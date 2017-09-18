@@ -1,0 +1,21 @@
+global-styling:
+  css:
+    theme:
+      css/theme.css: {}
+  dependencies:
+    - clinic/bootstrap
+
+tether:
+  js:
+     js/tether.js: {}
+
+bootstrap:
+  css:
+    base:
+      css/bootstrap.css: {}
+  js:
+      js/bootstrap.js: {}
+      js/main.js: {}
+  dependencies:
+    - core/jquery
+    - clinic/tether
