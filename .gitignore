@@ -238,5 +238,11 @@ pip-log.txt
 /profiles/
 /sites/
 /vendor/
-build-front/bower_components/
+bower_components/
 !/sites/default/services.yml
+node_modules/
+!/build-front/templates/parts/
+
+#Compiled files
+/themes/clinic/templates/page--front.html.twig
+/themes/clinic/templates/page.html.twig
