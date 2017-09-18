@@ -45,6 +45,7 @@ function clinic_preprocess_menu(&$variables) {
 
   switch ($menu_name) {
     case 'main':
+    case 'submenu':
     case 'account':
       $variables['attributes']['class'][] = 'navbar-nav nav';
       foreach ($variables['items'] as &$item) {
@@ -82,4 +83,18 @@ function clinice_preprocess_form(&$variables) {
  */
 function clinic_preprocess_status_messages(&$variables) {
   $variables['attributes']['class'][] = 'alert alert-info';
+}
+
+function clinic_preprocess_page(&$variables) {
+  $block = \Drupal\block\Entity\Block::load('kontaktivsapku_kiiv');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['kontaktivsapku_kiiv'] = $block_content;
+  //
+  $block = \Drupal\block\Entity\Block::load('kontaktivsapku_lviv');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['kontaktivsapku_lviv'] = $block_content;
 }

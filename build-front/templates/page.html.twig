@@ -43,22 +43,20 @@
  * @see html.html.twig
  *
  * @ingroup themeable
+ https://www.drupal.org/docs/8/modules/twig-tweak/cheat-sheet-8x-2x
  */
 #}
 <div class="layout-container">
-
-  ++тест2++
 
   <header role="banner">
     {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  @@include('./parts/main-menu.twig')
+
+  @@include('./parts/menu-contacts.twig')
 
   {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
 
   {{ page.help }}
 

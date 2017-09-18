@@ -232,7 +232,9 @@ pip-log.txt
 /LICENSE.txt
 /README.txt
 
+temp/
 /core/
+libraries/
 /modules/
 !/modules/custom/
 /profiles/
