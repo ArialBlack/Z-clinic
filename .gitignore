@@ -247,7 +247,6 @@ node_modules/
 
 #Compiled files
 
-./themes/clinic/fonts/*
-./themes/clinic/css/*.css
-
-./themes/clinic/templates/*
+/themes/clinic/fonts/*
+/themes/clinic/css/*
+/themes/clinic/templates/*
