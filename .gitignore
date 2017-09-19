@@ -248,6 +248,7 @@ node_modules/
 #Compiled files
 
 /build-front/fonts/*
+/build-front/sass/_svgfont**
 /themes/clinic/fonts/*
 /themes/clinic/css/*
 /themes/clinic/templates/*
