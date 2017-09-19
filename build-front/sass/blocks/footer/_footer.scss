@@ -76,18 +76,71 @@
   &_locations {
     @extend %col-8;
     overflow: hidden;
-    &_title {
-      &-active {
 
+    .nav {
+      border-bottom: 0 none;
+    }
+
+    &-wrapper {
+      @extend %col-4;
+      margin-top: 20px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 0 none;
+      border-color: transparent;
+      transition: all .5s ease-in;
+
+      &:hover, &:focus, &:active {
+        border: 0 none;
+        border-color: transparent;
+        color: $primary-color;
       }
     }
 
-    &_subtitle {
+    &-title {
+      @extend %title-hint, %text-bold;
+      transition: all .2s ease-in;
+      font-size: 20px;
+      padding: 10px 30px 0 0;
 
+      &:hover, &:focus, &:active {
+        border: 0 none;
+        border-color: transparent !important;
+        color: $primary-color;
+      }
+      &.active {
+        background-color: transparent !important;
+        border-color: transparent !important;
+
+        @extend %text-light, %title-red-line;
+        font-size: 26px !important;
+      }
     }
 
-    &_icon {
+    &-subtitle {
+      @extend %title-hint, %text-bold;
+      font-size: $fs-md;
+    }
 
+    &-list {
+      margin-top: 20px;
+      &-item {
+        padding: 5px;
+        &-text {
+          display: inline-block;
+          padding-left: 10px;
+          text-decoration: none;
+          color: $text-light;
+          font-size: $fs-sm;
+        }
+
+        .icon {
+
+        }
+      }
     }
   }
 }
