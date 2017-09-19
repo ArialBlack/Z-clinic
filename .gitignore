@@ -247,6 +247,7 @@ node_modules/
 
 #Compiled files
 
+/build-front/fonts/*
 /themes/clinic/fonts/*
 /themes/clinic/css/*
 /themes/clinic/templates/*
