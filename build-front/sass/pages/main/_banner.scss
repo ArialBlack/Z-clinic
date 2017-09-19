@@ -1,0 +1,10 @@
+.banner {
+  @extend %content-center;
+  min-height: 400px;
+
+  &_title {
+    @extend %text-bold, %title-primary;
+    width: 100%;
+    text-align: center;
+  }
+}

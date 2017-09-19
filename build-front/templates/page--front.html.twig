@@ -60,10 +60,117 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+    <section class="intro">
+      <div class="intro-wrapper">
+        <div class="intro_logo">
+          @@include('./parts/logo.twig')
+          <h2 class="intro_title">Їсти. Усміхатися. Цілуватися</h2>
+        </div>
 
+        {#here will be navigation: вам, вашим дітям, вашій мамі, кожному, ваше обличчя, чому ми, усе під наркозом поки ви спите#}
+      </div>
+    </section>
+    <section class="about-us">
+      <h3 class="about-us_title">Медіа про нас</h3>
+      {#here will be slider#}
+    </section>
+
+    <section class="zablotsky-speech">
+      <div class="zablotsky-speech_info">
+        <div class="zablotsky-speech-wrapper">
+        <h3 class="zablotsky-speech_title">Ярослав Заблоцький</h3>
+        <i class="icon icon-bow_arrow"></i>
+        <p class="zablotsky-speech_description">За 30 років своєї роботи лікарем я сформував свою власну філософію і зрозумів, що справжня стоматологія — це не асортимент послуг на вибір, тому:</p>
+        </div>
+      </div>
+      <div class="zablotsky-speech_portrait">
+        <img src="../themes/clinic/img/zablotsky_portrait.png" alt="yaroslav zablotsky portrait">
+      </div>
+      <div class="zablotsky-speech_sides">
+        <div class="zablotsky-speech-wrapper">
+        <h3 class="zablotsky-speech_sides-title">Філософія</h3>
+        <div class="zablotsky-speech_sides-pager">
+          <a href="#" class="zablotsky-speech_sides-pager-link">
+            <i class="icon arrow-left"></i>
+          </a>
+          <a href="#" class="zablotsky-speech_sides-pager-link">
+            <span class="zablotsky-speech_sides-pager-current">2</span>
+          </a>
+          <a href="#" class="zablotsky-speech_sides-pager-link">
+            <span class="zablotsky-speech_sides-pager-all">5</span>
+          </a>
+          <a href="#" class="zablotsky-speech_sides-pager-link">
+            <i class="icon arrow-right"></i>
+          </a>
+        </div>
+        <p class="zablotsky-speech_sides-content">
+          Я відмовляю людям у виготовленні“мостів” на здорові зуби, адже для цього потрібно нищити (обточувати) здорові зуби – обточені зуби років через 15-20 прийдеться видаляти!
+        </p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="clinic">
+      <div class="clinic-wrapper">
+        <h3 class="clinic_title">Клініка у Львові</h3>
+        <p class="clinic_location">вул. Коперника 20</p>
+      </div>
+      <img src="../themes/clinic/img/clinic_lviv.jpg" alt="clinic in lviv">
+    </section>
+
+    <section class="since-1998">
+      <div class="since-1998_logo">
+        @@include(./parts/logo.twig)
+        <img src="../themes/clinic/img/since_1998.jpg" alt="since 1998">
+      </div>
+    </section>
+
+    <section class="clinic">
+      <div class="clinic-wrapper">
+        <h3 class="clinic_title">Клініка у Києві</h3>
+        <p class="clinic_location">вул. Ногоспітальна, 5</p>
+      </div>
+      <img src="../themes/clinic/img/clinic_kyiv.jpg" alt="clinic in kyiv">
+    </section>
+
+    <section class="short_logo">
+      @@include(./parts/small-logo.twig)
+    </section>
+
+    <section class="promotion">
+      <p class="promotion_text">
+        Ми не лікуємо зубів та не вставляємо імплантатів! Ми повертаємо людям,
+        які мають проблеми з зубами, можливість цілуватися, посміхатися чи просто насолоджуватися їжею!
+      </p>
+    </section>
+
+    <section class="clinic">
+      <div class="clinic-wrapper">
+        <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
+        <p class="clinic_location">вул. Наукова, 7А, БП Оптіма Плаза</p>
+      </div>
+      <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in kyiv">
+
+      <section class="short_logo">
+        @@include(./parts/small-logo.twig)
+      </section>
+
+      <section class="clinic">
+        <div class="clinic-wrapper">
+          <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
+          <p class="clinic_location">Спортивна пл. 1, ТРЦ Гуллівер</p>
+        </div>
+        <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
+      </section>
+
+    {#<div class="layout-content">#}
+      {#{{ page.content }}#}
+    {#</div>#}{# /.layout-content #}
+
+    <div class="banner">
+      <h3 class="banner_title">На все життя!</h3>
+    </div>
     <div class="map" id="map">
     </div>
   </main>

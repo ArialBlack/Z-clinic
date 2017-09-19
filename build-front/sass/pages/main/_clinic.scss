@@ -1,0 +1,16 @@
+.clinic {
+  text-align: center;
+
+  &_title {
+    @extend %title-dark, %title-red-line;
+  }
+
+  &_location {
+    @extend %text-regular;
+  }
+
+  img {
+    max-width: 100%;
+    min-height: 250px;
+  }
+}

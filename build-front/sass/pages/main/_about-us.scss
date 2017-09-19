@@ -1,0 +1,15 @@
+.about-us {
+  min-height: 300px;
+  height: auto;
+  background: #E6E6E6 url('../img/city_background.jpg') no-repeat fixed 90% 100%;
+  background-size: cover;
+  margin: 20px 0;
+
+  &_title {
+    @extend %title-hint;
+    color: $text-light;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+  }
+}
