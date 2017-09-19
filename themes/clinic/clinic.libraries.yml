@@ -24,7 +24,6 @@ bootstrap:
   js:
       js/bootstrap.js: {}
       js/main.js: {}
-      js/map.js: {}
   dependencies:
     - core/jquery
     - clinic/tether
