@@ -15,6 +15,8 @@ var fileinclude = require('gulp-file-include'),
     concat = require('gulp-concat'),
     babel = require('gulp-babel'),
     fs = require('fs'),
+    iconfont = require('gulp-iconfont'),
+    iconfontCss = require('gulp-iconfont-css'),
     dirs = {
       'source': {
         'html': './templates/',
@@ -48,7 +50,7 @@ gulp.task('iconfont', function () {
     .pipe(plumber())
     .pipe(iconfontCss({
       fontName: fontname
-      , path: './sass/helpers/_svgfont.sass'
+      , path: './sass/_svgfont.sass'
       , targetPath: dirs.source.sassRoot + '_svgfont.sass'
       , fontPath: '../fonts/'
       , cssClass: 'icon'
@@ -125,4 +127,4 @@ gulp.task('watch', function() {
   gulp.watch(dirs.source.fonts, ['fonts']);
 });
 
-gulp.task('default', [ 'watch', 'fileinclude', 'compileSass', 'images', 'fonts']);
+gulp.task('default', [ 'watch', 'fileinclude', 'compileSass', 'images', 'fonts', 'iconfont']);
