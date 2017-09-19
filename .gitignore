@@ -248,7 +248,7 @@ node_modules/
 #Compiled files
 
 /themes/clinic/fonts/*
-/themes/clinic/css/*.css
+/themes/clinic/css/**/*.css
 
 /themes/clinic/templates/page--node--8.html.twig
 /themes/clinic/templates/page--front.html.twig
@@ -266,3 +266,4 @@ node_modules/
 /themes/clinic/templates/page.html.twig
 /themes/clinic/templates/page--node--15.html.twig
 /themes/clinic/templates/page--node--6.html.twig
+
