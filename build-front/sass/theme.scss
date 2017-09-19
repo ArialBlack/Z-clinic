@@ -1,3 +1,4 @@
+@import "../bower_components/bootstrap/scss/bootstrap";
 @import "vendors/media";
 @import "reset";
 @import "mixins";
@@ -10,6 +11,8 @@
 
 @import "layouts";
 
-@import "blocks/**/*.scss";
+@import "pages/**/*.scss";
+
+@import "paragraphs/*.scss";
 
 @import "pages/**/*.scss";
