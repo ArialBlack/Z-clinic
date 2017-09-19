@@ -1,0 +1,38 @@
+%title-hint {
+  text-transform: uppercase;
+  color: $text-hint;
+  font-size: $fs-lg;
+}
+
+%title-primary {
+  text-transform: uppercase;
+  color: $primary-color;
+  font-size: $fs-title;
+}
+
+%title-dark {
+  text-transform: uppercase;
+  color: $text-dark;
+  font-size: $fs-lg;
+}
+
+%title-red-line {
+  &:after {
+    content: ' ';
+    border: 2px solid $primary-color;
+    display: block;
+  }
+}
+
+%text-regular {
+  color: $text-hint;
+  font-size: $fs-md;
+}
+
+%text-light {
+  color: $text-light;
+}
+
+%text-bold {
+  font-weight: 700;
+}
