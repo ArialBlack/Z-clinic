@@ -1,3 +1,15 @@
 .since-1998 {
+  @extend %content-center;
   text-align: center;
+  min-height: 400px;
+
+  &_logo {
+    max-width: 400px;
+    margin: 0 auto;
+
+    img {
+      margin-top: 25px;
+    }
+  }
+
 }

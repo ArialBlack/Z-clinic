@@ -1,6 +1,6 @@
 %title-hint {
   text-transform: uppercase;
-  color: $text-dark-hint;
+  color: $text-hint;
   font-size: $fs-lg;
   font-family: RobotoRegular;
 }
@@ -21,8 +21,9 @@
 %title-red-line {
   &:after {
     content: ' ';
-    margin-top: 10px !important;
     border: 2px solid $primary-color !important;
+    width: 40px;
+    margin: 10px auto;
     display: block !important;
   }
 }
