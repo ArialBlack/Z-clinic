@@ -246,5 +246,6 @@ node_modules/
 !/build-front/templates/parts/
 
 #Compiled files
-/themes/clinic/templates/page--front.html.twig
-/themes/clinic/templates/page.html.twig
+./themes/clinic/templates/*.twig
+./themes/clinic/fonts/*
+./themes/clinic/styles/*.css
