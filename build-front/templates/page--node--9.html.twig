@@ -1,6 +1,6 @@
 {#
 /**
- * @file
+ * @page Усе під наркозом
  * Default theme implementation to display a single page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
@@ -43,6 +43,7 @@
  * @see html.html.twig
  *
  * @ingroup themeable
+ https://www.drupal.org/docs/8/modules/twig-tweak/cheat-sheet-8x-2x
  */
 #}
 <div class="layout-container">
@@ -55,6 +56,8 @@
 
   @@include('./parts/menu-contacts.twig')
 
+  {{ page.breadcrumb }}
+
   {{ page.help }}
 
   <main role="main">
@@ -64,9 +67,17 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    <div class="map" id="map">
-      map is here
-    </div>
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
   </main>
 
   @@include('./parts/footer.twig')

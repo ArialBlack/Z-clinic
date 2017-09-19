@@ -1,6 +1,6 @@
 {#
 /**
- * @file
+ * @page НАША ІСТОРІЯ
  * Default theme implementation to display a single page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
@@ -43,6 +43,7 @@
  * @see html.html.twig
  *
  * @ingroup themeable
+ https://www.drupal.org/docs/8/modules/twig-tweak/cheat-sheet-8x-2x
  */
 #}
 <div class="layout-container">
@@ -51,9 +52,45 @@
     {{ page.header }}
   </header>
 
-  @@include('./parts/main-menu.twig')
+  <div id="site-main-menu">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#menu1" role="tab">1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2" role="tab">2</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="menu1" role="tabpanel">
+            {{ drupal_menu('main') }}
+        </div>
+        <div class="tab-pane" id="menu2" role="tabpanel">
+            {{ drupal_menu('submenu') }}
+        </div>
+    </div>
+</div>
 
-  @@include('./parts/menu-contacts.twig')
+  <div id="site-contacts-menu">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#menucontacts1" role="tab">Київ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menucontacts2" role="tab">Львів</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="menucontacts1" role="tabpanel">
+            {{ kontaktivsapku_kiiv }}
+        </div>
+        <div class="tab-pane" id="menucontacts2" role="tabpanel">
+            {{ kontaktivsapku_lviv }}
+        </div>
+    </div>
+</div>
+
+  {{ page.breadcrumb }}
 
   {{ page.help }}
 
@@ -64,11 +101,22 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    <div class="map" id="map">
-      map is here
-    </div>
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
   </main>
 
-  @@include('./parts/footer.twig')
+  <footer role="contentinfo">
+    фууутер
+</footer>
+
 
 </div>{# /.layout-container #}

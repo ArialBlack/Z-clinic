@@ -111,7 +111,21 @@ gulp.task('images', function() {
 gulp.task('fileinclude', function() {
     gulp.src([
         './templates/page--front.html.twig',
-        './templates/page.html.twig'
+        './templates/page.html.twig',
+        './templates/page--node--2.html.twig',
+        './templates/page--node--3.html.twig',
+        './templates/page--node--4.html.twig',
+        './templates/page--node--5.html.twig',
+        './templates/page--node--6.html.twig',
+        './templates/page--node--7.html.twig',
+        './templates/page--node--8.html.twig',
+        './templates/page--node--9.html.twig',
+        './templates/page--node--10.html.twig',
+        './templates/page--node--11.html.twig',
+        './templates/page--node--12.html.twig',
+        './templates/page--node--13.html.twig',
+        './templates/page--node--14.html.twig',
+        './templates/page--node--15.html.twig'
     ])
         .pipe(fileinclude({
             prefix: '@@',
