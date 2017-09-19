@@ -1,0 +1,93 @@
+.footer {
+  min-height: 400px;
+  height: auto;
+  background: $footer_bg;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-bottom: 20px solid $primary-color;
+
+  &_socials-wrapper {
+    @extend %col-offset-1, %col-3;
+    overflow: hidden;
+  }
+  &_logo {
+    fill: $text-light;
+    display: block;
+    margin-bottom: 20px;
+    transition: all .2s ease-in;
+
+    &:hover, &:focus {
+      color: $primary-color;
+    }
+
+    .icon {
+      &:before {
+        font-size: 44px;
+      }
+    }
+  }
+
+  .icon{
+    &:before {
+      color: $text-light;
+    }
+  }
+
+  &_socials-list {
+    &-item {
+      display: inline-block;
+      &-link {
+        text-decoration: none;
+        font-size: $fs-lg;
+        display: inline-block;
+        padding: 10px;
+
+        svg {
+          width: 64px;
+          height: 64px;
+          &:hover, &:focus {
+            .icon-background {
+              fill: $text-light;
+            }
+
+            .icon-text {
+              fill: $primary-color;
+            }
+          }
+          .icon-background {
+            fill-rule:evenodd;
+            clip-rule:evenodd;
+            fill: $primary-color;
+            transition: all .2s ease-in;
+          }
+
+          .icon-text {
+            fill-rule:evenodd;
+            clip-rule:evenodd;
+            fill:#FFFFFF;
+            transition: all .2s ease-in;
+          }
+        }
+      }
+    }
+  }
+
+  &_locations {
+    @extend %col-8;
+    overflow: hidden;
+    &_title {
+      &-active {
+
+      }
+    }
+
+    &_subtitle {
+
+    }
+
+    &_icon {
+
+    }
+  }
+}

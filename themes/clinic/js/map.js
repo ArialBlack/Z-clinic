@@ -217,9 +217,7 @@
                       });
         
                     google.maps.event.trigger(map, "resize");
-                  directionsDisplay.setMap(map);
-                  // calculateAndDisplayRoute(directionsService, directionsDisplay);
-          
+                    directionsDisplay.setMap(map);
                       google.maps.event.addDomListener(window, "resize", function () {
               
                             var center = map.getCenter();
