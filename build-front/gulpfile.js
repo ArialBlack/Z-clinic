@@ -17,6 +17,7 @@ var fileinclude = require('gulp-file-include'),
     fs = require('fs'),
     iconfont = require('gulp-iconfont'),
     iconfontCss = require('gulp-iconfont-css'),
+    runSequence = require('run-sequence'),
     dirs = {
       'source': {
         'html': './templates/**/*.twig',
@@ -123,4 +124,8 @@ gulp.task('watch', function() {
   gulp.watch(dirs.source.fonts, ['fonts']);
 });
 
-gulp.task('default', [ 'watch', 'fileinclude', 'compileSass', 'images', 'fonts', 'iconfont']);
+gulp.task('default', function(){
+  runSequence(
+    'iconfont', 'compileSass', 'fonts', 'fileinclude', 'images', 'watch'
+  );
+});
