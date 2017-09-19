@@ -17,9 +17,10 @@ var fileinclude = require('gulp-file-include'),
     fs = require('fs'),
     iconfont = require('gulp-iconfont'),
     iconfontCss = require('gulp-iconfont-css'),
+    runSequence = require('run-sequence'),
     dirs = {
       'source': {
-        'html': './templates/',
+        'html': './templates/**/*.twig',
         'fonts': './fonts/*.*',
         'fontsFolder': './fonts/',
         'sass': ['./sass/**/*.scss'],
@@ -50,16 +51,15 @@ gulp.task('iconfont', function () {
     .pipe(plumber())
     .pipe(iconfontCss({
       fontName: fontname
-      , path: './sass/_svgfont.sass'
-      , targetPath: dirs.source.sassRoot + '_svgfont.sass'
+      , path: './helpers/_svgfont.sass'
+      , targetPath: '../' + dirs.source.sassRoot + '_svgfont.sass'
       , fontPath: '../fonts/'
       , cssClass: 'icon'
     }))
-    .pipe(plumber())
     .pipe(iconfont({
       fontName: fontname
       , prependUnicode: true
-      , formats: ['ttf', 'eot', 'woff']
+      , formats: ['ttf', 'eot', 'woff', 'woff2']
       , normalize: true
       , fontHeight: 1001
       , fontStyle: 'normal'
@@ -109,24 +109,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('fileinclude', function() {
-    gulp.src([
-        './templates/page--front.html.twig',
-        './templates/page.html.twig',
-        './templates/page--node--2.html.twig',
-        './templates/page--node--3.html.twig',
-        './templates/page--node--4.html.twig',
-        './templates/page--node--5.html.twig',
-        './templates/page--node--6.html.twig',
-        './templates/page--node--7.html.twig',
-        './templates/page--node--8.html.twig',
-        './templates/page--node--9.html.twig',
-        './templates/page--node--10.html.twig',
-        './templates/page--node--11.html.twig',
-        './templates/page--node--12.html.twig',
-        './templates/page--node--13.html.twig',
-        './templates/page--node--14.html.twig',
-        './templates/page--node--15.html.twig'
-    ])
+    gulp.src(['./templates/*.twig'])
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
@@ -141,4 +124,8 @@ gulp.task('watch', function() {
   gulp.watch(dirs.source.fonts, ['fonts']);
 });
 
-gulp.task('default', [ 'watch', 'fileinclude', 'compileSass', 'images', 'fonts', 'iconfont']);
+gulp.task('default', function(){
+  runSequence(
+    'iconfont', 'compileSass', 'fonts', 'fileinclude', 'images', 'watch'
+  );
+});
