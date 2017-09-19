@@ -50,16 +50,15 @@ gulp.task('iconfont', function () {
     .pipe(plumber())
     .pipe(iconfontCss({
       fontName: fontname
-      , path: './sass/_svgfont.sass'
-      , targetPath: dirs.source.sassRoot + '_svgfont.sass'
+      , path: './helpers/_svgfont.sass'
+      , targetPath: '../' + dirs.source.sassRoot + '_svgfont.sass'
       , fontPath: '../fonts/'
       , cssClass: 'icon'
     }))
-    .pipe(plumber())
     .pipe(iconfont({
       fontName: fontname
       , prependUnicode: true
-      , formats: ['ttf', 'eot', 'woff']
+      , formats: ['ttf', 'eot', 'woff', 'woff2']
       , normalize: true
       , fontHeight: 1001
       , fontStyle: 'normal'
