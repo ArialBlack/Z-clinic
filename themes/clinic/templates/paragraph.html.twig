@@ -38,7 +38,6 @@
  * @ingroup themeable
  */
 #}
-{% set order = content.field_flip_order[0]['#markup'] %}
 {% set redMark = content.field_output_red_mark[0]['#markup'] %}
 
 {%
@@ -46,11 +45,9 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    order ? 'reversed',
     redMark ? 'with-mark',
   ]
 %}
-
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
