@@ -12,8 +12,8 @@ var fileinclude = require('gulp-file-include'),
     pngquant = require('imagemin-pngquant'),
     gulpif = require('gulp-if'),
     mqpacker = require('css-mqpacker'),
-    // uglify = require('gulp-uglify'),
-    // concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
     // babel = require('gulp-babel'),
     // fs = require('fs'),
     iconfont = require('gulp-iconfont'),
@@ -26,6 +26,7 @@ var fileinclude = require('gulp-file-include'),
         'fontsFolder': './fonts/',
         'sass': ['./sass/**/*.scss'],
         'img': ['./images/*.*'],
+        'js': './page_parts/**/*.js',
         'sassRoot': 'sass/',
         'svgIcons': './images/icons/*.svg'
       },
@@ -109,6 +110,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest(dirs.build.img));
 });
 
+//templates
 gulp.task('fileinclude', function() {
     gulp.src(['./templates/*.twig'])
         .pipe(fileinclude({
@@ -118,8 +120,19 @@ gulp.task('fileinclude', function() {
         .pipe(gulp.dest('../themes/clinic/templates/'));
 });
 
+//scripts
+gulp.task('scripts', function() {
+  var jsFileName = "main.js";
+  return gulp.src(dirs.source.js)
+  .pipe(plumber())
+  .pipe(concat(jsFileName))
+  .pipe(uglify())
+  .pipe(gulp.dest(dirs.build.js));
+});
+
 gulp.task('watch', function() {
   gulp.watch(dirs.source.sass, ['compileSass']);
+  gulp.watch(dirs.source.js, ['scripts']);
   gulp.watch(dirs.source.html, ['fileinclude']);
   gulp.watch(dirs.source.img, ['images']);
   gulp.watch(dirs.source.fonts, ['fonts']);
@@ -127,6 +140,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', function(){
   runSequence(
-    'iconfont', 'compileSass', 'fonts', 'fileinclude', 'images', 'watch'
+    'iconfont', 'images', 'compileSass', 'fonts', 'fileinclude', 'scripts', 'watch'
   );
 });

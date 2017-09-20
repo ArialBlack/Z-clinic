@@ -253,3 +253,4 @@ node_modules/
 /themes/clinic/css/*
 /themes/clinic/templates/*
 /themes/clinic/img/*
+/themes/clinic/js/main.js
