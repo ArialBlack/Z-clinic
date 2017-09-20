@@ -1,18 +1,23 @@
-<div id="site-contacts-menu">
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#menucontacts1" role="tab">Київ</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menucontacts2" role="tab">Львів</a>
-        </li>
-    </ul>
-    <div class="tab-content">
-        <div class="tab-pane active" id="menucontacts1" role="tabpanel">
-            {{ kontaktivsapku_kiiv }}
-        </div>
-        <div class="tab-pane" id="menucontacts2" role="tabpanel">
-            {{ kontaktivsapku_lviv }}
+<div class="menu_contacts" id="site-contacts-menu">
+
+    <button class="menu_nav-icon icon-icon icon-contacts" data-toggle="collapse" data-target="#menu_contacts_rollup" aria-expanded="false" aria-controls="Show contacts"></button>
+
+    <div class="menu_contacts-rollup collapse" id="menu_contacts_rollup">
+        <ul class="menu_contacts-header nav nav-tabs" role="tablist">
+            <li class="menu_contacts-header_item nav-item">
+                <a class="menu_contacts-header_link nav-link active" data-toggle="tab" href="#menucontacts1" role="tab">Київ</a>
+            </li>
+            <li class="menu_contacts-header_item nav-item">
+                <a class="menu_contacts-header_link nav-link" data-toggle="tab" href="#menucontacts2" role="tab">Львів</a>
+            </li>
+        </ul>
+        <div class="menu_contacts-content tab-content">
+            <div class="menu_contacts-content_tab tab-pane active" id="menucontacts1" role="tabpanel">
+                {{ kontaktivsapku_kiiv }}
+            </div>
+            <div class="menu_contacts-content_tab tab-pane" id="menucontacts2" role="tabpanel">
+                {{ kontaktivsapku_lviv }}
+            </div>
         </div>
     </div>
 </div>
