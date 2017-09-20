@@ -249,8 +249,13 @@ node_modules/
 
 /build-front/fonts/*
 /build-front/sass/_svgfont**
+
 /themes/clinic/fonts/*
 /themes/clinic/css/*
 /themes/clinic/templates/*
 /themes/clinic/img/*
 /themes/clinic/js/main.js
+
+/themes/clinic/templates/page--node--*.html.twig
+/themes/clinic/templates/page--front.html.twig
+/themes/clinic/templates/page.html.twig
