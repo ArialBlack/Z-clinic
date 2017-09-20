@@ -9,7 +9,6 @@
     			return;
     		$navRollups.collapse('hide');
     	});
-        console.log('run menu script !');
     });
 
 }(jQuery));
