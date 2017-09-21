@@ -1,17 +1,17 @@
-@include font("RobotoRegular", "Roboto-Regular");
+@include font("roboto", "Roboto-Regular");
 
-@include font("RobotoBold", "Roboto-Bold");
+@include font("roboto", "Roboto-Bold", 700);
 
-@include font("RobotoBoldItalic", "Roboto-BoldItalic");
+@include font("roboto", "Roboto-BoldItalic", 700, italic);
 
-@include font("RobotoMedium", "Roboto-Medium");
+@include font("roboto", "Roboto-Medium", 300);
 
-@include font("RobotoLight", "Roboto-Light");
+@include font("roboto", "Roboto-MediumItalic", 300, italic);
 
-@include font("RobotoLightItalic", "Roboto-LightItalic", 300, italic);
+@include font("roboto", "Roboto-Light", 200);
 
-@include font("RobotoMediumItalic", "Roboto-MediumItalic", 300, italic);
+@include font("roboto", "Roboto-LightItalic", 200, italic);
 
-@include font("RobotoThin", "Roboto-Thin", 300, italic);
+@include font("roboto", "Roboto-Thin", 100);
 
-@include font("Roboto-ThinItalic", "Roboto-ThinItalic");
+@include font("roboto", "Roboto-ThinItalic", 100, italic);
