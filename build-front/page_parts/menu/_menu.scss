@@ -120,12 +120,13 @@
 		.menu-close_button {
 			right: 18px;
 		}
-		&-content_tab {
-			padding: 22px 50px 22px 62px;
-			overflow: hidden;
-			.navbar-nav {
-				max-width: 200px;
+		&-content{
+				overflow: hidden;
+				padding: 22px 50px 92px 62px;
+			&_tab {
 				float: left;
+				max-width: 200px;
+				box-sizing: content-box;
 				.nav-item {
 					position: relative;
 					padding: 2px 0;
@@ -178,6 +179,31 @@
 				}
 				.nav-item + .nav-item {
 					margin-top: -2px;
+				}
+			}
+		}
+		&-social{
+			float: right;
+			padding-top: 85px;
+			&_icon{
+				display: block;
+				margin-bottom: 35px;
+				width: $menu-icon-size;
+				height: $menu-icon-size;
+				border: 2px $primary-color solid;
+				color: $primary-color;
+				font-size: 22px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: $menu-icon-size - 4;
+				// transition: color $trs-d, background-color $trs-d;
+				&:before{
+					// transition: color $trs-d, background-color $trs-d;
+				}
+				&:hover{
+					text-decoration: none;
+					color: $white-smoke;
+					background-color:  $primary-color;
 				}
 			}
 		}
