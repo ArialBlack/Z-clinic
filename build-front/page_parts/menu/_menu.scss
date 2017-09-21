@@ -57,8 +57,8 @@
 			width: 50%;
 			padding-top: 50%;
 			float: left;
-			position: relative; // transition: background-color $trs-d, font-size $trs-d, font-weight $trs-d;
-			color: $primary-color; // line-height: 1;
+			position: relative;
+			color: $primary-color;
 			font-weight: 300;
 			&:hover {
 				color: $primary-color;
@@ -70,7 +70,7 @@
 		}
 		&_text {
 			color: $primary-color;
-			position: absolute; // transition: background-color $trs-d, font-size $trs-d, font-weight $trs-d;
+			position: absolute; 
 			font-size: 18px;
 			height: 48px;
 			line-height: 48px;
@@ -79,14 +79,34 @@
 			right: 0;
 			left: 0;
 			margin: auto;
-		} // &_link:hover &_text{
-		// 	color: $primary-color;
-		// 	font-weight: 700;
-		// 	font-size: 48px;
-		// }
+			transition: font-size $trs-d;
+		}
 		&_link.active &_text {
 			font-weight: 700;
 			font-size: 48px;
+		}
+		&_icon_text{
+			position: absolute;
+			text-align: center;
+			font-size: 14px;
+			height: 75px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+			color: $text-menu;
+			svg{
+				display: block;
+				height: 37px;
+				margin: 0 auto 20px;
+				fill: $primary-color;
+				transition: transform $trs-d;
+				transform-origin: 50% 100%;
+			}
+		}
+		&_link.active &_icon_text svg {
+			transform: scale(1.1);
 		}
 	}
 	.tab-content {
