@@ -1,16 +1,14 @@
-<div class="menu_contacts" id="site-contacts-menu">
+<div class="menu-sub menu_contacts menu-section" id="site-contacts-menu">
 
-    <button class="menu_nav-icon icon-icon icon-contacts" data-toggle="collapse" data-target="#menu_contacts_rollup" aria-expanded="false" aria-controls="Show contacts"></button>
+    <button class="menu-open_button icon icon-contacts" data-toggle="collapse" data-target="#menu_contacts_rollup" aria-expanded="false" aria-controls="Show contacts">
+        кОНТАКТИ
+    </button>
 
-    <div class="menu_contacts-rollup collapse" id="menu_contacts_rollup">
-        <ul class="menu_contacts-header nav nav-tabs" role="tablist">
-            <li class="menu_contacts-header_item nav-item">
-                <a class="menu_contacts-header_link nav-link active" data-toggle="tab" href="#menucontacts1" role="tab">Київ</a>
-            </li>
-            <li class="menu_contacts-header_item nav-item">
-                <a class="menu_contacts-header_link nav-link" data-toggle="tab" href="#menucontacts2" role="tab">Львів</a>
-            </li>
-        </ul>
+    <div class="menu-rollup menu_contacts-rollup collapse" id="menu_contacts_rollup">
+        <div class="menu-header nav" role="tablist">
+            <a class="menu-header_link nav-link active" data-toggle="tab" href="#menucontacts1" role="tab">Київ</a>
+            <a class="menu-header_link nav-link" data-toggle="tab" href="#menucontacts2" role="tab">Львів</a>
+        </div>
         <div class="menu_contacts-content tab-content">
             <div class="menu_contacts-content_tab tab-pane active" id="menucontacts1" role="tabpanel">
                 {{ kontaktivsapku_kiiv }}
@@ -19,5 +17,9 @@
                 {{ kontaktivsapku_lviv }}
             </div>
         </div>
+
+        <button class="menu_nav-icon close" data-toggle="collapse" data-target="#menu_contacts_rollup" aria-expanded="false" aria-controls="Clouse contact menu">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 </div>

@@ -1,0 +1,108 @@
+.menu{
+	max-width: $hdpi+px;
+	margin: 0 auto;
+	position: relative;
+	&-section{
+		position: absolute;
+		z-index: 2;
+		top: 58px;
+	}
+	&-open_button{
+		margin: 3px 0 0 3px;
+		background-color: transparent;
+		text-transform: uppercase;
+		text-align: center;
+		color: $menu-button;
+		font-size: $fs-sm;
+		line-height: 1;
+		font-family: inherit;
+		cursor: pointer;
+		transition: color $trs-d;
+		outline: none !important;
+		&:before{
+			font-family: svgfont;
+			font-size: $open-button-icon;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 17px;
+			max-width: $open-button-icon;
+			max-height: $open-button-icon;
+			border-radius: 50%;
+			overflow: hidden;
+			background-color: $white;
+			color: $primary-color;
+			transition: transform $trs-d;
+		}
+		&:hover{
+			color: $primary-color;
+			&:before{
+				transform: scale(1.1);
+			}
+		}
+	}
+	&-rollup{
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		box-shadow: 0 0 87px rgba(200,200,200,.75);
+		background-color: $white-smoke;
+		min-width: 464px;
+	}
+	&-header{
+		margin: 0;
+		background-color: $zircon;
+		overflow: hidden;
+		&_link{
+			text-align: center;
+			width: 50%;
+			padding-top: 50%;
+			float: left;
+			position: relative;
+			// transition: background-color $trs-d, font-size $trs-d, font-weight $trs-d;
+			color: $primary-color;
+			// line-height: 1;
+			font-weight: 300;
+			&:hover{
+				color: $primary-color;
+			}
+			&.active{
+				background-color: $white-smoke;
+				cursor: default;
+			}
+		}
+		&_text{
+			color: $primary-color;
+			position: absolute;
+			// transition: background-color $trs-d, font-size $trs-d, font-weight $trs-d;
+			font-size: 18px;
+			height: 48px;
+			line-height: 48px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+		}
+		// &_link:hover &_text{
+		// 	color: $primary-color;
+		// 	font-weight: 700;
+		// 	font-size: 48px;
+		// }
+		&_link.active &_text{
+			font-weight: 700;
+			font-size: 48px;
+		}
+	}
+	&_nav{
+		left: 15px;
+		&-rollup{
+			left: 0;
+		}
+	}
+	&_contacts{
+		right: 15px;
+		&-rollup{
+			right: 0;
+		}
+	}
+}
