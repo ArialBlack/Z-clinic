@@ -10,7 +10,7 @@ $mobile: 320;
 
 // Sizes
 $col-padding: 15;
-$open-button-icon: 46px;
+$menu-icon-size: 46px;
 
 //colors
 $white: #ffffff;
@@ -18,6 +18,7 @@ $white-smoke: #f8f8f8;
 $zircon: #f1f2f2;
 $primary-color: #e30613;
 $footer-bg: #4f5051;
+$menu-divider-color: #959595;
 
 // text colors
 $text-dark-hint: #575756;
@@ -25,7 +26,7 @@ $text-light: #ffffff;
 $text-hint: #8a8c8f;
 $text-dark: #000000;
 $error: #f1577b;
-$menu-button: #636466;
+$text-menu: #636466;
 
 // text sizes
 $fs-sm: 12px;
@@ -35,3 +36,4 @@ $fs-title: 42px;
 
 //transitions
 $trs-d: .3s ease
+$trs-fast: .2s ease
