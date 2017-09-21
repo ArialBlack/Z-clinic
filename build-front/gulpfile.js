@@ -25,6 +25,7 @@ var fileinclude = require('gulp-file-include'),
 			'fonts': './fonts/*.*',
 			'fontsFolder': './fonts/',
 			'sass': ['./sass/**/*.scss'],
+			'sassWatch': ['./sass/**/*.scss', './page_parts/**/*.scss'],
 			'img': ['./images/*.*'],
 			'js': './page_parts/**/*.js',
 			'sassRoot': 'sass/',
@@ -131,7 +132,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(dirs.source.sass, ['compileSass']);
+	gulp.watch(dirs.source.sassWatch, ['compileSass']);
 	gulp.watch(dirs.source.js, ['scripts']);
 	gulp.watch(dirs.source.html, ['fileinclude']);
 	gulp.watch(dirs.source.img, ['images']);
