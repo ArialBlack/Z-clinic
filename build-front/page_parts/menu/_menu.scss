@@ -216,5 +216,19 @@
 		.menu-close_button {
 			left: 18px;
 		}
+		&-content_tab {
+			text-align: right;
+			padding: 65px 135px 50px 45px;
+			color: $text-menu;
+			.paragraph{
+				margin-bottom: 25px;
+				font-size: 12px;
+				>div:first-child {
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 1.5;
+				}
+			}
+		}
 	}
 }
