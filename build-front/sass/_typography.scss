@@ -2,7 +2,6 @@
   text-transform: uppercase;
   color: $text-hint;
   font-size: $fs-lg;
-  font-family: RobotoRegular;
 }
 
 %title-primary {
@@ -31,12 +30,10 @@
 %text-regular {
   color: $text-hint !important;
   font-size: $fs-md !important;
-  font-family: RobotoRegular;
 }
 
 %text-light {
   color: $text-light !important;
-  font-family: RobotoRegular;
 }
 
 %text-bold {

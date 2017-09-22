@@ -1,7 +1,10 @@
 .intro {
   @extend %content-center;
-  min-height: 400px;
+  // min-height: 400px;
   height: auto;
+  margin: 0 auto;
+  max-width: $hdpi+px;
+  padding: 18% 30px;
 
   &-wrapper {
     text-align: center;
@@ -54,7 +57,7 @@
   }
 
   &_title {
-    @extend %title-hint, %text-bold;
+    @extend %title-hint;
     margin-top: 30px;
   }
 
