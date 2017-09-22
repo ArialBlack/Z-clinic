@@ -1,6 +1,11 @@
 .paragraph {
-  .field_output_red_mark,
-  .field_flip_order {
+  .boolean-field {
     display: none;
+  }
+}
+
+.paragraph--type--center-title {
+  div {
+    text-align: center;
   }
 }

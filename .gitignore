@@ -258,3 +258,4 @@ node_modules/
 /themes/clinic/templates/page--node--*.html.twig
 /themes/clinic/templates/page--front.html.twig
 /themes/clinic/templates/page.html.twig
+!/modules/entity_browser/src/Plugin/views/display/EntityBrowser.php
