@@ -256,3 +256,6 @@ node_modules/
 /themes/clinic/img/*
 /themes/clinic/js/main.js
 
+/themes/clinic/templates/page--node--*.html.twig
+/themes/clinic/templates/page--front.html.twig
+/themes/clinic/templates/page.html.twig
