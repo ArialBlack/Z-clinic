@@ -1,22 +1,134 @@
 .mansory_menu{
 	padding-top: 122px;
-	overflow: hidden;
 	margin: 0 auto;
 	max-width: $hdpi+px;
 	&-left{
-		// float: left;
-		// width: calc;
+		padding: 0 8px;
 		&_bot{
-			padding-top: 15px;
+			@include min-screen($mdpi){
+				padding-top: 16px;
+			}
+		}
+		&_top{
+			margin: 0 -8px;
+		}
+		.col-lg-3{
+			padding: 0 8px;
+			box-sizing: border-box;
 		}
 	}
-	.col-lg-3,
-	.col-lg-2,
-	.col-lg-10{
-		span{
+	&-right{
+		padding: 0 8px;
+	}
+	&-item{
 		display: block;
-		background-color: $primary-color;
-		padding: 30px;
+		user-select: none;
+		padding-top: 100%;
+		text-transform: uppercase;
+		background-color: $white-smoke;
+		position: relative;
+		cursor: pointer;
+		&.is-wide{
+			padding-top: 13%;
 		}
+		&.is-tall{
+			height: 100%;
+			padding-top: 0;
+		}
+		&-i{
+			background-color: transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			transition: all $trs-d;
+			z-index: 3;
+			&_wrap{
+				width: 100%;
+			}
+		}
+		&:hover &-i{
+			background-color: $white;
+			left: -15px;
+			top: -15px;
+			right: -15px;
+			bottom: -15px;
+			box-shadow: 0 0 87px rgba(200, 200, 200, .75);
+		}
+	}
+	&-icon{
+		font-size: 55px;
+		margin-bottom: 35px;
+		color: $primary-color;
+		transition: all $trs-d;
+		display: block;
+		@include min-screen($mdpi){
+			font-size: 46px;
+			margin-bottom: 25px;
+		}
+		.is-wide &{
+			font-size: 50px;
+			margin-bottom: 0;
+			display: inline-block;
+			margin-right: 25px;
+			@include min-screen($mdpi){
+				font-size: 42px;
+			}
+		}
+	}
+	&-title{
+		@extend %title-red-line;
+		font-size: 18px;
+		font-weight: 700;
+		color: $text-menu;
+		&:after{
+			transition: all $trs-d;
+			visibility: hidden;
+			width: 0;
+			margin: 0 auto;
+		}
+		.is-wide &{
+			display: inline-block;
+			// line-height: 50px;
+		}
+	}
+	&-item:hover &-title {
+		&:after{
+			margin-top: 20px;
+			margin-bottom: 50px;
+			width: 54px;
+			visibility: visible;
+			@include min-screen($mdpi){
+				margin-top: 15px;
+				margin-bottom: 35px;
+			}
+		}
+	}
+	&-item.is-wide:hover &-title {
+		&:after{
+			margin-top: 8px;
+			margin-bottom: 18px;
+			width: 54px;
+			visibility: visible;
+		}
+	}
+	&-hiden_text{
+		visibility: hidden;
+		opacity: 0;
+		transition: all $trs-d;
+		height: 0;
+		font-size: 12px;
+		line-height: 2;
+		color: $text-menu;
+		&.is-wide{
+			line-height: 1.8;
+		}
+	}
+	&-item:hover &-hiden_text{
+		visibility: visible;
+		opacity: 1;
+		height: auto;
 	}
 }
