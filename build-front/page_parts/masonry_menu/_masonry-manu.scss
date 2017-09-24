@@ -1,5 +1,5 @@
 .masonry_menu{
-	padding-top: 122px;
+	padding-top: 100px;
 	margin: 0 auto;
 	max-width: $hdpi+px;
 	&-left{
@@ -44,7 +44,7 @@
 			bottom: 0;
 			margin: auto;
 			transition: all $trs-d;
-			z-index: 3;
+			z-index: 1;
 			&_wrap{
 				width: 100%;
 			}
