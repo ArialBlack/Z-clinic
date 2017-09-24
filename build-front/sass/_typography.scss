@@ -2,7 +2,6 @@
   text-transform: uppercase;
   color: $text-hint;
   font-size: $fs-lg;
-  font-family: "Roboto-Regular";
 }
 
 %title-primary {
@@ -15,7 +14,7 @@
   text-transform: uppercase;
   color: $text-dark;
   font-size: $fs-lg;
-  font-family: "Roboto-Bold";
+  font-weight: 700;
 }
 
 %title-red-line {
@@ -28,15 +27,24 @@
   }
 }
 
+%title-red-line-left {
+  &:after {
+    content: ' ';
+    border: 2px solid $primary-color !important;
+    width: 40px;
+    display: block !important;
+    margin: 10px auto 10px 0;
+  }
+}
+
 %text-regular {
   color: $text-hint !important;
   font-size: $fs-md !important;
-  font-family: "Roboto-Regular";
+  font-weight: 400;
 }
 
 %text-light {
   color: $text-light !important;
-  font-family: "Roboto-Regular";
 }
 
 %text-bold {

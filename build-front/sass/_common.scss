@@ -12,3 +12,21 @@ body {
   display: flex;
   align-items: center;
 }
+
+
+main {
+  max-width: $hdpi+px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.block-clinic-breadcrumbs {
+  display: none !important;
+}
+
+#block-clinic-page-title {
+  color: $primary-color;
+  font-weight: 700;
+  padding: 125px 20px 25px;
+}
