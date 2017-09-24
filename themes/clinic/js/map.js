@@ -1,5 +1,8 @@
 (function ($) {
     $(function () {
+        if (document.getElementById("map") === null) {
+          return;
+        }
         function toggleBounce(marker) {
             if (marker.getAnimation() !== null) {
                 marker.setAnimation(null);
@@ -227,7 +230,7 @@
                           });
         
                   }
-      
+            
               google.maps.event.addDomListener(window, "load", function () {
                   initialize();
                 });
