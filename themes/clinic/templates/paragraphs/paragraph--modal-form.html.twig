@@ -53,6 +53,11 @@
 
       <div class="image-button-container">
         {{ content.field_media }}
+
+        {% if content.field_description %}
+          {{ content.field_description }}
+        {% endif %}
+
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal{{ pID }}">
           {{ content.field_title }}
         </button>
