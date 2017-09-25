@@ -2,6 +2,13 @@
   .boolean-field {
     display: none;
   }
+
+  picture {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .paragraph--type--center-title {
