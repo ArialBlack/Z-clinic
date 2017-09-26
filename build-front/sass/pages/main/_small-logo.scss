@@ -9,4 +9,8 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  .icon.icon-z{
+    @extend %icon-logo;
+  }
 }
