@@ -13,4 +13,20 @@
 		// 	font-size: calc( 1vw + .5rem );
 		// }
 	}
+
+  .field-title {
+    @extend %title-hint, %title-red-line;
+    color: $text-dark-hint;
+  }
+
+  .field-text-long {
+    p {
+      font-size: $fs-md;
+      line-height: 1.6;
+      margin: 2em 0px;
+      // @include screen($tablet, $hdpi){
+      // 	font-size: calc( 0.8vw + .5rem );
+      // }
+    }
+  }
 }

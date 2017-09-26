@@ -7,6 +7,7 @@
     margin: 0 auto;
 
     .icon {
+      @extend %icon-logo;
       display: block;
     }
 
