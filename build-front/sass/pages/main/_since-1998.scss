@@ -6,8 +6,13 @@
   &_logo {
     margin: 0 auto;
 
+    .icon {
+      display: block;
+    }
+
     img {
       margin-top: 25px;
+      display: block;
     }
   }
 

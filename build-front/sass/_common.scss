@@ -19,7 +19,7 @@ body {
   padding-bottom: 100px;
   h1 {
     line-height: 1.2;
-    font-size: 48px; 
+    font-size: 48px;
     color: $primary-color;
     font-weight: 700;
     @include screen($tablet, $hdpi){
@@ -32,7 +32,7 @@ body {
   display: none !important;
 }
 
-.icon.icon-z {
+%icon-logo {
   font-size: 90px;
   transition: all $trs-d;
   cursor: pointer;
@@ -41,8 +41,8 @@ body {
   &:after {
     content: "";
     position: absolute;
-    top: -40%;
-    left: -90%;
+    top: -60%;
+    left: -160%;
     width: 150%;
     height: 150%;
     opacity: 0;
@@ -61,6 +61,7 @@ body {
   &:hover, &:focus {
     transform: scale(1.1);
   }
+
 
   &:hover:after {
     opacity: 1;
