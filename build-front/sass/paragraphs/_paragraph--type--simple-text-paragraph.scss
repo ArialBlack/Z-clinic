@@ -1,3 +1,16 @@
 .paragraph--type--simple-text-paragraph {
-  
+	@extend %center-block;
+	position: relative;
+	margin-bottom: 120px;
+	blockquote{
+		padding-bottom: 90px;
+		padding-top: 90px;
+		position: relative;
+		font-style: italic;
+		font-size: 20px;
+		color: $text-light-gray;
+		@include screen($tablet, $hdpi){
+			font-size: calc( 1.1vw + .625rem );
+		}
+	}
 }
