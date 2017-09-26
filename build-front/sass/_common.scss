@@ -14,12 +14,17 @@ body {
 }
 
 #block-clinic-page-title {
-  @extend %col-offset-1, %col-11;
+  @extend %center-block;
   position: relative;
-  padding-top: 150px;
+  padding-bottom: 100px;
   h1 {
+    line-height: 1.2;
+    font-size: 48px; 
     color: $primary-color;
     font-weight: 700;
+    @include screen($tablet, $hdpi){
+      font-size: calc( 2.5vw + .625rem );
+    }
   }
 }
 
