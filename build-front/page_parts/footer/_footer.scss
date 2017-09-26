@@ -79,14 +79,6 @@
 
     .nav {
       border-bottom: 0 none;
-      min-height: 67px;
-      .nav-link{
-        border: none;
-      }
-    }
-    .tab-content{
-      min-height: 165px;
-      overflow: hidden;
     }
 
     &-wrapper {
@@ -113,7 +105,6 @@
       transition: all .2s ease-in;
       font-size: 20px;
       padding: 10px 30px 0 0;
-      min-width: 88px;
 
       &:hover, &:focus, &:active {
         border: 0 none;

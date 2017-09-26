@@ -1,9 +1,7 @@
 .intro {
   @extend %content-center;
-  // min-height: 400px;
-  // height: auto;
-  padding: 10% 30px 12%;
-
+  min-height: 400px;
+  height: auto;
 
   &-wrapper {
     text-align: center;
