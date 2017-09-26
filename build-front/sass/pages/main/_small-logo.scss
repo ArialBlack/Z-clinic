@@ -1,0 +1,12 @@
+.small-logo {
+  @extend %content-center;
+  text-align: center;
+  min-height: 300px;
+  height: auto;
+
+  &-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

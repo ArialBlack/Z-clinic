@@ -1,0 +1,71 @@
+body {
+  font-family: "roboto", opensans, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  min-width: 320px;
+  min-height: 320px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+%content-center {
+  display: flex;
+  align-items: center;
+}
+
+#block-clinic-page-title {
+  @extend %col-offset-1, %col-11;
+  position: relative;
+  h1 {
+    color: $primary-color;
+    font-weight: 700;
+  }
+}
+
+#block-clinic-breadcrumbs {
+  display: none !important;
+}
+
+.icon.icon-z {
+  font-size: 90px;
+  transition: all $trs-d;
+  cursor: pointer;
+  color: $primary-color;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -90%;
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+    transform: rotate(30deg);
+
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+
+  &:hover, &:focus {
+    transform: scale(1.1);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+
+  &:active:after {
+    opacity: 0;
+  }
+}
