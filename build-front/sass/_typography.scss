@@ -27,6 +27,16 @@
   }
 }
 
+%title-red-line-left {
+  &:after {
+    content: ' ';
+    border: 2px solid $primary-color !important;
+    width: 40px;
+    margin: 10px auto 10px 0;
+    display: block !important;
+  }
+}
+
 %text-regular {
   color: $text-hint !important;
   font-size: $fs-md !important;
