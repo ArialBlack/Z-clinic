@@ -1,4 +1,41 @@
 .header{
-	margin: 0;
-	padding: 0;
+	margin: 0 auto;
+	padding: 0 30px;
+	max-width: $hdpi+px;
+	&-logo{
+		&_wrap{
+			text-align: center;
+			padding-top: 58px;
+			padding-bottom: 13%;
+		}
+		&_icon{
+			border: 2px solid $primary-color;
+			border-radius: 50%;
+			background-color: $primary-color;
+			max-width: 95px;
+			max-height: 95px;
+			transition: max-width $trs-d, max-height $trs-d, background-color $trs-d;
+			@include max-screen($hdpi){
+				max-width: 82px;
+				max-height: 82px;
+			}
+			@include max-screen($mdpi){
+				max-width: 75px;
+				max-height: 75px;
+			}
+			&-circle,
+			&-letter{
+				transition: max-width $trs-d, max-height $trs-d, fill $trs-d;
+			}
+			&:hover{
+				background-color: $white;
+			}
+			&:hover &-circle{
+				fill: $white;
+			}
+			&:hover &-letter{
+				fill: $primary-color;
+			}
+		}
+	}
 }
