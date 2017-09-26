@@ -1,0 +1,28 @@
+.banner {
+  @extend %content-center;
+  min-height: 400px;
+
+  &-content-wrapper {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &_title {
+    @extend %title-primary;
+    font-weight: 400;
+    letter-spacing: 4px;
+  }
+
+  svg {
+    width: 90px;
+    height: 90px;
+    transition: all $trs-d;
+    margin-top: -50px;
+    margin-bottom: 75px;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      transform: scale(1.1);
+    }
+  }
+}

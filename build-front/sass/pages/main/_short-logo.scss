@@ -25,7 +25,7 @@
         animation-name: draw;
         animation-duration: 3s;
         animation-fill-mode: forwards; // Stay on the last frame
-        animation-iteration-count: infinite; // Run only once
+        animation-iteration-count: 1; // Run only once
         animation-timing-function: linear;
       }
 

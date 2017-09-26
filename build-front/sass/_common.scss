@@ -16,7 +16,6 @@ body {
 #block-clinic-page-title {
   @extend %col-offset-1, %col-11;
   position: relative;
-  padding-top: 150px;
   h1 {
     color: $primary-color;
     font-weight: 700;
