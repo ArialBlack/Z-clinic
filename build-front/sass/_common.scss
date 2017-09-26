@@ -13,8 +13,14 @@ body {
   align-items: center;
 }
 
-.block-clinic-page-title {
+#block-clinic-page-title {
+  max-width: $hdpi+px;
   h1 {
     color: $primary-color;
+    font-weight: 700;
   }
+}
+
+#block-clinic-breadcrumbs {
+  display: none !important;
 }

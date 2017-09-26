@@ -11,13 +11,17 @@
 
     svg {
       width: 90px;
+      cursor: pointer;
+      transition: transform $trs-d;
 
-      transition: all .3s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
       .small-logo_background {
         stroke: $text-dark-hint;
-        stroke-width: 1;
-        stroke-dasharray: 100px;
-        stroke-dashoffset: 100px;
+        stroke-width: 0.1;
+        stroke-dasharray: 10px;
+        stroke-dashoffset: 10px;
         animation-name: draw;
         animation-duration: 3s;
         animation-fill-mode: forwards; // Stay on the last frame
@@ -27,13 +31,13 @@
 
       .small-logo_sign {
         stroke: $primary-color;
-        stroke-width: 1;
-        stroke-dasharray: 100px;
-        stroke-dashoffset: 100px;
+        stroke-width: 0.1;
+        stroke-dasharray: 10px;
+        stroke-dashoffset: 10px;
         animation-name: draw;
-        animation-duration: 3s;
+        animation-duration: 2.5s;
         animation-fill-mode: forwards; // Stay on the last frame
-        animation-iteration-count: infinite; // Run only once
+        animation-iteration-count: 1; // Run only once
         animation-timing-function: linear;
       }
     }
