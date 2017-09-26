@@ -9,36 +9,49 @@
     margin: 0 auto;
     text-align: center;
 
-    svg {
-      width: 90px;
+    .icon.icon-z {
+      font-size: 90px;
+      transition: all $trs-d;
+      margin-top: -50px;
+      margin-bottom: 75px;
       cursor: pointer;
-      transition: transform $trs-d;
+      color: $primary-color;
 
-      &:hover {
+      &:after {
+        content: "";
+        position: absolute;
+        top: -110%;
+        left: -210%;
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+        transform: rotate(30deg);
+
+        background: rgba(255, 255, 255, 0.13);
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%
+        );
+      }
+
+      &:hover, &:focus {
         transform: scale(1.1);
       }
-      .small-logo_background {
-        stroke: $text-dark-hint;
-        stroke-width: 0.1;
-        stroke-dasharray: 10px;
-        stroke-dashoffset: 10px;
-        animation-name: draw;
-        animation-duration: 3s;
-        animation-fill-mode: forwards; // Stay on the last frame
-        animation-iteration-count: 1; // Run only once
-        animation-timing-function: linear;
+
+      &:hover:after {
+        opacity: 1;
+        top: -30%;
+        left: -30%;
+        transition-property: left, top, opacity;
+        transition-duration: 0.7s, 0.7s, 0.15s;
+        transition-timing-function: ease;
       }
 
-      .small-logo_sign {
-        stroke: $primary-color;
-        stroke-width: 0.1;
-        stroke-dasharray: 10px;
-        stroke-dashoffset: 10px;
-        animation-name: draw;
-        animation-duration: 2.5s;
-        animation-fill-mode: forwards; // Stay on the last frame
-        animation-iteration-count: 1; // Run only once
-        animation-timing-function: linear;
+      &:active:after {
+        opacity: 0;
       }
     }
   }
