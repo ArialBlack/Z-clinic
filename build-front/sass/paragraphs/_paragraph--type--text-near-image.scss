@@ -1,9 +1,63 @@
 .paragraph--type--text-near-image {
+  padding: 25px 0;
+  position: relative;
+  overflow: hidden;
+
+  .field-title {
+    @extend %col-offset-1, %col-10, %title-red-line-left, %title-hint;
+    padding: 20px;
+  }
+
+  .field-text-near-image {
+    @extend %col-offset-1, %col-5;
+    padding: 20px;
+    p {
+      @extend %text-regular;
+      padding-bottom: 30px;
+      line-height: 2;
+
+    }
+
+    h4 {
+     @extend %text-bold;
+      color: $primary-color;
+      line-height: 2;
+    }
+  }
+
+  .field-media {
+    @extend %col-6;
+    padding: 0;
+    text-align: right;
+    display: table;
+    img {
+      display: table-cell;
+    }
+  }
+
   &.reversed {
     //flip image
   }
 
   &.with-mark {
-    
+    .field-redmark {
+      @extend %col-offset-1, %col-10, .icon, .icon-z;
+      padding: 40px 20px;
+      transition: transform $trs-d;
+      color: transparent;
+      &:hover, &:focus {
+        &:before {
+          transform: scale(1.1);
+        }
+      }
+
+      &:before {
+        display: inline-block;
+        color: $primary-color;
+        font-size: 64px;
+        cursor: pointer;
+        transition: transform $trs-d;
+      }
+    }
   }
 }

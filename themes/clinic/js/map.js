@@ -210,12 +210,12 @@
         
           
                       marker.addListener('click', function () {
-                          toggleBounce(marker);
+                          // toggleBounce(marker);
                           infowindowForFirst.open(map, marker);
                         });
         
                     secondMarker.addListener('click', function () {
-                        toggleBounce(secondMarker);
+                        // toggleBounce(secondMarker);
                         infowindowForSecond.open(map, secondMarker);
                       });
         
