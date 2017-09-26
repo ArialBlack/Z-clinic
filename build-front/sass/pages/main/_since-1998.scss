@@ -3,8 +3,12 @@
   text-align: center;
   min-height: 400px;
 
-  &_logo {
+  .small_logo {
     margin: 0 auto;
+
+    i {
+      display: block;
+    }
 
     img {
       margin-top: 25px;

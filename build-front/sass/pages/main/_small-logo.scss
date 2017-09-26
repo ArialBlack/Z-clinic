@@ -1,31 +1,26 @@
-.banner {
+.small-logo {
   @extend %content-center;
-  min-height: 400px;
+  text-align: center;
+  min-height: 300px;
+  height: auto;
 
-  &-content-wrapper {
-    text-align: center;
+  &-wrapper {
+    max-width: 400px;
     margin: 0 auto;
-  }
-
-  &_title {
-    @extend %title-primary;
-    font-weight: 400;
-    letter-spacing: 4px;
+    text-align: center;
   }
 
   .icon.icon-z {
     font-size: 90px;
     transition: all $trs-d;
-    margin-top: -40px;
-    margin-bottom: 75px;
     cursor: pointer;
     color: $primary-color;
 
     &:after {
       content: "";
       position: absolute;
-      top: -60%;
-      left: -160%;
+      top: -40%;
+      left: -90%;
       width: 150%;
       height: 150%;
       opacity: 0;
@@ -44,7 +39,6 @@
     &:hover, &:focus {
       transform: scale(1.1);
     }
-
 
     &:hover:after {
       opacity: 1;
