@@ -47,12 +47,16 @@
  */
 #}
 <div class="layout-container">
-
+<!-- 
   <header role="banner">
     {{ page.header }}
+  </header> -->
+
+  <header role="header">
+    @@include('../page_parts/menu/main.twig')
+    @@include('../page_parts/header/main.twig')
   </header>
 
-  @@include('../page_parts/menu/main.twig')
 
   {{ page.breadcrumb }}
 
