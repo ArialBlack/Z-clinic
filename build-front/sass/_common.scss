@@ -12,3 +12,9 @@ body {
   display: flex;
   align-items: center;
 }
+
+.block-clinic-page-title {
+  h1 {
+    color: $primary-color;
+  }
+}
