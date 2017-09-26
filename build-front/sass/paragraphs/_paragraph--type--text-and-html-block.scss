@@ -1,5 +1,31 @@
 .paragraph--type--text-and-html-block {
-  &.with-mark {
-
-  }
+	@extend %center-block;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	color: $text-light-gray;
+	@include screen($tablet, $hdpi){
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+	.field-title {
+		@extend %title-red-line;
+		font-weight: 700;
+		font-size: 24px;
+		color: $text-dark-hint;
+		// @include screen($tablet, $hdpi){
+		// 	font-size: calc( 1.2vw + .5rem );
+		// }
+		&:after {
+			margin: 15px 0 40px 0;
+		}
+	}
+	p {
+		font-size: $fs-md;
+		line-height: 1.6;
+		margin: 2em 0px;
+		// @include screen($tablet, $hdpi){
+		// 	font-size: calc( 0.8vw + .5rem );
+		// }
+	}
+	&.with-mark {}
 }

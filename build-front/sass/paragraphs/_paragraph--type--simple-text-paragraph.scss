@@ -9,8 +9,8 @@
 		font-style: italic;
 		font-size: 20px;
 		color: $text-light-gray;
-		@include screen($tablet, $hdpi){
-			font-size: calc( 1.1vw + .625rem );
-		}
+		// @include screen($tablet, $hdpi){
+		// 	font-size: calc( 1vw + .5rem );
+		// }
 	}
 }
