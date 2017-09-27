@@ -1,10 +1,11 @@
 .paragraph--type--simple-text-paragraph {
 	@extend %center-block;
 	position: relative;
-	margin-bottom: 120px;
+	margin-bottom: 40px;
 	blockquote{
 		padding-bottom: 90px;
 		padding-top: 90px;
+		padding-right: 16%;
 		position: relative;
 		font-style: italic;
 		font-size: 20px;
@@ -12,6 +13,37 @@
 		// @include screen($tablet, $hdpi){
 		// 	font-size: calc( 1vw + .5rem );
 		// }
+		@include max-screen(1600){
+			padding-left: 7.5vw;
+			padding-right: 14vw;
+		}
+
+		&:before,
+		&:after{
+			position: absolute;
+			font-size: 280px;
+			font-style: italic;
+			color: #e6e7e8;
+			font-weight: 300;
+			line-height: 88px;
+			@include max-screen(1600){
+				font-size: calc( 15vw + .5rem );
+			}
+		}
+		&:before{
+			content: '“';
+			top: 143px;
+			left: -115px;
+			@include max-screen(1600){
+				left: 0;
+				top: calc( 9vw + .5rem);
+			}
+		}
+		&:after{
+			content: '”';
+			bottom: 10px;
+			right: 8%;
+		}
 	}
 
   .field-title {
