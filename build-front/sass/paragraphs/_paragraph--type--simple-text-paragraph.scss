@@ -3,8 +3,8 @@
 	position: relative;
 	margin-bottom: 40px;
 	blockquote{
-		padding-bottom: 90px;
-		padding-top: 90px;
+		padding-bottom: calc(90px - 2.7em);
+		padding-top: calc(90px - 2.7em);
 		padding-right: 16%;
 		position: relative;
 		font-style: italic;
@@ -20,28 +20,26 @@
 
 		&:before,
 		&:after{
+			@extend .icon;
 			position: absolute;
-			font-size: 280px;
-			font-style: italic;
+			font-size: 82px;
 			color: #e6e7e8;
-			font-weight: 300;
-			line-height: 88px;
+			line-height: 82px;
 			@include max-screen(1600){
-				font-size: calc( 15vw + .5rem );
+				font-size: calc( 4.2vw + .5rem );
 			}
 		}
 		&:before{
-			content: '“';
-			top: 143px;
+			content: $icon-quotes-open;
+			top: 0px;
 			left: -115px;
 			@include max-screen(1600){
 				left: 0;
-				top: calc( 9vw + .5rem);
 			}
 		}
 		&:after{
-			content: '”';
-			bottom: 10px;
+			content: $icon-quotes-close;
+			bottom: 0;
 			right: 8%;
 		}
 	}
