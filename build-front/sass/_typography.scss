@@ -2,12 +2,16 @@
   text-transform: uppercase;
   color: $text-hint;
   font-size: $fs-lg;
+  font-family: "roboto", opensans, sans-serif;
+  line-height: 1.25;
 }
 
 %title-primary {
   text-transform: uppercase ;
   color: $primary-color;
   font-size: $fs-title;
+  font-family: "roboto", opensans, sans-serif;
+  line-height: 1.25;
 }
 
 %title-dark {
@@ -47,5 +51,6 @@
 }
 
 %text-bold {
-  font-weight: 700 !important;
+  font-weight: 600;
+  font-family: "roboto", opensans, sans-serif;
 }

@@ -1,5 +1,4 @@
 .paragraph--type--text-near-image {
-  margin: 25px 0 0;
   position: relative;
   overflow: hidden;
 
@@ -55,7 +54,7 @@
 
   &.with-mark {
     .field-redmark {
-      @extend .icon, .icon-z;
+      @extend %col-12, .icon, .icon-z;
       padding: 20px 40px;
       transition: transform $trs-d;
       color: transparent;
