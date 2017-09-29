@@ -1,14 +1,16 @@
 .paragraph--type--text-and-html-block {
-	@extend %center-block;
+	@extend %center-block, .row;
+	min-height: 500px;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	color: $text-light-gray;
+	position: relative;
 	@include screen($tablet, $hdpi){
 		padding-top: 5%;
 		padding-bottom: 5%;
 	}
 	.field-title {
-		@extend %title-red-line;
+		@extend %title-red-line, .col-md-8;
 		font-weight: 700;
 		font-size: 24px;
 		color: $text-dark-hint;
@@ -19,6 +21,9 @@
 			margin: 15px 0 40px 0;
 		}
 	}
+	.field-text-long{
+		@extend .col-md-7;
+	}
 	p {
 		font-size: $fs-md;
 		line-height: 1.6;
@@ -28,4 +33,56 @@
 		// }
 	}
 	&.with-mark {}
+	.field-text-html{
+		@extend .col-md-4;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		&-i{
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: $primary-color;
+			// padding-top: 200px;
+			color: $white;
+			padding-top: 10%;
+			flex-direction: column;
+			display: flex;
+			justify-content: space-around;
+			&.is-first{
+				top: 100px;
+				// padding-top: 100px;
+			}
+			.html-row{
+				// width: 50%;
+				padding: 0 25%;
+				position: relative;
+				line-height: 1.5;
+				.icon{
+					position: absolute;
+					top: 50%;
+					margin-top: -20px;
+					left: 0;
+					width: 25%;
+					text-align: center;
+					font-size: 40px;
+				}
+				h3 {
+					font-size: 24px;
+					font-weight: 700;
+					margin-bottom: 2em;
+					text-transform: uppercase;
+					line-height: 1.5;
+				}
+				p{
+					line-height: 1.5;
+					font-size: $fs-md;
+					margin: 0 0 2.5em;
+				}
+			}
+		}
+	}
 }
