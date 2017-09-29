@@ -1,0 +1,62 @@
+.banner {
+  @extend %content-center;
+  min-height: 400px;
+
+  &-content-wrapper {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &_title {
+    @extend %title-primary;
+    font-weight: 400;
+    letter-spacing: 4px;
+  }
+
+  .icon.icon-z {
+    font-size: 90px;
+    transition: all $trs-d;
+    margin-top: -40px;
+    margin-bottom: 75px;
+    cursor: pointer;
+    color: $primary-color;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -60%;
+      left: -160%;
+      width: 150%;
+      height: 150%;
+      opacity: 0;
+      transform: rotate(30deg);
+
+      background: rgba(255, 255, 255, 0.13);
+      background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.13) 0%,
+          rgba(255, 255, 255, 0.13) 77%,
+          rgba(255, 255, 255, 0.5) 92%,
+          rgba(255, 255, 255, 0.0) 100%
+      );
+    }
+
+    &:hover, &:focus {
+      transform: scale(1.1);
+    }
+
+
+    &:hover:after {
+      opacity: 1;
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-timing-function: ease;
+    }
+
+    &:active:after {
+      opacity: 0;
+    }
+  }
+}

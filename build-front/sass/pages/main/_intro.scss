@@ -16,7 +16,7 @@
     svg {
       cursor: pointer;
       width: 400px;
-      transition: all .3s ease-in;
+      transition: color $trs-d;
       .logo_clinic {
         stroke: $text-dark-hint;
         stroke-width: 1;
@@ -31,9 +31,9 @@
 
       .logo_zablotsky {
         stroke: $primary-color;
-        stroke-width: 1;
-        stroke-dasharray: 100px;
-        stroke-dashoffset: 100px;
+        stroke-width: 0.1;
+        stroke-dasharray: 10px;
+        stroke-dashoffset: 10px;
         animation-name: draw;
         animation-duration: 3s;
         animation-fill-mode: forwards; // Stay on the last frame

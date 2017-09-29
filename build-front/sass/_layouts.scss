@@ -120,3 +120,14 @@ input[type="submit"] {
 main {
   min-height: 100%;
 }
+%center-block{
+  max-width: $hdpi+px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $col-padding*2+px;
+  padding-right: $col-padding*2+px;
+  @include max-screen($mdpi){
+    padding-left: $col-padding+px;
+    padding-right: $col-padding+px;
+  }
+}

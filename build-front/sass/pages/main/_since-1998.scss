@@ -4,11 +4,16 @@
   min-height: 400px;
 
   &_logo {
-    max-width: 400px;
     margin: 0 auto;
+
+    .icon {
+      @extend %icon-logo;
+      display: block;
+    }
 
     img {
       margin-top: 25px;
+      display: block;
     }
   }
 

@@ -1,0 +1,24 @@
+.button {
+  @include button-variant($primary-color, $primary-color);
+  @include button-size(34px, 47px, 22px, 1, 45px);
+  box-shadow: 0 0 49px rgba(164,76,81,.5);
+  position: relative;
+  border: none;
+  height: 50px;
+  width: 200px;
+  outline: none !important;
+  transition: box-shadow $trs-d, background-color $trs-d,height $trs-d, width $trs-d;
+  &:hover{
+    box-shadow: 0 0 65px rgba(164,76,81,.7);
+  }
+  @include max-screen($hdpi){
+    @include button-size(24px, 22px, 22px, 1, 35px);
+    height: 70px;
+    width: 400px;
+  }
+  @include max-screen($tablet){
+    @include button-size(18px, 12px, 18px, 1, 35px);
+    height: 54px;
+    width: 290px;
+  }
+}

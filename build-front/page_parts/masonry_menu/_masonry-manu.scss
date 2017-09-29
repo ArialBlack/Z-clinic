@@ -82,7 +82,7 @@
 		@extend %title-red-line;
 		font-size: 18px;
 		font-weight: 700;
-		color: $text-menu;
+		color: $text-light-gray;
 		&:after{
 			transition: all $trs-d;
 			visibility: hidden;
@@ -121,7 +121,7 @@
 		height: 0;
 		font-size: 12px;
 		line-height: 2;
-		color: $text-menu;
+		color: $text-light-gray;
 		&.is-wide{
 			line-height: 1.8;
 		}

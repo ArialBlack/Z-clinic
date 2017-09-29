@@ -1,5 +1,7 @@
 @include font("roboto", "Roboto-Regular");
 
+@include font("roboto", "Roboto-Italic", normel, italic);
+
 @include font("roboto", "Roboto-Bold", 700);
 
 @include font("roboto", "Roboto-BoldItalic", 700, italic);
@@ -17,4 +19,5 @@
 @include font("roboto", "Roboto-ThinItalic", 100, italic);
 
 @include font("roboto", "Roboto-Black", 900);
+
 @include font("roboto", "Roboto-BlackItalic", 900, italic);

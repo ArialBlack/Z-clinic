@@ -1,5 +1,76 @@
 .paragraph--type--text-near-image {
+  position: relative;
+  overflow: hidden;
+
+  &:nth-child(even) {
+    background: $tabs-background;
+  }
+  .field-title {
+    @extend %col-10, %title-red-line-left, %title-hint;
+    padding: 20px 40px;
+  }
+
+  .field-text-near-image {
+    @extend %col-7;
+    padding: 40px;
+    p {
+      @extend %text-regular;
+      padding-bottom: 30px;
+      line-height: 2;
+
+    }
+
+    h4 {
+     @extend %text-bold;
+      color: $primary-color;
+      line-height: 2;
+    }
+  }
+
+  .field-media {
+    @extend %col-5;
+    padding: 0;
+    text-align: right;
+
+    .field-media {
+
+      img {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+  }
+
   &.reversed {
     //flip image
+    .field-text-near-image {
+      @extend %col-reverse-5;
+    }
+
+    .field-media {
+      text-align: left;
+    }
+  }
+
+  &.with-mark {
+    .field-redmark {
+      @extend %col-12, .icon, .icon-z;
+      padding: 20px 40px;
+      transition: transform $trs-d;
+      color: transparent;
+      &:hover, &:focus {
+        &:before {
+          transform: scale(1.1);
+        }
+      }
+
+      &:before {
+        display: inline-block;
+        color: $primary-color;
+        font-size: 64px;
+        cursor: pointer;
+        transition: transform $trs-d;
+      }
+    }
   }
 }
