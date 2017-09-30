@@ -31,4 +31,82 @@
 			width: 290px;
 		}
 	}
+	.modal-dialog{
+		// max-width: 700px !important;
+		margin: 60px auto 0 !important;
+		.modal-content{
+			background-color: $primary-color;
+			color: $white;
+		}
+		.modal-header{
+			border-bottom: 1px solid $white;
+			.close{
+				border-radius: 50%;
+				width: $menu-icon-size;
+				height: $menu-icon-size;
+				outline: none !important;
+				cursor: pointer;
+				border: 2px $white solid;
+				color: $white;
+				font-size: 34px;
+				background-color: transparent;
+				text-align: center;
+				opacity: 1;
+				transition: transform $trs-d, border-color $trs-d;
+				&:hover {
+					opacity: 1;
+					color: $text-light-gray;
+					border-color: $text-light-gray;
+					transform: rotate(90deg);
+				}
+			}
+		}
+		btn[data-dismiss="modal"] {
+			border-radius: 19px;
+			padding: 0.5rem 1.75rem;
+		}
+		.modal-body{
+			padding: 15px 30px;
+			.js-form-item + .js-form-item{
+				margin-top: 20px;
+			}
+			.js-form-item {
+				@extend .form-group;
+				label {
+					display: block;
+					margin-bottom: 15px;
+					font-weight: 700;
+					font-size: 16px;
+				}
+			}
+			input[type="text"],
+			input[type="tel"],
+			input[type="date"],
+			input[type="time"],
+			textarea ,
+			select {
+				@extend .form-control;
+			}
+			.intl-tel-input{
+				display: block;
+			}
+			.flag-container + input[type="tel"]{
+				padding-left: 50px;
+			}
+			.country-name{
+				color: #999;
+			}
+			.form-actions{
+				text-align: center;
+				margin: 30px 0;
+				.button[type="submit"]{
+					@include button-variant(#4f5051, #4f5051);
+					@include button-size(30px, 80px, 22px, 1, 45px);
+					display: inline-block;
+					width: auto;
+					height: auto;
+				}
+			}
+		}
+	}
 }
