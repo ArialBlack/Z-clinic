@@ -13,7 +13,7 @@
 			right: 0;
 			width: calc(100% / 12 * 4);
 		}
-		@include max-screen($mdpi){
+		@include max-screen($max-mobile){
 			display: none;
 		}
 	}
