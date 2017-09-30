@@ -1,5 +1,22 @@
 .paragraph--type--one-image {
 	width: 100%;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		height: 100%;
+		background-color: $primary-color;
+		right: calc((100% - 1440px) / 2);
+		width: calc(1440px / 12 * 4);
+		@include max-screen($hdpi){
+			right: 0;
+			width: calc(100% / 12 * 4);
+		}
+		@include max-screen($mdpi){
+			display: none;
+		}
+	}
 	div{
 		width: 100%;
 	}
@@ -8,6 +25,7 @@
 	}
 	img{
 		width: 100%;
+		vertical-align: middle;
 	}
 
 }
