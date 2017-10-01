@@ -1,7 +1,8 @@
 .paragraph--type--one-image {
 	width: 100%;
 	position: relative;
-	&:before {
+
+	&.has-overlay:before {
 		content: '';
 		position: absolute;
 		top: 0;
