@@ -54,7 +54,13 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content }}
+      {{ content.field_title }}
+      <div class="text-image-container">
+          {{ content.field_long_text }}
+          <div class="field-media media-as-bg" style="background-image: url({{ content.field_media }});"></div>
+      </div>
+      {{ content.field_output_red_mark }}
+      {{ content.field_flip_order }}
     {% endblock %}
   </div>
 {% endblock paragraph %}

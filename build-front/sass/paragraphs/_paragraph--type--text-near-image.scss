@@ -32,13 +32,9 @@
     padding: 0;
     text-align: right;
 
-    .field-media {
-
-      img {
-        display: inline-block;
-        margin: 0 auto;
-      }
-    }
+    min-height: 400px; //tdo test
+    background-size: cover;
+    background-position: center center;
   }
 
   &.reversed {
