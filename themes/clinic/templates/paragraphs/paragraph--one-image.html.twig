@@ -40,6 +40,8 @@
 #}
 {% set hasOverlay = content.field_has_overlay[0]['#markup'] %}
 
+{% set pID = paragraph.id() %}
+
 {%
   set classes = [
     'paragraph',
@@ -49,7 +51,7 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} id="paragraphID-{{ pID }}">
     {% block content %}
       {{ content }}
     {% endblock %}
