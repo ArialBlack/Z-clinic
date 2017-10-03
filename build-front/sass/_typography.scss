@@ -2,7 +2,6 @@
   text-transform: uppercase;
   color: $text-hint;
   font-size: $fs-lg;
-  font-family: "roboto", opensans, sans-serif;
   line-height: 1.25;
 }
 
@@ -10,7 +9,6 @@
   text-transform: uppercase ;
   color: $primary-color;
   font-size: $fs-title;
-  font-family: "roboto", opensans, sans-serif;
   line-height: 1.25;
 }
 
@@ -44,6 +42,7 @@
 %text-regular {
   color: $text-hint !important;
   font-size: $fs-md !important;
+  font-weight: 400;
 }
 
 %text-light {
@@ -52,5 +51,4 @@
 
 %text-bold {
   font-weight: 600;
-  font-family: "roboto", opensans, sans-serif;
 }
