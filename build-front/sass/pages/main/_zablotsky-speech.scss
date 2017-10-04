@@ -16,6 +16,11 @@
       color: $primary-color;
       font-size: 40px;
       margin: 40px;
+      transition: transform $trs-d;
+      cursor: pointer;
+      &:hover, &:focus {
+        transform: scale(1.1);
+      }
     }
   }
 
