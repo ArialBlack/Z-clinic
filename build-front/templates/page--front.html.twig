@@ -73,7 +73,18 @@
     </section>
     <section class="about-us">
       <h3 class="about-us_title">Медіа про нас</h3>
-      {#here will be slider#}
+      <div class="about-us_carousel-wrapper">
+        <div class="about-use_carousel-nav" id="about-us_carousel-nav"></div>
+        <ul class="about-us_carousel">
+          <li>
+            <img src="../themes/clinic/img/focus-logo.png" alt="focus logo"/>
+          </li>
+          <li><img src="../themes/clinic/img/inter.png" alt="inter logo"/></li>
+          <li><img src="../themes/clinic/img/correspondent-logo.png" alt="correspondent logo"/></li>
+          <li><img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/></li>
+          <li><img src="../themes/clinic/img/forbes-logo.png" alt="forbes logo"/></li>
+        </ul>
+      </div>
     </section>
 
     <section class="zablotsky-speech">
@@ -87,26 +98,20 @@
       <div class="zablotsky-speech_portrait">
         <img src="../themes/clinic/img/zablotsky_portrait.png" alt="yaroslav zablotsky portrait">
       </div>
-      <div class="zablotsky-speech_sides">
+      <div class="zablotsky-speech_slides">
         <div class="zablotsky-speech-wrapper">
-        <h3 class="zablotsky-speech_sides-title">Філософія</h3>
-        <div class="zablotsky-speech_sides-pager">
-          <a href="#" class="zablotsky-speech_sides-pager-link">
-            <i class="icon arrow-left"></i>
-          </a>
-          <a href="#" class="zablotsky-speech_sides-pager-link">
-            <span class="zablotsky-speech_sides-pager-current">2</span>
-          </a>
-          <a href="#" class="zablotsky-speech_sides-pager-link">
-            <span class="zablotsky-speech_sides-pager-all">5</span>
-          </a>
-          <a href="#" class="zablotsky-speech_sides-pager-link">
-            <i class="icon arrow-right"></i>
-          </a>
-        </div>
-        <p class="zablotsky-speech_sides-content">
-          Я відмовляю людям у виготовленні“мостів” на здорові зуби, адже для цього потрібно нищити (обточувати) здорові зуби – обточені зуби років через 15-20 прийдеться видаляти!
-        </p>
+        <h3 class="zablotsky-speech_slides-title">Філософія</h3>
+          <div id="zablotsky-speech_slides-nav" class="zablotsky-speech_slides-nav">
+            <span class="zablotsky-speech_slides-nav-current zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-current">1</span>
+            <span class="zablotsky-speech_slides-nav-all zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-all">5</span>
+          </div>
+          <ul class="zablotsky-speech_slides-carousel">
+            <li>Я відмовляю людям у виготовленні“мостів” на здорові зуби, адже для цього потрібно нищити (обточувати) здорові зуби – обточені зуби років через 15-20 прийдеться видаляти!</li>
+            <li>Slide 2</li>
+            <li>Slide 3</li>
+            <li>Slide 4</li>
+            <li>Slide 5</li>
+          </ul>
         </div>
       </div>
 
@@ -118,6 +123,9 @@
         <p class="clinic_location">вул. Коперника 20</p>
       </div>
       <img src="../themes/clinic/img/clinic_lviv.jpg" alt="clinic in lviv">
+      <a href="#" class="clinic-lviv-arrow">
+        <i class="icon icon-floating-arrow"></i>
+      </a>
     </section>
 
     <section class="since-1998">

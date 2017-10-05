@@ -1,4 +1,6 @@
 @import "../bower_components/bootstrap/scss/bootstrap";
+@import "../bower_components/owl.carousel/src/scss/owl.carousel";
+@import "../bower_components/owl.carousel/src/scss/owl.theme.default";
 @import "vendors/media";
 @import "reset";
 @import "mixins";
@@ -16,4 +18,3 @@
 
 @import "paragraphs/*.scss";
 
-@import "blocks/**/*.scss";

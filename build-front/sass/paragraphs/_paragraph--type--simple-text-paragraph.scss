@@ -61,6 +61,7 @@
     }
 
     ul {
+
       li {
         @extend .icon, .icon-floating_arrow, %text-bold;
         color: $text-dark-hint;

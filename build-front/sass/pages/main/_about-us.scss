@@ -3,6 +3,7 @@
   height: auto;
   background: #E6E6E6 url('../img/city_background.jpg') no-repeat fixed 90% 100%;
   background-size: cover;
+  padding: 50px 0;
   margin: 20px 0;
 
   &_title {
@@ -11,5 +12,43 @@
     width: 100%;
     text-align: center;
     padding-top: 50px;
+  }
+
+  &_carousel {
+    padding: 50px;
+
+    &-wrapper {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    &-nav {
+      display: flex;
+      width: 100%;
+      position: relative;
+
+      &-arrow {
+        color: white;
+        background: $primary-color;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 40px;
+        cursor: pointer;
+        top: 45%;
+
+        &.left {
+          position: absolute;
+          left: 15px;
+          z-index: 100;
+        }
+
+        &.right {
+          position: absolute;
+          right: 15px;
+          z-index: 100;
+        }
+      }
+    }
   }
 }

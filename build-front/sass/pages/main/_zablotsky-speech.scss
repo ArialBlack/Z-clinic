@@ -1,18 +1,26 @@
 .zablotsky-speech {
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  max-width: $hdpi 'px';
+
   &-wrapper {
     width: 300px;
     margin: 0 auto;
   }
 
   &_info {
-    @extend %col-4;
+    @extend .col-lg-4;
     text-align: center;
-
     .icon {
       color: $primary-color;
-      font-size: $fs-lg;
-      margin: 20px;
+      font-size: 40px;
+      margin: 40px;
+      transition: transform $trs-d;
+      cursor: pointer;
+      &:hover, &:focus {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -25,40 +33,58 @@
   }
 
   &_portrait {
-    @extend %col-4;
+    @extend .col-lg-4;
     text-align: center;
-
     img {
       vertical-align: middle;
       max-width: 100%;
     }
   }
 
-  &_sides {
-    @extend %col-4;
+  &_slides {
+    @extend .col-lg-4;
     text-align: center;
     &-title {
       @extend %title-dark;
     }
 
-    &-pager {
-      &-link {
+    &-nav {
+      display: flex;
+      margin: 40px;
+
+      &-arrow {
         text-decoration: none;
-        color: $text-dark;
-        transition: all .2s ease-in;
-        &:hover {
-          color: $primary-color;
+        color: $primary-color;
+        cursor: pointer;
+        font-size: $fs-lg;
+        margin: 5px;
+        align-self: flex-end;
+      }
+
+
+      &-current {
+        font-size: $fs-lg;
+        font-weight: 700;
+        align-self: flex-end;
+      }
+
+      &-all {
+        font-size: $fs-sm;
+        font-weight: 400;
+        align-self: flex-end;
+
+        &:before {
+          content: '/';
         }
       }
 
-      &-current {
-        font-size: 26px;
-        color: $text-dark;
+      &-page {
+
       }
     }
-
-    &-content {
+    ul li {
       @extend %text-regular;
+      padding: 20px;
     }
   }
 }
