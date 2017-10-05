@@ -99,5 +99,6 @@ function clinic_preprocess_page(&$variables) {
   $variables['kontaktivsapku_lviv'] = $block_content;
 
   $variables['quoutes'] = views_embed_view('quoutes2front', 'block_1');
-
+  $variables['doctors'] = views_embed_view('doctors', 'block_1');
+  $variables['reviews'] = views_embed_view('reviews', 'block_1');
 }
