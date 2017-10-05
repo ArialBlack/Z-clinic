@@ -91,10 +91,13 @@ function clinic_preprocess_page(&$variables) {
     ->getViewBuilder('block')
     ->view($block);
   $variables['kontaktivsapku_kiiv'] = $block_content;
-  //
+
   $block = \Drupal\block\Entity\Block::load('kontaktivsapku_lviv');
   $block_content = \Drupal::entityTypeManager()
     ->getViewBuilder('block')
     ->view($block);
   $variables['kontaktivsapku_lviv'] = $block_content;
+
+  $variables['quoutes'] = views_embed_view('quoutes2front', 'block_1');
+
 }
