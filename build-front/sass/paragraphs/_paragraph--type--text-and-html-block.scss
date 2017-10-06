@@ -36,11 +36,12 @@
 	}
 
 	.field-text-html {
-		@extend .col-md-4;
+		@extend .col-md-4,.row;
 		position: absolute;
 		right: 0;
 		top: 0;
 		bottom: 0;
+		margin: 0;
 		@include max-screen($max-mobile){
 			position: static;
 			width: 100vw;
@@ -66,59 +67,71 @@
 				position: static;
 				padding: 10% 0px;
 			}
-			.html-section + .html-section{
-				@include max-screen($max-mobile){
-					margin-top: 2em;
+			&.is-not-full-height{
+				position: static;
+				margin: 0 15px;
+				background-color: $primary-color;
+				padding: 40px 0;
+				&.align-self-end{
+					margin-bottom: 100px;
 				}
 			}
-			.html-row {
-				padding: 0 25%;
-				position: relative;
-				line-height: 1.5;
+		}
+		.html-section + .html-section{
+			@include max-screen($max-mobile){
+				margin-top: 2em;
+			}
+		}
+		.html-row {
+			padding: 0 25%;
+			position: relative;
+			line-height: 1.5;
+			@include max-screen($hdpi){
+				padding: 0 10% 0 30%;
+			}
+			@include max-screen($mdpi){
+				padding: 0 10% 0 20%;
+			}
+			.icon {
+				position: absolute;
+				top: 50%;
+				margin-top: -20px;
+				left: 0;
+				width: 25%;
+				text-align: center;
+				font-size: 40px;
 				@include max-screen($hdpi){
-					padding: 0 10% 0 30%;
+					width: 30%;
+					font-size: 34px;
+					margin-top: -17px;
 				}
 				@include max-screen($mdpi){
-					padding: 0 10% 0 20%;
-				}
-				.icon {
-					position: absolute;
-					top: 50%;
-					margin-top: -20px;
-					left: 0;
-					width: 25%;
-					text-align: center;
-					font-size: 40px;
-					@include max-screen($hdpi){
-						width: 30%;
-						font-size: 34px;
-						margin-top: -17px;
-					}
-					@include max-screen($mdpi){
-						width: 20%;
-						font-size: 28px;
-						margin-top: -14px;
-					}
-				}
-				h3 {
-					font-size: 24px;
-					font-weight: 700;
-					margin-bottom: 2em;
-					text-transform: uppercase;
-					line-height: 1.5;
-					@include max-screen($max-mobile){
-						margin-bottom: .5em;
-					}
-				}
-				p {
-					line-height: 1.5;
-					font-size: $fs-md;
-					margin: 0 0 2.5em;
-					@include max-screen($max-mobile){
-						margin: 0 0 .5em;
-					}
+					width: 20%;
+					font-size: 28px;
+					margin-top: -14px;
 				}
 			}
+			h3 {
+				font-size: 24px;
+				font-weight: 700;
+				// margin-bottom: 2em;
+				text-transform: uppercase;
+				line-height: 1.5;
+				@include max-screen($max-mobile){
+					margin-bottom: .5em;
+				}
+			}
+			p {
+				line-height: 1.5;
+				font-size: $fs-md;
+				margin: 0;
+				@include max-screen($max-mobile){
+					margin: 0 0 .5em;
+				}
+			}
+		}
+		.html-row + .html-row {
+			margin: 2.5em 0 0;
 		}
 	}
 
