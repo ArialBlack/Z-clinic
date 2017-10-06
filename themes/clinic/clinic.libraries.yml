@@ -2,16 +2,10 @@ global-styling:
   css:
     theme:
       css/theme.css: {}
-
 tether:
   js:
      js/tether.js: {}
 
-owl.carousel:
-  js:
-     js/owl.carousel.js: {}
-  dependencies:
-      - core/jquery
 googlemaps:
   js:
      https://maps.googleapis.com/maps/api/js?key=AIzaSyAxc5g10jp8zZSf-gaNvlu8vMR5JRiUsOw&v=3.exp: { type: external, minified: true }
@@ -20,17 +14,11 @@ popper:
   js:
      js/popper.js: {}
 
-custom:
-  js:
-    js/main.js: {}
-    js/map.js: {}
-  dependencies:
-     - core/jquery
-     - bootstrap
-     - owl.carousel
 bootstrap:
   js:
       js/bootstrap.js: {}
+      js/main.js: {}
+      js/map.js: {}
   dependencies:
     - core/jquery
     - clinic/tether
