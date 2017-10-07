@@ -40,6 +40,7 @@
 #}
 {% set order = content.field_flip_order[0]['#markup'] %}
 {% set redMark = content.field_output_red_mark[0]['#markup'] %}
+{% set pID = paragraph.id() %}
 
 {%
   set classes = [
@@ -52,7 +53,7 @@
 %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }}  id="paragraphID-{{ pID }}">
     {% block content %}
       {{ content }}
     {% endblock %}
