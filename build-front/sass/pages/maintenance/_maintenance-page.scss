@@ -1,0 +1,63 @@
+.maintenance-page {
+  background: url('/themes/clinic/img/develop.jpg') no-repeat center center;
+  background-size: cover;
+
+  .text-xs-center {
+    text-align: center;
+  }
+
+  #page-wrapper,
+  #page,
+  #main-wrapper {
+    height: 100%;
+  }
+
+  #main-wrapper {
+    position: relative;
+
+    #main {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .red {
+    color: $primary-color;
+  }
+
+  h1 {
+    font-size: 72px;
+    text-transform: uppercase;
+    line-height: 180px;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+
+    &.red {
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+      text-transform: none;
+    }
+  }
+
+  .red-line {
+    display: inline-block;
+    width: 80px;
+    height: 10px;
+    background: $primary-color;
+    margin-bottom: 100px;
+  }
+
+  a {
+    font-size: 30px;
+    line-height: 60px;
+    color: white;
+  }
+}

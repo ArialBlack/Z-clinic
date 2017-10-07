@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Bartik's theme implementation to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+ #}
+<div id="page-wrapper">
+  <div id="page">
+    <div id="main-wrapper" class="container text-sm-center text-xs-center">
+      <div id="main" class="clearfix">
+        <main id="content" class="column" role="main">
+          <section class="section">
+            <img class="clock" src="/themes/clinic/img/clock.png" />
+            <h1 class="title red" id="page-title">Вибачте</h1>
+            <h2>Сайт знаходиться в розробці</h2>
+            <div class="red-line"></div>
+            <h2 class="red">Зв’яжіться з нами :</h2>
+            <a class="tel" href="tel:+380674115010">+38 (067) 411-5-010</a>
+            <a class="email" href="mailto:klinika@zablotskyy.kiev.ua">klinika@zablotskyy.kiev.ua</a>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
