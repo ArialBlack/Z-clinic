@@ -72,7 +72,9 @@
         </div>
     </section>
     <section class="about-us">
-      <h3 class="about-us_title">Медіа про нас</h3>
+
+      <h1 class="about-us_title">Медіа про нас</h1>
+
       <div class="about-us_carousel-wrapper">
         <div class="about-use_carousel-nav" id="about-us_carousel-nav"></div>
         <ul class="about-us_carousel">
@@ -105,13 +107,11 @@
             <span class="zablotsky-speech_slides-nav-current zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-current">1</span>
             <span class="zablotsky-speech_slides-nav-all zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-all">5</span>
           </div>
-          <ul class="zablotsky-speech_slides-carousel">
-            <li>Я відмовляю людям у виготовленні“мостів” на здорові зуби, адже для цього потрібно нищити (обточувати) здорові зуби – обточені зуби років через 15-20 прийдеться видаляти!</li>
-            <li>Slide 2</li>
-            <li>Slide 3</li>
-            <li>Slide 4</li>
-            <li>Slide 5</li>
-          </ul>
+
+          <div class="zablotsky-speech_slides-carousel-container">
+            {{ quoutes }}
+          </div>
+
         </div>
       </div>
 
@@ -176,10 +176,6 @@
         </div>
         <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
       </section>
-
-    {#<div class="layout-content">#}
-      {#{{ page.content }}#}
-    {#</div>#}{# /.layout-content #}
 
     @@include('../page_parts/banner/banner.twig')
     <div class="map" id="map">

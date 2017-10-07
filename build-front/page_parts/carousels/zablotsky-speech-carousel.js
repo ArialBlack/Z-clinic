@@ -10,6 +10,8 @@
     console.log('render count', event);
   }
     $(document).ready(function(){
+      $('.zablotsky-speech_slides-carousel-container ul').addClass('zablotsky-speech_slides-carousel');
+      
       var zablotskySpeechCarousel = $('.zablotsky-speech_slides-carousel');
       zablotskySpeechCarousel.addClass('owl-carousel owl-theme');
       zablotskySpeechCarousel.owlCarousel({

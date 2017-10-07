@@ -46,8 +46,9 @@
  https://www.drupal.org/docs/8/modules/twig-tweak/cheat-sheet-8x-2x
  */
 #}
+
 <div class="layout-container">
-<!--
+  <!--
   <header role="banner">
     {{ page.header }}
   </header> -->
@@ -66,7 +67,12 @@
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
+
       {{ page.content }}
+
+      {{ doctors }}
+
+      {{ reviews }}
     </div>{# /.layout-content #}
 
     {% if page.sidebar_first %}

@@ -1,6 +1,10 @@
 .paragraph--type--modal-form {
 	.image-button-container{
 		position: relative;
+		picture,
+		img {
+			width: 100%;
+		}
 	}
 	.btn[data-toggle="modal"]{
 		@include button-variant($primary-color, $primary-color);

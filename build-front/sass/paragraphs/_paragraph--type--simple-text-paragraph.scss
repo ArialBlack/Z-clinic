@@ -2,92 +2,105 @@
 	@extend %center-block;
 	position: relative;
 	margin-bottom: 40px;
-	blockquote{
+	blockquote {
 		padding-bottom: calc(90px - 2.7em);
 		padding-top: calc(90px - 2.7em);
 		padding-right: 16%;
 		position: relative;
 		font-style: italic;
 		font-size: 20px;
-		color: $text-light-gray;
-		// @include screen($tablet, $hdpi){
+		color: $text-light-gray; // @include screen($tablet, $hdpi){
 		// 	font-size: calc( 1vw + .5rem );
 		// }
-		@include max-screen(1600){
+		@include max-screen(1600) {
 			padding-left: 7.5vw;
 			padding-right: 14vw;
 		}
 
 		&:before,
-		&:after{
+		&:after {
 			@extend .icon;
 			position: absolute;
 			font-size: 82px;
 			color: #e6e7e8;
 			line-height: 82px;
-			@include max-screen(1600){
-				font-size: calc( 4.2vw + .5rem );
+			@include max-screen(1600) {
+				font-size: calc( 4.2vw + .5rem);
 			}
 		}
-		&:before{
+		&:before {
 			content: $icon-quotes-open;
 			top: 0px;
 			left: -115px;
-			@include max-screen(1600){
+			@include max-screen(1600) {
 				left: 0;
 			}
 		}
-		&:after{
+		&:after {
 			content: $icon-quotes-close;
 			bottom: 0;
 			right: 8%;
 		}
 	}
 
-  .field-title {
-    @extend %title-hint, %title-red-line-left;
-    color: $text-dark-hint;
-    margin: 25px 0;
-  }
+	.field-title {
+		@extend %title-hint,
+		%title-red-line-left;
+		color: $text-dark-hint;
+		// margin: 25px 0;
+		&:after {
+			margin: 10px auto 40px 0;
+		}
+	}
 
-  .field-text-long {
-    p {
-      font-size: $fs-md;
-      line-height: 1.6;
-      margin: 2em 0px;
-      // @include screen($tablet, $hdpi){
-      // 	font-size: calc( 0.8vw + .5rem );
-      // }
-    }
+	.field-text-long {
+		p {
+			font-size: $fs-md;
+			line-height: 1.6;
+			margin: 2em 0px; // @include screen($tablet, $hdpi){
+			// 	font-size: calc( 0.8vw + .5rem );
+			// }
+		}
 
-    ul {
+		ul {
 
-      li {
-        @extend .icon, .icon-floating_arrow, %text-bold;
-        color: $text-dark-hint;
-        display: block;
-        list-style-position: outside;
-        padding: 15px 0 0;
+			li {
+				@extend %text-bold;
+				font-size: 20px;
+				line-height: 1.4;
+				color: $text-dark-hint;
+				display: block;
+				list-style-position: outside;
+				padding: 5px 0;
+				position: relative;
+				padding-left: 50px;
 
+				&:before {
+					@extend .icon, .icon-tick;
+					color: $white;
+					position: absolute;
+					left: 0;
+					top: 7px;
+					background: $primary-color;
+					font-size: 12px;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					text-align: center;
+					line-height: 20px;
+				}
+			}
+		}
 
-        &:before {
-          color: $primary-color;
-          background: $text-light;
-          margin-right: 5px;
-          font-size: 14px;
-        }
-      }
-    }
-
-    h4 {
-      a {
-        display: block;
-        line-height: 1.25;
-        text-transform: uppercase;
-        color: $text-hint;
-        font-weight: 200;
-        margin: 20px 0;
-      }
-    }
-  }
+		h4 {
+			a {
+				display: block;
+				line-height: 1.25;
+				text-transform: uppercase;
+				color: $text-hint;
+				font-weight: 200;
+				margin: 20px 0;
+			}
+		}
+	}
 }
