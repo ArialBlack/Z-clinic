@@ -149,7 +149,7 @@ main {
   @include max-screen($max-mobile){
     position: static;
     width: 100vw;
-    margin: 0 -15px;
+    margin: 0 -15px 50px;
     padding: 0;
   }
   &-i {
@@ -168,7 +168,7 @@ main {
     &.is-first {
       top: 100px;
     }
-    @include max-screen($max-mobile){
+    @include max-screen($max-mobile) {
       position: static;
       padding: 10% 0px;
     }
@@ -177,16 +177,19 @@ main {
       margin: 0 15px;
       background-color: $primary-color;
       padding: 40px 0;
+      @include max-screen($max-mobile) {
+        margin: 0;
+      }
       &.align-self-end{
         margin-bottom: 100px;
-        @include max-screen($max-mobile){
+        @include max-screen($max-mobile) {
           margin-bottom: 0;
         }
       }
     }
   }
   .html-section + .html-section{
-    @include max-screen($max-mobile){
+    @include max-screen($max-mobile) {
       margin-top: 2em;
     }
   }
@@ -194,7 +197,7 @@ main {
     padding: 0 25%;
     position: relative;
     line-height: 1.5;
-    @include max-screen($hdpi){
+    @include max-screen($hdpi) {
       padding: 0 10% 0 30%;
     }
     @include max-screen($mdpi){
