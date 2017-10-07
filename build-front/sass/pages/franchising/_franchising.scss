@@ -27,12 +27,14 @@
 		padding-bottom: 0;
 	}
 	.paragraph--type--simple-text-paragraph{
-		@extend .col-md-8;
+		@extend .col-md-7;
 		margin-left: 0;
 		margin-right: 0;
+		margin-bottom: 100px;
 	}
 	.paragraph--type--custom-html-block{
 		@extend .col-md-4;
+		margin: 0;
 		@include min-screen($max-mobile) {
 			position: absolute;
 			top: 120px;

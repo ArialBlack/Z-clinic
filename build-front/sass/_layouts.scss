@@ -158,7 +158,7 @@ main {
     top: 0;
     bottom: 0;
     left: 0;
-    // width: 100%;
+    width: 100%;
     background-color: $primary-color;
     color: $white;
     padding-top: 10%;
@@ -244,5 +244,23 @@ main {
   .html-row.is-no-icon,
   .is-no-icon .html-row {
     padding: 0 10%;
+  }
+  .vertival-text{
+    font-weight: 900;
+    font-size: 36px !important;
+    font-family: roboto;
+    position: static !important;
+    margin-bottom: 12px;
+    @include min-screen($max-mobile) {
+      position: absolute !important;
+      right: 100%;
+      top: 0 !important;
+      left: auto !important;
+      transform-origin: 100% 100%;
+      color: $primary-color;
+      margin-top: -20px !important;
+      margin-right: 7px;
+      transform: rotate(-90deg);
+    }
   }
 }
