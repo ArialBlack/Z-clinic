@@ -1,0 +1,43 @@
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/62"]{
+	@extend %center-block-with-bg;
+	background-color: #fbfbfb;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	a{
+		text-decoration: underline;
+		display: inline-block;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/63"]{
+	padding-top: 80px;
+	// @extend .row;
+	> * {
+		@extend .col-md-8;
+	}
+}
+.paragraph--type--group-paragraph[data-quickedit-entity-id="paragraph/68"]{
+	@extend %center-block, .row;
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@include max-screen($tablet) {
+		padding-bottom: 0;
+	}
+	.paragraph--type--simple-text-paragraph{
+		@extend .col-md-8;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.paragraph--type--custom-html-block{
+		@extend .col-md-4;
+		@include min-screen($max-mobile) {
+			position: absolute;
+			top: 120px;
+			bottom: 120px;
+			right: 0;
+		}
+	}
+}
