@@ -4,8 +4,10 @@
 	position: relative;
 	&-section {
 		position: absolute;
-		z-index: 2;
-		top: 58px;
+		top: 15px;
+		@include min-screen($max-mobile){
+			top: 30px;
+		}
 	}
 	&-open_button {
 		margin: 3px 0 0 3px;
@@ -19,23 +21,30 @@
 		cursor: pointer;
 		transition: color $trs-d;
 		outline: none !important;
-		&:before {
+		&-text{
+			display: none;
+			@include min-screen($max-mobile){
+				display: block;
+			}
+		}
+		.icon{
 			font-family: svgfont;
-			font-size: $menu-icon-size;
 			display: block;
-			margin: 0 auto;
-			margin-bottom: 17px;
-			max-width: $menu-icon-size;
-			max-height: $menu-icon-size;
+			margin: 0 auto 10px;
 			border-radius: 50%;
 			overflow: hidden;
 			background-color: $white;
 			color: $primary-color;
 			transition: transform $trs-d;
+			// font-size: 40px;
+			font-size: $menu-icon-size;
+			@include min-screen($max-mobile){
+				margin: 0 auto 17px;
+			}
 		}
 		&:hover {
 			color: $primary-color;
-			&:before {
+			& .icon {
 				transform: scale(1.1);
 			}
 		}
@@ -46,7 +55,11 @@
 		top: 0;
 		box-shadow: 0 0 87px rgba(200, 200, 200, .75);
 		background-color: $white-smoke;
-		min-width: 464px;
+		width: calc(100vw - 30px);
+		@include min-screen($max-mobile){
+			min-width: 340px;
+			width: auto;
+		}
 	}
 	&-header {
 		margin: 0;
@@ -56,11 +69,17 @@
 		&_link {
 			text-align: center;
 			width: 50%;
-			padding-top: 50%;
+			padding-top: 40%;
 			float: left;
 			position: relative;
 			color: $primary-color;
 			font-weight: 300;
+			@include min-screen($max-mobile){
+				padding-top: 50%;
+			}
+			@include landscape-max-screen($tablet){
+				padding-top: 20%;
+			}
 			&:hover {
 				color: $primary-color;
 			}
@@ -112,11 +131,11 @@
 	}
 	.tab-content {
 		position: relative;
-		padding-bottom: 70px;
+		padding-bottom: 65px;
 	}
 	&-close_button {
 		position: absolute;
-		bottom: 18px;
+		bottom: 10px;
 		border-radius: 50%;
 		width: $menu-icon-size;
 		height: $menu-icon-size;
@@ -139,14 +158,17 @@
 			left: 0;
 		}
 		.menu-close_button {
-			right: 18px;
+			right: 10px;
 		}
 		&-content{
 				overflow: hidden;
-				padding: 22px 50px 92px 62px;
+				padding: 15px 25px 63px 30px;
 			&_tab {
 				float: left;
-				max-width: 200px;
+				max-width: calc(100% - 46px);
+				@include min-screen($max-mobile){
+					max-width: 220px;
+				}
 				box-sizing: content-box;
 				.nav-item {
 					position: relative;
@@ -190,7 +212,7 @@
 						font-weight: 700;
 						color: $text-light-gray;
 						transition: color $trs-d;
-						padding: 18px 10px;
+						padding: 10px;
 						margin: -2px 0;
 					}
 					&:hover .nav-link {
@@ -205,10 +227,9 @@
 		}
 		&-social{
 			float: right;
-			padding-top: 85px;
+			padding-top: 30px;
 			&_icon{
 				display: block;
-				margin-bottom: 35px;
 				width: $menu-icon-size;
 				height: $menu-icon-size;
 				border: 2px $primary-color solid;
@@ -217,7 +238,7 @@
 				border-radius: 50%;
 				text-align: center;
 				line-height: $menu-icon-size - 4;
-				// transition: color $trs-d, background-color $trs-d;
+				transition: color $trs-d, background-color $trs-d;
 				&:before{
 					// transition: color $trs-d, background-color $trs-d;
 				}
@@ -226,6 +247,9 @@
 					color: $white-smoke;
 					background-color:  $primary-color;
 				}
+			}
+			&_icon + &_icon {
+				margin-top: 20px;
 			}
 		}
 	}
@@ -238,12 +262,16 @@
 			margin: 3px 3px 0 0;
 		}
 		.menu-close_button {
-			left: 18px;
+			left: 10px;
 		}
 		&-content_tab {
-			text-align: right;
-			padding: 65px 135px 50px 45px;
 			color: $text-light-gray;
+			text-align: center;
+			padding: 20px 30px;
+			@include min-screen($max-mobile){
+				padding: 15px 30px 0px 20px;
+				text-align: right;
+			}
 			.paragraph{
 				margin-bottom: 25px;
 				font-size: 12px;
