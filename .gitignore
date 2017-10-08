@@ -258,3 +258,5 @@ node_modules/
 /themes/clinic/templates/page--node--*.html.twig
 /themes/clinic/templates/page--front.html.twig
 /themes/clinic/templates/page.html.twig
+/themes/clinic/templates/maintenance-page.html.twig
+!/build-front/images/clock.png
