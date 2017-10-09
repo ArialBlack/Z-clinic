@@ -1,24 +1,45 @@
 .masonry_menu{
-	padding-top: 100px;
-	margin: 0 auto;
+	// display: none;
+	padding-top: 80px;
+	margin: 0 -15px;
 	max-width: $hdpi+px;
+	@include min-screen($max-mobile){
+		margin: 0 auto;
+	}
 	&-left{
 		padding: 0 8px;
 		&_bot{
-			@include min-screen($mdpi){
-				padding-top: 16px;
-			}
+			padding-top: 16px;
 		}
 		&_top{
 			margin: 0 -8px;
+			&-item{
+				padding: 0 8px;
+			}
 		}
-		.col-lg-3{
+		.col-md-3{
 			padding: 0 8px;
 			box-sizing: border-box;
+			margin-top: 16px;
+			@include min-screen($max-tablet){
+				margin-top: 0;
+			}
 		}
 	}
 	&-right{
 		padding: 0 8px;
+		margin-top: 16px;
+		@include min-screen($max-tablet){
+			margin-top: 0;
+		}
+	}
+	@include max-screen($tablet){
+		&-right &-icon{
+			display: inline-block;
+			margin-bottom: 0;
+			margin-right: 25px;
+			font-size: 42px;
+		}
 	}
 	&-item{
 		display: block;
@@ -28,12 +49,24 @@
 		background-color: $white-smoke;
 		position: relative;
 		cursor: pointer;
-		&.is-wide{
-			padding-top: 13%;
+		&.is-wide, 
+		&.is-tall {
+			padding-top: 40%;
 		}
-		&.is-tall{
-			height: 100%;
-			padding-top: 0;
+		@include min-screen($max-mobile) {
+			&.is-wide, 
+			&.is-tall {
+				padding-top: 21%;
+			}
+		}
+		@include min-screen($max-tablet) {
+			&.is-wide{
+				padding-top: 13%;
+			}
+			&.is-tall{
+				height: 100%;
+				padding-top: 0;
+			}
 		}
 		&-i{
 			background-color: transparent;
@@ -49,13 +82,15 @@
 				width: 100%;
 			}
 		}
-		&:hover &-i{
-			background-color: $white;
-			left: -15px;
-			top: -15px;
-			right: -15px;
-			bottom: -15px;
-			box-shadow: 0 0 87px rgba(200, 200, 200, .75);
+		@include min-screen($max-tablet){
+			&:hover &-i{
+				background-color: $white;
+				left: -15px;
+				top: -15px;
+				right: -15px;
+				bottom: -15px;
+				box-shadow: 0 0 87px rgba(200, 200, 200, .75);
+			}
 		}
 	}
 	&-icon{
@@ -64,9 +99,12 @@
 		color: $primary-color;
 		transition: all $trs-d;
 		display: block;
-		@include min-screen($mdpi){
+		@include max-screen($mdpi){
 			font-size: 46px;
 			margin-bottom: 25px;
+		}
+		@include max-screen($max-mobile){
+			margin-bottom: 0;
 		}
 		.is-wide &{
 			font-size: 50px;
@@ -80,9 +118,9 @@
 	}
 	&-title{
 		@extend %title-red-line;
-		font-size: 18px;
 		font-weight: 700;
 		color: $text-light-gray;
+		font-size: 0;
 		&:after{
 			transition: all $trs-d;
 			visibility: hidden;
@@ -93,25 +131,8 @@
 			display: inline-block;
 			// line-height: 50px;
 		}
-	}
-	&-item:hover &-title {
-		&:after{
-			margin-top: 20px;
-			margin-bottom: 50px;
-			width: 54px;
-			visibility: visible;
-			@include min-screen($mdpi){
-				margin-top: 15px;
-				margin-bottom: 35px;
-			}
-		}
-	}
-	&-item.is-wide:hover &-title {
-		&:after{
-			margin-top: 8px;
-			margin-bottom: 18px;
-			width: 54px;
-			visibility: visible;
+		@include min-screen($max-mobile) {
+			font-size: 18px;
 		}
 	}
 	&-hiden_text{
@@ -126,9 +147,31 @@
 			line-height: 1.8;
 		}
 	}
-	&-item:hover &-hiden_text{
-		visibility: visible;
-		opacity: 1;
-		height: auto;
+	@include min-screen($max-tablet){
+		&-item:hover &-title {
+			&:after{
+				margin-top: 20px;
+				margin-bottom: 50px;
+				width: 54px;
+				visibility: visible;
+				@include min-screen($mdpi){
+					margin-top: 15px;
+					margin-bottom: 35px;
+				}
+			}
+		}
+		&-item.is-wide:hover &-title {
+			&:after{
+				margin-top: 8px;
+				margin-bottom: 18px;
+				width: 54px;
+				visibility: visible;
+			}
+		}
+		&-item:hover &-hiden_text{
+			visibility: visible;
+			opacity: 1;
+			height: auto;
+		}
 	}
 }

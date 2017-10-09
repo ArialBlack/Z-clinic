@@ -2,7 +2,13 @@
   @extend %content-center;
   // min-height: 400px;
   // height: auto;
-  padding: 10% 30px 12%;
+  padding: 120px 30px 20%;
+  @include min-screen($max-tablet) {
+    padding: 200px 30px 12%;
+  }
+  @include min-screen($max-tablet) {
+    padding: 10% 30px 12%;
+  }
 
 
   &-wrapper {
@@ -11,11 +17,20 @@
   }
 
   &_logo {
-    width: 600px;
+    width: 90%;
+    @include min-screen($max-mobile) {
+      width: 60%;
+    }
+    @include min-screen($max-tablet) {
+      width: 600px;
+    }
     margin: 0 auto;
     svg {
       cursor: pointer;
-      width: 400px;
+      width: 100%;
+      @include min-screen($max-tablet) {
+        width: 600px;
+      }
       transition: color $trs-d;
       .logo_clinic {
         stroke: $text-dark-hint;
@@ -56,8 +71,12 @@
   }
 
   &_title {
-    @extend %title-hint, %text-bold;
     margin-top: 30px;
+    @extend %title-hint, %text-bold;
+    @include max-screen($tablet){
+      font-size: 25px;
+      font-weight: 400;
+    }
   }
 
   &_navigation-list {
