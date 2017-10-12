@@ -1,0 +1,28 @@
+.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/43"]{
+	@extend %center-block-with-bg;
+	background-color: $white-smoke;
+	.child_advantages{
+		padding: 70px 15% 80px;
+		@include max-screen($tablet){
+			padding: 60px 10%;
+		}
+		&-header{
+			text-align: center;
+			color: $primary-color;
+			border: 10px solid #4f5052;
+			border-radius: 50%;
+			height: 102px;
+			width: 102px;
+			line-height: 82px;
+			font-size: 48px;
+			font-weight: 900;
+			margin: 0 auto 60px;
+		}
+		&-text{
+			font-size: $fs-md;
+			font-weight: 700;
+			color: $text-light-gray;
+			line-height: 1.7;
+		}
+	}
+}
