@@ -38,6 +38,9 @@
 			right: 0;
 		}
 	}
+	.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/69"]{
+		@extend .field-text-html;
+	}
 }
 
 .paragraph--type--text-and-html-block[data-quickedit-entity-id="paragraph/60"] {
