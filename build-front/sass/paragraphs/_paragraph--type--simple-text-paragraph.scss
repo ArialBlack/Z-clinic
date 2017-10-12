@@ -62,35 +62,7 @@
 			// }
 		}
 
-		ul {
 
-			li {
-				@extend %text-bold;
-				font-size: 20px;
-				line-height: 1.4;
-				color: $text-dark-hint;
-				display: block;
-				list-style-position: outside;
-				padding: 5px 0;
-				position: relative;
-				padding-left: 50px;
-
-				&:before {
-					@extend .icon, .icon-tick;
-					color: $white;
-					position: absolute;
-					left: 0;
-					top: 7px;
-					background: $primary-color;
-					font-size: 12px;
-					width: 20px;
-					height: 20px;
-					border-radius: 50%;
-					text-align: center;
-					line-height: 20px;
-				}
-			}
-		}
 
 		h4 {
 			a {

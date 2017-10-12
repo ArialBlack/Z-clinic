@@ -63,6 +63,9 @@
 		@extend %red-mark-z;
 		margin-top: 65px;
 	}
+	ul{
+		@extend %ul-mark-tick;
+	}
 }
 
 %red-mark-z{
