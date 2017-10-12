@@ -26,3 +26,24 @@
 		}
 	}
 }
+
+.paragraph--type--group-paragraph[data-quickedit-entity-id="paragraph/41"] {
+	@extend %center-block;
+	overflow: hidden;
+	padding-bottom: 80px;
+	.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/38"],
+	.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/39"] {
+		@extend .col-md-9;
+		margin: 0;
+		float: left;
+	}
+	.paragraph--type--media[data-quickedit-entity-id="paragraph/40"] {
+		@extend .col-md-3;
+		margin: 0;
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+}
