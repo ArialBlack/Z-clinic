@@ -6,7 +6,7 @@
 }
 
 %title-primary {
-  text-transform: uppercase ;
+  text-transform: uppercase;
   color: $primary-color;
   font-size: $fs-title;
   line-height: 1.25;
@@ -51,4 +51,51 @@
 
 %text-bold {
   font-weight: 600;
+}
+
+%ul-mark{
+  counter-reset: section;
+  li {
+    font-size: 18px;
+    color: $text-dark-hint;
+    display: block;
+    list-style-position: outside;
+    padding: 5px 0;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 50px;
+    &:before {
+      counter-increment: section;
+      content: counters(section,".");
+      color: $white;
+      position: absolute;
+      left: 0;
+      top: 12px;
+      background: $primary-color;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+}
+
+%ul-mark-tick{
+  @extend %ul-mark;
+  li {
+    @extend %text-bold;
+    font-size: 20px;
+    line-height: 1.4;
+    &:before {
+      @extend .icon, .icon-tick;
+      top: 7px;
+      content: %icon-tick;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+    }
+  }
 }
