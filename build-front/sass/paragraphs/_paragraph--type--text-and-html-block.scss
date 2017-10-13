@@ -14,7 +14,7 @@
 		padding-bottom: 0;
 	}
 	.field-title {
-		@extend %title-red-line, .col-md-8, .col-lg-7;
+		@extend %title-red-line, .col-lg-7;
 		font-weight: 700;
 		font-size: 24px;
 		color: $text-dark-hint;
@@ -24,7 +24,7 @@
 		}
 	}
 	.field-text-long {
-		@extend .col-md-8, .col-lg-7;
+		@extend .col-lg-7;
 		@include max-screen($tablet){
 			max-width: none !important;
 		}
