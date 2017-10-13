@@ -70,7 +70,7 @@
       color: $white;
       position: absolute;
       left: 0;
-      top: 12px;
+      top: 8px;
       background: $primary-color;
       width: 30px;
       height: 30px;
@@ -79,6 +79,9 @@
       text-align: center;
       line-height: 30px;
     }
+  }
+  li + li {
+    margin: 30px 0 0 0;
   }
 }
 
@@ -89,7 +92,8 @@
     font-size: 20px;
     line-height: 1.4;
     &:before {
-      @extend .icon, .icon-tick;
+      @extend .icon;
+      content: $icon-tick;
       top: 7px;
       content: %icon-tick;
       width: 20px;
@@ -97,5 +101,8 @@
       line-height: 20px;
       font-size: 12px;
     }
+     li + li {
+      margin: 0;
+     }
   }
 }
