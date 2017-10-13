@@ -1,6 +1,8 @@
 .paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/50"] {
-	@extend .col-lg-9;
-	margin-bottom: 100px
+	margin-bottom: 100px;
+	.field-text-long {
+		@extend .col-lg-9;
+	}
 }
 .paragraph--type--text-and-html-block[data-quickedit-entity-id="paragraph/51"] {
 	.field-redmark{
