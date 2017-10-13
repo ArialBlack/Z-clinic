@@ -1,0 +1,35 @@
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/50"] {
+	@extend .col-lg-9;
+	margin-bottom: 100px
+}
+.paragraph--type--text-and-html-block[data-quickedit-entity-id="paragraph/51"] {
+	.field-redmark{
+		@extend %red-mark-z;
+		margin-top: 65px;
+	}
+}
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/52"],
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/54"],
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/56"],
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/58"] {
+	padding-top: 80px;
+	padding-bottom: 60px;
+	ul {
+		@extend %ul-mark;
+	}
+
+}
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/56"]{
+	ul li:last-child:before {
+		content: 'i';
+		background-color: transparent;
+		border: 2px solid $primary-color;
+		color: $primary-color;
+		line-height: 26px;
+	}
+}
+.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/58"] {
+	.field-text-long{
+		@extend .col-lg-7;
+	}
+}
