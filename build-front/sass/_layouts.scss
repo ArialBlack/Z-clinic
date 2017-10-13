@@ -139,13 +139,13 @@ main {
 }
 
 .field-text-html {
-  @extend .col-md-4,.row;
+  @extend .col-lg-4,.row;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   margin: 0;
-  @include max-screen($max-mobile){
+  @include max-screen($max-tablet){
     position: static;
     width: 100vw;
     margin: 0 -15px 50px;
@@ -167,7 +167,7 @@ main {
     &.is-first {
       top: 100px;
     }
-    @include max-screen($max-mobile) {
+    @include max-screen($max-tablet) {
       position: static;
       padding: 10% 0px;
     }
@@ -176,19 +176,19 @@ main {
       margin: 0 15px;
       background-color: $primary-color;
       padding: 40px 0;
-      @include max-screen($max-mobile) {
+      @include max-screen($max-tablet) {
         margin: 0;
       }
       &.align-self-end{
         margin-bottom: 100px;
-        @include max-screen($max-mobile) {
+        @include max-screen($max-tablet) {
           margin-bottom: 0;
         }
       }
     }
   }
   .html-section + .html-section{
-    @include max-screen($max-mobile) {
+    @include max-screen($max-tablet) {
       margin-top: 2em;
     }
   }
@@ -227,7 +227,7 @@ main {
       // margin-bottom: 2em;
       text-transform: uppercase;
       line-height: 1.5;
-      @include max-screen($max-mobile){
+      @include max-screen($max-tablet){
         margin-bottom: .5em;
       }
     }
@@ -235,7 +235,7 @@ main {
       line-height: 1.5;
       font-size: $fs-md;
       margin: 0;
-      @include max-screen($max-mobile){
+      @include max-screen($max-tablet){
         margin: 0 0 .5em;
       }
     }
@@ -253,7 +253,7 @@ main {
     font-family: roboto;
     position: static !important;
     margin-bottom: 12px;
-    @include min-screen($max-mobile) {
+    @include min-screen($max-tablet) {
       position: absolute !important;
       right: 100%;
       top: 0 !important;
