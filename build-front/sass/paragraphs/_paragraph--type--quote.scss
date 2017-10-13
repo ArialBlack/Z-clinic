@@ -1,3 +1,24 @@
 .paragraph--type--quote {
-
+	@extend %center-block;
+	padding: 150px 0 100px;
+	text-align: center;
+	blockquote {
+		display: block;
+		width: calc(100% / 12 * 10);
+		font-style: italic;
+		font-size: 24px;
+		color: $text-light-gray;
+		margin: 0 auto 100px;
+		line-height: 1.625;
+		@include min-screen($tablet){
+			margin: 0 auto 145px;
+			width: calc(100% / 12 * 8);
+		}
+	}
+	h3 {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 24px;
+		color: $black;
+	}
 }
