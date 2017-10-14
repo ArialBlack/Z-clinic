@@ -1,0 +1,69 @@
+.paragraph--type--text-and-html-block[data-quickedit-entity-id="paragraph/116"] {
+	padding-top: 0;
+	.field-text-long blockquote {
+		padding-bottom: calc(90px - 2.7em);
+		padding-top: calc(90px - 2.7em);
+		position: relative;
+		font-style: italic;
+		font-size: 20px;
+		color: $text-light-gray;
+		margin-bottom: 80px;
+		@include max-screen(1600) {
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+		&:before,
+		&:after {
+			@extend .icon;
+			position: absolute;
+			font-size: 64px;
+			color: #e6e7e8;
+			line-height: 1;
+			@include max-screen(1600) {
+				font-size: calc( 4.2vw + .5rem);
+			}
+		}
+		&:before {
+			content: $icon-quotes-open;
+			top: 0px;
+			left: -76px;
+			@include max-screen(1600) {
+				left: 0;
+			}
+		}
+		&:after {
+			content: $icon-quotes-close;
+			bottom: 0;
+			right: -78px;
+			@include max-screen(1600) {
+				right: 0;
+			}
+		}
+	}
+}
+
+.paragraph--type--modal-form[data-quickedit-entity-id="paragraph/121"] {
+	padding: 100px 0;
+	text-align: center;
+	background-color: #e7e7e8;
+	@include min-screen($tablet){
+		padding: 200px 0;
+	}
+	.field-description {
+		margin: 0 auto 50px;
+		text-align: center;
+		padding: 0 30px;
+		max-width: calc(1440px / 12 * 10);
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 24px;
+		color: $black;
+		line-height: 1.6;
+		@include min-screen($tablet){
+			margin: 0 auto 150px;
+		}
+	}
+	.btn[data-toggle="modal"]{
+		position: static;
+	}
+}
