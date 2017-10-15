@@ -3,19 +3,38 @@
   height: auto;
   background: $footer_bg;
   overflow: hidden;
-  display: flex;
-  align-items: center;
   border-bottom: 20px solid $primary-color;
+  padding: 80px 0 90px;
+  &-i {
+    @extend %center-block;
+    @include max-screen($mdpi){
+      padding: 0 10%;
+    }
+  }
 
   &_socials-wrapper {
-    @extend %col-offset-1, %col-3;
     overflow: hidden;
+  @include max-screen($mdpi){
+      order: 1;
+    }
   }
   &_logo {
     fill: $text-light;
     display: block;
     margin-bottom: 20px;
     transition: all .2s ease-in;
+    width: 100%;
+    max-width: 240px;
+    @include max-screen($mdpi){
+      float: right;
+    }
+    @include max-screen($max-mobile){
+      margin: 0 auto 40px;
+      float: none;
+    }
+    svg {
+      width: 100%;
+    }
 
     &:hover, &:focus {
       color: $primary-color;
@@ -35,13 +54,25 @@
   }
 
   &_socials-list {
+    @include max-screen($mdpi){
+      float: left;
+    }
+    @include max-screen($max-mobile){
+      float: none;
+      text-align: center;
+    }
+    &-item + &-item {
+      margin-left: 20px;
+      @include max-screen($max-mobile){
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
     &-item {
       display: inline-block;
       &-link {
         text-decoration: none;
-        font-size: $fs-lg;
         display: inline-block;
-        padding: 10px;
 
         svg {
           width: 64px;
@@ -74,8 +105,11 @@
   }
 
   &_locations {
-    @extend %col-8;
     overflow: hidden;
+    @include max-screen($mdpi){
+        order: 0;
+        margin-bottom: 50px;
+      }
 
     .nav {
       border-bottom: 0 none;
@@ -90,9 +124,21 @@
     }
 
     &-wrapper {
-      @extend %col-4;
+      vertical-align: top;
+      display: inline-block;
       margin-top: 20px;
+
+      @include min-screen(1280){
+        max-width: 30%;
+      }
+      @include min-screen($max-mobile){
+        margin-top: 35px;
+      }
+      
     }
+     &-wrapper +  &-wrapper {
+      margin-right: 5%;
+     }
 
     &-item {
       display: flex;
