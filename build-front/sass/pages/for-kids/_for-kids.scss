@@ -1,0 +1,93 @@
+.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/140"] {
+	padding: 100px 0;
+	text-align: center;
+	@include min-screen($tablet){
+		padding: 180px 0 200px;
+	}
+	.block-text{
+		margin: 0 auto 100px;
+		text-align: center;
+		padding: 0 30px;
+		max-width: calc(1440px / 12 * 9);
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $fs-h;
+		color: $black;
+		line-height: 1.6;
+	}
+	.btn {
+		@include button-variant($primary-color, $primary-color);
+		@include button-size(36px, 71px, 22px, 1, 48px);
+		box-shadow: 0 0 49px rgba(164,76,81,.5);
+		&:hover{
+			box-shadow: 0 0 65px rgba(164,76,81,.7);
+		}
+		@include max-screen($hdpi) {
+			@include button-size(24px, 22px, 22px, 1, 35px);
+		}
+		@include max-screen($tablet) {
+			@include button-size(18px, 12px, 18px, 1, 35px);
+		}
+	}
+}
+
+.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/138"] {
+	@extend %center-block;
+	text-align: center;
+	padding: 180px 0 200px;
+	.text-top {
+		margin: 0 auto 130px;
+		text-align: center;
+		padding: 0 30px;
+		max-width: calc(1440px / 12 * 10);
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $fs-h;
+		color: $black;
+		line-height: 1.6;
+	}
+	.pub-img{
+		max-width: 96%;
+		width: 96%;
+		vertical-align: middle;
+		display: block;
+		margin: 0 auto 100px;
+	}
+	.text-bot {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $fs-h;
+		color: $primary-color;
+	}
+}
+
+
+.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/132"] {
+	@extend %center-block;
+	position: relative;
+	.img-container{
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% / 7 * 2);
+		img {
+			width: 100%;
+		}
+	}
+	.texr-header{
+		font-size: $fs-lg;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $black;
+		margin-bottom: 80px;
+	}
+	.btn.btn-primary{
+		@include button-variant($primary-color, $primary-color);
+		@include button-size(38px, 90px, 22px, 1, 48px);
+		vertical-align: middle;
+		box-shadow: 0 0 49px rgba(164,76,81,.5);
+		margin-left: 15%;
+		&:hover{
+			box-shadow: 0 0 65px rgba(164,76,81,.7);
+		}
+	}
+}
