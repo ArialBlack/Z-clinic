@@ -127,19 +127,16 @@
       vertical-align: top;
       display: inline-block;
       margin-top: 20px;
+      margin-right: 5%;
 
       @include min-screen(1280){
-        max-width: 30%;
+        max-width: 40%;
       }
       @include min-screen($max-mobile){
         margin-top: 35px;
       }
       
     }
-     &-wrapper +  &-wrapper {
-      margin-right: 5%;
-     }
-
     &-item {
       display: flex;
       align-items: center;
