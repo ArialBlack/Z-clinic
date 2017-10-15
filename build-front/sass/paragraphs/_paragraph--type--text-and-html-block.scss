@@ -5,11 +5,8 @@
 	padding-bottom: 100px;
 	color: $text-light-gray;
 	position: relative;
-	@include screen($tablet, $hdpi) {
+	@include max-screen($max-tablet){
 		padding-top: 5%;
-		padding-bottom: 5%;
-	}
-	@include max-screen($max-mobile){
 		display: block;
 		padding-bottom: 0;
 	}
@@ -25,8 +22,9 @@
 	}
 	.field-text-long {
 		@extend .col-lg-7;
-		@include max-screen($tablet){
+		@include max-screen($max-tablet){
 			max-width: none !important;
+			padding-bottom: 5%;
 		}
 	}
 	p {
