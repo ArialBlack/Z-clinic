@@ -1,7 +1,7 @@
 .paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/140"] {
 	padding: 100px 0;
 	text-align: center;
-	@include min-screen($tablet){
+	@include min-screen($max-tablet) {
 		padding: 180px 0 200px;
 	}
 	.block-text{
@@ -34,7 +34,7 @@
 .paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/138"] {
 	@extend %center-block;
 	text-align: center;
-	padding: 180px 0 200px;
+	padding: 150px 0;
 	.text-top {
 		margin: 0 auto 130px;
 		text-align: center;
@@ -65,12 +65,25 @@
 .paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/132"] {
 	@extend %center-block;
 	position: relative;
+	@include max-screen($max-tablet) {
+		padding: 5% 0;
+	}
 	.img-container{
 		display: inline-block;
 		vertical-align: middle;
 		width: calc(100% / 7 * 2);
 		img {
 			width: 100%;
+		}
+		@include max-screen($max-tablet) {
+			display: block;
+			width: 100%;
+			margin-bottom: 50px;
+			text-align: center;
+			img {
+				display: inline-block;
+				width: 35%;
+			}
 		}
 	}
 	.texr-header{
@@ -79,6 +92,14 @@
 		text-transform: uppercase;
 		color: $black;
 		margin-bottom: 80px;
+		@include max-screen($max-tablet) {
+			padding: 0 30px;
+		}
+	}
+	.field-text-html{
+		@include max-screen($max-tablet) {
+			margin-top: 50px;
+		}
 	}
 	.btn.btn-primary{
 		@include button-variant($primary-color, $primary-color);
@@ -88,6 +109,10 @@
 		margin-left: 15%;
 		&:hover{
 			box-shadow: 0 0 65px rgba(164,76,81,.7);
+		}
+		@include max-screen($max-tablet) {
+			margin: 0 auto;
+			display: block;
 		}
 	}
 }
