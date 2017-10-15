@@ -1,7 +1,12 @@
 .paragraph--type--text-near-image {
   position: relative;
   overflow: hidden;
-
+  .text-image-container {
+    @include max-screen($tablet) {
+      display: flex;
+      flex-flow: column;
+    }
+  }
   &:nth-child(even) {
     background: $tabs-background;
   }
@@ -35,6 +40,9 @@
     min-height: 400px; //tdo test
     background-size: cover;
     background-position: center center;
+    @include max-screen($tablet) {
+      order: -1;
+    }
   }
 
   &.reversed {

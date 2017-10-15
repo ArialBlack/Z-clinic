@@ -5,6 +5,8 @@
     .nav-item {
       @extend %col-4, %col-md-4, %col-sm-4;
       text-transform: uppercase;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       .nav-link {
         text-align: center;
         display: block;
@@ -13,6 +15,7 @@
         padding: 20px;
         border-radius: 0!important;
         border: 0 none;
+        height: 100%;
 
         &:hover, &:focus {
           border-color: transparent;
