@@ -8,6 +8,9 @@
 	.field-redmark{
 		@extend %red-mark-z;
 		margin-top: 65px;
+		@include max-screen($max-tablet){
+			display: none;
+		}
 	}
 }
 .paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/52"],

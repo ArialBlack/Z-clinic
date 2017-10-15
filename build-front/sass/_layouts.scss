@@ -246,6 +246,14 @@ main {
   .html-row.is-no-icon,
   .is-no-icon .html-row {
     padding: 0 10%;
+    @include max-screen($max-tablet) {
+      text-align: center;
+      p {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+    }
   }
   .vertival-text{
     font-weight: 900;
