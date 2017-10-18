@@ -8,6 +8,11 @@ body {
   overflow: auto;
 }
 
+main {
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
 %content-center {
   display: flex;
   align-items: center;
