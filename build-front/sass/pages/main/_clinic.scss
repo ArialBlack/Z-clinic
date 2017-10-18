@@ -33,6 +33,7 @@
   margin-bottom: 50px;
   &_carousel {
     padding: 0 !important;
+    overflow: hidden;
 
     &-navigation {
       position: absolute;

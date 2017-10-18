@@ -3,8 +3,8 @@
   $(document).ready(function(){
     $('.clinics_carousel').addClass('owl-carousel owl-theme');
     var clinicsCarousel = $('.clinics_carousel').owlCarousel({
-      center: true,
-      items: 1,
+      // center: true,
+      items: 2,
       loop: true,
       margin: 0,
       slideBy: 1,
