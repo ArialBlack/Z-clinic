@@ -44,6 +44,10 @@
     @include max-screen($tablet) {
       order: -1;
     }
+
+    @include max-screen($max-mobile) {
+      min-height: 250px;
+    }
   }
 
   &.reversed {

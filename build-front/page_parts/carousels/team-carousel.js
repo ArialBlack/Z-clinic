@@ -1,19 +1,20 @@
 'use strict';
 (function ($) {
    $(document).ready(function(){
-    $('.about-us_carousel').addClass('owl-carousel owl-theme');
-    $('.about-us_carousel').owlCarousel({
+     /*
+    $('.team_carousel').addClass('owl-carousel owl-theme');
+    $('.team_carousel').owlCarousel({
       center: true,
       items: 5,
       loop: true,
-      margin: 65,
+      margin: 25,
       slideBy: 1,
       dots: false,
       navText: ['<i class="icon icon-floating_arrow">', '<i class="icon icon-floating_arrow">'],
       nav: true,
-      navContainer: '#about-us_carousel-nav',
+      navContainer: '#team_carousel-nav',
       navElement: 'span',
-      navClass: ['about-us_carousel-nav-arrow left', 'about-us_carousel-nav-arrow right'],
+      navClass: ['team_carousel-nav-arrow left', 'team_carousel-nav-arrow right'],
       responsive:{
         600:{
           items:3
@@ -23,6 +24,7 @@
         }
       }
     });
+    */
   });
   
 }(jQuery));

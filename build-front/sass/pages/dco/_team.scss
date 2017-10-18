@@ -1,18 +1,37 @@
 .path-teeth-care-center {
+
   .team {
     @extend %centered-content;
     padding: 50px;
     min-height: 100vh;
+    max-width: $hdpi 'px';
 
     &_title {
       @extend %title-primary;
+      text-align: center;
+
+      &-regular {
+        display: block;
+        margin: 10px auto 50px;
+        font-size: 24px;
+        color: $text-dark;
+        text-align: center;
+      }
     }
 
     &_logo {
       margin: 0 auto;
+      display: block;
     }
 
     &_subtitle {
+      @extend %title-hint;
+      color: $text-dark-hint;
+      display: block;
+      font-size: 22px;
+      line-height: 1.5;
+      font-style: italic;
+      text-align: center;
       .text-active {
         color: $primary-color;
         font-weight: 600;
@@ -20,7 +39,10 @@
     }
 
     &_carousel {
+      overflow: hidden;
 
+      // while no content.
+      display: none;
     }
   }
 }

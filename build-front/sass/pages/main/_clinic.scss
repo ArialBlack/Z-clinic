@@ -5,12 +5,20 @@
     @extend %title-dark, %title-red-line;
     margin: 0 auto;
     text-align: center;
+    @include max-screen($max-mobile) {
+      font-size: $fs-md;
+      font-weight: 600;
+    }
   }
 
   &_location {
     @extend %text-regular;
-    margin: 15px 0 30px;
+    margin: 15px 10px 30px;
     text-align: center;
+
+    @include max-screen($max-mobile) {
+      font-size: $fs-sm;
+    }
   }
 
   img {
@@ -73,8 +81,29 @@
         margin-top: -25px;
         z-index: 2;
 
+        @include max-screen($max-tablet) {
+          width: 35px;
+          font-size: 26px;
+          top: 70%;
+        }
+
+        @include max-screen($max-mobile) {
+          width: 35px;
+          font-size: 26px;
+          top: 80%;
+        }
+
         .icon {
           font-size: 26px;
+
+          @include max-screen($max-tablet) {
+            font-size: 14px;
+          }
+
+          @include max-screen($max-mobile) {
+            font-size: 14px;
+          }
+
         }
 
         &.left {

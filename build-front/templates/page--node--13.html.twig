@@ -145,19 +145,21 @@
 
       {{ page.content }}
       <section class="team">
-        <h3 class="team_title">
-          Єдині в Україні, вміння та кваліфікацію яких підтверждено публічно UAP
-        </h3>
-        <img class="team_logo" src="../themes/clinic/img/uap-logo.png" alt="ukrainian academy of periodontology"/>
+        <div class="team-wrapper">
+          <h3 class="team_title">
+            Єдині в Україні, вміння та кваліфікацію яких підтверждено публічно UAP
+          </h3>
+          <img class="team_logo" src="../themes/clinic/img/uap-logo.png" alt="ukrainian academy of periodontology"/>
 
-        <p class="team_subtitle">
-          З <span class="text-active">30</span> кандидатів ми відібрали тільки
-          <span class="text-active">9</span>,
-          які зараз працюють в наших клініках.
-        </p>
-        <h4 class="team_title-regular">Знайомтесь</h4>
-        <div class="team_carousel">
-          {{ doctors }}
+          <p class="team_subtitle">
+            З <span class="text-active">30</span> кандидатів ми відібрали тільки
+            <span class="text-active">9</span>,
+            які зараз працюють в наших клініках.
+          </p>
+          <h4 class="team_title-regular">Знайомтесь!</h4>
+          <div class="team_carousel">
+            {{ doctors }}
+          </div>
         </div>
       </section>
 
@@ -194,7 +196,7 @@
         <p class="support_subtitle"></p>
       </section>
       {{ reviews }}
-    </div> /.layout-content
+    </div>
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
@@ -207,6 +209,15 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
+    <section class="quote">
+      <div class="quote-wrapper">
+        <img src="../themes/clinic/img/zablotsky_portrait.png" class="quote-img" alt="Zablotsky Portrait">
+        <blockquote class="quote-text">
+          <p class="quote-text-left">Я хочу зробити українців здоровими.</p>
+          <p class="quote-text-right">Запрошую у Dental Care Office!</p>
+        </blockquote>
+      </div>
+    </section>
     @@include('../page_parts/banner/banner.twig')
 
 

@@ -5,6 +5,7 @@
     &-wrapper {
       margin: 0 auto;
       min-height: 60vh;
+      padding: 20px;
     }
 
     &_logo {
@@ -81,6 +82,12 @@
       font-size: 54px;
       letter-spacing: 1.5px;
       line-height: 1.5;
+      text-align: center;
+
+      @include max-screen($max-mobile) {
+        font-size: 30px;
+        text-align: center;
+      }
     }
 
     &_subtitle {
