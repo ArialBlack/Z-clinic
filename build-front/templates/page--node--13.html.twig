@@ -66,10 +66,18 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
+    <section class="intro">
+      @@include('../page_parts/logo/logo.twig')
+      <p class="intro_sublogo">Dental Care Center</p>
+      <h1 class="intro_title">Центр турботи про ясна та зуби</h1>
+      <p class="intro_subtitle">Для Вас та Вашої дитини</p>
+    </section>
+    <section class="dco_video-banner">
+      // video
+    </section>
     <div class="layout-content">
 
       {{ page.content }}
-
       {{ doctors }}
 
       {{ reviews }}
@@ -87,6 +95,8 @@
       </aside>
     {% endif %}
     @@include('../page_parts/banner/banner.twig')
+    <div class="map" id="map">
+    </div>
   </main>
 
   @@include('../page_parts/footer/footer.twig')
