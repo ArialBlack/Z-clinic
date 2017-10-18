@@ -1,8 +1,10 @@
 %title-hint {
   text-transform: uppercase;
   color: $text-hint;
-  font-size: $fs-lg;
+  font-size: $fs-title;
+  font-weight: 600;
   line-height: 1.25;
+  letter-spacing: 1.25px;
 }
 
 %title-primary {
@@ -42,7 +44,9 @@
 %text-regular {
   color: $text-hint !important;
   font-size: $fs-md !important;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 1.25px;
+  line-height: 1.5;
 }
 
 %text-light {
