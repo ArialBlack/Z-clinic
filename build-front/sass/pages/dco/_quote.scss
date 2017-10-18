@@ -4,11 +4,12 @@
     min-height: 80vh;
 
     &-wrapper {
-
+      text-align: center;
     }
 
     &-img {
-      margin: 20px;
+      margin: 20px auto;
+      display: block;
 
       @include max-screen($max-mobile) {
         max-width: 80%;
@@ -39,7 +40,7 @@
     blockquote {
       padding-bottom: calc(90px - 2.7em);
       padding-top: calc(90px - 2.7em);
-      padding-right: 16%;
+      padding-right: 25%;
       position: relative;
       color: $text-light-gray; // @include screen($tablet, $hdpi){
       // 	font-size: calc( 1vw + .5rem );
