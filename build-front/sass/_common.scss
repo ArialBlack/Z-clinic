@@ -76,3 +76,9 @@ body {
     opacity: 0;
   }
 }
+
+%centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

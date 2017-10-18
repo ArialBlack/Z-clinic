@@ -11,6 +11,10 @@
     @extend %title-primary;
     font-weight: 400;
     letter-spacing: 4px;
+
+    @include max-screen($max-mobile) {
+      font-size: $fs-lg;
+    }
   }
 
   .icon.icon-z {

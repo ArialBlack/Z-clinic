@@ -1,21 +1,14 @@
 .zablotsky-speech {
-  display: flex;
   align-items: center;
   min-height: 100vh;
   max-width: $hdpi 'px';
-
+  @include min-screen($mdpi) {
+    display: flex;
+  }
 
   &-wrapper {
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
-    @include max-screen($tablet) {
-      max-width: 300px;
-      width: 300px;
-    }
-    @include max-screen($mobile) {
-      max-width: 320px;
-      width: 320px;
-    }
   }
 
   &_info {
@@ -44,9 +37,14 @@
   &_portrait {
     @extend .col-lg-4, .col-12;
     text-align: center;
+    margin: 20px;
     img {
       vertical-align: middle;
       max-width: 100%;
+
+      @include max-screen($max-mobile) {
+        max-width: 70%;
+      }
     }
   }
 
@@ -104,6 +102,10 @@
       max-height: 200px;
       padding-bottom: 20px;
       overflow: auto;
+
+      @include max-screen($max-mobile) {
+        max-height: none;
+      }
     }
   }
 }

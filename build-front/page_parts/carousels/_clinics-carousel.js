@@ -9,9 +9,9 @@
       margin: 0,
       slideBy: 1,
       dots: false,
-      navText: ['&#60;', '&#62;'],
+      navText: ['<i class="icon icon-floating_arrow">', '<i class="icon icon-floating_arrow">'],
       nav: true,
-      navContainer: '#clinics_carousel-nav',
+      navContainer: '.clinics_carousel-wrapper',
       navElement: 'span',
       navClass: ['clinics_carousel-nav-arrow left', 'clinics_carousel-nav-arrow right'],
       responsive:{
@@ -28,24 +28,13 @@
       var CONSTANT_OWL_INDEX = 2;
       console.log(event);
       var checkLast = event.item.count + event.isTrigger;
-      if (event.item.index === 2) {
-        $('#clinics_carousel-navigation-item-previous').addClass('active');
-        $('#clinics_carousel-navigation-item-next').removeClass('active');
-      } else {
-        $('#clinics_carousel-navigation-item-next').addClass('active');
-        $('#clinics_carousel-navigation-item-previous').removeClass('active');
-      }
-      
     });
     
-    $('#clinics_carousel-navigation-item-next').on('click', function () {
-      console.log('this.data.id', $(this).attr('data-id'));
-      clinicsCarousel.trigger('next.owl.carousel');
-    });
-    $('#clinics_carousel-navigation-item-previous').on('click', function () {
-      console.log('this.data.id', $(this).attr('data-id'));
-      clinicsCarousel.trigger('previous.owl.carousel');
-    });
+    $('.clinics_carousel-navigation-item').on('click', function () {
+      clinicsCarousel.trigger('to.owl.carousel', $(this).attr('data-id'));
+      $('.clinics_carousel-navigation-item').removeClass('active');
+      $(this).addClass('active');
+    })
   });
   
 }(jQuery));

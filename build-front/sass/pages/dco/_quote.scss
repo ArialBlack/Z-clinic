@@ -1,0 +1,85 @@
+.path-teeth-care-center {
+  .quote {
+    @extend %centered-content;
+    min-height: 80vh;
+
+    &-wrapper {
+      text-align: center;
+    }
+
+    &-img {
+      margin: 20px auto;
+      display: block;
+
+      @include max-screen($max-mobile) {
+        max-width: 80%;
+        margin: 20px auto;
+        display: block;
+      }
+    }
+    &-text {
+      @extend %title-hint;
+      color: $text-dark-hint;
+      font-size: 24px;
+      max-width: 100%;
+      line-height: 2;
+
+      @include max-screen($max-mobile) {
+        font-size: 10px;
+      }
+
+      &-left {
+        text-align: center;
+      }
+
+      &-right {
+        text-align: right;
+      }
+    }
+
+    blockquote {
+      padding-bottom: calc(90px - 2.7em);
+      padding-top: calc(90px - 2.7em);
+      padding-right: 25%;
+      position: relative;
+      color: $text-light-gray; // @include screen($tablet, $hdpi){
+      // 	font-size: calc( 1vw + .5rem );
+      // }
+      @include max-screen(1600) {
+        padding-left: 7.5vw;
+        padding-right: 14vw;
+      }
+
+      @include max-screen($max-mobile) {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+      }
+
+      &:before,
+      &:after {
+        @extend .icon;
+        position: absolute;
+        font-size: 82px;
+        color: #e6e7e8;
+        line-height: 82px;
+        @include max-screen(1600) {
+          font-size: calc( 4.2vw + .5rem);
+        }
+      }
+      &:before {
+        content: $icon-quotes-open;
+        top: 0px;
+        left: -115px;
+        @include max-screen(1600) {
+          left: 0;
+        }
+      }
+      &:after {
+        content: $icon-quotes-close;
+        bottom: 0;
+        right: 8%;
+      }
+    }
+  }
+}
