@@ -240,11 +240,11 @@
                   map.setCenter(center);
                 }, 500);
       
-                $('#contacts_kyiv').on('click', function() {
+                $('#kyiv').on('click', function() {
                     initialize();
                   });
       
-                $('#contacts_lviv').on('click', function() {
+                $('#lviv').on('click', function() {
                     initialize('lviv');
                   });
             } catch (err) {
