@@ -1,5 +1,27 @@
 .path-user {
+  min-height: 100vh !important;
+  .layout-content {
+    padding-top: 200px !important;
+  }
+
+
   input {
     border: 1px solid black;
+  }
+}
+
+
+.path-user-login {
+  min-height: 100vh;
+  .layout-content {
+    padding-top: 200px;
+  }
+
+  #block-clinic-content {
+    text-align: center;
+
+    input {
+      margin: 0 auto;
+    }
   }
 }

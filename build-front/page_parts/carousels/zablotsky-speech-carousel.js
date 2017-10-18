@@ -21,7 +21,7 @@
         margin:20,
         dots: false,
         navText: ['&#60;', '&#62;'],
-        navContainer: '#zablotsky-speech_slides-nav',
+        navContainer: '#zablotsky-speech_slides-nav-wrapper',
         navClass: ['zablotsky-speech_slides-nav-arrow left', 'zablotsky-speech_slides-nav-arrow right'],
         navElement: 'span',
         nav:true,

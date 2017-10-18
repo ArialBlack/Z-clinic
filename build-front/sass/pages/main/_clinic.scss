@@ -4,15 +4,51 @@
   &_title {
     @extend %title-dark, %title-red-line;
     margin: 0 auto;
+    text-align: center;
   }
 
   &_location {
     @extend %text-regular;
     margin: 15px 0 30px;
+    text-align: center;
   }
 
   img {
     max-width: 100%;
     min-height: 250px;
+  }
+}
+
+.clinics {
+  position: relative;
+  &_carousel {
+    padding: 0 !important;
+
+    &-navigation {
+      position: absolute;
+      z-index: 5;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: $text-light;
+
+      &-item {
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 10px;
+        color: $text-hint;
+        cursor: pointer;
+        transition: all .2s ease-in;
+
+        &:hover, &:focus {
+          color: $text-light;
+        }
+        &.active {
+          font-size: 36px;
+          font-weight: 600;
+          color: $text-light;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,26 @@
+.path-why-we {
+  .why-we {
+    &_banners {
+      min-height: 500px;
+
+      &-wrapper {
+        @extend .col-lg-6, %center-block;
+
+      }
+
+      &-content {
+        background: $primary-color;
+        color: $text-light;
+        padding: 20px;
+        min-height: 350px;
+        min-width: 350px;
+        &-icon {
+
+        }
+        &-text {
+
+        }
+      }
+    }
+  }
+}

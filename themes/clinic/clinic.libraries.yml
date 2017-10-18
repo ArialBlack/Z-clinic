@@ -23,11 +23,11 @@ owl.carousel:
 
 custom:
   js:
-      js/main.js: {}
-      js/map.js: {}
+     js/main.js: {}
+     js/map.js: {}
   dependencies:
-    - clinic/bootstrap
-    - clinic/owl.carousel
+     - clinic/bootstrap
+     - clinic/owl.carousel
 
 bootstrap:
   js:

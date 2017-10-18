@@ -25,8 +25,8 @@
                     var latitude = 50.4327114;
                   var longitude = 30.5274209;
                   if (placeToShow === 'lviv') {
-                      latitude = 25.124536;
-                      longitude = 55.379437;
+                      latitude = 49.808054;
+                      longitude = 24.004490;
                     }
                   var mapOptions = {
                       center: new google.maps.LatLng(latitude, longitude),
@@ -240,11 +240,11 @@
                   map.setCenter(center);
                 }, 500);
       
-                $('#contacts_kyiv').on('click', function() {
+                $('#kyiv').on('click', function() {
                     initialize();
                   });
       
-                $('#contacts_lviv').on('click', function() {
+                $('#lviv').on('click', function() {
                     initialize('lviv');
                   });
             } catch (err) {

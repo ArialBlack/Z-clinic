@@ -5,6 +5,8 @@
     .nav-item {
       @extend %col-4, %col-md-4, %col-sm-4;
       text-transform: uppercase;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       .nav-link {
         text-align: center;
         display: block;
@@ -13,6 +15,7 @@
         padding: 20px;
         border-radius: 0!important;
         border: 0 none;
+        height: 100%;
 
         &:hover, &:focus {
           border-color: transparent;
@@ -21,11 +24,10 @@
         &.active {
           background: $primary-color;
         }
-
-        &:last-child {
-          border-left: 1px solid $primary-color;
-        }
       }
+    }
+    .nav-item + .nav-item {
+      border-left: 1px solid $primary-color;
     }
   }
 
@@ -33,28 +35,47 @@
     max-width: $hdpi+px;
     margin: 0 auto;
     position: relative;
+    padding: 30px 20px;
+    @include min-screen($max-mobile) {
+      padding: 100px 20px 80px;
+    }
+
 
     .tab-pane {
-      padding: 20px;
       transition: color $trs-d;
 
       h4 {
         font-weight: 200;
         color: $text-hint;
-        padding: 30px 0;
+        margin-bottom: 60px;
+        font-size: 20px;
+        line-height: 1.6;
       }
 
       ul {
         li {
           display: block;
-          list-style-position: outside;
+          counter-increment: section;
           color: $text-hint;
-          padding: 15px 0 0;
-
+          font-size: 18px;
+          line-height: 1.6;
+          position: relative;
+          padding: 5px 0 15px 45px;
+          @include min-screen($max-mobile) {
+            padding: 5px 0 35px 70px;
+          }
           &:before {
-            content: ' ';
-            color: $text-light;
+            content: counter(section);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: $white;
             background: $primary-color;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            border-radius: 50%;
           }
         }
       }
