@@ -8,10 +8,18 @@
   &-wrapper {
     width: 400px;
     margin: 0 auto;
+    @include max-screen($tablet) {
+      max-width: 300px;
+      width: 300px;
+    }
+    @include max-screen($mobile) {
+      max-width: 320px;
+      width: 320px;
+    }
   }
 
   &_info {
-    @extend .col-lg-4;
+    @extend .col-lg-4, .col-12;
     text-align: center;
     .icon {
       color: $primary-color;
@@ -34,7 +42,7 @@
   }
 
   &_portrait {
-    @extend .col-lg-4;
+    @extend .col-lg-4, .col-12;
     text-align: center;
     img {
       vertical-align: middle;
@@ -43,7 +51,7 @@
   }
 
   &_slides {
-    @extend .col-lg-4;
+    @extend .col-lg-4, .col-12;
     text-align: center;
     &-title {
       @extend %title-dark;
