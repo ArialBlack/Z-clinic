@@ -106,9 +106,11 @@
       <div class="zablotsky-speech_slides">
         <div class="zablotsky-speech-wrapper">
         <h3 class="zablotsky-speech_slides-title">Філософія</h3>
-          <div id="zablotsky-speech_slides-nav" class="zablotsky-speech_slides-nav">
-            <span class="zablotsky-speech_slides-nav-current zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-current">1</span>
-            <span class="zablotsky-speech_slides-nav-all zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-all">5</span>
+          <divclass="zablotsky-speech_slides-nav">
+            <div id="zablotsky-speech_slides-nav-wrapper" class="zablotsky-speech_slides-nav-wrapper">
+              <span class="zablotsky-speech_slides-nav-current zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-current">1</span>
+              <span class="zablotsky-speech_slides-nav-all zablotsky-speech_slides-nav-page" id="zablotsky-speech_slides-nav-all">5</span>
+            </div>
           </div>
 
           <div class="zablotsky-speech_slides-carousel-container">
@@ -159,12 +161,27 @@
       </p>
     </section>
 
-    <section class="clinic">
-      <div class="clinic-wrapper">
-        <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
-        <p class="clinic_location">вул. Наукова, 7А, БП Оптіма Плаза</p>
+    <section class="clinics">
+      <div class="clinics_carousel-navigation">
+        <span data-id="1" class="clinics_carousel-navigation-item active">1</span>
+        <span data-id="2" class="clinics_carousel-navigation-item">2</span>
       </div>
-      <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in kyiv">
+      <div class="clinics_carousel">
+        <div class="clinics_carousel-wrapper">
+          <div class="clinic-wrapper">
+            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
+            <p class="clinic_location">вул. Наукова, 7А, БП Оптіма Плаза</p>
+          </div>
+          <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+        </div>
+        <div class="clinics_carousel-wrapper">
+          <div class="clinic-wrapper">
+            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
+            <p class="clinic_location">вул, Липинського, 28 (ЖК Парус Park)</p>
+          </div>
+          <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+        </div>
+      </div>
     </section>
       <section class="small-logo">
         <div class="small-logo-wrapper">
@@ -172,35 +189,12 @@
         </div>
       </section>
 
-      <section class="clinics">
-        <div class="clinics_carousel-items-navigation">
-          <span data-id="1" class="clinics_carousel-items-navigation">1</span>
-          <span data-id="2" class="clinics_carousel-items-navigation">2</span>
-          <span data-id="3" class="clinics_carousel-items-navigation">3</span>
+      <section class="clinic">
+        <div class="clinic-wrapper">
+          <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
+          <p class="clinic_location">Спортивна пл. 1, ТРЦ Гуллівер</p>
         </div>
-        <div class="clinics_carousel">
-          <div class="clinics_carousel-wrapper">
-            <div class="clinic-wrapper">
-              <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
-              <p class="clinic_location">Спортивна пл. 1, ТРЦ Гуллівер</p>
-            </div>
-            <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
-          </div>
-          <div class="clinics_carousel-wrapper">
-            <div class="clinic-wrapper">
-              <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
-              <p class="clinic_location">вул. Наукова, 7А, БП Оптіма Плаза</p>
-            </div>
-            <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
-          </div>
-          <div class="clinics_carousel-wrapper">
-            <div class="clinic-wrapper">
-              <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві 2</h3>
-              <p class="clinic_location">Спортивна пл. 1, ТРЦ Гуллівер</p>
-            </div>
-            <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
-          </div>
-        </div>
+        <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
       </section>
 
     @@include('../page_parts/banner/banner.twig')

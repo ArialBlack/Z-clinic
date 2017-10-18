@@ -16,7 +16,9 @@
 
   &_carousel {
     padding: 50px;
-
+    .owl-stage {
+      padding: 25px;
+    }
     &-wrapper {
       width: 100%;
       height: auto;
@@ -29,18 +31,26 @@
       position: relative;
 
       &-arrow {
-        color: white;
-        background: $primary-color;
-        border-radius: 50%;
-        padding: 5px;
-        font-size: 40px;
-        line-height: 1;
-        width: 50px;
+        //color: white;
+        //background: $primary-color;
+        //border-radius: 50%;
+        //padding: 5px;
+        //font-size: 40px;
+        //line-height: 1;
+        // width: 50px;
         text-align: center;
         cursor: pointer;
         top: 50%;
         margin-top: -25px;
         z-index: 2;
+
+        .icon {
+          font-size: 26px;
+
+          &:before {
+            content: $icon-left_arrow;
+          }
+        }
 
         &.left {
           position: absolute;
