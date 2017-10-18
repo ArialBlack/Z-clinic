@@ -1,8 +1,15 @@
 .path-teeth-care-center {
+  max-width: $hdpi 'px';
+  padding: 20px;
+  #block-clinic-page-title {
+    display: none;
+  }
+
   .dco-advantages {
     @extend %centered-content;
     padding: 50px;
     min-height: 100vh;
+    background: #f8f8f8;
 
     &-wrapper {
       text-align: center;
@@ -46,28 +53,7 @@
 
   .dco_video-banner {
     min-height: 500px;
-    background: #e6e6e6;
+    background: #d4d2d2;
     @extend %content-center;
-  }
-
-  .team {
-    &_title {
-      @extend %title-primary;
-    }
-
-    &_logo {
-      margin: 0 auto;
-    }
-
-    &_subtitle {
-      .text-active {
-        color: $primary-color;
-        font-weight: 600;
-      }
-    }
-
-    &_carousel {
-
-    }
   }
 }

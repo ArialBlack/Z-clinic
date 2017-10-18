@@ -11,7 +11,7 @@
       dots: false,
       navText: ['<i class="icon icon-floating_arrow">', '<i class="icon icon-floating_arrow">'],
       nav: true,
-      navContainer: '#clinics_carousel-nav',
+      navContainer: '.clinics_carousel-wrapper',
       navElement: 'span',
       navClass: ['clinics_carousel-nav-arrow left', 'clinics_carousel-nav-arrow right'],
       responsive:{
