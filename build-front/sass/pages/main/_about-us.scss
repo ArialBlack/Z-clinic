@@ -31,13 +31,13 @@
       position: relative;
 
       &-arrow {
-        //color: white;
-        //background: $primary-color;
-        //border-radius: 50%;
-        //padding: 5px;
-        //font-size: 40px;
-        //line-height: 1;
-        // width: 50px;
+        color: white;
+        background: $primary-color;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 40px;
+        line-height: 1;
+         width: 50px;
         text-align: center;
         cursor: pointer;
         top: 50%;
@@ -46,20 +46,25 @@
 
         .icon {
           font-size: 26px;
-
-          &:before {
-            content: $icon-left_arrow;
-          }
         }
 
         &.left {
           position: absolute;
           left: 15px;
+          transform: rotate(180deg);
+          i {
+            margin-top: -5px;
+            margin-left: 3px;
+          }
         }
 
         &.right {
           position: absolute;
           right: 15px;
+          i {
+            margin-top: -7px;
+            margin-right: -5px;
+          }
         }
       }
     }
