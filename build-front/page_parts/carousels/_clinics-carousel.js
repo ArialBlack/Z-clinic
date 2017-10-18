@@ -29,6 +29,12 @@
       console.log(event);
       var checkLast = event.item.count + event.isTrigger;
     });
+    
+    $('.clinics_carousel-navigation-item').on('click', function () {
+      clinicsCarousel.trigger('to.owl.carousel', $(this).attr('data-id'));
+      $('.clinics_carousel-navigation-item').removeClass('active');
+      $(this).addClass('active');
+    })
   });
   
 }(jQuery));

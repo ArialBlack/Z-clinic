@@ -1,7 +1,23 @@
 .path-teeth-care-center {
   .dco-advantages {
-    &_title {
+    @extend %centered-content;
+    padding: 50px;
+    min-height: 100vh;
 
+    &-wrapper {
+      text-align: center;
+    }
+
+    &_title {
+      @extend %title-hint;
+    }
+
+    &_logo {
+      display: block;
+      margin: 50px;
+      i {
+        @extend %icon-logo;
+      }
     }
 
     &_subtitle {
@@ -10,9 +26,13 @@
 
     &_description {
       &-item {
-        @extend %text-regular;
+        @extend %title-hint;
+        color: $text-dark-hint;
         text-transform: uppercase;
         font-size: $fs-title;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        word-spacing: 2px;
 
         .text-active {
           color: $primary-color;
@@ -25,7 +45,7 @@
   }
 
   .dco_video-banner {
-    min-height: 400px;
+    min-height: 500px;
     background: #e6e6e6;
     @extend %content-center;
   }

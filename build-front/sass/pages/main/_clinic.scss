@@ -52,9 +52,10 @@
     }
 
     &-nav {
-      display: flex;
+      position: absolute;
+      z-index: 5;
+      bottom: 20px;
       width: 100%;
-      position: relative;
 
       &-arrow {
         color: white;
@@ -66,7 +67,7 @@
         width: 50px;
         text-align: center;
         cursor: pointer;
-        top: 50%;
+
         margin-top: -25px;
         z-index: 2;
 

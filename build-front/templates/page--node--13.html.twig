@@ -63,114 +63,150 @@
 
   {{ page.help }}
 
-  {#<main role="main">#}
-    {#<a id="main-content" tabindex="-1"></a>#}{# link is in html.html.twig #}
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
 
-    {#<section class="greeting">#}
-      {#@@include('../page_parts/logo/logo.twig')#}
-      {#<p class="greeting_sublogo">Dental Care Center</p>#}
-      {#<h1 class="greeting_title">Центр турботи про ясна та зуби</h1>#}
-      {#<p class="greeting_subtitle">Для Вас та Вашої дитини</p>#}
-    {#</section>#}
-    {#<section class="dco_video-banner">#}
-      {#// video#}
-    {#</section>#}
+    <section class="greeting">
+      <div class="greeting-wrapper">
+        <div class="greeting_logo-wrapper">
+          <span class="greeting_logo">@@include('../page_parts/logo/logo.twig')</span>
+          <p class="greeting_sublogo">Dental Care Center</p>
+        </div>
+      <h1 class="greeting_title">Центр турботи про ясна та зуби</h1>
+      <p class="greeting_subtitle">Для Вас та Вашої дитини</p>
+      </div>
+    </section>
+    <section class="dco_video-banner">
 
-    {#<section class="dco-advantages">#}
-      {#<h2 class="dco-advantages_title">Dental Care office</h2>#}
-      {#@@include('../page_parts/small-logo/small-logo.twig')#}
-      {#<div class="dco-advantages_description">#}
-        {#<p class="dco-advantages_description-item">#}
-          {#<span class="text-regular">Не клініка,</span>#}
-          {#<span class="text-active">а офіс</span>#}
-        {#</p>#}
+    </section>
 
-        {#<p class="dco-advantages_description-item">#}
-          {#<span class="text-regular">Не пацієнти,</span>#}
-          {#<span class="text-active">а клієнти</span>#}
-        {#</p>#}
+    <section class="dco-advantages">
+      <div class="dco-advantages-wrapper">
+      <h2 class="dco-advantages_title">Dental Care office</h2>
+      <span class="dco-advantages_logo">
+        <i class="icon icon-z"></i>
+      </span>
+      <div class="dco-advantages_description">
+        <p class="dco-advantages_description-item">
+          <span class="text-regular">Не клініка,</span>
+          <span class="text-active">а офіс</span>
+        </p>
 
-        {#<p class="dco-advantages_description-item">#}
-          {#<span class="text-regular">Лише</span>#}
-          {#<span class="text-active">одна послуга</span>#}
-        {#</p>#}
+        <p class="dco-advantages_description-item">
+          <span class="text-regular">Не пацієнти,</span>
+          <span class="text-active">а клієнти</span>
+        </p>
 
-        {#<p class="dco-advantages_description-item">#}
-          {#<span class="text-regular">Лише</span>#}
-          {#<span class="text-active">одна ціна</span>#}
-        {#</p>#}
-      {#</div>#}
-    {#</section>#}
-    {#<section class="clinics">#}
-      {#// clinics carousel#}
-    {#</section>#}
+        <p class="dco-advantages_description-item">
+          <span class="text-regular">Лише</span>
+          <span class="text-active">одна послуга</span>
+        </p>
 
-    {#<div class="layout-content">#}
+        <p class="dco-advantages_description-item">
+          <span class="text-regular">Лише</span>
+          <span class="text-active">одна ціна</span>
+        </p>
+      </div>
+      </div>
+    </section>
+    <section class="clinics">
+      <div class="clinics_carousel-nav" id="clinics_carousel-nav"></div>
+      <div class="clinics_carousel-navigation">
+        <span data-id="1" id="clinics_carousel-navigation-item-previous active" class="clinics_carousel-navigation-item active">1</span>
+        <span data-id="2" id="clinics_carousel-navigation-item-next" class="clinics_carousel-navigation-item">2</span>
+        <span data-id="3" id="clinics_carousel-navigation-item-next" class="clinics_carousel-navigation-item">3</span>
+      </div>
+      <div class="clinics_carousel">
+        <div class="clinics_carousel-wrapper">
+          <div class="clinic-wrapper">
+            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
+            <p class="clinic_location">вул. Наукова, 7А, БП Оптіма Плаза</p>
+          </div>
+          <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+        </div>
+        <div class="clinics_carousel-wrapper">
+          <div class="clinic-wrapper">
+            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
+            <p class="clinic_location">вул, Липинського, 28 (ЖК Парус Park)</p>
+          </div>
+          <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+        </div>
+        <div class="clinics_carousel-wrapper">
+          <div class="clinic-wrapper">
+            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
+            <p class="clinic_location">Спортивна пл. 1, ТРЦ Гуллівер</p>
+          </div>
+          <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
+        </div>
+      </div>
+    </section>
 
-      {#{{ page.content }}#}
-      {#<section class="team">#}
-        {#<h3 class="team_title">#}
-          {#Єдині в Україні, вміння та кваліфікацію яких підтверждено публічно UAP#}
-        {#</h3>#}
-        {#<img class="team_logo" src="../themes/clinic/img/uap-logo.png" alt="ukrainian academy of periodontology"/>#}
+    <div class="layout-content">
 
-        {#<p class="team_subtitle">#}
-          {#З <span class="text-active">30</span> кандидатів ми відібрали тільки#}
-          {#<span class="text-active">9</span>,#}
-          {#які зараз працюють в наших клініках.#}
-        {#</p>#}
-        {#<h4 class="team_title-regular">Знайомтесь</h4>#}
-        {#<div class="team_carousel">#}
-          {#{{ doctors }}#}
-        {#</div>#}
-      {#</section>#}
+      {{ page.content }}
+      <section class="team">
+        <h3 class="team_title">
+          Єдині в Україні, вміння та кваліфікацію яких підтверждено публічно UAP
+        </h3>
+        <img class="team_logo" src="../themes/clinic/img/uap-logo.png" alt="ukrainian academy of periodontology"/>
 
-      {#<section class="services">#}
-        {#<h2 class="services_title">#}
-          {#Преміум послуга доступна кожному#}
-        {#</h2>#}
-        {#<div class="services_steps">#}
-          {#<h3 class="services_steps-title">Перший візит</h3>#}
-          {#<div class="services_steps-for-kids">#}
-            {#<span class="services_steps-for-kids-icon"><i class="icon icon-child-face"></i></span>#}
-            {#<p class="services_steps_for-kids-text">Для Вашої дитини все починається з консультації.</p>#}
-          {#</div>#}
-          {#<div class="services_steps-content">#}
-            {#<ul class="services_steps-list">#}
+        <p class="team_subtitle">
+          З <span class="text-active">30</span> кандидатів ми відібрали тільки
+          <span class="text-active">9</span>,
+          які зараз працюють в наших клініках.
+        </p>
+        <h4 class="team_title-regular">Знайомтесь</h4>
+        <div class="team_carousel">
+          {{ doctors }}
+        </div>
+      </section>
 
-            {#</ul>#}
-            {#<div class="services_steps-skobka">#}
-              {#// skoba#}
-            {#</div>#}
-            {#<div class="services_steps-price">#}
-              {#<span class="main-price">2750</span>#}
-              {#<span class="price-currency">#}
-                {#<span class="foreing-price">~100$</span>#}
-                {#<span class="local-currency">грн</span>#}
-              {#</span>#}
-              {#<p class="price-for-visit">Ціна за 1 комплексний візит</p>#}
-            {#</div>#}
-          {#</div>#}
-        {#</div>#}
-      {#</section>#}
-      {#<section class="support">#}
-        {#<h2 class="support-title">Чисті зуби не хворіють</h2>#}
+      <section class="services">
+        <h2 class="services_title">
+          Преміум послуга доступна кожному
+        </h2>
+        <div class="services_steps">
+          <h3 class="services_steps-title">Перший візит</h3>
+          <div class="services_steps-for-kids">
+            <span class="services_steps-for-kids-icon"><i class="icon icon-child-face"></i></span>
+            <p class="services_steps_for-kids-text">Для Вашої дитини все починається з консультації.</p>
+          </div>
+          <div class="services_steps-content">
+            <ul class="services_steps-list">
 
-      {#</section>#}
-      {#{{ reviews }}#}
-    {#</div>#}{# /.layout-content #}
+            </ul>
+            <div class="services_steps-skobka">
+              @@include('../page_parts/logo/skobka.twig')
+            </div>
+            <div class="services_steps-price">
+              <span class="main-price">2750</span>
+              <span class="price-currency">
+                <span class="foreing-price">~100$</span>
+                <span class="local-currency">грн</span>
+              </span>
+              <p class="price-for-visit">Ціна за 1 комплексний візит</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="support">
+        <h2 class="support_title">Чисті зуби не хворіють</h2>
+        <p class="support_subtitle"></p>
+      </section>
+      {{ reviews }}
+    </div> /.layout-content
 
-    {#{% if page.sidebar_first %}#}
-      {#<aside class="layout-sidebar-first" role="complementary">#}
-        {#{{ page.sidebar_first }}#}
-      {#</aside>#}
-    {#{% endif %}#}
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
 
-    {#{% if page.sidebar_second %}#}
-      {#<aside class="layout-sidebar-second" role="complementary">#}
-        {#{{ page.sidebar_second }}#}
-      {#</aside>#}
-    {#{% endif %}#}
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
     @@include('../page_parts/banner/banner.twig')
 
 

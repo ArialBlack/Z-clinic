@@ -1,6 +1,6 @@
 {#
 /**
- * @page Чому ми
+ * @page Про Нас
  * Default theme implementation to display a single page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
@@ -50,12 +50,13 @@
 <!--
   <header role="banner">
     {{ page.header }}
-  </header> -->
+  </header>
+ -->
+  <header role="header">
+    @@include('../page_parts/menu/main.twig')
+    @@include('../page_parts/header/main.twig')
+  </header>
 
-  {#<header role="header">#}
-    {#@@include('../page_parts/menu/main.twig')#}
-    {#@@include('../page_parts/header/main.twig')#}
-  {#</header>#}
 
   {{ page.breadcrumb }}
 
@@ -67,6 +68,23 @@
     <div class="layout-content">
       {{ page.content }}
     </div>{# /.layout-content #}
+    <section class="why-we_banners">
+      <div class="why-we_banners-wrapper">
+        <div class="why-we_banners-content">
+          <i class="icon icon-parking"></i>
+          <p class="why-we_banners-content-text">
+            Свій паркінг та паркувальник
+          </p>
+        </div>
+        <div class="why-we_banners-content">
+          <i class="icon icon-headphones"></i>
+          <p class="why-we_banners-content-text">
+            Наші адміністратори можуть нагадувати вам про ваші візити
+          </p>
+        </div>
+      </div>
+
+    </section>
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
         {{ page.sidebar_first }}

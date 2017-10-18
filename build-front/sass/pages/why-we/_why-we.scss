@@ -1,11 +1,11 @@
 .path-why-we {
+
   .why-we {
     &_banners {
       min-height: 500px;
 
       &-wrapper {
         @extend .col-lg-6, %center-block;
-
       }
 
       &-content {
