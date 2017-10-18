@@ -1,3 +1,53 @@
-.path-dco {
+.path-teeth-care-center {
+  .dco-advantages {
+    &_title {
 
+    }
+
+    &_subtitle {
+
+    }
+
+    &_description {
+      &-item {
+        @extend %text-regular;
+        text-transform: uppercase;
+        font-size: $fs-title;
+
+        .text-active {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .clinics {
+
+  }
+
+  .dco_video-banner {
+    min-height: 400px;
+    background: #e6e6e6;
+    @extend %content-center;
+  }
+
+  .team {
+    &_title {
+      @extend %title-primary;
+    }
+
+    &_logo {
+      margin: 0 auto;
+    }
+
+    &_subtitle {
+      .text-active {
+        color: $primary-color;
+        font-weight: 600;
+      }
+    }
+
+    &_carousel {
+
+    }
+  }
 }
