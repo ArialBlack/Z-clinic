@@ -2,7 +2,7 @@
   @extend %content-center;
   // min-height: 400px;
   // height: auto;
-  padding: 120px 30px 20%;
+  padding: 150px 30px 20%;
   @include min-screen($max-tablet) {
     padding: 200px 30px 12%;
   }
@@ -72,10 +72,11 @@
 
   &_title {
     margin-top: 30px;
-    @extend %title-hint, %text-bold;
+    @extend %title-hint;
+    font-weight: 400 !important;
     @include max-screen($tablet){
       font-size: 25px;
-      font-weight: 400;
+      font-weight: 200;
     }
   }
 
