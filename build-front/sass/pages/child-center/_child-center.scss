@@ -1,4 +1,4 @@
-.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/43"]{
+.paragraph--type--custom-html-block[id="paragraphID-43"]{
 	@extend %center-block-with-bg;
 	background-color: $white-smoke;
 	.child_advantages{
@@ -27,20 +27,20 @@
 	}
 }
 
-.paragraph--type--group-paragraph[data-quickedit-entity-id="paragraph/41"] {
+.paragraph--type--group-paragraph[id="paragraphID-41"] {
 	@extend %center-block;
 	overflow: hidden;
 	padding-bottom: 80px;
-	.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/38"],
-	.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/39"] {
+	.paragraph--type--simple-text-paragraph[id="paragraphID-38"],
+	.paragraph--type--simple-text-paragraph[id="paragraphID-39"] {
 		@extend .col-md-9;
 		margin: 0;
 		float: left;
 	}
-	.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/38"] {
+	.paragraph--type--simple-text-paragraph[id="paragraphID-38"] {
 		margin-bottom: 50px;
 	}
-	.paragraph--type--media[data-quickedit-entity-id="paragraph/40"] {
+	.paragraph--type--media[id="paragraphID-40"] {
 		@extend .col-md-3;
 		margin: 0;
 		overflow: hidden;
@@ -56,7 +56,7 @@
 		}
 	}
 }
-.paragraph--type--text-near-image[data-quickedit-entity-id="paragraph/44"] {
+.paragraph--type--text-near-image[id="paragraphID-44"] {
 	background-color: $white !important;
 	padding: 100px 0;
 	.media-as-bg {
@@ -66,7 +66,7 @@
 	}
 }
 
-.paragraph--type--text-and-html-block[data-quickedit-entity-id="paragraph/46"] {
+.paragraph--type--text-and-html-block[id="paragraphID-46"] {
 	overflow: hidden;
 	.field-title{
 		@extend .col-12;
@@ -114,7 +114,7 @@
 		}
 	}
 }
-.paragraph--type--center-title[data-quickedit-entity-id="paragraph/47"] {
+.paragraph--type--center-title[id="paragraphID-47"] {
 	@extend %center-block;
 	text-align: center;
 	padding: 50px 0;
@@ -132,8 +132,8 @@
 	}
 }
 
-.paragraph--type--views-block[data-quickedit-entity-id="paragraph/48"],
-.paragraph--type--views-block[data-quickedit-entity-id="paragraph/49"] {
+.paragraph--type--views-block[id="paragraphID-48"],
+.paragraph--type--views-block[id="paragraphID-49"] {
 	@extend %center-block;
 	padding-bottom: 140px;
 	.field-title{

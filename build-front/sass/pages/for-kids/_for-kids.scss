@@ -1,4 +1,4 @@
-.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/140"] {
+.paragraph--type--custom-html-block[id="paragraphID-140"] {
 	padding: 100px 0;
 	text-align: center;
 	@include min-screen($max-tablet) {
@@ -31,7 +31,7 @@
 	}
 }
 
-.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/138"] {
+.paragraph--type--custom-html-block[id="paragraphID-138"] {
 	@extend %center-block;
 	text-align: center;
 	padding: 150px 0;
@@ -62,7 +62,7 @@
 }
 
 
-.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/132"] {
+.paragraph--type--custom-html-block[id="paragraphID-132"] {
 	@extend %center-block;
 	position: relative;
 	@include max-screen($max-tablet) {
