@@ -1,72 +1,45 @@
 .masonry_menu{
-	// display: none;
-	padding-top: 80px;
-	margin: 0 -15px;
+	margin: 80px -15px 0;
 	max-width: $hdpi+px;
+	position: relative;
 	@include min-screen($max-mobile){
-		margin: 0 auto;
+		margin: 80px auto 0;
 	}
-	&-left{
-		padding: 0 8px;
-		&_bot{
-			padding-top: 16px;
-		}
-		&_top{
-			margin: 0 -8px;
-			&-item{
-				padding: 0 8px;
-			}
-		}
-		.col-md-3{
-			padding: 0 8px;
-			box-sizing: border-box;
-			margin-top: 16px;
-			@include min-screen($max-tablet){
-				margin-top: 0;
-			}
-		}
+	&-top,
+	&-bot {
+		margin-right: -6px;
+		margin-left: -6px;
+		padding: 0 6px;
 	}
-	&-right{
-		padding: 0 8px;
-		margin-top: 16px;
-		@include min-screen($max-tablet){
-			margin-top: 0;
-		}
-	}
-	@include max-screen($tablet){
-		&-right &-icon{
-			display: inline-block;
-			margin-bottom: 0;
-			margin-right: 25px;
-			font-size: 42px;
-		}
-	}
-	&-item{
-		display: block;
+	&-item {
 		user-select: none;
-		padding-top: 100%;
+		margin-bottom: 12px;
+		padding-right: 6px;
+		padding-left: 6px;
+		&.is-tall{
+			@include min-screen($max-tablet) {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+	&-link {
 		text-transform: uppercase;
 		background-color: $white-smoke;
 		position: relative;
 		cursor: pointer;
-		&.is-wide, 
-		&.is-tall {
-			padding-top: 40%;
-		}
-		@include min-screen($max-mobile) {
-			&.is-wide, 
-			&.is-tall {
-				padding-top: 21%;
+		display: block;
+		padding-top: 100%;
+		.is-wide & {
+			padding-top: 32%;
+			@include min-screen($max-tablet) {
+				padding-top: 19%;
 			}
 		}
-		@include min-screen($max-tablet) {
-			&.is-wide{
-				padding-top: 13%;
-			}
-			&.is-tall{
-				height: 100%;
-				padding-top: 0;
-			}
+		.is-tall & {
+			height: 100%;
 		}
 		&-i{
 			background-color: transparent;
@@ -85,26 +58,27 @@
 		@include min-screen($max-tablet){
 			&:hover &-i{
 				background-color: $white;
-				left: -15px;
-				top: -15px;
-				right: -15px;
-				bottom: -15px;
+				left: -12px;
+				top: -12px;
+				right: -12px;
+				bottom: -12px;
 				box-shadow: 0 0 87px rgba(200, 200, 200, .75);
 			}
 		}
+
 	}
 	&-icon{
-		font-size: 55px;
-		margin-bottom: 35px;
 		color: $primary-color;
 		transition: all $trs-d;
 		display: block;
-		@include max-screen($mdpi){
-			font-size: 46px;
+		margin-bottom: 0;
+		font-size: 55px;
+		@include screen($mdpi, $hdpi) {
+			font-size: 42px ;
 			margin-bottom: 25px;
 		}
-		@include max-screen($max-mobile){
-			margin-bottom: 0;
+		@include min-screen($hdpi) {
+			margin-bottom: 30px;
 		}
 		.is-wide &{
 			font-size: 50px;
@@ -124,15 +98,34 @@
 		&:after{
 			transition: all $trs-d;
 			visibility: hidden;
-			width: 0;
 			margin: 0 auto;
+			width: 30%;
+			@include min-screen($hdpi){
+				width: 22%;
+			}
 		}
 		.is-wide &{
 			display: inline-block;
-			// line-height: 50px;
 		}
-		@include min-screen($max-mobile) {
-			font-size: 18px;
+		@include min-screen($mdpi) {
+			font-size: 12px;
+		}
+		@include min-screen($hdpi) {
+			font-size: 18px !important;
+		}
+	}
+	@include min-screen($mdpi) {
+		&-link:hover &-title:after{
+			margin-top: 10px;
+			margin-bottom: 20px;
+			visibility: visible;
+		}
+	}
+	@include min-screen($hdpi){
+		&-link:hover &-title:after{
+			margin-top: 15px !important;
+			margin-bottom: 30px !important;
+			visibility: visible;
 		}
 	}
 	&-hiden_text{
@@ -140,38 +133,30 @@
 		opacity: 0;
 		transition: all $trs-d;
 		height: 0;
-		font-size: 12px;
-		line-height: 2;
+		font-size: 10px;
+		line-height: 1.6;
 		color: $text-light-gray;
 		&.is-wide{
 			line-height: 1.8;
 		}
+		@include min-screen($hdpi) {
+			font-size: 12px;
+			line-height: 2;
+		}
 	}
-	@include min-screen($max-tablet){
-		&-item:hover &-title {
-			&:after{
-				margin-top: 20px;
-				margin-bottom: 50px;
-				width: 54px;
-				visibility: visible;
-				@include min-screen($mdpi){
-					margin-top: 15px;
-					margin-bottom: 35px;
-				}
-			}
-		}
-		&-item.is-wide:hover &-title {
-			&:after{
-				margin-top: 8px;
-				margin-bottom: 18px;
-				width: 54px;
-				visibility: visible;
-			}
-		}
-		&-item:hover &-hiden_text{
+	@include min-screen($mdpi){
+		&-link:hover &-hiden_text{
 			visibility: visible;
 			opacity: 1;
 			height: auto;
 		}
 	}
+	// &-link.is-wide:hover &-title {
+	// 	&:after{
+	// 		margin-top: 8px;
+	// 		margin-bottom: 18px;
+	// 		width: 54px;
+	// 		visibility: visible;
+	// 	}
+	// }
 }
