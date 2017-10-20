@@ -1,62 +1,122 @@
-.path-teeth-care-center {
-  #accordion {
-    max-width: $hdpi + "px";
-
+.views-element-container {
+  #accordion[role="tablist"] {
+    max-width: #{$hdpi}px;
+    margin: 50px auto;
+    @include min-screen($mdpi) {
+      margin: 150px auto;
+    }
+    .card+.card {
+      margin-top: 10px;
+      @include min-screen($mdpi) {
+        margin-top: 30px;
+      }
+    }
     .card {
-      margin: 10px 20px 30px;
-      border: 0 none;
-      border-radius: 0;
-
-      .card-header {
+      border: none;
+      &-header {
+        border-radius: 0;
         border-bottom: 0 none;
-        background: #f8f8f8;
-        padding: 30px 60px;
+        padding: 0;
+        a[data-toggle="collapse"] {
+          display: block;
+          background: $white-smoke;
+          padding: 20px calc(100%/12);
+          position: relative;
+          cursor: pointer;
+          &:before {
+            content: $icon-accordeon-arrow;
+            font-family: "svgfont";
+            position: absolute;
+            right: calc(100% / 12 - 35px);
+            top: 50%;
+            height: 38px;
+            margin-top: -19px;
+            color: $primary-color;
+            font-size: 38px;
+            line-height: 1;
+            text-align: center;
+            transform: rotate(90deg);
+            transition: transform $trs-d;
+          }
+          &.collapsed:before {
+            transform: rotate(0);
+          }
+          &:hover {
+            text-decoration: none !important;
+          }
+          @include min-screen($mdpi) {
+            padding: 50px calc(100%/12);
+          }
+          .field-image {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            margin-right: 20px;
+            @include min-screen($mdpi) {
+              width: 100px;
+              height: 100px;
+            }
+            img {
+              width: 100%;
+              height: auto;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+          .media-body {
+            align-self: center;
+            .field-title {
+              @extend %text-regular;
+              color: $black;
+              text-decoration: none;
+              font-weight: 700;
+              line-height: 2;
+              text-transform: uppercase;
+            }
+            .field-position {
+              font-size: $fs-md;
+              font-weight: 400;
+              color: $text-light-gray;
+            }
+          }
+        }
+        & + div[role="tabpanel"] {
+          background-color: $tabs-background;
+          padding: 30px;
+          @include min-screen($mdpi) {
+            padding: 7% 8.3%;
+          }
 
-        @include max-screen($max-mobile) {
-          .media {
+          .card-block {
+            @extend %text-regular;
+            color: $text-dark-hint;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            position: relative;
+            &:before {
+              font-family: "svgfont";
+              position: absolute;
+              top: 50%;
+              height: 38px;
+              color: #e6e7e8;
+              font-size: 10px;
+              top: 0;
+              left: -14px;
+              @include min-screen($mdpi) {
+                font-size: 17px;
+                content: $icon-quotes-open;
+               top: -6.3%;
+               left: calc(8.3% / 2 * -1 - 8px);
+              }
+            }
+
+            p {
+              margin-bottom: 20px;
+            }
           }
         }
       }
-      .media-body {
-
-        &:hover {
-          text-decoration: none !important;
-        }
-
-        .field-title {
-          @extend %text-regular;
-          color: $text-dark;
-          text-decoration: none;
-          font-weight: bold;
-          line-height: 3.5;
-          text-transform: uppercase;
-        }
-
-        .field-position {
-          @extend %text-regular;
-        }
-      }
-
-      .collapse {
-        background-color: #fbfbfb;
-        padding: 30px 60px 60px;
-
-        .card-block {
-          @extend %text-regular;
-          color: $text-dark-hint;
-          font-weight: 400;
-          letter-spacing: 0.5px;
-
-          p {
-            margin-bottom: 20px;
-          }
-        }
-
-        &.show {
-        }
-      }
-
-
     }
   }
 }
