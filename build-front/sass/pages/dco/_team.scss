@@ -4,7 +4,7 @@
     @extend %centered-content;
     padding: 50px;
     min-height: 100vh;
-    max-width: $hdpi 'px';
+    max-width: $hdpi + 'px';
 
     &_title {
       @extend %title-primary;
@@ -41,8 +41,6 @@
     &_carousel {
       overflow: hidden;
 
-      // while no content.
-      display: none;
     }
   }
 }

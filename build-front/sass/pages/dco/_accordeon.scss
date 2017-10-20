@@ -1,6 +1,6 @@
 .path-teeth-care-center {
   #accordion {
-    max-width: $hdpi "px";
+    max-width: $hdpi + "px";
 
     .card {
       margin: 10px 20px 30px;
@@ -38,20 +38,21 @@
       }
 
       .collapse {
-        &.show {
-          background-color: #fbfbfb;
-          padding: 30px 60px 60px;
+        background-color: #fbfbfb;
+        padding: 30px 60px 60px;
 
-          .card-block {
-            @extend %text-regular;
-            color: $text-dark-hint;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+        .card-block {
+          @extend %text-regular;
+          color: $text-dark-hint;
+          font-weight: 400;
+          letter-spacing: 0.5px;
 
-            p {
-              margin-bottom: 20px;
-            }
+          p {
+            margin-bottom: 20px;
           }
+        }
+
+        &.show {
         }
       }
 
