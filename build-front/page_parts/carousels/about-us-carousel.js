@@ -9,7 +9,7 @@
       margin: 65,
       slideBy: 1,
       dots: false,
-      navText: ['<i class="icon icon-floating_arrow">', '<i class="icon icon-floating_arrow">'],
+      navText: ['<i class="icon icon-left_arrow">', '<i class="icon icon-right_arrow">'],
       nav: true,
       navContainer: '#about-us_carousel-nav',
       navElement: 'span',

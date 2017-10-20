@@ -1,4 +1,36 @@
 .path-teeth-care-center {
-  .views-element-container {
+  #accordion {
+    max-width: $hdpi 'px';
+    .card {
+      margin-bottom: 30px;
+      border: 0 none;
+      border-radius: 0;
+
+      .card-header {
+        border-bottom: 0 none;
+        background: #f8f8f8;
+      }
+      .media-body {
+        .field-title {
+
+        }
+
+        .field-position {
+
+        }
+      }
+
+      .collapse {
+        &.show {
+
+        }
+
+        .card-block {
+          background-color: #fbfbfb;
+        }
+      }
+
+
+    }
   }
 }

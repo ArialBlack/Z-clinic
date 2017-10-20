@@ -20,7 +20,7 @@
         loop:true,
         margin:20,
         dots: false,
-        navText: ['&#60;', '&#62;'],
+        navText: ['<i class="icon icon-left_arrow">', '<i class="icon icon-right_arrow">'],
         navContainer: '#zablotsky-speech_slides-nav-wrapper',
         navClass: ['zablotsky-speech_slides-nav-arrow left', 'zablotsky-speech_slides-nav-arrow right'],
         navElement: 'span',

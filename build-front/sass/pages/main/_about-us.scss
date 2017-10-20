@@ -59,7 +59,7 @@
 
         .icon {
           font-size: 26px;
-
+          margin-top: -5px;
           @include max-screen($max-tablet) {
             font-size: 16px;
           }
@@ -68,14 +68,8 @@
         &.left {
           position: absolute;
           left: 15px;
-          transform: rotate(180deg);
           @include max-screen($max-mobile) {
             left: 5px;
-          }
-
-          i {
-            margin-top: -5px;
-            margin-left: 3px;
           }
         }
 
@@ -85,10 +79,6 @@
 
           @include max-screen($max-mobile) {
             right: 5px;
-          }
-          i {
-            margin-top: -7px;
-            margin-right: -5px;
           }
         }
       }
