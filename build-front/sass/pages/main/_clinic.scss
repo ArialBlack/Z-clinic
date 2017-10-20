@@ -22,9 +22,81 @@
     }
   }
 
+  &-wrapper {
+    padding: 0 20px;
+  }
+  .img-wrapper {
+    position: relative;
+  }
+
   img {
     max-width: 100%;
     min-height: 250px;
+  }
+
+  &_arrow {
+    top: 55%;
+    left: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    animation-name: highlight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; // Stay on the last frame
+    animation-iteration-count: infinite; // Run inifinite
+    animation-timing-function: ease-in-out;
+
+    @include max-screen($max-tablet) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @keyframes highlight {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.25);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    &.down.clinic_kyiv {
+      left: 49%;
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    &.right.clinic_lviv {
+      top: 80%;
+      left: 38%;
+    }
+
+    &.left.clinic_lviv {
+      top: 80%;
+      left: 63%;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.left.dco_lviv {
+      top: 65%;
+      left: 48%;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+
   }
 }
 
@@ -44,6 +116,10 @@
       text-align: center;
       color: $text-light;
 
+      @include max-screen($tablet) {
+        bottom: 10px;
+      }
+
       &-item {
         display: inline-block;
         font-size: 20px;
@@ -52,6 +128,10 @@
         cursor: pointer;
         transition: all .2s ease-in;
 
+        @include max-screen($tablet) {
+          font-size: 14px;
+        }
+
         &:hover, &:focus {
           color: $text-light;
         }
@@ -59,6 +139,10 @@
           font-size: 36px;
           font-weight: 600;
           color: $text-light;
+
+          @include max-screen($tablet) {
+            font-size: 20px;
+          }
         }
       }
     }

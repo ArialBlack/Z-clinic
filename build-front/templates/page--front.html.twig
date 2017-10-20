@@ -124,7 +124,13 @@
         <h3 class="clinic_title">Клініка у Києві</h3>
         <p class="clinic_location">вул. Ногоспітальна, 5</p>
       </div>
-      <img src="../themes/clinic/img/clinic_kyiv.jpg" alt="clinic in kyiv">
+      <div class="img-wrapper">
+        <img src="../themes/clinic/img/clinic_kyiv.jpg" alt="clinic in kyiv">
+        <a href="#clinic_kyiv" class="clinic_arrow down clinic_kyiv" data-toggle="modal">
+          @@include('../page_parts/arrows/floating.twig')
+        </a>
+      </div>
+      @@include('../page_parts/modals/clinic_kyiv.twig')
     </section>
 
     <section class="since-1998">
@@ -139,10 +145,16 @@
         <h3 class="clinic_title">Клініка у Львові</h3>
         <p class="clinic_location">вул. Коперника 20</p>
       </div>
-      <img src="../themes/clinic/img/clinic_lviv.jpg" alt="clinic in lviv">
-      <a href="#" class="clinic-lviv-arrow">
-        <i class="icon icon-floating-arrow"></i>
-      </a>
+      <div class="img-wrapper">
+        <img src="../themes/clinic/img/clinic_lviv.jpg" alt="clinic in lviv">
+        <a href="#clinic_lviv" class="clinic_arrow left clinic_lviv" data-toggle="modal" >
+          @@include('../page_parts/arrows/floating.twig')
+        </a>
+        <a href="#clinic_lviv" class="clinic_arrow right clinic_lviv" data-toggle="modal" >
+          @@include('../page_parts/arrows/floating.twig')
+        </a>
+      </div>
+      @@include('../page_parts/modals/clinic_lviv.twig')
     </section>
 
     <section class="small-logo">
@@ -170,14 +182,26 @@
             <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
             <p class="clinic_location">вул. Наукова, 7А, <strong> БП Оптіма Плаза</strong></p>
           </div>
-          <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+          <div class="img-wrapper">
+            <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+            <a href="#dco_lviv" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+              @@include('../page_parts/arrows/floating.twig')
+            </a>
+          </div>
+          @@include('../page_parts/modals/dco_lviv.twig')
         </div>
         <div class="clinics_carousel-wrapper">
           <div class="clinic-wrapper">
             <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
             <p class="clinic_location">вул, Липинського, 28 <strong>ЖК Парус Park</strong></p>
           </div>
-          <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+          <div class="img-wrapper">
+            <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+            <a href="#dco_lviv" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+              @@include('../page_parts/arrows/floating.twig')
+            </a>
+        </div>
+        @@include('../page_parts/modals/dco_lviv.twig')
         </div>
       </div>
     </section>
@@ -192,7 +216,13 @@
           <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
           <p class="clinic_location">Спортивна пл. 1, <strong>ТРЦ Гуллівер</strong></p>
         </div>
+        <div class="img-wrapper">
         <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
+          <a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
+            @@include('../page_parts/arrows/floating.twig')
+          </a>
+        </div>
+        @@include('../page_parts/modals/dco_kyiv.twig')
       </section>
 
     @@include('../page_parts/banner/banner.twig')
