@@ -21,7 +21,13 @@
     text-align: center;
 
     input {
-      margin: 0 auto;
+      margin: 10px auto;
+      padding: 5px;
+    }
+
+    button {
+      padding: 0;
+      margin: 20px;
     }
   }
 }

@@ -1,5 +1,4 @@
 .menu {
-	max-width: $hdpi+px;
 	margin: 0 auto;
 	position: relative;
 	&-section {
@@ -90,7 +89,7 @@
 		}
 		&_text {
 			color: $primary-color;
-			position: absolute; 
+			position: absolute;
 			font-size: 18px;
 			height: 48px;
 			line-height: 48px;
