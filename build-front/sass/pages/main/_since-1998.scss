@@ -7,7 +7,7 @@
     margin: 0 auto;
 
     .logo {
-      max-width: 80%;
+      max-width: 100%;
       @include min-screen($max-mobile) {
         max-width: 60%;
       }
@@ -16,7 +16,6 @@
         cursor: pointer;
         width: 100%;
         @include min-screen($max-tablet) {
-          width: 600px;
         }
         transition: color $trs-d;
         .logo_clinic {
@@ -59,7 +58,7 @@
     }
 
     img {
-      margin-top: 25px auto;
+      margin: 50px auto;
       display: block;
       max-width: 100%;
 

@@ -18,23 +18,23 @@
 
   &_logo {
     width: 90%;
+    margin: 20px auto;
     @include min-screen($max-mobile) {
       width: 60%;
     }
     @include min-screen($max-tablet) {
-      width: 600px;
     }
-    margin: 0 auto;
     svg {
       cursor: pointer;
       width: 100%;
+      margin: 45px auto;
       @include min-screen($max-tablet) {
-        width: 600px;
+        max-width: 600px;
       }
       transition: color $trs-d;
       .logo_clinic {
         stroke: $text-dark-hint;
-        stroke-width: 1;
+        stroke-width: 0.1;
         stroke-dasharray: 100px;
         stroke-dashoffset: 100px;
         animation-name: draw;
@@ -57,7 +57,7 @@
 
         &-dots {
           stroke: $primary-color;
-          stroke-width: 1;
+          stroke-width: 0.1;
           stroke-dasharray: 100px;
           stroke-dashoffset: 100px;
           animation-name: draw;
@@ -73,7 +73,9 @@
   &_title {
     margin-top: 30px;
     @extend %title-hint;
+    color: $text-dark-hint;
     font-weight: 400 !important;
+    margin-bottom: 30px;
     @include max-screen($tablet){
       font-size: 25px;
       font-weight: 200;
