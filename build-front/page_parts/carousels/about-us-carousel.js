@@ -4,7 +4,7 @@
     $('.about-us_carousel').addClass('owl-carousel owl-theme');
     $('.about-us_carousel').owlCarousel({
       center: true,
-      items: 5,
+      items: 6,
       loop: true,
       margin: 65,
       slideBy: 1,

@@ -26,6 +26,10 @@
       @include max-screen($max-mobile) {
         padding: 0;
       }
+
+      & .owl-item {
+        width: 200px !important;
+      }
     }
     &-wrapper {
       width: 100%;
