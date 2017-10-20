@@ -1,15 +1,18 @@
 'use strict';
 (function ($) {
   $(document).ready(function(){
-    var collapseTriggers = $('#accordion a[data-toggle="collapse"]');
-    var collapseContent = $('#accordion .collapse');
-    console.log('collapseTriggers', collapseTriggers);
-    console.log('collapseContent', collapseContent);
-    for (var i = 0; collapseTriggers.length - 1; i++) {
-      console.log(collapseTriggers[i], collapseContent[i]);
-      // .attr('href', '#' + i);
-      // collapseContent[i].attr('id', i);
-    }
+    
+    var collapseTriggers = $('#accordion a[data-toggle="collapse"]').each(function (index, value) {
+      
+      $(value).attr('href', '#' + index);
+    });
+    var collapseContent = $('#accordion  .collapse').each(function (index, value) {
+      $(value).attr('id', index);
+      if (index !== 0) {
+        $(value).removeClass('show');
+      }
+    });
+    
   });
 }(jQuery));
 
