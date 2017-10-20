@@ -1,32 +1,57 @@
 .path-teeth-care-center {
   #accordion {
-    max-width: $hdpi 'px';
+    max-width: $hdpi "px";
+
     .card {
-      margin-bottom: 30px;
+      margin: 10px 20px 30px;
       border: 0 none;
       border-radius: 0;
 
       .card-header {
         border-bottom: 0 none;
         background: #f8f8f8;
+        padding: 30px 60px;
+
+        @include max-screen($max-mobile) {
+          .media {
+          }
+        }
       }
       .media-body {
-        .field-title {
 
+        &:hover {
+          text-decoration: none !important;
+        }
+
+        .field-title {
+          @extend %text-regular;
+          color: $text-dark;
+          text-decoration: none;
+          font-weight: bold;
+          line-height: 3.5;
+          text-transform: uppercase;
         }
 
         .field-position {
-
+          @extend %text-regular;
         }
       }
 
       .collapse {
         &.show {
-
-        }
-
-        .card-block {
           background-color: #fbfbfb;
+          padding: 30px 60px 60px;
+
+          .card-block {
+            @extend %text-regular;
+            color: $text-dark-hint;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+
+            p {
+              margin-bottom: 20px;
+            }
+          }
         }
       }
 
