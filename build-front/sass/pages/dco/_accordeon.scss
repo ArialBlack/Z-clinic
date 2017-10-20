@@ -83,12 +83,12 @@
         }
         & + div[role="tabpanel"] {
           background-color: $tabs-background;
-          padding: 30px;
-          @include min-screen($mdpi) {
-            padding: 7% 8.3%;
-          }
 
           .card-block {
+            padding: 30px;
+            @include min-screen($mdpi) {
+              padding: 7% 8.3%;
+            }
             @extend %text-regular;
             color: $text-dark-hint;
             font-weight: 400;
