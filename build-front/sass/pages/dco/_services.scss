@@ -33,7 +33,8 @@
       position: relative;
       margin: 120px 0 150px;
       &-side {
-        margin: 10px 0 150px;
+        margin: 10px 0 150px 20px;
+
         @include min-screen(1770) {
           margin: 0;
           position: absolute;
@@ -66,8 +67,7 @@
           }
         }
       }
-      &-content {
-      }
+
       &-list{
         margin-bottom: 150px;
         &-item {
@@ -82,61 +82,137 @@
             bottom: 0;
             right: 0;
             transition: all $trs-d;
+            padding: 30px;
+            cursor: pointer;
+
+            &.step-1 {
+              background: #951a1d;
+            }
+
+            &.step-2 {
+              background: #a41c1f;
+            }
+
+            &.step-3 {
+              background: #b21d21;
+            }
+
+            &.step-4 {
+              background: #c21e23;
+            }
+
+            &.step-5 {
+              background: #d31e24;
+            }
+
+            &.step-gift {
+              background: #e41e26;
+            }
+
+
+            &-number {
+              color: $text-light;
+              text-transform: uppercase;
+              padding-top: 10px;
+              font-weight: 200;
+
+              span {
+                font-size: 30px;
+                font-weight: 700;
+              }
+
+              i  {
+                margin: 0 auto;
+                display: block;
+                &:before {
+                  font-size: 30px;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .services_steps-list-hidden-content {
+              display: none;
+              transition: all $trs-d;
+              color: $text-hint;
+            }
           }
+
+
           &:hover .is-can-expand {
             left: 0;
             top: -100px;
             bottom: -110px;
             right: 0;
+
+            .services_steps-list-hidden-content {
+              display: block;
+            }
           }
         }
 
-      }
-      &-title {
-
-      }
-
-      &-for-kids {
-        &-icon {
-
+        &-title {
+          display: block;
+          margin: 20px 0 25px;
+          font-weight: 600;
+          font-size: 24px;
         }
 
-        &-text {
+        &-price {
+          position: absolute;
+          bottom: 50px;
+          display: block;
+          &-wrapper {
+            margin-bottom: 10px;
+            i.icon {
+              &:before {
+                font-size: 40px;
+              }
+            }
+          }
 
+          .cost {
+            &-wrapper {
+              display: inline-block;
+              margin-left: 20px;
+              vertical-align: bottom;
+              font-style: italic;
+            }
+
+            &-foreing {
+              display: block;
+              font-size: 20px;
+            }
+
+            &-uah {
+              display: block;
+              font-size: 18px;
+            }
+          }
+
+          &-message {
+            display: block;
+            margin: 20px 0 25px;
+            font-weight: 600;
+            font-size: 24px;
+          }
         }
-      }
 
-      &-content {
+        &-time {
+          &-wrapper {
+            i {
+              &:before {
+                font-size: 40px;
+              }
+            }
 
-      }
-
-      &-list {
-
-      }
-
-      &-skobka {
-
-      }
-
-      &-price {
-        .main price {
-
-        }
-
-        .price-currency {
-
-        }
-
-        .foreing-price {
-
-        }
-
-        .local-currency {
-
-        }
-
-        .price-for-visit {
-
+            span.time {
+              display: inline-block;
+              margin-left: 20px;
+              font-size: 20px;
+              font-style: italic;
+            }
+          }
         }
       }
     }

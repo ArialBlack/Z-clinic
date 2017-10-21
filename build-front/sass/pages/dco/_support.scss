@@ -52,10 +52,13 @@
       margin: 50px 0;
       &-list{
         margin-bottom: 150px;
+        display: flex;
+
         &-item {
           position: relative;
           padding-top: 27.5%;
           color: $white;
+
           &-step {
             background-color: $primary-color;
             position: absolute;
@@ -64,21 +67,115 @@
             bottom: 0;
             right: 0;
             transition: all $trs-d;
-          }
-          &:hover .is-can-expand {
-            left: 0;
-            top: -100px;
-            bottom: -110px;
-            right: 0;
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+
+            &.step-6 {
+              background: #951a1d;
+            }
+
+            &.step-7 {
+              background: #e41e26;
+            }
+
+            &-number {
+              @extend .col-lg-12;
+              color: $text-light;
+              text-transform: uppercase;
+              padding-top: 10px;
+              font-weight: 200;
+
+              span {
+                font-size: 30px;
+                font-weight: 700;
+              }
+
+              i  {
+                margin: 0 auto;
+                display: block;
+                &:before {
+                  font-size: 30px;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            &.has-arrow {
+              &:after {
+                @include smooth-triangle();
+              }
+            }
           }
         }
 
+        &-content {
+          display: flex;
+          @extend .col-lg-12;
+        }
+
+        &-title {
+          @extend .col-lg-6;
+          display: block;
+          font-weight: 600;
+          font-size: 40px;
+        }
+
+        &-price {
+          @extend .col-lg-6;
+          &-wrapper {
+            margin-bottom: 10px;
+            i.icon {
+              &:before {
+                font-size: 40px;
+              }
+            }
+          }
+
+          .cost {
+            &-wrapper {
+              display: inline-block;
+              margin-left: 20px;
+              vertical-align: bottom;
+              font-style: italic;
+            }
+
+            &-foreing {
+              display: block;
+              font-size: 20px;
+            }
+
+            &-uah {
+              display: block;
+              font-size: 18px;
+            }
+          }
+
+          &-message {
+            display: block;
+            margin: 20px 0 25px;
+            font-weight: 600;
+            font-size: 24px;
+          }
+        }
+
+        &-time {
+          &-wrapper {
+            i {
+              &:before {
+                font-size: 40px;
+              }
+            }
+
+            span.time {
+              display: inline-block;
+              margin-left: 20px;
+              font-size: 20px;
+              font-style: italic;
+            }
+          }
+        }
       }
-
-
-    }
-    &-skobka {
-
     }
   }
 }
