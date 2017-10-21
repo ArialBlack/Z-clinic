@@ -164,49 +164,57 @@
       </section>
 
       <section class="services">
-        <h2 class="services_title">
-          Преміум послуга доступна кожному
-        </h2>
-        <div class="services_steps">
-          <h3 class="services_steps-title">Перший візит</h3>
-          <div class="services_steps-for-kids">
-            <span class="services_steps-for-kids-icon"><i class="icon icon-baby-face"></i></span>
-            <p class="services_steps_for-kids-text">Для Вашої дитини все починається з консультації.</p>
-          </div>
-          <div class="services_steps-content">
-            <ul class="services_steps-list">
-              <li class="services_steps-list-item">
-                <p class="services_steps-list-item-step">крок <span>1</span><p>
-              </li>
-              <li class="services_steps-list-item">
-                <p class="services_steps-list-item-step">крок <span>2</span><p>
-              </li>
-              <li class="services_steps-list-item">
-                <p class="services_steps-list-item-step">крок <span>3</span><p>
-              </li>
-              <li class="services_steps-list-item">
-                <p class="services_steps-list-item-step">крок <span>4</span><p>
-              </li>
-              <li class="services_steps-list-item">
-                <p class="services_steps-list-item-step">крок <span>5</span><p>
-              </li>
-              <li class="services_steps-list-item">
-                <p class="services_steps-list-item-step"></p><span>+</span><p>
-              </li>
-            </ul>
-            <div class="services_steps-skobka">
-              @@include('../page_parts/logo/skobka.twig')
+        <div class="services-i">
+          
+          <h2 class="services-title">
+            Преміум послуга доступна кожному
+          </h2>
+            <h3 class="services-subtitle">Перший візит</h3>
+          <div class="services_steps">
+
+            <div class="services_steps-side">
+              <i class="icon icon-baby-face"></i>
+              <p class="services_steps-side-text">Для Вашої дитини все
+              <br>
+              починається з консультації.</p>
             </div>
-            <div class="services_steps-price">
-              <span class="main-price">2750</span>
-              <span class="price-currency">
-                <span class="foreing-price">~100$</span>
-                <span class="local-currency">грн</span>
-              </span>
-              <p class="price-for-visit">Ціна за 1 комплексний візит</p>
+            <div class="services_steps-content">
+              <ul class="services_steps-list row">
+                <li class="services_steps-list-item col-lg-2">
+                  <p class="services_steps-list-item-step is-can-expand">крок <span>1</span><p>
+                </li>
+                <li class="services_steps-list-item col-lg-2">
+                  <p class="services_steps-list-item-step is-can-expand">крок <span>2</span><p>
+                </li>
+                <li class="services_steps-list-item col-lg-2">
+                  <p class="services_steps-list-item-step is-can-expand">крок <span>3</span><p>
+                </li>
+                <li class="services_steps-list-item col-lg-2">
+                  <p class="services_steps-list-item-step is-can-expand">крок <span>4</span><p>
+                </li>
+                <li class="services_steps-list-item col-lg-2">
+                  <p class="services_steps-list-item-step is-can-expand">крок <span>5</span><p>
+                </li>
+                <li class="services_steps-list-item col-lg-2">
+                  <p class="services_steps-list-item-step"></p><span>+</span><p>
+                </li>
+              </ul>
+              <div class="services_steps-skobka">
+                @@include('../page_parts/logo/skobka.twig')
+              </div>
+              <div class="services_steps-price">
+                <span class="price">2750</span>
+                <span class="price-currency">
+                  <span class="foreing-price">~100$</span>
+                  <span class="local-currency">грн</span>
+                </span>
+                <p class="price-for-visit">Ціна за 1 комплексний візит</p>
+              </div>
             </div>
           </div>
+
         </div>
+
       </section>
       <section class="support">
         <h2 class="support_title">Чисті зуби не хворіють</h2>
@@ -248,17 +256,18 @@
               </div>
             </li>
           </ul>
-          <div class="support_steps-skobka">
-            @@include('../page_parts/logo/skobka.twig')
-          </div>
-          <div class="support_steps-price">
-            <span class="main-price">3850</span>
-            <span class="price-currency">
-                <span class="foreing-price">~150$</span>
-                <span class="local-currency">грн</span>
-              </span>
-            <p class="price-for-visit">Ціна за 2 комплексні візити</p>
-          </div>
+        </div>
+        <div class="support-skobka">
+          @@include('../page_parts/logo/skobka.twig')
+        </div>
+
+        <div class="support-price">
+          <span class="support-price-main">3850</span>
+          <span class="support-price-currency">
+              <span class="support-price-currency_foreing">~150$</span>
+              <span class="support-price-currency_local">грн</span>
+            </span>
+          <p class="support-price-title">Ціна за 2 комплексні візити</p>
         </div>
       </section>
       {{ reviews }}

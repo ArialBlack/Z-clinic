@@ -1,45 +1,63 @@
 .path-teeth-care-center {
   .support {
-    display: none;
+    @extend %center-block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include min-screen($max-tablet) {
+      padding-top: 130px;
+      padding-bottom: 100px;
+    }
 
     &_title {
-
+      text-align: center;
+      font-size: 55px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-bottom: 50px;
+      line-height: 1.1;
     }
 
     &_subtitle {
-
+      text-align: center;
+      font-size: $fs-h;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $text-dark-hint;
     }
 
+    &-price {
+      text-align: center;
+      &-main {
+        
+      }
+      &-title {
+        
+      }
+
+      .price-currency {
+
+      }
+
+      .foreing-price {
+
+      }
+
+      .local-currency {
+
+      }
+
+    }
     &_steps {
+      margin: 50px 0;
       &-list {
 
       }
 
-      &-skobka {
 
-      }
+    }
+    &-skobka {
 
-      &-price {
-        .main price {
-
-        }
-
-        .price-currency {
-
-        }
-
-        .foreing-price {
-
-        }
-
-        .local-currency {
-
-        }
-
-        .price-for-visit {
-
-        }
-      }
     }
   }
 }

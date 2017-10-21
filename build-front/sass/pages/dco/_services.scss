@@ -1,10 +1,97 @@
 .path-teeth-care-center {
   .services {
-    &_title {
+    @extend %center-block-with-bg;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $white-smoke;
+    @include min-screen($max-tablet) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    &-i {
+      position: relative;
+    }
 
+    &-title {
+      text-align: center;
+      font-size: 55px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-bottom: 50px;
+      line-height: 1.1;
+    }
+    &-subtitle {
+      text-align: center;
+      font-size: $fs-h;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $text-dark-hint;
     }
 
     &_steps {
+      position: relative;
+      margin: 120px 0 150px;
+      &-side {
+        margin: 10px 0 150px;
+        @include min-screen(1770) {
+          margin: 0;
+          position: absolute;
+          top: 0;
+          left: -100px;
+
+        }
+        .icon {
+          font-size: 77px;
+          color: $primary-color;
+        }
+
+        &-text {
+          font-size: $fs-md;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: $footer-bg;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 20px;
+          @include min-screen(1770) {
+            white-space: nowrap;
+            position: absolute;
+            top: 130px;
+            right: 12px;
+            transform: rotate(-90deg);
+            transform-origin: 100% 100%;
+
+          }
+        }
+      }
+      &-content {
+      }
+      &-list{
+        margin-bottom: 150px;
+        &-item {
+          position: relative;
+          padding-top: 27.5%;
+          color: $white;
+          &-step {
+            background-color: $primary-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            transition: all $trs-d;
+          }
+          &:hover .is-can-expand {
+            left: 0;
+            top: -100px;
+            bottom: -110px;
+            right: 0;
+          }
+        }
+
+      }
       &-title {
 
       }
