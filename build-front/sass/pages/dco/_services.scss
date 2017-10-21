@@ -79,6 +79,10 @@
           padding-top: 25.5%;
           color: $white;
 
+          @include max-screen($hdpi) {
+            padding-top: 30%;
+          }
+
           @include max-screen($max-mobile) {
             padding-top: 75%;
           }
@@ -100,7 +104,7 @@
             }
 
             @include max-screen($max-tablet) {
-              padding-top: 50%;
+              padding-top: 40%;
             }
 
           }

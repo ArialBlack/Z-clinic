@@ -69,7 +69,6 @@
             transition: all $trs-d;
             padding: 30px;
             cursor: pointer;
-            display: flex;
 
             &.step-6 {
               background: #951a1d;
@@ -112,17 +111,18 @@
 
         &-content {
           display: flex;
+          margin-top: 10%;
         }
 
         &-title {
-          @extend .col-lg-6;
+          @extend .col-lg-6, .col-sm-12;
           display: block;
           font-weight: 600;
           font-size: 40px;
         }
 
         &-price {
-          @extend .col-lg-6;
+          @extend .col-lg-6, .col-sm-12;
           &-wrapper {
             margin-bottom: 10px;
             i.icon {
