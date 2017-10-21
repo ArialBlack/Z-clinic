@@ -4,8 +4,12 @@
     @extend %centered-content;
     padding: 50px;
     min-height: 100vh;
-    max-width: $hdpi + 'px';
+    max-width: 1440px;
+    margin: 0 auto;
 
+    &-wrapper {
+      max-width: 100%;
+    }
     &_title {
       @extend %title-primary;
       text-align: center;
@@ -13,7 +17,7 @@
       &-regular {
         display: block;
         margin: 10px auto 50px;
-        font-size: 24px;
+        font-size: 30px;
         color: $text-dark;
         text-align: center;
       }
@@ -32,6 +36,7 @@
       line-height: 1.5;
       font-style: italic;
       text-align: center;
+      text-transform: none;
       .text-active {
         color: $primary-color;
         font-weight: 600;
@@ -39,8 +44,103 @@
     }
 
     &_carousel {
-      overflow: hidden;
+      position: relative;
+      text-align: center;
 
+      .team_carousel-nav {
+          display: flex;
+          width: 100%;
+
+          &-arrow {
+            color: white;
+            background: $primary-color;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 40px;
+            line-height: 1;
+            width: 50px;
+            text-align: center;
+            cursor: pointer;
+            top: 27.5%;
+            margin-top: -25px;
+            z-index: 2;
+
+            @include max-screen($max-tablet) {
+              width: 35px;
+              font-size: 26px;
+              top: 25%;
+            }
+
+            .icon {
+              font-size: 26px;
+              margin-top: -5px;
+              @include max-screen($max-tablet) {
+                font-size: 16px;
+              }
+            }
+
+            &.left {
+              position: absolute;
+              left: -50px;
+
+              @include max-screen($hdpi) {
+                left: -35px;
+              }
+
+              @include max-screen($max-tablet) {
+                left: 5px;
+              }
+            }
+
+            &.right {
+              position: absolute;
+              right: -50px;
+
+              @include max-screen($hdpi) {
+                right: -35px;
+              }
+              @include max-screen($max-tablet) {
+                right: 5px;
+              }
+            }
+          }
+        }
+
+      .views-field-field-image {
+        img {
+          border-radius: 50%;
+          width: 250px;
+          height: 250px;
+          overflow: hidden;
+          margin: 0 auto 20px;
+        }
+      }
+
+      .views-field-title {
+        a {
+          @extend %title-hint;
+          color: $text-dark;
+          font-size: 30px;
+          line-height: 1.5;
+          text-decoration: none;
+
+          &:hover, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .views-field-field-place {
+        .field-content {
+          @extend %title-red-line, %hint-text;
+          margin-bottom:10px;
+          font-size: 20px;
+        }
+      }
+
+      .views-field-body {
+        @extend %hint-text;
+      }
     }
   }
 }

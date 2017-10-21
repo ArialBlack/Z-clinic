@@ -29,10 +29,10 @@
     &-price {
       text-align: center;
       &-main {
-        
+
       }
       &-title {
-        
+
       }
 
       .price-currency {
@@ -50,7 +50,28 @@
     }
     &_steps {
       margin: 50px 0;
-      &-list {
+      &-list{
+        margin-bottom: 150px;
+        &-item {
+          position: relative;
+          padding-top: 27.5%;
+          color: $white;
+          &-step {
+            background-color: $primary-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            transition: all $trs-d;
+          }
+          &:hover .is-can-expand {
+            left: 0;
+            top: -100px;
+            bottom: -110px;
+            right: 0;
+          }
+        }
 
       }
 

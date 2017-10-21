@@ -1,10 +1,10 @@
 'use strict';
 (function ($) {
    $(document).ready(function(){
-    $('.team_carousel').addClass('owl-carousel owl-theme');
-    $('.team_carousel').owlCarousel({
-      center: true,
-      items: 5,
+    $('.team_carousel ul').addClass('owl-carousel owl-theme');
+    $('.team_carousel .owl-carousel').owlCarousel({
+      center: false,
+      items: 4,
       loop: true,
       margin: 25,
       slideBy: 1,
@@ -15,8 +15,14 @@
       navElement: 'span',
       navClass: ['team_carousel-nav-arrow left', 'team_carousel-nav-arrow right'],
       responsive:{
-        600:{
+        1280:{
+          items:4
+        },
+        1024:{
           items:3
+        },
+        768:{
+          items:2
         },
         320: {
           items: 1

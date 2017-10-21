@@ -34,6 +34,10 @@
       if (event.item.index === 5) {
         $('.clinics_carousel-navigation-item[data-id=' + 1 + ']').addClass('active');
       }
+      
+      if (index === 0) {
+        $('.clinics_carousel-navigation-item[data-id=' + 3 + ']').addClass('active');
+      }
     });
     
     $('.clinics_carousel-navigation-item').on('click', function () {
