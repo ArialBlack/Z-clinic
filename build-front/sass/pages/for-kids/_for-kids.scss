@@ -107,6 +107,7 @@
 		vertical-align: middle;
 		box-shadow: 0 0 49px rgba(164,76,81,.5);
 		margin-left: 15%;
+    font-weight: 600;
 		&:hover{
 			box-shadow: 0 0 65px rgba(164,76,81,.7);
 		}
@@ -115,4 +116,11 @@
 			display: block;
 		}
 	}
+}
+
+#paragraphID-135 {
+  a {
+    text-decoration: underline;
+    font-style: italic;
+  }
 }

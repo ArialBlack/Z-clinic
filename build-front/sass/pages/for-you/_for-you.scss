@@ -1,0 +1,9 @@
+.path-for-you {
+  div[id="paragraphID-104"]{
+    .field-text-html {
+      @include min-screen($max-tablet) {
+        margin-bottom: 130px;
+      }
+    }
+  }
+}

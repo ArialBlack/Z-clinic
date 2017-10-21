@@ -1,16 +1,32 @@
 .paragraph--type--simple-text-paragraph[id="paragraphID-50"] {
-	margin-bottom: 100px;
+	margin-bottom: 20px;
 	.field-text-long {
 		@extend .col-lg-9;
+    p {
+      font-size: $fs-lg;
+      color: $text-hint;
+      letter-spacing: 0.5px;
+    }
 	}
 }
 .paragraph--type--text-and-html-block[id="paragraphID-51"] {
+  padding-top: 40px;
 	.field-redmark{
 		@extend %red-mark-z;
-		margin-top: 65px;
+
 		@include max-screen($max-tablet){
 			display: none;
 		}
+
+    .field-text-long {
+      @extend %hint-text;
+    }
+
+    .field-text-html {
+      @extend %hint-text;
+      color: $text-light;
+      font-weight: 600;
+    }
 	}
 }
 .paragraph--type--simple-text-paragraph[id="paragraphID-52"],
@@ -21,6 +37,10 @@
 	padding-bottom: 60px;
 	ul {
 		@extend %ul-mark;
+
+    li {
+      @extend %hint-text;
+    }
 	}
 
 }

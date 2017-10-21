@@ -2,6 +2,17 @@
   min-height: 100vh !important;
   .layout-content {
     padding-top: 200px !important;
+
+    #block-clinic-local-tasks {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    #block-clinic-content {
+      text-align: center;
+      max-width: 1440px;
+      margin: 50px auto;
+    }
   }
 
 
@@ -19,6 +30,7 @@
 
   #block-clinic-content {
     text-align: center;
+    margin: 50px 0;
 
     input {
       margin: 10px auto;
@@ -27,7 +39,7 @@
 
     button {
       padding: 0;
-      margin: 20px;
+      margin: 40px;
     }
   }
 }

@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   .text-image-container {
+    display: flex;
     @include max-screen($tablet) {
       display: flex;
       flex-flow: column;
@@ -11,19 +12,26 @@
     background: $tabs-background;
   }
   .field-title {
-    @extend %col-10, %title-red-line-left, %title-hint;
-    padding: 20px 40px;
+    @extend .col-lg-10, %title-red-line-left, %title-hint;
+    padding: 20px 30px 0;
+    font-size: $fs-lg;
+    color: $text-dark-hint;
   }
 
   .field-text-near-image {
-    @extend %col-7;
-    padding: 40px;
+    @extend .col-lg-7;
+    padding: 10px 30px;
+    a {
+      text-decoration: underline;
+    }
     p {
-      @extend %text-regular;
-      padding-bottom: 30px;
-      line-height: 2;
-      font-weight: 200;
-
+      @extend %hint-text;
+      font-size: $fs-md;
+      line-height: 1.6;
+      color: $text-hint;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      margin: 2em 0px;
     }
 
     h4 {
@@ -34,7 +42,7 @@
   }
 
   .field-media {
-    @extend %col-5;
+    @extend .col-lg-5;
     padding: 0;
     text-align: right;
 
@@ -51,9 +59,8 @@
   }
 
   &.reversed {
-    //flip image
-    .field-text-near-image {
-      @extend %col-reverse-5;
+    .text-image-container {
+      flex-direction: row-reverse;
     }
 
     .field-media {
@@ -63,8 +70,8 @@
 
   &.with-mark {
     .field-redmark {
-      @extend %col-12, .icon, .icon-z;
-      padding: 20px 40px;
+      @extend .col-lg-12, .icon, .icon-z;
+      padding: 20px 30px 50px;
       transition: transform $trs-d;
       color: transparent;
       &:hover, &:focus {
