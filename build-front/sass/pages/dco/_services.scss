@@ -43,8 +43,7 @@
         }
 
         @include max-screen(1769) {
-          top: 0;
-          left: 50%;
+          text-align: center;
         }
         .icon {
           font-size: 77px;
@@ -60,6 +59,7 @@
           display: inline-block;
           vertical-align: middle;
           margin-left: 20px;
+
           @include min-screen(1770) {
             white-space: nowrap;
             position: absolute;
@@ -79,6 +79,14 @@
           padding-top: 25.5%;
           color: $white;
 
+          @include max-screen($max-mobile) {
+            padding-top: 75%;
+          }
+
+          @include max-screen($max-tablet) {
+            padding-top: 35%;
+          }
+
           &:hover, &:focus {
             @include min-screen(1441) {
               padding-top: 30%;
@@ -86,6 +94,15 @@
             @include max-screen($hdpi) {
               padding-top: 36.5%;
             }
+
+            @include max-screen($max-mobile) {
+              padding-top: 100%;
+            }
+
+            @include max-screen($max-tablet) {
+              padding-top: 50%;
+            }
+
           }
           &-step {
             background-color: $primary-color;
@@ -170,6 +187,13 @@
           &.gift {
             margin-top: 35%;
 
+            @include max-screen($max-mobile) {
+              margin-top: 10%;
+            }
+
+            @include max-screen($max-tablet) {
+              margin-top: 15%;
+            }
             .gift-icon {
 
               margin: 0 auto;
@@ -203,6 +227,12 @@
           position: absolute;
           bottom: 50px;
           display: block;
+
+          @include max-screen($max-mobile) {
+            position: relative;
+            bottom: 0;
+          }
+
           &-wrapper {
             margin-bottom: 10px;
             i.icon {
