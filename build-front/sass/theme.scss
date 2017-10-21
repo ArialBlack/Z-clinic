@@ -1,4 +1,15 @@
-@import "../bower_components/bootstrap/scss/bootstrap";
+@import "../bower_components/bootstrap/scss/mixins/_grid-framework";
+@import "../bower_components/bootstrap/scss/mixins/_forms";
+@import "../bower_components/bootstrap/scss/mixins/_transition";
+@import "../bower_components/bootstrap/scss/mixins/_breakpoints";
+@import "../bower_components/bootstrap/scss/mixins/_grid";
+@import "../bower_components/bootstrap/scss/mixins/_box-shadow";
+@import "../bower_components/bootstrap/scss/mixins/_border-radius";
+@import "../bower_components/bootstrap/scss/mixins/_buttons";
+@import "../bower_components/bootstrap/scss/_functions";
+@import "../bower_components/bootstrap/scss/_variables";
+@import "../bower_components/bootstrap/scss/_grid";
+@import "../bower_components/bootstrap/scss/_forms";
 @import "../bower_components/owl.carousel/src/scss/owl.carousel";
 @import "../bower_components/owl.carousel/src/scss/owl.theme.default";
 @import "vendors/media";
