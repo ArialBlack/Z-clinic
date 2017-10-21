@@ -80,11 +80,12 @@
             }
 
             &-number {
-              @extend .col-lg-12;
               color: $text-light;
               text-transform: uppercase;
               padding-top: 10px;
               font-weight: 200;
+              padding-left: 15px;
+              display: block;
 
               span {
                 font-size: 30px;
@@ -111,7 +112,6 @@
 
         &-content {
           display: flex;
-          @extend .col-lg-12;
         }
 
         &-title {

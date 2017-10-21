@@ -39,8 +39,12 @@
           margin: 0;
           position: absolute;
           top: 0;
-          left: -100px;
+          left: -130px;
+        }
 
+        @include max-screen(1769) {
+          top: 0;
+          left: 50%;
         }
         .icon {
           font-size: 77px;
@@ -72,8 +76,17 @@
         margin-bottom: 150px;
         &-item {
           position: relative;
-          padding-top: 27.5%;
+          padding-top: 25.5%;
           color: $white;
+
+          &:hover, &:focus {
+            @include min-screen(1441) {
+              padding-top: 30%;
+            }
+            @include max-screen($hdpi) {
+              padding-top: 36.5%;
+            }
+          }
           &-step {
             background-color: $primary-color;
             position: absolute;
@@ -124,6 +137,7 @@
               i  {
                 margin: 0 auto;
                 display: block;
+                text-align: center;
                 &:before {
                   font-size: 30px;
                   font-weight: 700;
@@ -135,6 +149,7 @@
               display: none;
               transition: all $trs-d;
               color: $text-hint;
+              margin: 20px 0;
             }
           }
 
@@ -151,8 +166,34 @@
           }
         }
 
+        &-content {
+          &.gift {
+            margin-top: 35%;
+
+            .gift-icon {
+
+              margin: 0 auto;
+              display: block;
+              text-align: center;
+
+              i {
+                &:before {
+                  font-size: 55px;
+                }
+              }
+            }
+            .message {
+              display: block;
+              margin: 50px 0 25px;
+              font-weight: 600;
+              font-size: 24px;
+              text-align: center;
+            }
+          }
+        }
         &-title {
           display: block;
+          width: 100%;
           margin: 20px 0 25px;
           font-weight: 600;
           font-size: 24px;
@@ -188,13 +229,6 @@
               display: block;
               font-size: 18px;
             }
-          }
-
-          &-message {
-            display: block;
-            margin: 20px 0 25px;
-            font-weight: 600;
-            font-size: 24px;
           }
         }
 
