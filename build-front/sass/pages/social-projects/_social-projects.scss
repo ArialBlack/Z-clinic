@@ -1,0 +1,123 @@
+.path-social-projects {
+
+  #block-vstupdoosocproektiv {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 30px;
+
+    .quickedit-field {
+      @extend .col-lg-7;
+    }
+    p {
+      @extend %hint-text;
+      color: $text-dark-hint;
+    }
+  }
+
+  #block-clinic-content {
+    .item-list {
+      ul {
+        display: flex;
+      }
+      li {
+        @extend .col-lg-6;
+        padding: 0;
+        position: relative;
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+
+        &:nth-child(odd) {
+
+        }
+
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+
+          .views-field-view-node {
+
+            .field-content {
+
+              a {
+
+                &:before {
+                  content: $icon-gift;
+                  font-size: 40px;
+                  display: inline-block;
+                  margin-right: 20px;
+                  vertical-align: middle;
+                }
+
+                &:after {
+                  content: '';
+                }
+              }
+            }
+          }
+        }
+
+        .views-field-title {
+          position: absolute;
+          top: 75px;
+          width: 100%;
+
+          .field-content {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+          }
+          a {
+            @extend %title-primary;
+            font-size: 30px;
+            display: block;
+          }
+        }
+
+        .views-field-field-cover {
+          @extend .col-lg-12;
+          padding: 0;
+        }
+
+        .views-field-field-teaser-description {
+          @extend .col-lg-7;
+          margin-top: -100px;
+          background: $primary-color;
+          padding: 30px;
+
+          p {
+            @extend %hint-text;
+            color: $text-light;
+          }
+        }
+
+        .views-field-view-node {
+          @extend .col-lg-5;
+          text-align: center;
+
+          .field-content {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+
+            a {
+              @extend .icon, %hint-text;
+              display: inline-block;
+              color: $primary-color;
+              font-size: 20px;
+              font-weight: 400;
+
+              &:after {
+                content: $icon-gift;
+                font-size: 40px;
+                display: inline-block;
+                margin-left: 20px;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

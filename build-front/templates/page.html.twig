@@ -48,11 +48,14 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
+  {#<header role="banner">#}
+  {{ page.header }}
+  {#</header>#}
 
-  @@include('../page_parts/menu/main.twig')
+  <header role="header">
+    @@include('../page_parts/menu/main.twig')
+    @@include('../page_parts/header/main.twig')
+  </header>
 
   {{ page.breadcrumb }}
 
@@ -77,6 +80,7 @@
       </aside>
     {% endif %}
 
+    @@include('../page_parts/banner/banner.twig')
   </main>
 
   @@include('../page_parts/footer/footer.twig')

@@ -3,10 +3,10 @@
    $(document).ready(function(){
     $('.about-us_carousel').addClass('owl-carousel owl-theme');
     $('.about-us_carousel').owlCarousel({
-      center: true,
-      items: 6,
+      center: false,
+      items: 5,
       loop: true,
-      margin: 65,
+      margin: 60,
       slideBy: 1,
       dots: false,
       navText: ['<i class="icon icon-left_arrow">', '<i class="icon icon-right_arrow">'],

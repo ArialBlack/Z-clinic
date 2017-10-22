@@ -1,0 +1,214 @@
+.page-node-type-social-project {
+  #paragraphID-147, #paragraphID-149 {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  #paragraphID-149 {
+    margin: 50px auto;
+  }
+
+  #paragraphID-151 {
+    margin: 50px auto;
+    max-width: 1440px;
+
+    .field-title {
+      @extend %title-primary;
+      text-align: center;
+    }
+
+    .owl-carousel {
+      .social-nav-arrow {
+        color: white;
+        background: $primary-color;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 40px;
+        line-height: 1;
+        width: 50px;
+        text-align: center;
+        cursor: pointer;
+        top: 50%;
+        margin-top: -25px;
+        z-index: 2;
+
+        @include max-screen($max-tablet) {
+          width: 35px;
+          font-size: 26px;
+          top: 50%;
+        }
+
+        .icon {
+          font-size: 26px;
+          margin-top: -5px;
+          @include max-screen($max-tablet) {
+            font-size: 16px;
+          }
+        }
+
+        &.left {
+          position: absolute;
+          left: -65px;
+
+          @include max-screen($hdpi) {
+            left: -35px;
+          }
+
+          @include max-screen($max-tablet) {
+            left: 5px;
+          }
+        }
+
+        &.right {
+          position: absolute;
+          right: -65px;
+
+          @include max-screen($hdpi) {
+            right: -35px;
+          }
+          @include max-screen($max-tablet) {
+            right: 5px;
+          }
+        }
+      }
+
+      .content {
+        text-align: center;
+
+        img {
+          margin: 20px 0;
+        }
+
+        div:nth-of-type(2) {
+          @extend %title-red-line;
+          color: $text-dark;
+          text-transform: uppercase;
+          font-size: 24px;
+        }
+
+        div:nth-of-type(3) {
+          @extend %hint-text;
+        }
+      }
+    }
+  }
+
+  #paragraphID-152 {
+    position: relative;
+
+    .field-title {
+      @extend %title-primary;
+      width: 100%;
+      color: $text-light;
+      position: absolute;
+      top: 100px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    div:nth-of-type(3) {
+      position: absolute;
+      top: 400px;
+      display: flex;
+      width: 100%;
+      max-width: 1440px;
+
+      div {
+        // @extend .col-lg-3;
+        a {
+          color: $text-light;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  #paragraphID-154 {
+    .field-text-long {
+      h2 {
+        @extend %title-primary;
+        margin: 0 0 50px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  #paragraphID-155 {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    div {
+      div {
+        display: flex;
+        position: relative;
+        &:first-child, &:last-child {
+          &:before {
+            content: '⚫';
+            display: inline-block;
+            font-size: 36px;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            color: $primary-color;
+          }
+
+          &:after {
+            content: ' ';
+            border-right: 1px solid $primary-color;
+            display: inline-block;
+            width: 15px;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+          }
+        }
+
+        &:last-child {
+          &:after {
+            top: -60%;
+          }
+        }
+
+        &:before {
+          content: '⚫';
+          display: inline-block;
+          font-size: 24px;
+          position: absolute;
+          top: 25%;
+          left: calc(50% + 3px);
+          color: $primary-color;
+        }
+
+        &:after {
+          content: ' ';
+          border-right: 1px solid $primary-color;
+          display: inline-block;
+          font-size: 24px;
+          width: 15px;
+          height: 100%;
+          position: absolute;
+          top: 25%;
+          left: 50%;
+
+        }
+
+        &:nth-child(odd) {
+          text-align: left;
+          flex-direction: row-reverse;
+        }
+
+        &:nth-child(even) {
+          text-align: right;
+        }
+
+        p {
+          @extend .col-lg-6, %hint-text;
+          color: $text-dark-hint;
+          padding: 30px 60px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

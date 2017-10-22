@@ -1,5 +1,5 @@
 .zablotsky-speech {
-  align-items: center;
+  margin-top: 35vh;
   min-height: 100vh;
   max-width: $hdpi 'px';
   @include min-screen($mdpi) {
@@ -8,6 +8,7 @@
 
   @include max-screen($tablet) {
     padding-top: 40px;
+    margin-top: 0;
   }
 
   &-wrapper {
@@ -57,9 +58,6 @@
   &_slides {
     @extend .col-lg-4, .col-12;
     text-align: center;
-    @include min-screen($max-tablet) {
-      padding-top: 250px;
-    }
 
     &-title {
       @extend %title-dark;
@@ -67,11 +65,13 @@
 
     &-nav {
       display: flex;
-      margin: 20px;
       text-align: center;
 
       &-wrapper {
-        margin: 0 auto;
+        margin: 55px auto 35px;
+        @include max-screen($max-tablet) {
+          margin: 30px auto;
+        }
       }
       &-arrow {
         text-decoration: none;
@@ -110,7 +110,6 @@
     }
 
     &-carousel-container {
-      max-height: 200px;
       padding-bottom: 20px;
       overflow: auto;
 
