@@ -101,7 +101,7 @@
       width: 100%;
       color: $text-light;
       position: absolute;
-      top: 100px;
+      top: 200px;
       letter-spacing: 2px;
       text-align: center;
     }
@@ -111,14 +111,20 @@
       top: 400px;
       display: flex;
       width: 100%;
-      max-width: 1440px;
-
       div {
-        // @extend .col-lg-3;
+        text-align: center;
         a {
           color: $text-light;
           font-size: 30px;
+
         }
+      }
+    }
+
+    .owl-carousel {
+      .owl-stage-outer {
+        max-width: 1440px;
+        margin: 0 auto;
       }
     }
   }
@@ -150,6 +156,10 @@
             top: 25%;
             left: 50%;
             color: $primary-color;
+
+            @include max-screen($mdpi) {
+              left: 90%;
+            }
           }
 
           &:after {
@@ -161,12 +171,35 @@
             position: absolute;
             top: 50%;
             left: 50%;
+
+            @include max-screen($mdpi) {
+              left: 90%;
+            }
+          }
+        }
+        &:first-child {
+          &:after {
+            @include max-screen($hdpi) {
+              top: 40%;
+            }
+
+            @include max-screen($max-mobile) {
+              top: 35%;
+            }
           }
         }
 
         &:last-child {
           &:after {
             top: -60%;
+            height: 90%;
+            @include max-screen($mdpi) {
+              left: 90%;
+            }
+
+            @include max-screen($max-mobile) {
+              height: 90%;
+            }
           }
         }
 
@@ -178,6 +211,10 @@
           top: 25%;
           left: calc(50% + 3px);
           color: $primary-color;
+
+          @include max-screen($mdpi) {
+            left: calc(90% + 3px);
+          }
         }
 
         &:after {
@@ -191,6 +228,9 @@
           top: 25%;
           left: 50%;
 
+          @include max-screen($mdpi) {
+            left: 90%;
+          }
         }
 
         &:nth-child(odd) {
@@ -200,6 +240,9 @@
 
         &:nth-child(even) {
           text-align: right;
+          @include max-screen($mdpi) {
+            text-align: left;
+          }
         }
 
         p {
@@ -207,6 +250,14 @@
           color: $text-dark-hint;
           padding: 30px 60px;
           font-size: 20px;
+
+          @include max-screen($mdpi) {
+            padding: 30px 150px 30px 20px;
+          }
+
+          @include max-screen($max-mobile) {
+            padding: 30px 60px 30px 20px;
+          }
         }
       }
     }

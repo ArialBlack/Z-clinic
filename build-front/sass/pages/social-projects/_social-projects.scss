@@ -17,19 +17,16 @@
   #block-clinic-content {
     .item-list {
       ul {
-        display: flex;
+        @include min-screen($mdpi) {
+          display: flex;
+        }
       }
       li {
         @extend .col-lg-6;
         padding: 0;
         position: relative;
         display: flex;
-        align-items: start;
         flex-wrap: wrap;
-
-        &:nth-child(odd) {
-
-        }
 
         &:nth-child(even) {
           flex-direction: row-reverse;
@@ -46,6 +43,12 @@
                   display: inline-block;
                   margin-right: 20px;
                   vertical-align: middle;
+
+                  @include screen($mdpi, $hdpi) {
+                    font-size: 16px;
+                    margin-right: 10px;
+
+                  }
                 }
 
                 &:after {
@@ -81,10 +84,17 @@
 
         .views-field-field-teaser-description {
           @extend .col-lg-7;
-          margin-top: -100px;
+
+
           background: $primary-color;
           padding: 30px;
 
+          @include min-screen($hdpi) {
+            margin-top: -100px;
+          }
+          @include min-screen($mdpi) {
+            margin-top: -150px;
+          }
           p {
             @extend %hint-text;
             color: $text-light;
@@ -93,6 +103,10 @@
 
         .views-field-view-node {
           @extend .col-lg-5;
+          max-width: 41.66667%;
+          display: flex;
+          align-items: center;
+
           text-align: center;
 
           .field-content {
@@ -106,6 +120,11 @@
               color: $primary-color;
               font-size: 20px;
               font-weight: 400;
+              cursor: pointer;
+
+              @include screen($mdpi, $hdpi) {
+                font-size: 14px
+              }
 
               &:after {
                 content: $icon-gift;
@@ -113,6 +132,11 @@
                 display: inline-block;
                 margin-left: 20px;
                 vertical-align: middle;
+
+                @include screen($mdpi, $hdpi) {
+                  font-size: 16px;
+                  margin-left: 10px;
+                }
               }
             }
           }
