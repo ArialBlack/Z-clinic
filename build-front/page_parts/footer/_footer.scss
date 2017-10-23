@@ -14,7 +14,7 @@
 
   &_socials-wrapper {
     overflow: hidden;
-    align-self: center;
+    margin-top: 5vh;
 
   @include max-screen($mdpi){
       order: 1;

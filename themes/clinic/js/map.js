@@ -163,17 +163,23 @@
                   var marketPositionLat = 50.4372142;
                   var marketPositionLon = 30.5201172;
                   if (placeToShow === 'lviv') {
-                      marketPositionLat = 25.124536;
-                      marketPositionLon = 55.379437;
+                      marketPositionLat = 24.0257822;
+                      marketPositionLon = 49.8385225;
                     }
+                var secondMarkerPositionLat = 50.4286493;
+                var secondMarkerPositionLon = 30.5319515;
+                if (placeToShow === 'lviv') {
+                  secondMarkerPositionLat = 24.0020403;
+                  secondMarkerPositionLon = 49.8024075;
+                }
                   var markerPosition = {
                       lat: marketPositionLat,
                       lng: marketPositionLon
                   };
         
                     var secondMarkerPosition = {
-                      lat: 50.4286493,
-                      lng: 30.5319515
+                      lat: secondMarkerPositionLat,
+                      lng: secondMarkerPositionLon
                   };
         
                     var firstMarkerText = '<div class="default-text">Zablotsky clinic</div> <span class="address"> Kyiv, Sportyvna str. 1a</span>';
