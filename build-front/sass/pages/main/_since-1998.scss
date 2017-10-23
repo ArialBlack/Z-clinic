@@ -9,14 +9,16 @@
     .logo {
       max-width: 100%;
       @include min-screen($max-mobile) {
+        max-width: 90%;
+      }
+      @include max-screen($max-mobile) {
         max-width: 60%;
       }
+
       margin: 0 auto;
       svg {
         cursor: pointer;
         width: 100%;
-        @include min-screen($max-tablet) {
-        }
         transition: color $trs-d;
         .logo_clinic {
           stroke: $text-dark-hint;

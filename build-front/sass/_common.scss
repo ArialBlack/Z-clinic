@@ -21,13 +21,14 @@ main {
 #block-clinic-page-title {
   @extend %center-block;
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   h1 {
     line-height: 1.2;
     font-size: 48px;
     color: $primary-color;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 5px;
     @include screen($tablet, $hdpi){
       font-size: calc( 2.5vw + .625rem );
     }

@@ -188,10 +188,14 @@
           display: inline-block;
           padding-left: 10px;
           text-decoration: none;
-          color: lighten($text-hint, 10);
+          color: lighten($text-light, 10);
           letter-spacing: 1px;
           font-size: $fs-sm;
           font-weight: 400;
+          text-decoration: none;
+          &:hover, &:focus {
+            text-decoration: none;
+          }
         }
 
         .icon {

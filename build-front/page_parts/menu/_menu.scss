@@ -213,6 +213,7 @@
 						transition: color $trs-d;
 						padding: 10px 10px 10px 0;
 						margin: -2px 0;
+            text-transform: uppercase;
 					}
 					&:hover .nav-link {
 						// font-weight: 900;
@@ -267,6 +268,10 @@
 			color: $text-light-gray;
 			text-align: center;
 			padding: 20px 30px;
+
+      .field-description {
+        color: $primary-color;
+      }
 			@include min-screen($max-mobile){
 				padding: 15px 30px 0px 20px;
 				text-align: right;
