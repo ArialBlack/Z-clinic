@@ -79,46 +79,52 @@
           padding-top: 25.5%;
           color: $white;
 
-          @include max-screen($hdpi) {
+          @include screen(1025, $hdpi) {
             padding-top: 30%;
           }
 
-          @include max-screen(1024) {
+          @include screen($mdpi, 1024) {
             padding-top: 35%;
+          }
+
+          @include screen($tablet, $max-tablet) {
+            padding-top: 45%;
           }
 
           @include screen(450, $max-mobile) {
             padding-top: 45%;
           }
 
+          @include screen(321, 449) {
+            padding-top: 75%;
+          }
+
           @include max-screen($mobile) {
             padding-top: 80%;
           }
 
-          @include max-screen($max-tablet) {
-            padding-top: 45%;
-          }
 
           &:hover, &:focus {
-            @include min-screen(1025) {
+            @include screen(1025, 1920) {
               padding-top: 30%;
             }
 
-            @include max-screen(1024) {
+            @include screen($mdpi, 1024) {
               padding-top: 50%;
             }
+
 
             @include screen(450, $max-mobile) {
               padding-top: 45%;
             }
 
+            @include screen(321, 449) {
+              padding-top: 85%;
+            }
+
             @include max-screen($mobile) {
               padding-top: 120%;
             }
-            @include max-screen($max-tablet) {
-              padding-top: 35%;
-            }
-
           }
           &-step {
             background-color: $primary-color;
