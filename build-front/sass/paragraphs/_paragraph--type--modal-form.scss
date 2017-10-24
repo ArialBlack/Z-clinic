@@ -78,11 +78,21 @@
 				margin-top: 15px;
 			}
 			.js-form-item {
-				@extend .form-group;
+        @extend .form-group;
+        margin-bottom: 30px;
+
+        .intl-tel-input {
+          margin-top: 10px;
+        }
+
 				label {
-					display: block;
-					font-weight: 700;
-					font-size: 16px;
+          display: block;
+          font-weight: 700;
+          font-size: 16px;
+          color: $white;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-left: 25px;
 				}
 			}
 			@include min-screen($tablet){
@@ -100,15 +110,31 @@
 				}
 			}
 
-			input[type="text"],
-			input[type="tel"],
-			input[type="date"],
-			input[type="time"],
-			textarea ,
-			select {
-				@extend .form-control;
-			}
-			.intl-tel-input{
+      input[type="text"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="time"],
+      input[type="email"],
+      textarea ,
+      select {
+        @extend .form-control;
+        border-radius: 45px;
+        padding: 15px 25px;
+        min-height: 75px;
+        margin-top: 10px;
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: #ffffff url(../img/red-arrow.png) 0 0 no-repeat;
+        background-size: 10% 25%;
+        background-position: 95% 50%;
+      }
+
+
+      .intl-tel-input{
 				display: block;
 			}
 			.flag-container + input[type="tel"]{
