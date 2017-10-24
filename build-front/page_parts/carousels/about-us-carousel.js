@@ -4,9 +4,9 @@
     $('.about-us_carousel').addClass('owl-carousel owl-theme');
     $('.about-us_carousel').owlCarousel({
       center: false,
-      items: 6,
+      items: 5,
       loop: true,
-      margin: 50,
+      margin: 25,
       slideBy: 1,
       dots: false,
       navText: ['<i class="icon icon-left_arrow">', '<i class="icon icon-right_arrow">'],
@@ -15,6 +15,15 @@
       navElement: 'span',
       navClass: ['about-us_carousel-nav-arrow left', 'about-us_carousel-nav-arrow right'],
       responsive:{
+        1920:{
+          items:6
+        },
+        1366:{
+          items:5
+        },
+        1024:{
+          items:4
+        },
         600:{
           items:3
         },

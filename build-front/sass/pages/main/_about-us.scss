@@ -19,18 +19,32 @@
   }
 
   &_carousel {
-    padding: 50px;
-    .owl-stage-outer {
-      max-width: 1440px;
-      margin: 0 auto;
+    padding: 25px 75px;
+
+    @include max-screen(1024) {
+      padding: 0;
     }
     .owl-stage {
-      padding: 50px;
-
+      &-outer {
+        margin-top: 20px;
+      }
       @include max-screen($max-mobile) {
         padding: 0;
       }
 
+      .owl-item {
+        transition-delay: 0.3s;
+        &.active {
+          display: flex;
+          flex-flow: wrap;
+          align-items: center;
+          height: 75px;
+
+          li {
+            margin: 0 auto;
+          }
+        }
+      }
     }
     &-wrapper {
       width: 100%;
