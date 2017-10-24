@@ -1,5 +1,106 @@
-.path-teeth-care-center {
-  .views-element-container {
-    display: none;
+.views-element-container {
+  #accordion[role="tablist"] {
+    max-width: #{$hdpi}px;
+    margin: 50px auto;
+    @include min-screen($mdpi) {
+      margin: 150px auto;
+    }
+    .card+.card {
+      margin-top: 10px;
+      @include min-screen($mdpi) {
+        margin-top: 30px;
+      }
+    }
+    .card {
+      border: none;
+      &-header {
+        border-radius: 0;
+        border-bottom: 0 none;
+        padding: 0;
+        a[data-toggle="collapse"] {
+          display: block;
+          background: $white-smoke;
+          padding: 20px calc(100%/12);
+          position: relative;
+          cursor: pointer;
+          &:before {
+            content: $icon-accordeon-arrow;
+            font-family: "svgfont";
+            position: absolute;
+            right: calc(100% / 12 - 35px);
+            top: 50%;
+            height: 38px;
+            margin-top: -19px;
+            color: $primary-color;
+            font-size: 38px;
+            line-height: 1;
+            text-align: center;
+            transform: rotate(90deg);
+            transition: transform $trs-d;
+          }
+          &.collapsed:before {
+            transform: rotate(0);
+          }
+          &:hover {
+            text-decoration: none !important;
+          }
+          @include min-screen($mdpi) {
+            padding: 50px calc(100%/12);
+          }
+          .field_foto {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            margin-right: 20px;
+            @include min-screen($mdpi) {
+              width: 100px;
+              height: 100px;
+            }
+            img {
+              width: 100%;
+              height: auto;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+          .media-body {
+            align-self: center;
+            .field-title {
+              @extend %text-regular;
+              color: $black;
+              text-decoration: none;
+              font-weight: 700;
+              line-height: 2;
+              text-transform: uppercase;
+            }
+            .field-position {
+              font-size: $fs-md;
+              font-weight: 400;
+              color: $text-light-gray;
+            }
+          }
+        }
+        & + div[role="tabpanel"] {
+          background-color: $tabs-background;
+
+          .card-block {
+            padding: 30px;
+            @include min-screen($mdpi) {
+              padding: 7% 8.3%;
+            }
+            @extend %text-regular;
+            color: $text-dark-hint;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            position: relative;
+
+            p {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
   }
 }

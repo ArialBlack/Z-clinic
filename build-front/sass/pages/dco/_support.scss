@@ -1,43 +1,220 @@
 .path-teeth-care-center {
   .support {
-    display: none;
+    @extend %center-block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include min-screen($max-tablet) {
+      padding-top: 130px;
+      padding-bottom: 100px;
+    }
 
     &_title {
-
+      text-align: center;
+      font-size: 55px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-bottom: 50px;
+      line-height: 1.1;
     }
 
     &_subtitle {
-
+      text-align: center;
+      font-size: $fs-h;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $text-dark-hint;
     }
 
+    &-price {
+      text-align: center;
+      &-main {
+
+      }
+      &-title {
+
+      }
+
+      .price-currency {
+
+      }
+
+      .foreing-price {
+
+      }
+
+      .local-currency {
+
+      }
+
+    }
     &_steps {
-      &-list {
+      margin: 50px 0;
+      &-list{
+        margin-bottom: 150px;
 
-      }
-
-      &-skobka {
-
-      }
-
-      &-price {
-        .main price {
-
+        @include max-screen($max-mobile) {
+          margin-bottom: 20px;
         }
 
-        .price-currency {
-
+        @include min-screen($max-mobile) {
+          display: flex;
         }
 
-        .foreing-price {
+        &-item {
+          position: relative;
+          padding-top: 27.5%;
+          color: $white;
 
+          @include max-screen($mdpi) {
+            padding-top: 50%;
+          }
+
+          @include max-screen(450) {
+            padding-top: 95%;
+          }
+          @include screen(450, $max-mobile) {
+            padding-top: 65%;
+          }
+          &-step {
+            background-color: $primary-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            transition: all $trs-d;
+            padding: 30px;
+            cursor: pointer;
+
+            @include max-screen($max-mobile) {
+              padding: 15px;
+            }
+            &.step-6 {
+              background: #951a1d;
+
+              &:after {
+                content: '';
+                position: absolute;
+                top: 55px;
+                right: -10px;
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+
+                border-left: 10px solid #951a1d;
+                z-index: 5;
+
+
+                @include max-screen($max-mobile) {
+                  border-left: 0 none;
+                }
+              }
+            }
+
+            &.step-7 {
+              background: #e41e26;
+            }
+
+            &-number {
+              color: $text-light;
+              text-transform: uppercase;
+              padding-top: 10px;
+              font-weight: 200;
+              padding-left: 15px;
+              display: block;
+
+              span {
+                font-size: 30px;
+                font-weight: 700;
+              }
+
+              i  {
+                margin: 0 auto;
+                display: block;
+                &:before {
+                  font-size: 30px;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            &.has-arrow {
+              &:after {
+                @include smooth-triangle();
+              }
+            }
+          }
         }
 
-        .local-currency {
-
+        &-content {
+          margin-top: 10%;
+          @include min-screen($max-mobile) {
+            display: flex;
+          }
         }
 
-        .price-for-visit {
+        &-title {
+          @extend .col-lg-6;
+          display: block;
+          font-weight: 600;
+          font-size: 40px;
+        }
 
+        &-price {
+          @extend .col-lg-6;
+          &-wrapper {
+            margin-bottom: 10px;
+            i.icon {
+              &:before {
+                font-size: 40px;
+              }
+            }
+          }
+
+          .cost {
+            &-wrapper {
+              display: inline-block;
+              margin-left: 20px;
+              vertical-align: bottom;
+              font-style: italic;
+            }
+
+            &-foreing {
+              display: block;
+              font-size: 20px;
+            }
+
+            &-uah {
+              display: block;
+              font-size: 18px;
+            }
+          }
+
+          &-message {
+            display: block;
+            margin: 20px 0 25px;
+            font-weight: 600;
+            font-size: 24px;
+          }
+        }
+
+        &-time {
+          &-wrapper {
+            i {
+              &:before {
+                font-size: 40px;
+              }
+            }
+
+            span.time {
+              display: inline-block;
+              margin-left: 20px;
+              font-size: 20px;
+              font-style: italic;
+            }
+          }
         }
       }
     }

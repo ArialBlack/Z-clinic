@@ -19,12 +19,31 @@
   }
 
   &_carousel {
-    padding: 50px;
-    .owl-stage {
-      padding: 50px;
+    padding: 25px 75px;
 
+    @include max-screen(1024) {
+      padding: 0;
+    }
+    .owl-stage {
+      &-outer {
+        margin-top: 20px;
+      }
       @include max-screen($max-mobile) {
         padding: 0;
+      }
+
+      .owl-item {
+        transition-delay: 0.3s;
+        &.active {
+          display: flex;
+          flex-flow: wrap;
+          align-items: center;
+          height: 75px;
+
+          li {
+            margin: 0 auto;
+          }
+        }
       }
     }
     &-wrapper {
@@ -59,7 +78,7 @@
 
         .icon {
           font-size: 26px;
-
+          margin-top: -5px;
           @include max-screen($max-tablet) {
             font-size: 16px;
           }
@@ -68,14 +87,8 @@
         &.left {
           position: absolute;
           left: 15px;
-          transform: rotate(180deg);
           @include max-screen($max-mobile) {
             left: 5px;
-          }
-
-          i {
-            margin-top: -5px;
-            margin-left: 3px;
           }
         }
 
@@ -85,10 +98,6 @@
 
           @include max-screen($max-mobile) {
             right: 5px;
-          }
-          i {
-            margin-top: -7px;
-            margin-right: -5px;
           }
         }
       }

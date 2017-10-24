@@ -1,0 +1,51 @@
+.pricing {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+  .price {
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $primary-color;
+    line-height: 1.1;
+    display: inline-block;
+    letter-spacing: 2px;
+    span  {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  .price-currency {
+    display: inline-block;
+  }
+
+  .foreing-price {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-dark-hint;
+    display: block;
+  }
+
+  .local-currency {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $primary-color;
+    line-height: 1.1;
+    display: block;
+  }
+
+  .price-for-visit {
+    margin-top: 25px;
+    text-align: center;
+    font-size: $fs-h;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-dark-hint;
+  }
+}

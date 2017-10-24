@@ -1,9 +1,14 @@
 .zablotsky-speech {
-  align-items: center;
+  margin-top: 35vh;
   min-height: 100vh;
   max-width: $hdpi 'px';
   @include min-screen($mdpi) {
     display: flex;
+  }
+
+  @include max-screen($tablet) {
+    padding-top: 40px;
+    margin-top: 0;
   }
 
   &-wrapper {
@@ -28,16 +33,18 @@
 
   &_title {
     @extend %title-dark;
+    line-height: 1.5;
   }
 
   &_description {
     @extend %text-regular;
+    font-weight: 400;
   }
 
   &_portrait {
     @extend .col-lg-4, .col-12;
     text-align: center;
-    margin: 20px;
+    margin: 20px 0;
     img {
       vertical-align: middle;
       max-width: 100%;
@@ -51,17 +58,20 @@
   &_slides {
     @extend .col-lg-4, .col-12;
     text-align: center;
+
     &-title {
       @extend %title-dark;
     }
 
     &-nav {
       display: flex;
-      margin: 20px;
       text-align: center;
 
       &-wrapper {
-        margin: 0 auto;
+        margin: 55px auto 35px;
+        @include max-screen($max-tablet) {
+          margin: 30px auto;
+        }
       }
       &-arrow {
         text-decoration: none;
@@ -80,7 +90,7 @@
       }
 
       &-all {
-        font-size: 50px;
+        font-size: 25px;
         font-weight: 400;
         align-self: flex-end;
 
@@ -96,14 +106,14 @@
     ul li {
       @extend %text-regular;
       padding: 20px;
+      font-weight: 400;
     }
 
     &-carousel-container {
-      max-height: 200px;
       padding-bottom: 20px;
       overflow: auto;
 
-      @include max-screen($max-mobile) {
+      @include max-screen($tablet) {
         max-height: none;
       }
     }

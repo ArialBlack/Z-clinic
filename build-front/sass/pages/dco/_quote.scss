@@ -20,9 +20,9 @@
     &-text {
       @extend %title-hint;
       color: $text-dark-hint;
-      font-size: 24px;
+      font-size: 20px;
       max-width: 100%;
-      line-height: 2;
+      line-height: 1.5;
 
       @include max-screen($max-mobile) {
         font-size: 10px;
@@ -40,19 +40,19 @@
     blockquote {
       padding-bottom: calc(90px - 2.7em);
       padding-top: calc(90px - 2.7em);
-      padding-right: 25%;
+      padding-right: 30%;
       position: relative;
-      color: $text-light-gray; // @include screen($tablet, $hdpi){
-      // 	font-size: calc( 1vw + .5rem );
-      // }
+      color: $text-light-gray;
+      right: -10%;
+
       @include max-screen(1600) {
         padding-left: 7.5vw;
-        padding-right: 14vw;
+        padding-right: 7.5vw;
+        right: 0;
       }
 
       @include max-screen($max-mobile) {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 40px;
         text-align: center;
       }
 
@@ -69,16 +69,37 @@
       }
       &:before {
         content: $icon-quotes-open;
-        top: 0px;
+        top: -15px;
         left: -115px;
         @include max-screen(1600) {
-          left: 0;
+          left: -15px;
+          top: -25px;
+        }
+
+        @include max-screen($max-mobile) {
+          top: -15px;
+          left: 27px;
         }
       }
       &:after {
         content: $icon-quotes-close;
-        bottom: 0;
+        bottom: -35px;
         right: 8%;
+
+        @include max-screen(1600) {
+          bottom: -35px;
+          right: -30px;
+        }
+
+        @include screen(450, $max-mobile) {
+          bottom: -15px;
+          right: -5px;
+        }
+
+        @include max-screen(449) {
+          bottom: -15px;
+          right: 5px;
+        }
       }
     }
   }

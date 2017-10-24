@@ -1,4 +1,4 @@
-.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/62"]{
+.paragraph--type--simple-text-paragraph[id="paragraphID-62"]{
 	@extend %center-block-with-bg;
 	background-color: #fbfbfb;
 	padding-top: 80px;
@@ -11,13 +11,13 @@
 		}
 	}
 }
-.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/63"]{
+.paragraph--type--simple-text-paragraph[id="paragraphID-63"]{
 	padding-top: 80px;
 	> * {
-		@extend .col-lg-8;
+		@extend .col-lg-7;
 	}
 }
-.paragraph--type--group-paragraph[data-quickedit-entity-id="paragraph/68"]{
+.paragraph--type--group-paragraph[id="paragraphID-68"]{
 	@extend %center-block, .row;
 	position: relative;
 	padding-top: 80px;
@@ -31,7 +31,7 @@
 		margin-bottom: 100px;
 	}
 
-	.paragraph--type--custom-html-block[data-quickedit-entity-id="paragraph/69"]{
+	.paragraph--type--custom-html-block[id="paragraphID-69"]{
 		@extend .field-text-html;
 		@extend .col-lg-4;
 		margin: 0;
@@ -57,7 +57,7 @@
 	}
 }
 
-.paragraph--type--text-and-html-block[data-quickedit-entity-id="paragraph/60"] {
+.paragraph--type--text-and-html-block[id="paragraphID-60"] {
 	.field-redmark{
 		@extend %red-mark-z;
 		margin-top: 80px;
@@ -69,13 +69,13 @@
 		margin-bottom: 185px;
 	}
 }
-.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/66"] {
+.paragraph--type--simple-text-paragraph[id="paragraphID-66"] {
 	.field-redmark{
 		@extend %red-mark-z;
 		margin-top: 65px;
 	}
 }
-.paragraph--type--simple-text-paragraph[data-quickedit-entity-id="paragraph/67"] {
+.paragraph--type--simple-text-paragraph[id="paragraphID-67"] {
 	.field-redmark{
 		@extend %red-mark-z;
 		margin-top: 65px;

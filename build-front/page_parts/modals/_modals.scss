@@ -1,0 +1,29 @@
+.clinic_modal {
+  .modal-title {
+    @extend %title-primary;
+  }
+
+  .modal-body {
+    min-height: 200px;
+  }
+
+  .modal-footer {
+    .btn.btn-secondary {
+      border-radius: 50%;
+      width: $menu-icon-size;
+      height: $menu-icon-size;
+      outline: none !important;
+      cursor: pointer;
+      border: 2px $text-light-gray solid;
+      color: $primary-color;
+      font-size: 34px;
+      background-color: transparent;
+      text-align: center;
+      transition: transform $trs-d, border-color $trs-d;
+      &:hover {
+        border-color: $primary-color;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

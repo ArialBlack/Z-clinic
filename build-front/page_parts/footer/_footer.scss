@@ -14,6 +14,8 @@
 
   &_socials-wrapper {
     overflow: hidden;
+    margin-top: 5vh;
+
   @include max-screen($mdpi){
       order: 1;
     }
@@ -135,7 +137,7 @@
       @include min-screen($max-mobile){
         margin-top: 35px;
       }
-      
+
     }
     &-item {
       display: flex;
@@ -152,11 +154,12 @@
     }
 
     &-title {
-      @extend %title-hint, %text-bold;
+      @extend %title-hint;
       transition: all .2s ease-in;
       font-size: 20px;
       padding: 10px 30px 0 0;
       min-width: 88px;
+      font-weight: 200;
 
       &:hover, &:focus, &:active {
         border: 0 none;
@@ -185,8 +188,15 @@
           display: inline-block;
           padding-left: 10px;
           text-decoration: none;
-          color: $text-light;
+          color: lighten($text-light, 10);
+          letter-spacing: 1px;
           font-size: $fs-sm;
+          font-weight: 400;
+          text-decoration: none;
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+            color: white;
+          }
         }
 
         .icon {

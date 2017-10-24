@@ -6,15 +6,71 @@
   &_logo {
     margin: 0 auto;
 
-    .icon {
-      @extend %icon-logo;
+    .logo {
+      @include min-screen($mdpi) {
+        max-width: 100%;
+      }
+
+      @include min-screen($max-mobile) {
+        max-width: 90%;
+      }
+      @include max-screen($max-mobile) {
+        max-width: 60%;
+      }
+
+      margin: 0 auto;
+      svg {
+        cursor: pointer;
+        width: 100%;
+        transition: color $trs-d;
+        .logo_clinic {
+          stroke: $text-dark-hint;
+          stroke-width: 1;
+          stroke-dasharray: 100px;
+          stroke-dashoffset: 100px;
+          animation-name: draw;
+          animation-duration: 3s;
+          animation-fill-mode: forwards; // Stay on the last frame
+          animation-iteration-count: 1; // Run only once
+          animation-timing-function: linear;
+        }
+
+        .logo_zablotsky {
+          stroke: $primary-color;
+          stroke-width: 0.1;
+          stroke-dasharray: 10px;
+          stroke-dashoffset: 10px;
+          animation-name: draw;
+          animation-duration: 3s;
+          animation-fill-mode: forwards; // Stay on the last frame
+          animation-iteration-count: 1; // Run only once
+          animation-timing-function: linear;
+
+          &-dots {
+            stroke: $primary-color;
+            stroke-width: 1;
+            stroke-dasharray: 100px;
+            stroke-dashoffset: 100px;
+            animation-name: draw;
+            animation-duration: 3s;
+            animation-fill-mode: forwards; // Stay on the last frame
+            animation-iteration-count: 1; // Run only once
+            animation-timing-function: linear;
+          }
+        }
+      }
       display: block;
     }
 
     img {
-      margin-top: 25px;
+      margin: 50px auto;
       display: block;
       max-width: 100%;
+
+      @include max-screen($max-tablet) {
+        max-width: 80%;
+        margin: 25px auto;
+      }
     }
   }
 

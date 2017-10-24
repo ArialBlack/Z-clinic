@@ -28,7 +28,7 @@
         transition: color $trs-d;
         .logo_clinic {
           stroke: $text-dark-hint;
-          stroke-width: 1;
+          stroke-width: 0.1;
           stroke-dasharray: 100px;
           stroke-dashoffset: 100px;
           animation-name: draw;
@@ -51,7 +51,7 @@
 
           &-dots {
             stroke: $primary-color;
-            stroke-width: 1;
+            stroke-width: 0.1;
             stroke-dasharray: 100px;
             stroke-dashoffset: 100px;
             animation-name: draw;

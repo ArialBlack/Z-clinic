@@ -15,6 +15,13 @@ function clinic_preprocess_html(&$variables) {
   }
 }
 
+function clinic_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__'.$content_type;
+    }
+}
+
 /**
  * Prepares variables for `region.html.twig`.
  */
@@ -105,6 +112,12 @@ function clinic_preprocess_page(&$variables) {
     ->getViewBuilder('block')
     ->view($block);
   $variables['kontaktivsapku_lviv'] = $block_content;
+
+  $block = \Drupal\block\Entity\Block::load('webform');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['schedule_consultation'] = $block_content;
 
   $variables['quoutes'] = views_embed_view('quoutes2front', 'block_1');
   $variables['doctors'] = views_embed_view('doctors', 'block_1');

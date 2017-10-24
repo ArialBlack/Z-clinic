@@ -9,6 +9,10 @@
     min-height: 100vh;
     background: #f8f8f8;
 
+    @include max-screen($max-mobile) {
+      padding: 20px;
+    }
+
     &-wrapper {
       text-align: center;
     }
@@ -39,6 +43,9 @@
         letter-spacing: 2px;
         word-spacing: 2px;
 
+        @include max-screen($max-mobile) {
+          font-size: 27px;
+        }
         .text-active {
           color: $primary-color;
         }

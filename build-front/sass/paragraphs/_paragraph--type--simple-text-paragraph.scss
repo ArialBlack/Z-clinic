@@ -47,6 +47,7 @@
 		@extend %title-hint,
 		%title-red-line-left;
 		color: $text-dark-hint;
+    font-size: $fs-lg;
 		// margin: 25px 0;
 		&:after {
 			margin: 10px auto 40px 0;
@@ -55,6 +56,7 @@
 
 	.field-text-long {
 		p {
+      @extend %hint-text;
 			font-size: $fs-md;
 			line-height: 1.6;
 			margin: 2em 0px; // @include screen($tablet, $hdpi){

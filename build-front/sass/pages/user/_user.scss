@@ -1,7 +1,16 @@
 .path-user {
   min-height: 100vh !important;
   .layout-content {
-    padding-top: 200px !important;
+    #block-clinic-local-tasks {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    #block-clinic-content {
+      text-align: center;
+      max-width: 1440px;
+      margin: 50px auto;
+    }
   }
 
 
@@ -13,15 +22,19 @@
 
 .path-user-login {
   min-height: 100vh;
-  .layout-content {
-    padding-top: 200px;
-  }
 
   #block-clinic-content {
     text-align: center;
+    margin: 50px 0;
 
     input {
-      margin: 0 auto;
+      margin: 10px auto;
+      padding: 5px;
+    }
+
+    button {
+      padding: 0;
+      margin: 40px;
     }
   }
 }

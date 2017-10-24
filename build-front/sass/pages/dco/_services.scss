@@ -1,57 +1,349 @@
 .path-teeth-care-center {
   .services {
-    display: none;
+    @extend %center-block-with-bg;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $white-smoke;
+    @include min-screen($max-tablet) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    &-i {
+      position: relative;
+    }
 
-    &_title {
-
+    &-title {
+      text-align: center;
+      font-size: 55px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-bottom: 50px;
+      line-height: 1.1;
+    }
+    &-subtitle {
+      text-align: center;
+      font-size: $fs-h;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $text-dark-hint;
     }
 
     &_steps {
-      &-title {
+      position: relative;
+      margin: 120px 0 150px;
+      &-side {
+        margin: 10px 0 150px 20px;
 
-      }
+        @include min-screen(1770) {
+          margin: 0;
+          position: absolute;
+          top: 0;
+          left: -130px;
+        }
 
-      &-for-kids {
-        &-icon {
-
+        @include max-screen(1769) {
+          text-align: center;
+        }
+        .icon {
+          font-size: 77px;
+          color: $primary-color;
         }
 
         &-text {
+          font-size: $fs-md;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: $footer-bg;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 20px;
 
+          @include min-screen(1770) {
+            white-space: nowrap;
+            position: absolute;
+            top: 130px;
+            right: 12px;
+            transform: rotate(-90deg);
+            transform-origin: 100% 100%;
+
+          }
         }
       }
 
-      &-content {
+      &-list{
+        margin-bottom: 150px;
 
-      }
-
-      &-list {
-
-      }
-
-      &-skobka {
-
-      }
-
-      &-price {
-        .main price {
-
+        @include max-screen($max-mobile) {
+          margin-bottom: 20px;
         }
 
-        .price-currency {
+        &-item {
+          position: relative;
+          padding-top: 25.5%;
+          color: $white;
 
+          @include screen(1025, $hdpi) {
+            padding-top: 30%;
+          }
+
+          @include screen($mdpi, 1024) {
+            padding-top: 35%;
+          }
+
+          @include screen($tablet, $max-tablet) {
+            padding-top: 45%;
+          }
+
+          @include screen(450, $max-mobile) {
+            padding-top: 45%;
+          }
+
+          @include screen(321, 449) {
+            padding-top: 75%;
+          }
+
+          @include max-screen($mobile) {
+            padding-top: 80%;
+          }
+
+
+          &:hover, &:focus {
+            @include screen(1025, 1920) {
+              padding-top: 30%;
+            }
+
+            @include screen($mdpi, 1024) {
+              padding-top: 50%;
+            }
+
+
+            @include screen(450, $max-mobile) {
+              padding-top: 45%;
+            }
+
+            @include screen(321, 449) {
+              padding-top: 85%;
+            }
+
+            @include max-screen($mobile) {
+              padding-top: 120%;
+            }
+          }
+          &-step {
+            background-color: $primary-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            transition: all $trs-d;
+            padding: 30px;
+            cursor: pointer;
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 55px;
+              right: -10px;
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+
+              border-left: 10px solid white;
+              z-index: 5;
+            }
+
+            @include max-screen($hdpi) {
+              padding: 15px;
+            }
+
+            &.step-1 {
+              background: #951a1d;
+              &:after {
+                border-left: 10px solid #951a1d;
+              }
+            }
+
+            &.step-2 {
+              background: #a41c1f;
+              &:after {
+                border-left: 10px solid #a41c1f;
+              }
+            }
+
+            &.step-3 {
+              background: #b21d21;
+              &:after {
+                border-left: 10px solid #b21d21;
+              }
+            }
+
+            &.step-4 {
+              background: #c21e23;
+              &:after {
+                border-left: 10px solid #c21e23;
+              }
+            }
+
+            &.step-5 {
+              background: #d31e24;
+              &:after {
+                border-left: 10px solid #d31e24;
+              }
+            }
+
+            &.step-gift {
+              background: #e41e26;
+              &:after {
+                border-left: 0 none;
+              }
+            }
+
+
+            &-number {
+              color: $text-light;
+              text-transform: uppercase;
+              padding-top: 10px;
+              font-weight: 200;
+
+              span {
+                font-size: 30px;
+                font-weight: 700;
+              }
+
+              i  {
+                margin: 0 auto;
+                display: block;
+                text-align: center;
+                &:before {
+                  font-size: 30px;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .services_steps-list-hidden-content {
+              display: none;
+              transition: all $trs-d;
+              color: $text-hint;
+              margin: 20px 0;
+            }
+          }
+
+
+          &:hover .is-can-expand {
+            left: 0;
+            top: -100px;
+            bottom: -110px;
+            right: 0;
+
+            @include max-screen($max-tablet) {
+              bottom:0;
+            }
+
+            .services_steps-list-hidden-content {
+              display: block;
+            }
+          }
         }
 
-        .foreing-price {
+        &-content {
+          &.gift {
+            margin-top: 35%;
 
+            @include max-screen($max-mobile) {
+              margin-top: 10%;
+            }
+
+            @include max-screen($max-tablet) {
+              margin-top: 15%;
+            }
+            .gift-icon {
+
+              margin: 0 auto;
+              display: block;
+              text-align: center;
+
+              i {
+                &:before {
+                  font-size: 55px;
+                }
+              }
+            }
+            .message {
+              display: block;
+              margin: 50px 0 25px;
+              font-weight: 600;
+              font-size: 24px;
+              text-align: center;
+            }
+          }
+        }
+        &-title {
+          display: block;
+          width: 100%;
+          margin: 20px 0 25px;
+          font-weight: 600;
+          font-size: 24px;
         }
 
-        .local-currency {
+        &-price {
+          position: absolute;
+          bottom: 50px;
+          display: block;
 
+          @include max-screen($max-mobile) {
+            position: relative;
+            bottom: 0;
+          }
+
+          &-wrapper {
+            margin-bottom: 10px;
+            i.icon {
+              &:before {
+                font-size: 40px;
+              }
+            }
+          }
+
+          .cost {
+            &-wrapper {
+              display: inline-block;
+              margin-left: 20px;
+              vertical-align: bottom;
+              font-style: italic;
+            }
+
+            &-foreing {
+              display: block;
+              font-size: 20px;
+            }
+
+            &-uah {
+              display: block;
+              font-size: 18px;
+            }
+          }
         }
 
-        .price-for-visit {
+        &-time {
+          &-wrapper {
+            i {
+              &:before {
+                font-size: 40px;
+              }
+            }
 
+            span.time {
+              display: inline-block;
+              margin-left: 20px;
+              font-size: 20px;
+              font-style: italic;
+            }
+          }
         }
       }
     }

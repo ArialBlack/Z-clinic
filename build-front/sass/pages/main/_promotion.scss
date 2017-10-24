@@ -1,15 +1,17 @@
 .promotion {
   @extend %content-center;
   min-height: 150px;
-  margin-bottom: 75px;
+  margin-top: -50px;
+  margin-bottom: 100px;
   height: auto;
 
   &_text {
     @extend %text-regular, %col-offset-3, %col-6;
     line-height: 1.7;
-    font-size: $fs-title;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
     text-align: center;
     padding: 0 20px;
-    font-weight: 300;
   }
 }

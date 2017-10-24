@@ -1,4 +1,4 @@
-.paragraph--type--text-and-html-block[data-quickedit-entity-id="paragraph/116"] {
+.paragraph--type--text-and-html-block[id="paragraphID-116"] {
 	padding-top: 0;
 	.field-text-long blockquote {
 		padding-bottom: calc(90px - 2.7em);
@@ -42,7 +42,7 @@
 	}
 }
 
-.paragraph--type--modal-form[data-quickedit-entity-id="paragraph/121"] {
+.paragraph--type--modal-form[id="paragraphID-121"] {
 	padding: 100px 0;
 	text-align: center;
 	background-color: #e7e7e8;
@@ -66,4 +66,16 @@
 	.btn[data-toggle="modal"]{
 		position: static;
 	}
+}
+
+#paragraphID-120 {
+  .field-text-html-i {
+    margin-bottom: 130px;
+  }
+}
+
+.path-for-mother {
+  .field-text-html-i {
+    justify-content: center;
+  }
 }
