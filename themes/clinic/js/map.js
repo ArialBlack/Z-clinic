@@ -25,8 +25,8 @@
                     var latitude = 50.4327114;
                   var longitude = 30.5274209;
                   if (placeToShow === 'lviv') {
-                      latitude = 49.808054;
-                      longitude = 24.004490;
+                      latitude = 49.838475,
+                      longitude = 24.0252484
                     }
                   var mapOptions = {
                       center: new google.maps.LatLng(latitude, longitude),
@@ -160,17 +160,20 @@
                   };
                   map = new google.maps.Map(mapId, mapOptions);
                   map.setZoom(15);
+                  if (placeToShow === 'lviv') {
+                    map.setZoom(12);
+                  }
                   var marketPositionLat = 50.4372142;
                   var marketPositionLon = 30.5201172;
                   if (placeToShow === 'lviv') {
-                      marketPositionLat = 24.0257822;
-                      marketPositionLon = 49.8385225;
+                      marketPositionLat = 49.8617026;
+                      marketPositionLon = 24.0264641;
                     }
                 var secondMarkerPositionLat = 50.4286493;
                 var secondMarkerPositionLon = 30.5319515;
                 if (placeToShow === 'lviv') {
-                  secondMarkerPositionLat = 24.0020403;
-                  secondMarkerPositionLon = 49.8024075;
+                  secondMarkerPositionLat = 49.8024075;
+                  secondMarkerPositionLon = 24.0020403;
                 }
                   var markerPosition = {
                       lat: marketPositionLat,
@@ -181,22 +184,26 @@
                       lat: secondMarkerPositionLat,
                       lng: secondMarkerPositionLon
                   };
-        
-                    var firstMarkerText = '<div class="default-text">Zablotsky clinic</div> <span class="address"> Kyiv, Sportyvna str. 1a</span>';
+                  
+                    console.log('should be lviv', markerPosition, secondMarkerPosition);
+                  var firstMarkerText = '<div class="default-text">Zablotskyy clinic</div> <span class="address">Спортивна 1a, Київ</span>';
+                  
                   if (placeToShow === 'lviv') {
-                      firstMarkerText = '<div class="default-text">Zablotsky clinic</div> <span class="address"> Lviv</span>';
-                    }
-                  var secondMarkerText = '<div class="default-text">Zablotsky clinic</div> <span class="address"> Kyiv, Hospitlna str. 5</span>';
+                    firstMarkerText = '<div class="default-text">Zablotskyy DCO</div> <span class="address">Липинського 28, Львів</span>';
+                  }
+                  
+                  var secondMarkerText = '<div class="default-text">Zablotskyy clinic</div> <span class="address">Новогоспітальна 5, Київ</span>';
+                  
                   if (placeToShow === 'lviv') {
-                      secondMarkerText = '<div class="default-text">Zablotsky clinic</div> <span class="address"> Lviv</span>';
-                    }
+                    secondMarkerText = '<div class="default-text">Zablotskyy DCO</div> <span class="address">Наукова 7D, Львів</span>';
+                  }
         
-                    var infowindowForFirst = new google.maps.InfoWindow({
-                      content: firstMarkerText
+                  var infowindowForFirst = new google.maps.InfoWindow({
+                    content: firstMarkerText
                   });
         
-                    var infowindowForSecond = new google.maps.InfoWindow({
-                      content: secondMarkerText
+                  var infowindowForSecond = new google.maps.InfoWindow({
+                    content: secondMarkerText
                   });
         
                     //TODO: replace icon url to regular one.
@@ -213,8 +220,28 @@
                       animation: google.maps.Animation.DROP,
                       icon: 'https://image.ibb.co/b60Pr5/location_mark.png'
                   });
-        
-          
+  
+                if (placeToShow === 'lviv') {
+                  var thirdMarker = new google.maps.Marker({
+                    position: {
+                      lat: 49.838475,
+                      lng: 24.0252484
+                    },
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    icon: 'https://image.ibb.co/b60Pr5/location_mark.png'
+                  });
+  
+                  var infowindowForThird = new google.maps.InfoWindow({
+                    content: '<div class="default-text">Zablotskyy Clinic</div> <span class="address">Коперника 20, Львів</span>'
+                  });
+                  
+                  thirdMarker.addListener('click', function () {
+                    toggleBounce(thirdMarker);
+                    infowindowForThird.open(map, thirdMarker);
+                  });
+                  
+                }
                       marker.addListener('click', function () {
                           toggleBounce(marker);
                           infowindowForFirst.open(map, marker);
@@ -246,13 +273,14 @@
                   map.setCenter(center);
                 }, 500);
       
-                $('#kyiv').on('click', function() {
+                $('#footer_kyiv').on('click', function() {
                     initialize();
                   });
       
-                $('#lviv').on('click', function() {
-                    initialize('lviv');
-                  });
+                $('#footer_lviv').on('click', function() {
+                  console.log('lviv is on initialize');
+                   initialize('lviv');
+                });
             } catch (err) {
               console.log('Map is not allowed on this page');
             }
