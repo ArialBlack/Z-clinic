@@ -7,12 +7,20 @@
     max-width: 1440px;
     margin: 0 auto;
 
+    @include max-screen($max-mobile) {
+      padding: 20px;
+    }
+
     &-wrapper {
       max-width: 100%;
     }
     &_title {
       @extend %title-primary;
       text-align: center;
+
+      @include max-screen($max-mobile) {
+        font-size: 32px;
+      }
 
       &-regular {
         display: block;

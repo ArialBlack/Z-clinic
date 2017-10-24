@@ -83,28 +83,40 @@
             padding-top: 30%;
           }
 
-          @include max-screen($max-mobile) {
-            padding-top: 75%;
+          @include max-screen(1024) {
+            padding-top: 35%;
+          }
+
+          @include screen(450, $max-mobile) {
+            padding-top: 45%;
+          }
+
+          @include max-screen($mobile) {
+            padding-top: 80%;
           }
 
           @include max-screen($max-tablet) {
-            padding-top: 40%;
+            padding-top: 45%;
           }
 
           &:hover, &:focus {
-            @include min-screen(1441) {
+            @include min-screen(1025) {
               padding-top: 30%;
             }
-            @include max-screen($hdpi) {
-              padding-top: 36.5%;
+
+            @include max-screen(1024) {
+              padding-top: 50%;
             }
 
-            @include max-screen($max-mobile) {
-              padding-top: 100%;
+            @include screen(450, $max-mobile) {
+              padding-top: 45%;
             }
 
+            @include max-screen($mobile) {
+              padding-top: 120%;
+            }
             @include max-screen($max-tablet) {
-              padding-top: 40%;
+              padding-top: 35%;
             }
 
           }
@@ -119,28 +131,64 @@
             padding: 30px;
             cursor: pointer;
 
+            &:after {
+              content: '';
+              position: absolute;
+              top: 55px;
+              right: -10px;
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+
+              border-left: 10px solid white;
+              z-index: 5;
+            }
+
+            @include max-screen($hdpi) {
+              padding: 15px;
+            }
+
             &.step-1 {
               background: #951a1d;
+              &:after {
+                border-left: 10px solid #951a1d;
+              }
             }
 
             &.step-2 {
               background: #a41c1f;
+              &:after {
+                border-left: 10px solid #a41c1f;
+              }
             }
 
             &.step-3 {
               background: #b21d21;
+              &:after {
+                border-left: 10px solid #b21d21;
+              }
             }
 
             &.step-4 {
               background: #c21e23;
+              &:after {
+                border-left: 10px solid #c21e23;
+              }
             }
 
             &.step-5 {
               background: #d31e24;
+              &:after {
+                border-left: 10px solid #d31e24;
+              }
             }
 
             &.step-gift {
               background: #e41e26;
+              &:after {
+                border-left: 0 none;
+              }
             }
 
 

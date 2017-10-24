@@ -52,13 +52,30 @@
       margin: 50px 0;
       &-list{
         margin-bottom: 150px;
-        display: flex;
+
+        @include max-screen($max-mobile) {
+          margin-bottom: 20px;
+        }
+
+        @include min-screen($max-mobile) {
+          display: flex;
+        }
 
         &-item {
           position: relative;
           padding-top: 27.5%;
           color: $white;
 
+          @include max-screen($mdpi) {
+            padding-top: 50%;
+          }
+
+          @include max-screen(450) {
+            padding-top: 95%;
+          }
+          @include screen(450, $max-mobile) {
+            padding-top: 65%;
+          }
           &-step {
             background-color: $primary-color;
             position: absolute;
@@ -70,8 +87,30 @@
             padding: 30px;
             cursor: pointer;
 
+            @include max-screen($max-mobile) {
+              padding: 15px;
+            }
             &.step-6 {
               background: #951a1d;
+
+              &:after {
+                content: '';
+                position: absolute;
+                top: 55px;
+                right: -10px;
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+
+                border-left: 10px solid #951a1d;
+                z-index: 5;
+
+
+                @include max-screen($max-mobile) {
+                  border-left: 0 none;
+                }
+              }
             }
 
             &.step-7 {
@@ -110,19 +149,21 @@
         }
 
         &-content {
-          display: flex;
           margin-top: 10%;
+          @include min-screen($max-mobile) {
+            display: flex;
+          }
         }
 
         &-title {
-          @extend .col-lg-6, .col-md-6, .col-sm-12;
+          @extend .col-lg-6;
           display: block;
           font-weight: 600;
           font-size: 40px;
         }
 
         &-price {
-          @extend .col-lg-6, .col-md-6, .col-sm-12;
+          @extend .col-lg-6;
           &-wrapper {
             margin-bottom: 10px;
             i.icon {
