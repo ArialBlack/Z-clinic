@@ -19,9 +19,10 @@ main {
 }
 
 #block-clinic-page-title {
-  @extend %center-block;
+  max-width: $hdpi+px;
+  margin: 0 auto;
   position: relative;
-  padding-bottom: 10px;
+  padding: 0 45px 10px;
   h1 {
     line-height: 1.2;
     font-size: 48px;
@@ -99,5 +100,15 @@ main {
 
   #accordion {
     display: none;
+  }
+}
+
+#block-clinic-local-actions {
+  margin: 40px;
+
+  ul {
+    li {
+      list-style: none;
+    }
   }
 }
