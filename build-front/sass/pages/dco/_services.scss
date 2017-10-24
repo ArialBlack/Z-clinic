@@ -181,6 +181,10 @@
             bottom: -110px;
             right: 0;
 
+            @include max-screen($max-tablet) {
+              bottom:0;
+            }
+
             .services_steps-list-hidden-content {
               display: block;
             }

@@ -115,14 +115,14 @@
         }
 
         &-title {
-          @extend .col-lg-6, .col-sm-12;
+          @extend .col-lg-6, .col-md-6, .col-sm-12;
           display: block;
           font-weight: 600;
           font-size: 40px;
         }
 
         &-price {
-          @extend .col-lg-6, .col-sm-12;
+          @extend .col-lg-6, .col-md-6, .col-sm-12;
           &-wrapper {
             margin-bottom: 10px;
             i.icon {

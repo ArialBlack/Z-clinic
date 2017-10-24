@@ -71,11 +71,6 @@ main {
     );
   }
 
-  &:hover, &:focus {
-    transform: scale(1.1);
-  }
-
-
   &:hover:after {
     opacity: 1;
     top: -30%;
