@@ -23,6 +23,11 @@ main {
   margin: 0 auto;
   position: relative;
   padding: 0 45px 10px;
+
+  @include max-screen($max-mobile) {
+    line-height: 1;
+    padding: 0 30px;
+  }
   h1 {
     line-height: 1.2;
     font-size: 48px;
@@ -35,9 +40,8 @@ main {
     }
 
     @include max-screen($max-mobile) {
-      line-height: 1;
-      font-size: 20px;
-      padding: 0 30px;
+      letter-spacing: 2px;
+      font-size: 32px;
     }
   }
 }

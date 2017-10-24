@@ -193,8 +193,10 @@
           font-size: $fs-sm;
           font-weight: 400;
           text-decoration: none;
-          &:hover, &:focus {
+          cursor: none;
+          &:hover, &:focus, &:active {
             text-decoration: none;
+            color: white;
           }
         }
 

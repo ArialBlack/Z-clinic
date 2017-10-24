@@ -162,12 +162,12 @@
 		}
 	}
 	.views-element-container {
-		@extend .col-lg-6;
+		@extend .col-lg-12;
 	}
 	.views-row{
 		display: inline-block;
 		img {
-			max-height: 100px;
+			max-height: 150px;
 			width: auto;
 			vertical-align: middle;
 		}

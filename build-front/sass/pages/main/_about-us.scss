@@ -20,17 +20,17 @@
 
   &_carousel {
     padding: 50px;
+    .owl-stage-outer {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
     .owl-stage {
       padding: 50px;
-      max-width: $hdpi'px';
 
       @include max-screen($max-mobile) {
         padding: 0;
       }
 
-      & .owl-item {
-        width: 200px !important;
-      }
     }
     &-wrapper {
       width: 100%;
