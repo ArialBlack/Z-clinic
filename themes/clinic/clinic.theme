@@ -13,6 +13,11 @@ function clinic_preprocess_html(&$variables) {
   if (count($path_args) >= 2) {
     $variables['path_info']['args'] = Html::cleanCssIdentifier(ltrim($path, '/'));
   }
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node) {
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
 }
 
 function clinic_theme_suggestions_page_alter(array &$suggestions, array $variables) {
