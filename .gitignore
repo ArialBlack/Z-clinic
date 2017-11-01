@@ -261,3 +261,5 @@ node_modules/
 /themes/clinic/templates/maintenance-page.html.twig
 !/build-front/images/clock.png
 themes/clinic/templates/page--social_project.html.twig
+themes/clinic/templates/node--56--full.html.twig
+themes/clinic/templates/node--57--full.html.twig
