@@ -125,7 +125,7 @@
 		}
 
     @include min-screen($mobile) {
-      font-size: 12px;
+      font-size: 10px;
     }
 
 		@include min-screen($mdpi) {

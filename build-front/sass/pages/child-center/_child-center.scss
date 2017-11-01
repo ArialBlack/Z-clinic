@@ -125,16 +125,17 @@
 		img{
 			display: block;
 			margin: 0 auto 50px;
-
+      max-width: 100%;
 		}
 		.btn{
 			@include button-variant($primary-color, $primary-color);
-			@include button-size(37px, 120px, 22px, 1, 47px);
+			@include button-size(37px, 100px, 22px, 1, 47px);
 			box-shadow: 0 0 49px rgba(164,76,81,.5);
-			max-width: 356px;
+			max-width: 300px;
 			display: block;
 			margin: 0 auto;
       font-weight: 600;
+      margin-bottom: 30px;
 			&:hover{
 				box-shadow: 0 0 65px rgba(164,76,81,.7);
 			}

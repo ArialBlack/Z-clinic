@@ -2,11 +2,11 @@
   @extend %content-center;
   // min-height: 400px;
   // height: auto;
-  padding: 150px 30px 20%;
+  padding: 25px 30px 20%;
   @include min-screen($max-tablet) {
     padding: 200px 30px 12%;
   }
-  @include min-screen($max-tablet) {
+  @include min-screen($mobile) {
     padding: 10% 30px 12%;
   }
 

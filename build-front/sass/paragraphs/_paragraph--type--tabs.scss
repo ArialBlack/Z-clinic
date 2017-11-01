@@ -17,6 +17,10 @@
         border: 0 none;
         height: 100%;
 
+        @include max-screen(450) {
+          font-size: 8px;
+        }
+
         &:hover, &:focus {
           border-color: transparent;
         }

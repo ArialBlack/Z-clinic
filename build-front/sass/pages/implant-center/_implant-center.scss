@@ -6,6 +6,14 @@
       font-size: $fs-lg;
       color: $text-hint;
       letter-spacing: 0.5px;
+      font-weight: 200;
+      font-style: italic;
+
+      @include max-screen(450) {
+        font-size: 22px;
+        line-height: 1.2;
+
+      }
     }
 	}
 }
@@ -33,6 +41,11 @@
 .paragraph--type--simple-text-paragraph[id="paragraphID-54"],
 .paragraph--type--simple-text-paragraph[id="paragraphID-56"],
 .paragraph--type--simple-text-paragraph[id="paragraphID-58"] {
+  .field-title {
+    @include max-screen(450) {
+      font-size: 25px;
+    }
+  }
 	padding-top: 80px;
 	padding-bottom: 60px;
 	ul {

@@ -49,7 +49,7 @@
 			border-bottom: 1px solid $white;
 
       .modal-title {
-        display: none;
+        visibility: hidden;
       }
 
 			.close{
@@ -130,7 +130,7 @@
         @extend .form-control;
         border-radius: 45px;
         padding: 15px 25px;
-        min-height: 75px;
+        min-height: 50px;
         margin-top: 10px;
       }
 

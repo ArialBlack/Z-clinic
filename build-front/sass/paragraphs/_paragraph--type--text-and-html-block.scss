@@ -16,6 +16,10 @@
 		font-size: 30px;
 		color: $text-dark-hint;
 		text-transform: uppercase;
+
+    @include max-screen(450) {
+      font-size: 24px;
+    }
 		&:after {
 			margin: 15px 0 40px 0;
 		}

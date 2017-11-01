@@ -1,5 +1,13 @@
 .path-history {
+
   #paragraphID-76 {
+
+    .field-title {
+      @include max-screen(450){
+        font-size: 22px;
+      }
+    }
+
     .field-text-html-i.is-first {
       top: 250px;
     }
