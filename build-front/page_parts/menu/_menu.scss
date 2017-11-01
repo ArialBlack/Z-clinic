@@ -2,9 +2,13 @@
 	margin: 0 auto;
 	position: relative;
 	&-section {
-		position: fixed;
-    z-index: 1000;
+		position: absolute;
+    z-index: 950;
 		top: 15px;
+
+    @include min-screen(375) {
+      position: fixed;
+    }
 		@include min-screen($max-mobile){
 			top: 30px;
 		}
@@ -51,7 +55,7 @@
 	}
 	&-rollup {
 		position: absolute;
-		z-index: 3;
+		z-index: 1000;
 		top: 0;
 		box-shadow: 0 0 87px rgba(200, 200, 200, .75);
 		background-color: $white-smoke;
@@ -64,7 +68,7 @@
 	&-header {
 		margin: 0;
 		background-color: $zircon;
-		overflow: hidden;
+		overflow: auto;
 		display: block;
 		&_link {
 			text-align: center;
