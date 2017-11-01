@@ -1,4 +1,16 @@
 .path-why-we {
+  #block-clinic-page-title {
+    max-width: none;
+    margin: 0;
+    padding: 0 30px;
+  }
+  #paragraphID-14 {
+    .media-as-bg {
+      background-size: contain !important;
+      background-repeat: no-repeat;
+      background-position: 100% 100% !important;
+    }
+  }
 
   .why-we {
     &_banners {

@@ -1,6 +1,7 @@
 .paragraph--type--text-near-image {
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
   .text-image-container {
     display: flex;
     @include max-screen($tablet) {
@@ -49,6 +50,8 @@
     min-height: 400px; //tdo test
     background-size: cover;
     background-position: center center;
+
+
     @include max-screen($tablet) {
       order: -1;
     }

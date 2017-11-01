@@ -37,14 +37,21 @@
 		}
 	}
 	.modal-dialog{
-		max-width: 600px !important;
+		max-width: 800px !important;
 		margin: 40px auto 0 !important;
+
+
 		.modal-content{
 			background-color: $primary-color;
 			color: $white;
 		}
 		.modal-header{
 			border-bottom: 1px solid $white;
+
+      .modal-title {
+        display: none;
+      }
+
 			.close{
 				border-radius: 50%;
 				width: $menu-icon-size;
@@ -74,10 +81,13 @@
 		}
 		.modal-body{
 			padding: 15px 30px;
-			.js-form-item + .js-form-item{
-				margin-top: 15px;
-			}
-			.js-form-item {
+      @include max-screen($max-mobile) {
+        .js-form-item + .js-form-item{
+          margin-top: 20px;
+        }
+      }
+
+      .js-form-item {
         @extend .form-group;
         margin-bottom: 30px;
 
@@ -85,30 +95,30 @@
           margin-top: 10px;
         }
 
-				label {
+        label {
           display: block;
           font-weight: 700;
-          font-size: 16px;
+          font-size: 12px;
           color: $white;
           text-transform: uppercase;
           letter-spacing: 2px;
           margin-left: 25px;
-				}
-			}
-			@include min-screen($tablet){
-				.form-item-data-i-cas-date,
-				.form-item-data-i-cas-time{
-					width: 48%;
-				}
-				.form-item-data-i-cas-date{
-					float: left;
-					margin-right: 4%;
-				}
-				.form-item-data-i-cas-time{
-					float: right;
-					margin-top: 0 !important;
-				}
-			}
+        }
+      }
+      @include min-screen($tablet){
+        .form-item-data-i-cas-date,
+        .form-item-data-i-cas-time{
+          width: 48%;
+        }
+        .form-item-data-i-cas-date{
+          float: left;
+          margin-right: 4%;
+        }
+        .form-item-data-i-cas-time{
+          float: right;
+          margin-top: 0 !important;
+        }
+      }
 
       input[type="text"],
       input[type="tel"],
@@ -133,27 +143,53 @@
         background-position: 95% 50%;
       }
 
-
       .intl-tel-input{
-				display: block;
-			}
-			.flag-container + input[type="tel"]{
-				padding-left: 50px;
-			}
-			.country-name{
-				color: #999;
-			}
-			.form-actions{
-				text-align: center;
-				margin: 30px 0;
-				.button[type="submit"]{
-					@include button-variant(#4f5051, #4f5051);
-					@include button-size(25px, 60px, 22px, 1, 45px);
-					display: inline-block;
-					width: auto;
-					height: auto;
-				}
-			}
+        display: block;
+
+        .selected-flag {
+          padding: 0 0 0 8px;
+        }
+      }
+      .flag-container + input[type="tel"]{
+        padding-left: 50px;
+      }
+      .country-name{
+        color: #999;
+      }
+      .form-actions{
+        text-align: center;
+        margin: 30px 0;
+        .button[type="submit"]{
+          @include button-variant(#4f5051, #4f5051);
+          @include button-size(25px, 60px, 22px, 1, 45px);
+          display: inline-block;
+          width: auto;
+          height: auto;
+        }
+      }
+
+      .js-webform-radios-fieldset {
+        display: none;
+      }
+
+      .js-form-item{
+        &-komu, &-misto, &-data, &-cas {
+          @extend .col-lg-3;
+        }
+
+        &-im-a-ta-prizvise, &-telefon, &-elektronna-posta {
+          @extend .col-lg-4;
+        }
+      }
+
+      .js-form-item-pitanna-so-turbue, .webform-actions {
+        @extend .col-lg-12;
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+      }
 		}
 	}
 }
