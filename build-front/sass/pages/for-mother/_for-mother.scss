@@ -40,12 +40,23 @@
 			}
 		}
 	}
+
+
+  .field-text-html-i {
+    .quotes {
+      @include min-screen($mdpi) {
+        margin-top: -200px;
+      }
+    }
+  }
 }
 
 .paragraph--type--modal-form[id="paragraphID-121"] {
 	padding: 100px 0;
 	text-align: center;
-	background-color: #e7e7e8;
+  display: flex;
+  flex-wrap: wrap;
+
 	@include min-screen($tablet){
 		padding: 200px 0;
 	}
@@ -59,12 +70,20 @@
 		font-size: 24px;
 		color: $black;
 		line-height: 1.6;
+    order: 1;
 		@include min-screen($tablet){
 			margin: 0 auto 150px;
 		}
 	}
+
+  .field-media {
+    order: 2;
+  }
+
+
 	.btn[data-toggle="modal"]{
 		position: static;
+    order: 3;
 	}
 }
 
