@@ -1,6 +1,11 @@
-.node-56 {
+.node-56, node-57 {
   #block-clinic-page-title {
     text-align: center;
+    display: none !important;
+  }
+
+  .banner, .footer {
+    display: none !important;
   }
   .error-page {
     &_content {
