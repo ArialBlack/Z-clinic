@@ -37,7 +37,7 @@
 			margin: 0 auto 10px;
 			border-radius: 50%;
 			overflow: hidden;
-			background-color: transparent;
+			background-color: $white;
 			color: $primary-color;
 			transition: transform $trs-d;
 			// font-size: 40px;
@@ -46,6 +46,28 @@
 				margin: 0 auto 17px;
 			}
 		}
+
+    svg {
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 46px;
+      height: 46px;
+      transition: transform $trs-d;
+      font-size: $menu-icon-size;
+
+      .contacts-background {
+        fill: #E20613;
+      }
+
+      .contacts-icon {
+        fill: #ffffff;
+      }
+      @include min-screen($max-mobile){
+        margin: 0 auto 17px;
+      }
+    }
 		&:hover {
 			color: $primary-color;
 			& .icon {
