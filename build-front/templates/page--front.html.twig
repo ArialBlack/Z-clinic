@@ -51,7 +51,7 @@
     {{ page.header }}
   </header> -->
 
-  <header>
+  <header role="header">
     @@include('../page_parts/menu/main.twig')
   </header>
 
@@ -79,13 +79,30 @@
         <div class="about-us_carousel-nav" id="about-us_carousel-nav"></div>
         <ul class="about-us_carousel">
           <li>
-            <img src="../themes/clinic/img/focus-logo.png" alt="focus logo"/>
+            <a href="https://focus.ua/country/340305/"><img src="../themes/clinic/img/focus-logo.png" alt="focus logo"/></a>
           </li>
-          <li><img src="../themes/clinic/img/inter-logo.png" alt="inter logo"/></li>
-          <li><img src="../themes/clinic/img/correspondent-logo.png" alt="correspondent logo"/></li>
-          <li><img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/></li>
-          <li><img src="../themes/clinic/img/forbes-logo.png" alt="forbes logo"/></li>
-          <li><img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo"/></li>
+          <li>
+            <a href="http://inter.ua/uk/"><img src="../themes/clinic/img/inter-logo.png" alt="inter logo"/></a>
+          </li>
+          <li>
+            <a href="http://ua.korrespondent.net/journal/1304417-korrespondent-biznes-po-zubah-istoriya-uspihu-lvivskogo-stomatologa"><img src="../themes/clinic/img/correspondent-logo.png" alt="correspondent logo"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://1plus1.ua/snidanok-z-1-1/video/yak-opanuvati-mistectvo-doglyadu-za-zubami-poradi-likarya-stomatologa">
+            <img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/>
+            </a>
+          </li>
+          <li>
+            <a href="http://forbes.net.ua/opinions/1353982-5-povodov-nachat-biznes-bez-startovogo-kapitala">
+            <img src="../themes/clinic/img/forbes-logo.png" alt="forbes logo"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=V7zsuFhw0xw">
+            <img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo"/>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
@@ -170,6 +187,26 @@
       </p>
     </section>
 
+    <section class="clinic">
+      <div class="clinic-wrapper">
+        <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
+        <p class="clinic_location">Спортивна пл. 1, <strong>ТРЦ Гуллівер</strong></p>
+      </div>
+      <div class="img-wrapper">
+        <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
+        <a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
+          @@include('../page_parts/arrows/floating.twig')
+        </a>
+      </div>
+      {#@@include('../page_parts/modals/dco_kyiv.twig')#}
+    </section>
+
+      <section class="small-logo">
+        <div class="small-logo-wrapper">
+          <i class="icon icon-z"></i>
+        </div>
+      </section>
+
     <section class="clinics">
       <div class="clinics_carousel-nav" id="clinics_carousel-nav"></div>
       <div class="clinics_carousel-navigation">
@@ -200,31 +237,11 @@
             <a href="#dco_lviv" class="clinic_arrow left dco_lviv" data-toggle="modal" >
               @@include('../page_parts/arrows/floating.twig')
             </a>
-        </div>
-        {#@@include('../page_parts/modals/dco_lviv.twig')#}
+          </div>
+          {#@@include('../page_parts/modals/dco_lviv.twig')#}
         </div>
       </div>
     </section>
-      <section class="small-logo">
-        <div class="small-logo-wrapper">
-          <i class="icon icon-z"></i>
-        </div>
-      </section>
-
-      <section class="clinic">
-        <div class="clinic-wrapper">
-          <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
-          <p class="clinic_location">Спортивна пл. 1, <strong>ТРЦ Гуллівер</strong></p>
-        </div>
-        <div class="img-wrapper">
-        <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
-          <a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
-            @@include('../page_parts/arrows/floating.twig')
-          </a>
-        </div>
-        {#@@include('../page_parts/modals/dco_kyiv.twig')#}
-      </section>
-
     @@include('../page_parts/banner/banner.twig')
     <div class="map" id="map">
     </div>

@@ -24,7 +24,7 @@ main {
   position: relative;
   padding: 0 45px 10px;
 
-  @include max-screen($max-mobile) {
+  @include max-screen($hdpi) {
     line-height: 1;
     padding: 0 30px;
   }
@@ -40,8 +40,8 @@ main {
     }
 
     @include max-screen($max-mobile) {
-      letter-spacing: 2px;
-      font-size: 32px;
+      letter-spacing: 1px;
+      font-size: 26px;
     }
   }
 }
@@ -116,4 +116,8 @@ main {
       display: none;
     }
   }
+}
+
+.hidden {
+  display: none!important;
 }

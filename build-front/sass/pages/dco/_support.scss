@@ -28,25 +28,6 @@
 
     &-price {
       text-align: center;
-      &-main {
-
-      }
-      &-title {
-
-      }
-
-      .price-currency {
-
-      }
-
-      .foreing-price {
-
-      }
-
-      .local-currency {
-
-      }
-
     }
     &_steps {
       margin: 50px 0;
@@ -71,7 +52,7 @@
           }
 
           @include max-screen(450) {
-            padding-top: 95%;
+            padding-top: 115%;
           }
           @include screen(450, $max-mobile) {
             padding-top: 65%;

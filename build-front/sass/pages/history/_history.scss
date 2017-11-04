@@ -1,7 +1,91 @@
 .path-history {
+
+  .paragraph--type--text-and-html-block {
+    .field-text-html .html-row h3 {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    .field-text-html .html-row + .html-row {
+      margin: 0;
+    }
+
+    .field-text-html .html-row h4, .field-text-html .html-row p{
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
   #paragraphID-76 {
+
+    .field-title {
+      @include max-screen(450){
+        font-size: 22px;
+      }
+    }
+
     .field-text-html-i.is-first {
       top: 250px;
+    }
+
+    .field-text-long {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+  }
+
+  #paragraphID-78, #paragraphID-82 {
+    .field-text-long {
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  #paragraphID-78 {
+    .story-page {
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        @include min-screen($mdpi) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #paragraphID-79 {
+    &.has-overlay {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 25%;
+        height: 125px;
+        background: #E6E6E6 url(../img/uap-logo.png) no-repeat 22% 100%;
+        background-size: cover;
+        right: calc(100% / 12 * 2);
+        width: calc(100% / 12 * 2);
+
+        @include max-screen($mdpi) {
+          display: none;
+        }
+
+        @include min-screen($hdpi) {
+          height: 220px;
+          top: 35%;
+        }
+
+        @include max-screen($hdpi - 1) {
+          height: 170px;
+          top: 35%;
+          right: calc(100% / 12);
+        }
+      }
     }
   }
 

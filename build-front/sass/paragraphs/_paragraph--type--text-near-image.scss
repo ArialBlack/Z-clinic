@@ -1,11 +1,16 @@
 .paragraph--type--text-near-image {
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
   .text-image-container {
     display: flex;
     @include max-screen($tablet) {
       display: flex;
       flex-flow: column;
+    }
+
+    @include max-screen($max-tablet) {
+      display: block;
     }
   }
   &:nth-child(even) {
@@ -21,6 +26,12 @@
   .field-text-near-image {
     @extend .col-lg-7;
     padding: 10px 30px;
+    @include max-screen($max-tablet) {
+      display: block;
+      width: 100%;
+      flex-direction: column;
+    }
+
     a {
       text-decoration: underline;
     }
@@ -49,18 +60,26 @@
     min-height: 400px; //tdo test
     background-size: cover;
     background-position: center center;
+
+
     @include max-screen($tablet) {
       order: -1;
     }
 
-    @include max-screen($max-mobile) {
+    @include max-screen($max-tablet) {
       min-height: 250px;
+      flex-direction: column;
+      display: block;
+      width: 100%;
     }
   }
 
   &.reversed {
     .text-image-container {
-      flex-direction: row-reverse;
+
+      @include min-screen($mdpi) {
+        flex-direction: row-reverse;
+      }
     }
 
     .field-media {

@@ -37,6 +37,12 @@
             text-align: center;
             transform: rotate(90deg);
             transition: transform $trs-d;
+
+            @include max-screen(450) {
+              right: calc(100% / 12 - 15px);
+              font-size: 20px;
+              margin-right: 5px;
+            }
           }
           &.collapsed:before {
             transform: rotate(0);

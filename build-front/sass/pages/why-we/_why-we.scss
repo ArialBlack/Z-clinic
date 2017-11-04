@@ -1,5 +1,47 @@
 .path-why-we {
+  #block-clinic-page-title {
+    @include min-screen(1600) {
+      max-width: none;
+      margin-left: 200px;
+      padding: 0 30px;
+    }
+  }
 
+  #paragraphID-14 {
+    .media-as-bg {
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+  }
+  #paragraphID-14, #paragraphID-16, #paragraphID-18 {
+    .field-text-near-image {
+      @include min-screen(1600) {
+        padding-left: 230px;
+      }
+    }
+
+    .field-title {
+      @include min-screen(1600) {
+        padding-left: 230px;
+      }
+    }
+  }
+
+  #paragraphID-15, #paragraphID-17, #paragraphID-19 {
+    .field-text-near-image {
+      @include min-screen(1600) {
+        padding-right: 230px;
+      }
+    }
+
+    .field-title {
+      @include min-screen(1600) {
+        padding-right: 230px;
+      }
+    }
+  }
   .why-we {
     &_banners {
       max-width: 1440px;

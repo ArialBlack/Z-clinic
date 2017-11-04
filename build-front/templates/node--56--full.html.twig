@@ -93,6 +93,17 @@
   {% endif %}
 
   <div{{ content_attributes }}>
+    <section class="error-page_content">
+      <div class="content-wrapper">
+        <img src="../themes/clinic/img/404.png" alt="404" class="error-page_content-background">
+        <h2 class="error-page_title">Сторінку не знайдено</h2>
+      </div>
+    </section>
+    <section class="error-page_footer">
+      <button class="error-page_btn">
+        <i class="icon icon-left_arrow"></i>
+        На головну</button>
+    </section>
     {{ content }}
   </div>
 

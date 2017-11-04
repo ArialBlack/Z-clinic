@@ -1,0 +1,104 @@
+.node-56, node-57 {
+  #block-clinic-page-title {
+    text-align: center;
+    display: none !important;
+  }
+
+  .header-logo_wrap {
+    padding-bottom: 20px;
+  }
+
+  .banner, .footer {
+    display: none !important;
+  }
+
+  .layout-content {
+    .mb-3 {
+      margin-bottom: 0 !important;
+    }
+  }
+  .error-page {
+    &_content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      min-height: calc(90vh - 364px);
+
+      @include screen($mdpi, $hdpi) {
+        min-height: calc(95vh - 364px);
+      }
+
+      @include screen($mobile, $max-mobile) {
+        min-height: calc(95vh - 364px);
+      }
+
+      @include screen($tablet, $max-tablet) {
+        min-height: calc(100vh - 364px);
+      }
+
+      &-wrapper {
+        max-width: 100%;
+      }
+      &-background {
+        margin: 0 auto;
+        display: block;
+
+        @include screen($mdpi, $hdpi) {
+          width: 50%;
+        }
+
+        @include screen($mobile, $max-mobile) {
+          width: 50%;
+        }
+
+        @include screen($tablet, $max-tablet) {
+          width: 100%;
+        }
+
+        @include min-screen($hdpi) {
+          width: 55%;
+        }
+      }
+    }
+
+    &_title {
+      color: $text-dark-hint;
+      font-size: $fs-lg;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    &_footer {
+      background: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      min-height: 200px;
+
+      @include screen($mdpi, $hdpi) {
+        min-height: 150px;
+      }
+    }
+
+    &_btn {
+      @include button-variant(#f8f8f8, $primary-color);
+      @include button-size(15px, 15px, 22px, 1, 45px);
+
+      display: inline-block;
+      width: auto;
+      height: auto;
+      border: 2px solid $primary-color;
+      color: #4f5051;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      .icon {
+        font-size: 30px;
+        font-weight: 600;
+        color: $primary-color;
+      }
+    }
+  }
+}

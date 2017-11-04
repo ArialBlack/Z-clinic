@@ -73,6 +73,12 @@
 		display: block;
 		margin-bottom: 0;
 		font-size: 55px;
+
+    @include min-screen($mobile) {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
 		@include screen($mdpi, $hdpi) {
 			font-size: 42px ;
 			margin-bottom: 25px;
@@ -85,9 +91,19 @@
 			margin-bottom: 0;
 			display: inline-block;
 			margin-right: 25px;
-			@include min-screen($mdpi){
-				font-size: 42px;
-			}
+
+      @include min-screen($mdpi){
+        font-size: 42px;
+        margin-bottom: 0;
+        display: inline-block;
+        margin-right: 25px;
+      }
+
+      @include screen($mobile, $max-tablet) {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
 		}
 	}
 	&-title{
@@ -107,6 +123,11 @@
 		.is-wide &{
 			display: inline-block;
 		}
+
+    @include min-screen($mobile) {
+      font-size: 10px;
+    }
+
 		@include min-screen($mdpi) {
 			font-size: 12px;
 		}
