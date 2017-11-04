@@ -1,5 +1,20 @@
 .path-history {
 
+  .paragraph--type--text-and-html-block {
+    .field-text-html .html-row h3 {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    .field-text-html .html-row + .html-row {
+      margin: 0;
+    }
+
+    .field-text-html .html-row h4, .field-text-html .html-row p{
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
   #paragraphID-76 {
 
     .field-title {
