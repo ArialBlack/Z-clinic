@@ -2,7 +2,7 @@
 
   .paragraph--type--text-and-html-block {
     .field-text-html .html-row h3 {
-      font-size: 30px;
+      font-size: 40px;
       margin-bottom: 0;
     }
 
@@ -11,8 +11,11 @@
     }
 
     .field-text-html .html-row h4, .field-text-html .html-row p{
-      font-size: 24px;
+      font-size: 30px;
       font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
   }
   #paragraphID-76 {
