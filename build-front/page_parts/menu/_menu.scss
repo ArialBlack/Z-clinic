@@ -3,7 +3,7 @@
 	position: relative;
 	&-section {
 		position: fixed;
-    z-index: 1500;
+    z-index: 1000;
 		top: 15px;
 
 		@include min-screen($max-mobile){
@@ -22,6 +22,7 @@
 		cursor: pointer;
 		transition: color $trs-d;
 		outline: none !important;
+
 		&-text{
 			display: none;
 			@include min-screen($max-mobile){
@@ -74,7 +75,7 @@
 	}
 	&-rollup {
 		position: absolute;
-		z-index: 1000;
+		z-index: 1005;
 		top: 0;
 		box-shadow: 0 0 87px rgba(200, 200, 200, .75);
 		background-color: $white-smoke;
@@ -85,6 +86,10 @@
 			min-width: 340px;
 			width: auto;
 		}
+
+    @include  max-screen($tablet) {
+      position: relative;
+    }
 	}
 	&-header {
 		margin: 0;
