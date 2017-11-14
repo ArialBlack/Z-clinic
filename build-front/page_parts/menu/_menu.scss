@@ -291,7 +291,11 @@
 		}
 		.menu-open_button{
 			margin: 3px 3px 0 0;
+      & .icon {
+        transform: scale(1.1);
+      }
 		}
+
 		.menu-close_button {
 			left: 10px;
 		}
