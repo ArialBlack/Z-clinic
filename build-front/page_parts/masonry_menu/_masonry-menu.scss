@@ -124,16 +124,17 @@
 			display: inline-block;
 		}
 
-    @include min-screen($mobile) {
-      font-size: 10px;
+    @include min-screen($hdpi) {
+      font-size: 18px !important;
     }
 
-		@include min-screen($mdpi) {
-			font-size: 12px;
-		}
-		@include min-screen($hdpi) {
-			font-size: 18px !important;
-		}
+    @include screen(1024, 1439) {
+      font-size: 12px;
+    }
+
+    @include max-screen($mdpi) {
+      font-size: 10px;
+    }
 	}
 	@include min-screen($mdpi) {
 		&-link:hover &-title:after{

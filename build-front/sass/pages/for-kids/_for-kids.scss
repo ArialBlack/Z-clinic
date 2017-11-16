@@ -94,11 +94,12 @@
 		margin-bottom: 80px;
 		@include max-screen($max-tablet) {
 			padding: 0 30px;
+      font-size: 24px;
 		}
 	}
 	.field-text-html{
 		@include max-screen($max-tablet) {
-			margin-top: 50px;
+			margin: 50px 0 0 !important;
 		}
 	}
 	.btn.btn-primary{
@@ -122,5 +123,16 @@
   a {
     text-decoration: underline;
     font-style: italic;
+  }
+}
+
+
+#paragraphID-143 {
+  .field-text-long {
+    h3 {
+      @include max-screen($max-mobile) {
+        font-size: 24px;
+      }
+    }
   }
 }

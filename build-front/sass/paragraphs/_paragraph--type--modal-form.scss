@@ -102,7 +102,6 @@
           color: $white;
           text-transform: uppercase;
           letter-spacing: 2px;
-          margin-left: 25px;
         }
       }
       @include min-screen($tablet){
@@ -191,5 +190,19 @@
         flex-wrap: wrap;
       }
 		}
+
+    .modal-footer {
+      display: none;
+    }
 	}
+}
+
+.ui-timepicker-wrapper {
+  width: 10.5em;
+  text-align: center;
+  margin: 0 5px;
+
+  @include max-screen($max-mobile) {
+    width: calc(100% - 90px);
+  }
 }

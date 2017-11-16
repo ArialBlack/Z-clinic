@@ -135,5 +135,14 @@
     .js-form-item-pitanna-so-turbue, .webform-actions {
       @extend .col-lg-12;
     }
+
+    .js-form-type-radio {
+      display: flex;
+
+      input[type=radio] {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }

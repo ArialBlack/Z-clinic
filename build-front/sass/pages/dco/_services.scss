@@ -54,8 +54,8 @@
           font-size: $fs-md;
           font-weight: bold;
           text-transform: uppercase;
-          color: $footer-bg;
-          line-height: 1.4;
+          color: $text-dark-hint;
+          line-height: 1.5;
           display: inline-block;
           vertical-align: middle;
           margin-left: 20px;
@@ -108,7 +108,7 @@
             padding-top: 80%;
           }
 
-
+          /* Mock tests.
           &:hover, &:focus {
             @include screen(1025, 1920) {
               padding-top: 30%;
@@ -131,6 +131,7 @@
               padding-top: 120%;
             }
           }
+          */
           &-step {
             background-color: $primary-color;
             position: absolute;
@@ -228,8 +229,10 @@
             .services_steps-list-hidden-content {
               display: none;
               transition: all $trs-d;
-              color: $text-hint;
+              color: #D2A3A4;
               margin: 20px 0;
+              line-height: 1.5;
+              font-size: 16px;
             }
           }
 
@@ -320,11 +323,13 @@
             &-foreing {
               display: block;
               font-size: 20px;
+              font-weight: 700;
             }
 
             &-uah {
               display: block;
               font-size: 18px;
+              font-weight: 700;
             }
           }
         }
@@ -342,6 +347,7 @@
               margin-left: 20px;
               font-size: 20px;
               font-style: italic;
+              font-weight: 700;
             }
           }
         }

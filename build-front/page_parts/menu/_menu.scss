@@ -2,13 +2,10 @@
 	margin: 0 auto;
 	position: relative;
 	&-section {
-		position: absolute;
-    z-index: 950;
+		position: fixed;
+    z-index: 1000;
 		top: 15px;
 
-    @include min-screen(375) {
-      position: fixed;
-    }
 		@include min-screen($max-mobile){
 			top: 30px;
 		}
@@ -25,6 +22,7 @@
 		cursor: pointer;
 		transition: color $trs-d;
 		outline: none !important;
+
 		&-text{
 			display: none;
 			@include min-screen($max-mobile){
@@ -77,15 +75,21 @@
 	}
 	&-rollup {
 		position: absolute;
-		z-index: 1000;
+		z-index: 1005;
 		top: 0;
 		box-shadow: 0 0 87px rgba(200, 200, 200, .75);
 		background-color: $white-smoke;
 		width: calc(100vw - 30px);
+    max-height: 100vh;
+    overflow: auto;
 		@include min-screen($max-mobile){
 			min-width: 340px;
 			width: auto;
 		}
+
+    @include  max-screen($tablet) {
+      position: relative;
+    }
 	}
 	&-header {
 		margin: 0;
@@ -287,7 +291,11 @@
 		}
 		.menu-open_button{
 			margin: 3px 3px 0 0;
+      & .icon {
+        transform: scale(1.1);
+      }
 		}
+
 		.menu-close_button {
 			left: 10px;
 		}
