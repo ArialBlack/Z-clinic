@@ -60,9 +60,17 @@
 
   #paragraphID-78 {
     padding-top: 0;
+
+    @include max-screen($max-tablet) {
+      padding-top: 30px;
+    }
   }
 
   #paragraphID-79 {
+    @include max-screen($max-tablet) {
+      padding-top: 30px;
+    }
+
     &.has-overlay {
       position: relative;
       //&:after {

@@ -36,11 +36,7 @@
       }
       
       if (index === 0) {
-        $('.clinics_carousel-navigation-item[data-id=' + 3 + ']').addClass('active');
-        
-        if ($('body').hasClass('node-18')) {
-          $('.clinics_carousel-navigation-item[data-id=' + 2 + ']').addClass('active');
-        }
+        $('.clinics_carousel-navigation-item[data-id=' + 2 + ']').addClass('active');
       }
     });
     
