@@ -32,11 +32,29 @@
 		cursor: pointer;
 		display: block;
 		padding-top: 100%;
+
+    .hidden-for-desktop {
+      display: block;
+
+      @include min-screen($max-tablet) {
+        display: none;
+      }
+    }
 		.is-wide & {
 			padding-top: 32%;
 			@include min-screen($max-tablet) {
 				padding-top: 19%;
 			}
+
+      @include max-screen($max-mobile) {
+        padding: 50%;
+      }
+
+      & .icon {
+        @include max-screen($max-mobile) {
+          font-size: 40px;
+        }
+      }
 		}
 		.is-tall & {
 			height: 100%;
@@ -111,6 +129,11 @@
 		font-weight: 700;
 		color: $text-light-gray;
 		font-size: 0;
+    padding: 5px;
+    .is-center {
+      text-align: center;
+    }
+
 		&:after{
 			transition: all $trs-d;
 			visibility: hidden;
