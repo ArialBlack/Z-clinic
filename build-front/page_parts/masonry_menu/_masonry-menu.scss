@@ -160,6 +160,10 @@
   .mansory_menu-title-content {
     display: inline-block;
     vertical-align: middle;
+
+    @include max-screen($mobile) {
+      font-size: 8px;
+    }
   }
 
 	@include min-screen($mdpi) {
@@ -199,4 +203,10 @@
 			height: auto;
 		}
 	}
+}
+
+.hidden-for-mobile {
+  @include max-screen($tablet) {
+    display: none;
+  }
 }
