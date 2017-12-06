@@ -98,9 +98,13 @@
   }
 
   .dco_video-banner {
-    display: none;
+    display: block;
     min-height: 500px;
     background: #d4d2d2;
     @extend %content-center;
+
+    &-frame {
+      margin: 0 auto;
+    }
   }
 }

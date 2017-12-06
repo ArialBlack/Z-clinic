@@ -33,6 +33,7 @@
   img {
     max-width: 100%;
     min-height: 250px;
+    width: 100% !important;
 
     @include max-screen($max-mobile) {
       min-height: 0;
