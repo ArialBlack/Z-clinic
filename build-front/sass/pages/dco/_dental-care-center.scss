@@ -119,15 +119,15 @@
       background: url('/themes/clinic/img/dco_placeholder.jpg') no-repeat center center;
       background-size: cover;
       left: 25%;
-      //pointer-events: none;
-      //touch-actions: none;
+
+      @include max-screen($max-tablet) {
+        width: 100%;
+        left: 0;
+      }
 
       @include max-screen($max-mobile) {
-        font-size: 26px;
-        width: 100%;
         height: auto;
         min-height: 250px;
-        left: 0;
       }
 
       &-btn {
@@ -147,11 +147,21 @@
         background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMjAgMTIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7b3BhY2l0eTowLjM7fQ0KCS5zdDF7b3BhY2l0eTowLjc7fQ0KCS5zdDJ7ZmlsbDojRkZGRkZGO30NCjwvc3R5bGU+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjAsNC41QzI5LjQsNC41LDQuNSwyOS40LDQuNSw2MHMyNC45LDU1LjUsNTUuNSw1NS41czU1LjUtMjQuOSw1NS41LTU1LjVTOTAuNiw0LjUsNjAsNC41eiBNODQsNjYuN0w1Miw4Ny41DQoJYy01LjUsMy42LTEwLDEuMi0xMC01LjRWMzcuOWMwLTYuNiw0LjUtOSwxMC01LjRsMzEuOSwyMUM4OS41LDU3LjEsODkuNSw2Myw4NCw2Ni43eiIvPg0KPGcgY2xhc3M9InN0MSI+DQoJPHBhdGggY2xhc3M9InN0MiIgZD0iTTYwLDQuNWMzMC42LDAsNTUuNSwyNC45LDU1LjUsNTUuNVM5MC42LDExNS41LDYwLDExNS41UzQuNSw5MC42LDQuNSw2MFMyOS40LDQuNSw2MCw0LjUgTTYwLDANCgkJQzI2LjksMCwwLDI2LjksMCw2MHMyNi45LDYwLDYwLDYwczYwLTI2LjksNjAtNjBTOTMuMSwwLDYwLDBMNjAsMHogTTYwLDAiLz4NCgk8cGF0aCBjbGFzcz0ic3QyIiBkPSJNODQsNTMuNUw1MiwzMi41Yy01LjUtMy42LTEwLTEuMi0xMCw1LjR2NDQuM2MwLDYuNiw0LjUsOSwxMCw1LjRMODQsNjYuN0M4OS41LDYzLDg5LjUsNTcuMSw4NCw1My41TDg0LDUzLjV6DQoJCSBNNzkuNyw2Mi4yIi8+DQo8L2c+DQo8L3N2Zz4NCg==");
         background-size: 120px 120px;
         z-index: 6;
-        transition: color $trs-d;
+        transition: all $trs-d;
 
         &:hover, &:focus {
           transform: scale(1.1);
         }
+
+        @include max-screen($max-mobile) {
+          width: 60px;
+          height: 60px;
+          margin-left: -30px;
+          margin-top: -30px;
+          border-radius: 60px;
+          background-size: 60px 60px;
+        }
+
         //
         //pointer-events: none;
         //touch-actions: none;
@@ -164,8 +174,11 @@
       display: block;
       min-height: 500px;
 
+      @include max-screen($max-tablet) {
+        width: 100%;
+      }
+
       @include max-screen($max-mobile) {
-        font-size: 26px;
         width: 100%;
         height: auto;
         min-height: 250px;
