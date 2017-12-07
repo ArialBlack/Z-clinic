@@ -20,6 +20,10 @@
       color: $primary-color;
       margin-bottom: 50px;
       line-height: 1.1;
+
+      @include max-screen($max-mobile) {
+        font-size: 26px;
+       }
     }
     &-subtitle {
       text-align: center;
@@ -45,6 +49,10 @@
         @include max-screen(1769) {
           text-align: center;
         }
+
+        @include max-screen($tablet) {
+          margin: 0 0 50px 0;
+        }
         .icon {
           font-size: 77px;
           color: $primary-color;
@@ -69,6 +77,10 @@
             transform-origin: 100% 100%;
 
           }
+
+          @include max-screen($tablet) {
+            margin-left: 0;
+          }
         }
       }
 
@@ -81,19 +93,19 @@
 
         &-item {
           position: relative;
-          padding-top: 25.5%;
+          padding-top: 34.5%;
           color: $white;
 
           @include screen(1025, $hdpi) {
-            padding-top: 30%;
+            padding-top: 27%;
           }
 
           @include screen($mdpi, 1024) {
-            padding-top: 35%;
+            padding-top: 52%;
           }
 
           @include screen($tablet, $max-tablet) {
-            padding-top: 45%;
+            padding-top: 40%;
           }
 
           @include screen(450, $max-mobile) {
@@ -101,37 +113,13 @@
           }
 
           @include screen(321, 449) {
-            padding-top: 75%;
+            padding-top: 90%;
           }
 
           @include max-screen($mobile) {
-            padding-top: 80%;
+            padding-top: 110%;
           }
 
-          /* Mock tests.
-          &:hover, &:focus {
-            @include screen(1025, 1920) {
-              padding-top: 30%;
-            }
-
-            @include screen($mdpi, 1024) {
-              padding-top: 50%;
-            }
-
-
-            @include screen(450, $max-mobile) {
-              padding-top: 45%;
-            }
-
-            @include screen(321, 449) {
-              padding-top: 85%;
-            }
-
-            @include max-screen($mobile) {
-              padding-top: 120%;
-            }
-          }
-          */
           &-step {
             background-color: $primary-color;
             position: absolute;
@@ -232,15 +220,15 @@
               color: #D2A3A4;
               margin: 20px 0;
               line-height: 1.5;
-              font-size: 16px;
+              font-size: 14px;
             }
           }
 
 
           &:hover .is-can-expand {
             left: 0;
-            top: -100px;
-            bottom: -110px;
+            top: -130px;
+            bottom: -170px;
             right: 0;
 
             @include max-screen($max-tablet) {

@@ -19,7 +19,7 @@
       text-align: center;
 
       @include max-screen($max-mobile) {
-        font-size: 32px;
+        font-size: 26px;
       }
 
       &-regular {
@@ -34,6 +34,7 @@
     &_logo {
       margin: 0 auto;
       display: block;
+      max-width: 100%;
     }
 
     &_subtitle {

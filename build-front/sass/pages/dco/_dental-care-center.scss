@@ -85,7 +85,7 @@
         word-spacing: 2px;
 
         @include max-screen($max-mobile) {
-          font-size: 27px;
+          font-size: 18px;
         }
         .text-active {
           color: $primary-color;
@@ -94,7 +94,8 @@
     }
   }
   .clinics {
-
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .dco_video-banner {
@@ -103,8 +104,21 @@
     background: #d4d2d2;
     @extend %content-center;
 
+    @include max-screen($max-mobile) {
+      min-height: 200px;
+    }
+
+
     &-frame {
       margin: 0 auto;
+      width: 50%;
+
+      @include max-screen($max-mobile) {
+        font-size: 26px;
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+      }
     }
   }
 }
