@@ -74,6 +74,12 @@
       font-weight: 400;
       font-size: 24px;
       max-width: 745px;
+
+      @include max-screen($max-mobile) {
+        font-size: 12px;
+        margin-top: 5px;
+        letter-spacing: 1px;
+      }
     }
 
     &_title {
