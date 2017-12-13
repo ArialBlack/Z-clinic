@@ -222,6 +222,18 @@
               line-height: 1.5;
               font-size: 14px;
             }
+
+            &.step-gift {
+              .services_steps-list-hidden-content {
+                @includ max-screen(320) {
+                  font-size: 12px;
+                }
+
+                @include screen(992, 1025) {
+                  font-size: 12px;
+                }
+              }
+            }
           }
 
 
