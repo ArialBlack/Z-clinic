@@ -126,7 +126,7 @@
       }
 
       .views-field-title {
-        a {
+        .field-content {
           @extend %title-hint;
           color: $text-dark;
           font-size: 30px;
@@ -136,10 +136,6 @@
           display: block;
           text-align: center;
           margin: 0 auto;
-
-          &:hover, &:focus {
-            text-decoration: none;
-          }
         }
       }
 
