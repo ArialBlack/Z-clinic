@@ -10,6 +10,13 @@
       @include min-screen(1025);
       margin-top: -450px;
     }
+
+    .is-first {
+      @include max-screen(767) {
+        padding: 60% 0px;
+        top: 0;
+      }
+    }
   }
 
   #paragraphID-122 {

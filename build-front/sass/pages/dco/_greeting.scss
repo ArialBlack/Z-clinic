@@ -76,6 +76,12 @@
       max-width: 745px;
 
       @include max-screen($max-mobile) {
+        font-size: 16px;
+        margin-top: 5px;
+        letter-spacing: 1px;
+      }
+
+      @include max-screen(450) {
         font-size: 12px;
         margin-top: 5px;
         letter-spacing: 1px;
@@ -91,8 +97,9 @@
       text-align: center;
 
       @include max-screen($max-mobile) {
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
+        line-spacing: 1;
       }
     }
 
@@ -104,7 +111,7 @@
       font-weight: 600;
 
       @include max-screen($max-mobile) {
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
       }
     }

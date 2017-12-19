@@ -17,6 +17,8 @@
         border: 0 none;
         height: 100%;
 
+        cursor: default;
+
         @include max-screen(450) {
           font-size: 8px;
         }

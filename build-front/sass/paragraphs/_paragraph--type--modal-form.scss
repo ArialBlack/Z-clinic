@@ -1,5 +1,11 @@
 .paragraph--type--modal-form {
 	min-height: 150px;
+
+  .field-title {
+    @include max-screen($max-mobile) {
+      font-size: 16px;
+    }
+  }
 	.image-button-container{
 		position: relative;
 		picture,
