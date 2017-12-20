@@ -80,6 +80,10 @@
       font-size: 25px;
       font-weight: 200;
     }
+
+    @include max-screen($max-mobile){
+      font-size: 15px;
+    }
   }
 
   &_navigation-list {
