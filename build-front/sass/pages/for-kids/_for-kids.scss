@@ -131,6 +131,13 @@
     font-style: italic;
   }
 
+  .col-7 {
+    @extend %center-block;
+    position: relative;
+    @include max-screen($max-tablet) {
+      padding: 5% 0;
+    }
+  }
   .img-container{
     display: inline-block;
     vertical-align: middle;
