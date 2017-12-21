@@ -115,6 +115,7 @@
 		@include max-screen($max-tablet) {
 			margin: 0 auto;
 			display: block;
+      width: 50%;
 		}
 
     @include max-screen($max-mobile) {
@@ -131,7 +132,7 @@
     font-style: italic;
   }
 
-  .col-7 {
+  .kazky_zablotsky {
     @extend %center-block;
     position: relative;
     @include max-screen($max-tablet) {
@@ -159,11 +160,13 @@
 
   .btn.btn-primary{
     @include button-variant($primary-color, $primary-color);
-    @include button-size(38px, 90px, 22px, 1, 22px);
+    @include button-size(38px, 90px, 22px, 1, 48px);
     vertical-align: middle;
     box-shadow: 0 0 49px rgba(164,76,81,.5);
     margin-left: 15%;
     font-weight: 600;
+    text-decoration: none !important;
+    font-style: normal !important;
     &:hover{
       box-shadow: 0 0 65px rgba(164,76,81,.7);
     }
@@ -177,6 +180,10 @@
       display: block;
       @include button-size(19px, 45px, 16px, 1, 48px);
     }
+  }
+
+  .book-html {
+    // here styles for
   }
 }
 

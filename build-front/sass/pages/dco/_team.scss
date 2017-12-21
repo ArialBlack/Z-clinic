@@ -35,6 +35,9 @@
       margin: 0 auto;
       display: block;
       max-width: 100%;
+      @include max-screen($max-mobile) {
+        max-width: 60%;
+      }
     }
 
     &_subtitle {
