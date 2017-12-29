@@ -149,7 +149,6 @@
               @@include('../page_parts/arrows/floating.twig')
             </a>
           </div>
-          @@include('../page_parts/modals/dco_lviv_plaza.twig')
         </div>
         <div class="clinics_carousel-wrapper">
           <div class="clinic-wrapper">
@@ -162,9 +161,11 @@
               @@include('../page_parts/arrows/floating.twig')
             </a>
           </div>
-          @@include('../page_parts/modals/dco_lviv_parus.twig')
         </div>
       </div>
+
+      @@include('../page_parts/modals/dco_lviv_parus.twig')
+      @@include('../page_parts/modals/dco_lviv_plaza.twig')
     </section>
 
     <div class="layout-content">
@@ -368,6 +369,17 @@
                 </span>
                 <p class="price-for-visit">Ціна за 1 комплексний візит</p>
               </div>
+
+              <div class="services_steps-side-mobile">
+                <i class="services_steps-side-mobile-icon icon-baby-face"></i>
+                <p class="services_steps-side-mobile-text">Для Вашої дитини все
+                  <br>
+                  починається з консультації.
+                  <br>
+                  Вартість та час професійної гігієни залежить від її віку.
+                </p>
+              </div>
+
             </div>
           </div>
       </section>
@@ -437,7 +449,48 @@
         </div>
       </section>
       {{ reviews }}
-      {{ schedule_consultation }}
+      <section class="about-us">
+
+        <h1 class="about-us_title">Медіа про нас</h1>
+
+        <div class="about-us_carousel-wrapper">
+          <div class="about-us_carousel-nav" id="about-us_carousel-nav"></div>
+          <ul class="about-us_carousel">
+            <li>
+              <a target="_blank" rel="noopener" href="https://focus.ua/society/384948/"><img src="../themes/clinic/img/focus-logo.png" alt="focus logo"/></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="http://inter.ua/uk/"><img src="../themes/clinic/img/inter-logo.png" alt="inter logo"/></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=V7zsuFhw0xw">
+                <img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.facebook.com/yaroslav.zablotskyy/videos/154677307946018/">
+                <img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="http://forbes.net.ua/opinions/1353982-5-povodov-nachat-biznes-bez-startovogo-kapitala">
+                <img src="../themes/clinic/img/forbes-logo.png" alt="forbes logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="http://ua.korrespondent.net/journal/1304417-korrespondent-biznes-po-zubah-istoriya-uspihu-lvivskogo-stomatologa"><img src="../themes/clinic/img/correspondent-logo.png" alt="correspondent logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="http://viva.ua/beauty/beauty-news/46567-samie-krasivie-ulibki-znamenitostey-v-proekte-strana-zdorovih-ulibok.html">
+                <img src="../themes/clinic/img/viva_logo.png" alt="viva logo"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+    {{ schedule_consultation }}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">

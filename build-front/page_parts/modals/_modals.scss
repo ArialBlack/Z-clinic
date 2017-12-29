@@ -1,6 +1,23 @@
-.clinic_modal {
+.video_modal {
   .modal-dialog {
     max-width: 750px;
+    margin: 20vh auto;
+
+    @include min-screen(1700) {
+      max-width: 100%;
+      width:100%;
+      margin: 40vh auto;
+    }
+
+    @include max-screen($max-mobile) {
+      max-width: 100%;
+      width:100%;
+      margin: 20vh auto;
+    }
+  }
+
+  .modal-header {
+    display: none;
   }
   .modal-title {
     @extend %title-hint;
@@ -12,12 +29,31 @@
   }
 
   .modal-body {
-    min-height: 200px;
+    max-height: 300px;
+    padding: 0;
+
+    @include max-screen($max-mobile) {
+      min-height: 1px;
+      min-width: 1px;
+      height: 200px;
+      width: 100%;
+    }
   }
 
   .modal-video {
     width: 100%;
     min-width: 700px;
     min-height: 300px;
+
+    @include max-screen($max-mobile) {
+      min-height: 1px;
+      min-width: 1px;
+      height: 200px;
+      width: 100%;
+    }
   }
+}
+
+.modal-backdrop {
+  background-color: #fff;
 }

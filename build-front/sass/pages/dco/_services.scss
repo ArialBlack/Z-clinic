@@ -39,6 +39,35 @@
       &-side {
         margin: 10px 0 150px 20px;
 
+        &-mobile {
+          @include max-screen(1024) {
+            display: block;
+            margin: 0;
+            text-align: center;
+
+            &-icon {
+              font-size: 77px;
+              color: $primary-color;
+              margin: 10px;
+            }
+
+            &-text {
+              font-size: $fs-md - 2px;
+              font-weight: bold;
+              text-transform: uppercase;
+              color: $text-dark-hint;
+              line-height: 1.5;
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 0;
+            }
+          }
+        }
+
+        @include max-screen(1024) {
+          display: none;
+        }
+
         @include min-screen(1770) {
           margin: 0;
           position: absolute;
@@ -59,7 +88,7 @@
         }
 
         &-text {
-          font-size: $fs-md;
+          font-size: $fs-md - 2px;
           font-weight: bold;
           text-transform: uppercase;
           color: $text-dark-hint;
@@ -76,10 +105,6 @@
             transform: rotate(-90deg);
             transform-origin: 100% 100%;
 
-          }
-
-          @include max-screen($tablet) {
-            margin-left: 0;
           }
         }
       }
