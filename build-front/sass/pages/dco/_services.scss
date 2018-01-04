@@ -40,6 +40,10 @@
         margin: 10px 0 150px 20px;
 
         &-mobile {
+          @include min-screen(1025) {
+            display: none;
+          }
+
           @include max-screen(1024) {
             display: block;
             margin: 0;

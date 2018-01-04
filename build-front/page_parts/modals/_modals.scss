@@ -30,6 +30,7 @@
 
   .modal-body {
     max-height: 300px;
+    max-width: 750px;
     padding: 0;
 
     @include max-screen($max-mobile) {
@@ -43,6 +44,8 @@
   .modal-video {
     width: 100%;
     min-width: 700px;
+    max-width: 750px;
+
     min-height: 300px;
 
     @include max-screen($max-mobile) {
