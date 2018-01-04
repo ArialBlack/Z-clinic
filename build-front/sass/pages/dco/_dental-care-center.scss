@@ -2,6 +2,27 @@
 
   .about-us {
     margin: 0;
+
+    &_title {
+      font-size: $fs-title - 5px;
+
+      @include max-screen($max-mobile) {
+        font-size: $fs-title - 10px;
+      }
+    }
+
+    &_subtitle {
+      line-height: 1.25;
+      letter-spacing: 1.25px;
+      color: $primary-color;
+      font-size: 26px;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+      @include max-screen($max-mobile) {
+        font-size: 16px;
+      }
+    }
   }
 
   #block-clinic-page-title {
