@@ -40,11 +40,11 @@
         margin: 10px 0 150px 20px;
 
         &-mobile {
-          @include min-screen(1025) {
+          @include min-screen(1441) {
             display: none;
           }
 
-          @include max-screen(1024) {
+          @include max-screen(1440) {
             display: block;
             margin: 0;
             text-align: center;
@@ -68,7 +68,7 @@
           }
         }
 
-        @include max-screen(1024) {
+        @include max-screen(1440) {
           display: none;
         }
 

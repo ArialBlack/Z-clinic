@@ -1,6 +1,7 @@
 .video_modal {
   .modal-dialog {
     max-width: 750px;
+    display: block;
     margin: 20vh auto;
 
     @include min-screen(1700) {
