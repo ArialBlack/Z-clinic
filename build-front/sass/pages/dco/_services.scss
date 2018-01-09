@@ -37,78 +37,26 @@
       position: relative;
       margin: 120px 0 150px;
       &-side {
-        margin: 10px 0 150px 20px;
-
         &-mobile {
-          @include min-screen(1441) {
-            display: none;
-          }
-
-          @include max-screen(1440) {
-            display: block;
-            margin: 0;
-            text-align: center;
-
-            &-icon {
-              font-size: 77px;
-              color: $primary-color;
-              margin: 10px;
-            }
-
-            &-text {
-              font-size: $fs-md - 2px;
-              font-weight: bold;
-              text-transform: uppercase;
-              color: $text-dark-hint;
-              line-height: 1.5;
-              display: inline-block;
-              vertical-align: middle;
-              margin-left: 0;
-            }
-          }
-        }
-
-        @include max-screen(1440) {
-          display: none;
-        }
-
-        @include min-screen(1770) {
+          display: block;
           margin: 0;
-          position: absolute;
-          top: 0;
-          left: -130px;
-        }
-
-        @include max-screen(1769) {
           text-align: center;
-        }
 
-        @include max-screen($tablet) {
-          margin: 0 0 50px 0;
-        }
-        .icon {
-          font-size: 77px;
-          color: $primary-color;
-        }
+          &-icon {
+            font-size: 77px;
+            color: $primary-color;
+            margin: 10px;
+          }
 
-        &-text {
-          font-size: $fs-md - 2px;
-          font-weight: bold;
-          text-transform: uppercase;
-          color: $text-dark-hint;
-          line-height: 1.5;
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: 20px;
-
-          @include min-screen(1770) {
-            white-space: nowrap;
-            position: absolute;
-            top: 130px;
-            right: 12px;
-            transform: rotate(-90deg);
-            transform-origin: 100% 100%;
-
+          &-text {
+            font-size: $fs-md - 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $text-dark-hint;
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0;
           }
         }
       }
