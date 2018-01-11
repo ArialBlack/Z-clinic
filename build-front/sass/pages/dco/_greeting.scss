@@ -9,12 +9,18 @@
     }
 
     &_logo {
-      max-width: 300px;
+      max-width: 475px;
+      display: blcok;
 
       &-wrapper {
       }
       @include min-screen($max-mobile) {
-        width: 60%;
+        width: 100%;
+      }
+      @include max-screen($tablet) {
+        max-width: 500px;
+        display: flex;
+        margin: 0 auto;
       }
       margin: 0 auto;
       svg {
@@ -73,7 +79,11 @@
       letter-spacing: 2px;
       font-weight: 400;
       font-size: 24px;
-      max-width: 745px;
+      max-width: 675px;
+
+      @include max-screen($tablet) {
+        max-width: 615px;
+      }
 
       @include max-screen($max-mobile) {
         font-size: 16px;
