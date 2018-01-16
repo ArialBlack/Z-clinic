@@ -4,6 +4,14 @@
     display: block;
     margin: 20vh auto;
 
+    .modal-content {
+      max-width: 700px;
+      margin: 0 auto;
+      @include max-screen($max-mobile) {
+        max-width: 95%;
+      }
+    }
+
     @include min-screen(1700) {
       max-width: 100%;
       width:100%;
