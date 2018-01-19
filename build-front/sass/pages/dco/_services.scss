@@ -52,7 +52,7 @@
             font-size: $fs-md - 2px;
             font-weight: bold;
             text-transform: uppercase;
-            color: $text-dark-hint;
+            color: $white;
             line-height: 1.5;
             display: inline-block;
             vertical-align: middle;
@@ -194,7 +194,7 @@
             .services_steps-list-hidden-content {
               display: none;
               transition: all $trs-d;
-              color: #D2A3A4;
+              color: $white;
               margin: 20px 0;
               line-height: 1.5;
               font-size: 14px;

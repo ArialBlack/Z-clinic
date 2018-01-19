@@ -169,7 +169,7 @@
                       marketPositionLat = 49.8617026;
                       marketPositionLon = 24.0264641;
                     }
-                var secondMarkerPositionLat = 50.4286493;
+                var secondMarkerPositionLat = 50.4286459;
                 var secondMarkerPositionLon = 30.5319515;
                 if (placeToShow === 'lviv') {
                   secondMarkerPositionLat = 49.8024075;
