@@ -52,7 +52,6 @@
             font-size: $fs-md - 2px;
             font-weight: bold;
             text-transform: uppercase;
-            color: $white;
             line-height: 1.5;
             display: inline-block;
             vertical-align: middle;
@@ -74,7 +73,7 @@
           color: $white;
 
           @include screen(1025, $hdpi) {
-            padding-top: 27%;
+            padding-top: 32%;
           }
 
           @include screen($mdpi, 1024) {

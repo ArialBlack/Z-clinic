@@ -79,10 +79,6 @@
 
     &.down.clinic_kyiv {
       left: 37%;
-
-      svg {
-        transform: rotate(90deg);
-      }
     }
 
     &.right.clinic_lviv {
@@ -94,17 +90,11 @@
       top: 80%;
       left: 63%;
 
-      svg {
-        transform: rotate(180deg);
-      }
     }
 
     &.left.dco_lviv {
       top: 65%;
       left: 48%;
-      svg {
-        transform: rotate(180deg);
-      }
     }
 
 
