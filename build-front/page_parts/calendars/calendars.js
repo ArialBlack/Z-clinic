@@ -36,8 +36,7 @@
         + '&sprop=website:&sf=true&output=xml');
      //  window.location = '/';
     });
-    https://calendar.google.com/calendar/r/eventedit?text=104th+Startup+Battle,+Agro&dates=20180215T150000Z/20180215T193000Z&details=For+details,+link+here:+https://www.eventbrite.com/e/104th-startup-battle-agro-tickets-41571175505&location=HUB+4.0+-+HUB+4.0+-++Yaroslavsky+Lane,+1/3+-+Kyiv+04071&sf=true&output=xml
-    $('#add_to_icalendar').on('click', function () {
+     $('#add_to_icalendar').on('click', function () {
       console.log('add to icalendar');
     });
     
