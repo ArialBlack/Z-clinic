@@ -15,16 +15,18 @@
       map = null;
       directionsService = null;
       directionsDisplay = null;
-      var myLatLng;
+      var myLatLng = {
+        lat: 50.432224,
+        lng: 30.5161519
+      };
       
       console.log('map is running');
       function initialize(placeToShow) {
         getLocation();
         var mapId = document.getElementById("map");
         
-        var directionsDisplay = new google.maps.DirectionsRenderer({
-          preserveViewport: true
-        });
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsService = new google.maps.DirectionsService;
         
         var latitude = 50.4327114;
         var longitude = 30.5274209;
@@ -293,12 +295,12 @@
       
       function geoSuccess(position) {
         console.log('lat', position.coords.longitude)
-        directionsService = new google.maps.DirectionsService;
-        directionsDisplay = new google.maps.DirectionsRenderer;
-        myLatLng = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
+        if (position) {
+          myLatLng = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+        }
         //call renderer to display directions
         directionsDisplay.setMap(map);
       }
