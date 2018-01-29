@@ -65,8 +65,14 @@
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
-      hop hey lalaley
-      {{ page.content }}
+      <h2 class="title">Дякую за вашу заявку</h2>
+      <p class="subtitle">у найближчий час з вами зв'яжеться наш адміністратор</p>
+      <div class="buttons">
+        <a href="/" class="btn btn-back">
+          <i class="icon icon-right_arrow"></i>
+          Назад до форми
+        </a>
+      </div>
     </div>{# /.layout-content #}
 
     {% if page.sidebar_first %}
@@ -80,10 +86,6 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
-
-    @@include('../page_parts/banner/banner.twig')
   </main>
-
-  @@include('../page_parts/footer/footer.twig')
 
 </div>{# /.layout-container #}

@@ -1,0 +1,38 @@
+.path-form-schedule-consultation-confirmation {
+  .layout-content {
+    text-align: center;
+    padding: 10%;
+    .title {
+      @extend %title-hint, %title-red-line;
+    }
+
+    .subtitle {
+      @extend %hint-text;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-top: 25px;
+    }
+    .buttons {
+      padding: 50px;
+    }
+    .btn-back {
+      @include button-variant($white, $primary-color);
+      @include button-size(25px, 60px, 22px, 1, 45px);
+      display: inline-block;
+      width: auto;
+      height: auto;
+      color: $primary-color;
+
+      &:hover, &:focus {
+        color: white;
+        background: $primary-color;
+      }
+
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
