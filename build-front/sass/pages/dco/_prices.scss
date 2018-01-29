@@ -48,4 +48,14 @@
     text-transform: uppercase;
     color: $text-dark-hint;
   }
+
+  .price-to-pay {
+    margin-top: 10px;
+    text-align: center;
+    font-size: $fs-md;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-dark-hint;
+    font-style: italic;
+  }
 }
