@@ -10,6 +10,10 @@ googlemaps:
   js:
      https://maps.googleapis.com/maps/api/js?key=AIzaSyAxc5g10jp8zZSf-gaNvlu8vMR5JRiUsOw&v=3.exp: { type: external, minified: true }
 
+addcalendar:
+  js:
+     https://addevent.com/libs/atc/1.6.1/atc.min.js: { type: external, minified: true }
+
 popper:
   js:
      js/popper.js: {}
@@ -28,6 +32,7 @@ custom:
   dependencies:
      - clinic/bootstrap
      - clinic/owl.carousel
+     - clinic/addcalendar
 
 bootstrap:
   js:

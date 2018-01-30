@@ -25,7 +25,7 @@
       }
     }
     .buttons {
-      padding: 50px;
+      padding: 50px 50px 150px;
       @include max-screen($max-mobile) {
         padding: 20px 0 0;
       }
@@ -37,19 +37,31 @@
       display: inline-block;
       width: auto;
       height: auto;
-      color: $primary-color;
+      color: $primary-color !important;
 
       @include max-screen($max-mobile) {
         @include button-size(15px, 30px, 22px, 1, 45px);
       }
       &:hover, &:focus {
-        color: white;
+        color: white !important;
         background: $primary-color;
+        i {
+          transform: rotate(270deg);
+        }
       }
 
       i {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
+        transition: all ease-in;
       }
+    }
+
+    .addeventatc_icon {
+      display: none !important;
+    }
+
+    .addeventatc_dropdown {
+      width: 305px;
     }
 
     .calendar-dropdown {
