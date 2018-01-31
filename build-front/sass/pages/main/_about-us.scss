@@ -25,6 +25,9 @@
       padding: 0;
     }
     .owl-stage {
+      display: flex;
+      align-items: center;
+
       &-outer {
         margin-top: 20px;
       }
