@@ -16,6 +16,25 @@
       display: flex;
       align-items: center;
 
+      .alert-info {
+        display: block;
+        text-align: center;
+        background-colo: white;
+        border-color: transparent;
+        color: $primary-color;
+        border-radius : 0;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .error {
+        display: none;
+      }
+      .form-item--error-message {
+        display: none;
+      }
+
       .webform-submission-form {
         display: flex;
         flex-wrap: wrap;

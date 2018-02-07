@@ -41,6 +41,7 @@
 
       @include max-screen($max-mobile) {
         @include button-size(15px, 30px, 22px, 1, 45px);
+        width: 90%;
       }
       &:hover, &:focus {
         color: white !important;

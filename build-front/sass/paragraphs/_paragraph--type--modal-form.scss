@@ -46,6 +46,25 @@
 		max-width: 800px !important;
 		margin: 40px auto 0 !important;
 
+  .alert-info {
+    display: block;
+    text-align: center;
+    background-colo: white;
+    border-color: transparent;
+    color: $primary-color;
+    border-radius : 0;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .error {
+    display: none;
+  }
+  .form-item--error-message {
+    display: none;
+  }
+
 
 		.modal-content{
 			background-color: $primary-color;

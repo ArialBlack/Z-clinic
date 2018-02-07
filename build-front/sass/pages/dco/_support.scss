@@ -4,6 +4,8 @@
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: $white-smoke;
+    position: relative;
+
     @include min-screen($max-tablet) {
       padding-bottom: 50px;
     }
@@ -34,6 +36,8 @@
 
       &-list {
         margin: 50px 12.5%;
+        padding-left: 0;
+        padding-right: 0;
         @include max-screen($max-tablet) {
           margin: 50px 0 20px 0;
           padding: 0;
@@ -191,6 +195,68 @@
               margin-top: 10px;
             }
           }
+        }
+      }
+    }
+
+    &_promo {
+      position: relative;
+      margin: 100px 12.5% 25px;
+      padding-left: 0;
+      padding-right: 0;
+
+      @include max-screen($max-mobile) {
+        margin: 50px 7.5% 10px;
+      }
+
+      &-container {
+        display: block;
+        padding: 25px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      &-sub {
+        color: $text-dark-hint;
+        font-weight: 500;
+        font-size: 12px;
+        display: block;
+      }
+
+      &-price {
+        text-transform: uppercase;
+        color: $primary-color;
+        font-size: 24px;
+        line-height: 2;
+        letter-spacing: 1px;
+        font-weight: 700;
+        &:before, &:after {
+          content: '';
+          display: inline-block;
+          border: 1px solid $text-dark-hint;
+          width: 40%;
+          position: absolute;
+          left: 0;
+          top: 45%;
+
+          @include max-screen(1024) {
+            width: 35%;
+          }
+
+          @include max-screen(768) {
+            width: 30%;
+          }
+          @include max-screen($max-mobile) {
+            width: 22.5%;
+          }
+          @include max-screen($mobile) {
+            width: 15%;
+          }
+        }
+
+        &:after {
+          left: auto;
+          right: 0;
         }
       }
     }

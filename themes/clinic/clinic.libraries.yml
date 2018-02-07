@@ -5,7 +5,9 @@ global-styling:
 tether:
   js:
      js/tether.js: {}
-
+moment:
+  js:
+     js/moment.js: {}
 googlemaps:
   js:
      https://maps.googleapis.com/maps/api/js?key=AIzaSyAxc5g10jp8zZSf-gaNvlu8vMR5JRiUsOw&v=3.exp: { type: external, minified: true }
@@ -33,6 +35,7 @@ custom:
      - clinic/bootstrap
      - clinic/owl.carousel
      - clinic/addcalendar
+     - clinic/moment
 
 bootstrap:
   js:

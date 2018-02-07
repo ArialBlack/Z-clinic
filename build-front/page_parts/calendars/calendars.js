@@ -41,19 +41,11 @@
       var year = filteredDate.substring(6,10);
       var month =  filteredDate.substring(0,2);
       var day = filteredDate.substring(3,5);
-      var endTime = String(parseInt(time.replace(':', '')) + 30);
-      var hours;
-      var minutes;
-  
-      if (endTime < 1000) {
-        endtime = '0' + endtime;
-      }
-      hours = endTime.substring(0,2);
-      minutes = endTime.substring(2, 4);
-      console.log('hours', hours, minutes, ' ', time);
+      var endTime = moment(time, 'HH:mm').add(1, 'h').format('HH:mm');
       var startTime = time;
+      console.log('endTime', endTime)
       $('.addeventatc .start').text(month + '/' + day + '/' + year + ' ' + time);
-      $('.addeventatc .end').text(month + '/' + day + '/' + year + ' ' + hours + ':' + minutes);
+      $('.addeventatc .end').text(month + '/' + day + '/' + year + ' ' + endTime);
       $('.addeventatc .location').text(location);
   
     }
