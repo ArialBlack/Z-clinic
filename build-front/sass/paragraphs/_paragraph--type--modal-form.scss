@@ -49,7 +49,7 @@
   .alert-info {
     display: block;
     text-align: center;
-    background-colo: white;
+    background-color: white;
     border-color: transparent;
     color: $primary-color;
     border-radius : 0;
@@ -58,9 +58,6 @@
     text-align: center;
   }
 
-  .error {
-    display: none;
-  }
   .form-item--error-message {
     display: none;
   }

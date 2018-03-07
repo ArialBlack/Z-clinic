@@ -17,6 +17,8 @@
         $('#block-kontaktivsapku-lviv #paragraphID-8').hide();
         $('#contacts_kyiv #footer_clinic').hide();
         $('#contacts_lviv #footer_clinic').hide();
+        $('#footer_instagram').attr('href', 'http://instagram.com/dental.care.office/');
+        $('#menu_nav_rollup .icon-nav-i').attr('href', 'http://instagram.com/dental.care.office/');
       }
     });
 
