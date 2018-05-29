@@ -96,3 +96,14 @@
 		font-size: 40px;
 	}
 }
+
+.last-year {
+  @include min-screen (1024) {
+    padding-top: 150px;
+  }
+
+  @include max-screen($mdpi) {
+    display: block;
+    padding-top: 0;
+  }
+}

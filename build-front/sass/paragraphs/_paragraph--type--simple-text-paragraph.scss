@@ -52,6 +52,10 @@
 		&:after {
 			margin: 10px auto 40px 0;
 		}
+
+    @include max-screen($max-mobile) {
+      font-size: 26px;
+    }
 	}
 
 	.field-text-long {

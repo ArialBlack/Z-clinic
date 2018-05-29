@@ -6,6 +6,14 @@
   #paragraphID-32 {
     max-width: 1440px !important;
     margin: 0 auto 20px;
+
+
+    .media-as-bg {
+      @include max-screen($max-mobile) {
+        background-position: 0;
+        background-size: 110%;
+      }
+    }
   }
 }
 

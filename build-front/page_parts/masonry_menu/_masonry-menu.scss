@@ -32,11 +32,33 @@
 		cursor: pointer;
 		display: block;
 		padding-top: 100%;
+
+    &.dco-link {
+      background-color: #F7ECEC;
+    }
+
+    .hidden-for-desktop {
+      display: block;
+
+      @include min-screen($max-tablet) {
+        display: none;
+      }
+    }
 		.is-wide & {
 			padding-top: 32%;
 			@include min-screen($max-tablet) {
 				padding-top: 19%;
 			}
+
+      @include max-screen($max-mobile) {
+        padding: 50%;
+      }
+
+      & .icon {
+        @include max-screen($max-tablet) {
+          font-size: 40px;
+        }
+      }
 		}
 		.is-tall & {
 			height: 100%;
@@ -102,7 +124,7 @@
       @include screen($mobile, $max-tablet) {
         display: block;
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
 		}
 	}
@@ -111,6 +133,8 @@
 		font-weight: 700;
 		color: $text-light-gray;
 		font-size: 0;
+    padding: 5px;
+
 		&:after{
 			transition: all $trs-d;
 			visibility: hidden;
@@ -136,6 +160,16 @@
       font-size: 10px;
     }
 	}
+
+  .mansory_menu-title-content {
+    display: inline-block;
+    vertical-align: middle;
+
+    @include max-screen($mobile) {
+      font-size: 8px;
+    }
+  }
+
 	@include min-screen($mdpi) {
 		&-link:hover &-title:after{
 			margin-top: 10px;
@@ -173,12 +207,10 @@
 			height: auto;
 		}
 	}
-	// &-link.is-wide:hover &-title {
-	// 	&:after{
-	// 		margin-top: 8px;
-	// 		margin-bottom: 18px;
-	// 		width: 54px;
-	// 		visibility: visible;
-	// 	}
-	// }
+}
+
+.hidden-for-mobile {
+  @include max-screen($tablet) {
+    display: none;
+  }
 }

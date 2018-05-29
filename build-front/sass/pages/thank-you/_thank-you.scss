@@ -1,0 +1,72 @@
+.path-form-schedule-consultation-confirmation {
+  .layout-content {
+    text-align: center;
+    padding: 10px;
+    @include max-screen($max-mobile) {
+      padding: 10px 0;
+    }
+    .title {
+      @extend %title-hint, %title-red-line;
+
+      @include max-screen($max-mobile) {
+        font-size: 26px;
+      }
+    }
+
+    .subtitle {
+      @extend %hint-text;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-top: 25px;
+      @include max-screen($max-mobile) {
+        font-size: 14px;
+      }
+    }
+    .buttons {
+      padding: 50px 50px 150px;
+      @include max-screen($max-mobile) {
+        padding: 20px 0 0;
+      }
+    }
+    .btn-back {
+      @include button-variant($white, $primary-color);
+      @include button-size(25px, 60px, 22px, 1, 45px);
+      margin: 10px;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      color: $primary-color !important;
+
+      @include max-screen($max-mobile) {
+        @include button-size(15px, 30px, 22px, 1, 45px);
+        width: 90%;
+      }
+      &:hover, &:focus {
+        color: white !important;
+        background: $primary-color;
+        i {
+          transform: rotate(270deg);
+        }
+      }
+
+      i {
+        transform: rotate(90deg);
+        transition: all ease-in;
+      }
+    }
+
+    .addeventatc_icon {
+      display: none !important;
+    }
+
+    .addeventatc_dropdown {
+      width: 305px;
+    }
+
+    .calendar-dropdown {
+      display: inline-block;
+    }
+  }
+}

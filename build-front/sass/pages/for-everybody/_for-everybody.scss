@@ -4,4 +4,46 @@
       margin-bottom: 130px;
     }
   }
+
+  #paragraphID-122 {
+    .html-section.first-reason {
+      @include min-screen(1025);
+      margin-top: -450px;
+    }
+
+    .is-first {
+      @include max-screen(767) {
+        padding: 60% 0px;
+        top: 0;
+      }
+    }
+  }
+
+  #paragraphID-122 {
+    .html-section.second-reason {
+      @include min-screen(1025);
+      margin-top: -500px;
+    }
+
+    .html-section.low-cost {
+      @include min-screen(1025);
+      margin-top: 1600px;
+    }
+
+    .html-section.third-reason {
+      @include min-screen(1025);
+      margin-top: 150px;
+    }
+  }
+
+  .eighth-teeth {
+
+  }
+
+  .dnk-store {
+
+  }
+
+  .business-ache {
+  }
 }

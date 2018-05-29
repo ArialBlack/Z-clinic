@@ -32,6 +32,9 @@
         }
       }
     });
+    $('#media_about_us_viva').on('click', function () {
+      window.open('https://www.youtube.com/watch?v=amK1_4X_-l8');
+    });
   });
   
 }(jQuery));

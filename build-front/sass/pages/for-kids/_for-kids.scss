@@ -115,7 +115,14 @@
 		@include max-screen($max-tablet) {
 			margin: 0 auto;
 			display: block;
+      width: 50%;
 		}
+
+    @include max-screen($max-mobile) {
+      margin: 0 auto;
+      display: block;
+      @include button-size(19px, 45px, 22px, 1, 48px);
+    }
 	}
 }
 
@@ -123,6 +130,60 @@
   a {
     text-decoration: underline;
     font-style: italic;
+  }
+
+  .kazky_zablotsky {
+    @extend %center-block;
+    position: relative;
+    @include max-screen($max-tablet) {
+      padding: 5% 0;
+    }
+  }
+  .img-container{
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% / 7 * 2);
+    img {
+      width: 100%;
+    }
+    @include max-screen($max-tablet) {
+      display: block;
+      width: 100%;
+      margin-bottom: 50px;
+      text-align: center;
+      img {
+        display: inline-block;
+        width: 35%;
+      }
+    }
+  }
+
+  .btn.btn-primary{
+    @include button-variant($primary-color, $primary-color);
+    @include button-size(38px, 90px, 22px, 1, 48px);
+    vertical-align: middle;
+    box-shadow: 0 0 49px rgba(164,76,81,.5);
+    margin-left: 15%;
+    font-weight: 600;
+    text-decoration: none !important;
+    font-style: normal !important;
+    &:hover{
+      box-shadow: 0 0 65px rgba(164,76,81,.7);
+    }
+    @include max-screen($max-tablet) {
+      margin: 0 auto;
+      display: block;
+    }
+
+    @include max-screen($max-mobile) {
+      margin: 0 auto;
+      display: block;
+      @include button-size(19px, 45px, 16px, 1, 48px);
+    }
+  }
+
+  .book-html {
+    // here styles for
   }
 }
 

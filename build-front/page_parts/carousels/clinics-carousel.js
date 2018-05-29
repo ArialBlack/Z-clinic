@@ -25,9 +25,8 @@
     });
   
     clinicsCarousel.on('changed.owl.carousel', function(event) {
-      var CONSTANT_OWL_INDEX = 1;
       console.log(event);
-      var index = event.item.index - CONSTANT_OWL_INDEX;
+      var index = event.item.index - 1;
       $('.clinics_carousel-navigation-item').removeClass('active');
       $('.clinics_carousel-navigation-item[data-id=' + index + ']').addClass('active');
       
@@ -36,16 +35,12 @@
       }
       
       if (index === 0) {
-        $('.clinics_carousel-navigation-item[data-id=' + 3 + ']').addClass('active');
-        
-        if ($('body').hasClass('node-18')) {
-          $('.clinics_carousel-navigation-item[data-id=' + 2 + ']').addClass('active');
-        }
+        $('.clinics_carousel-navigation-item[data-id=' + 2 + ']').addClass('active');
       }
     });
     
     $('.clinics_carousel-navigation-item').on('click', function () {
-      clinicsCarousel.trigger('to.owl.carousel', $(this).attr('data-id'));
+      clinicsCarousel.trigger('to.owl.carousel', parseInt($(this).attr('data-id')) + 1);
       $('.clinics_carousel-navigation-item').removeClass('active');
       $(this).addClass('active');
     });

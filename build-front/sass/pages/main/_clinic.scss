@@ -7,7 +7,7 @@
     text-align: center;
     font-size: 24px;
     @include max-screen($max-mobile) {
-      font-size: $fs-md;
+      font-size: 14px;
       font-weight: 600;
     }
   }
@@ -33,6 +33,7 @@
   img {
     max-width: 100%;
     min-height: 250px;
+    width: 100% !important;
 
     @include max-screen($max-mobile) {
       min-height: 0;
@@ -77,11 +78,7 @@
     }
 
     &.down.clinic_kyiv {
-      left: 49%;
-
-      svg {
-        transform: rotate(90deg);
-      }
+      left: 37%;
     }
 
     &.right.clinic_lviv {
@@ -93,17 +90,11 @@
       top: 80%;
       left: 63%;
 
-      svg {
-        transform: rotate(180deg);
-      }
     }
 
     &.left.dco_lviv {
       top: 65%;
       left: 48%;
-      svg {
-        transform: rotate(180deg);
-      }
     }
 
 

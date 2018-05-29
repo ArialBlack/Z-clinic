@@ -70,15 +70,19 @@
     <section class="greeting">
       <div class="greeting-wrapper">
         <div class="greeting_logo-wrapper">
-          <span class="greeting_logo">@@include('../page_parts/logo/logo.twig')</span>
-          <p class="greeting_sublogo">Dental Care Office</p>
+          <img class="greeting_logo" src="../themes/clinic/img/dco_logo.png" alt="Логотип Клініки"/>
+
+          {#<p class="greeting_logo">@@include('../page_parts/logo/logo.twig')</p>#}
+          {#<p class="greeting_sublogo">Dental Care Office</p>#}
         </div>
       <h1 class="greeting_title">Центр турботи про ясна та зуби</h1>
       <p class="greeting_subtitle">Для Вас та Вашої дитини</p>
       </div>
     </section>
     <section class="dco_video-banner">
-
+      <div class="dco_video-banner-placeholder"></div>
+      <div class="dco_video-banner-placeholder-btn" id="video_placeholder_btn"></div>
+      <iframe id="video_iframe" class="dco_video-banner-frame" src="https://www.youtube.com/embed/Cv2c33MFAoo?&amp;enablejsapi=1&amp;controls=0&amp;rel=0&amp;showinfo=0&amp;html5=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
     </section>
 
     <section class="dco-advantages">
@@ -109,36 +113,61 @@
       </div>
       </div>
     </section>
+    <section class="clinic">
+      <div class="clinic-wrapper">
+        <h3 class="clinic_title">Dental care office - центр турботи про ясна та зуби у Києві</h3>
+        <p class="clinic_location">Спортивна пл. 1а, <strong>ТРЦ Гуллівер</strong></p>
+      </div>
+      <div class="img-wrapper">
+        <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
+        <a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
+          @@include('../page_parts/arrows/floating.twig')
+        </a>
+      </div>
+      @@include('../page_parts/modals/dco_kyiv.twig')
+    </section>
+
+    <section class="small-logo">
+      <div class="small-logo-wrapper">
+        <i class="icon icon-z"></i>
+      </div>
+    </section>
+
     <section class="clinics">
       <div class="clinics_carousel-nav" id="clinics_carousel-nav"></div>
       <div class="clinics_carousel-navigation">
         <span data-id="1" id="clinics_carousel-navigation-item-previous active" class="clinics_carousel-navigation-item active">1</span>
         <span data-id="2" id="clinics_carousel-navigation-item-next" class="clinics_carousel-navigation-item">2</span>
-        <span data-id="3" id="clinics_carousel-navigation-item-next" class="clinics_carousel-navigation-item">3</span>
       </div>
       <div class="clinics_carousel">
         <div class="clinics_carousel-wrapper">
           <div class="clinic-wrapper">
-            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Києві</h3>
-            <p class="clinic_location">Спортивна пл. 1, ТРЦ Гуллівер</p>
+            <h3 class="clinic_title">Dental care office - центри турботи про ясна та зуби у Львові</h3>
+            <p class="clinic_location">вул. Наукова, 7А, <strong> БП Оптіма Плаза</strong></p>
           </div>
-          <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
+          <div class="img-wrapper">
+            <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
+            <a href="#dco_lviv_plaza" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+              @@include('../page_parts/arrows/floating.twig')
+            </a>
+          </div>
         </div>
         <div class="clinics_carousel-wrapper">
           <div class="clinic-wrapper">
-            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
-            <p class="clinic_location">вул. Наукова, 7А, БП Оптіма Плаза</p>
+            <h3 class="clinic_title">Dental care office - центри турботи про ясна та зуби у Львові</h3>
+            <p class="clinic_location">вул, Липинського, 28 <strong>ЖК Парус Park</strong></p>
           </div>
-          <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
-        </div>
-        <div class="clinics_carousel-wrapper">
-          <div class="clinic-wrapper">
-            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
-            <p class="clinic_location">вул, Липинського, 28 (ЖК Парус Park)</p>
+          <div class="img-wrapper">
+            <img src="../themes/clinic/img/office_parus.jpg" alt="clinic in lviv">
+            <a href="#dco_lviv_parus" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+              @@include('../page_parts/arrows/floating.twig')
+            </a>
           </div>
-          <img src="../themes/clinic/img/office_parus.jpg" alt="clinic in lviv">
         </div>
       </div>
+
+      @@include('../page_parts/modals/dco_lviv_parus.twig')
+      @@include('../page_parts/modals/dco_lviv_plaza.twig')
     </section>
 
     <div class="layout-content">
@@ -153,7 +182,7 @@
           <p class="team_subtitle">
             З <span class="text-active">30</span> кандидатів ми відібрали тільки
             <span class="text-active">9</span>,
-            які зараз працюють в наших клініках.
+            які зараз працюють в наших офісах.
           </p>
           <h4 class="team_title-regular">Знайомтесь!</h4>
           <div class="team_carousel">
@@ -170,22 +199,17 @@
           </h2>
           <h3 class="services-subtitle">Перший візит</h3>
           <div class="services_steps">
-
-            <div class="services_steps-side">
-              <i class="icon icon-baby-face"></i>
-              <p class="services_steps-side-text">Для Вашої дитини все
-              <br>
-              починається з консультації.</p>
-            </div>
             <div class="services_steps-content">
               <ul class="services_steps-list row">
                 <li class="services_steps-list-item col-lg-2">
                   <div class="services_steps-list-item-step step-1 has-arrow is-can-expand">
                     <p class="services_steps-list-item-step-number">крок <span>1</span><p>
                     <div class="services_steps-list-content">
-                      <span class="services_steps-list-title">Скрінінг</span>
+                      <span class="services_steps-list-title">Скринінг</span>
 
-                      <span class="services_steps-list-hidden-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid aspernatur atque, consequatur cum doloremque error exercitationem facilis, harum inventore minima obcaecati quod sunt voluptatum!</span>
+                      <span class="services_steps-list-hidden-content">
+                        Слово "скринінг" означає перевірка. Так як ми працюємо за університетськими стандартами, кожному клієнту (пацієнту) під час візиту професійної гігієни один раз на півроку ми проводимо поглиблений скринінг ясен, щоб мати можливість, як нам, так і самим клієнтам, порівнювати ці результати в динаміці. Такий скрініг триває біля 10 хвилин і входить у вартість нашої послуги.
+                      </span>
                       <span class="services_steps-list-price">
                         <div class="services_steps-list-price-wrapper">
                           <i class="icon icon-cost"></i>
@@ -196,7 +220,7 @@
                         </div>
                         <div class="services_steps-list-time-wrapper">
                           <i class="icon icon-clock"></i>
-                          <span class="time">5хв</span>
+                          <span class="time">10хв</span>
                         </div>
                       </span>
                     </div>
@@ -206,15 +230,17 @@
                   <div class="services_steps-list-item-step step-2 has-arrow is-can-expand">
                     <p class="services_steps-list-item-step-number">крок <span>2</span><p>
                     <div class="services_steps-list-content">
-                      <span class="services_steps-list-title">Панорамний ренген</span>
+                      <span class="services_steps-list-title">Панорамний знімок</span>
 
-                      <span class="services_steps-list-hidden-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid aspernatur atque, consequatur cum doloremque error exercitationem facilis, harum inventore minima obcaecati quod sunt voluptatum!</span>
+                      <span class="services_steps-list-hidden-content">
+                        Панорамний знімок - це така собі "дорожня карта", де лікар бачить, що "там за поворотом" - де пломби, коронки, імпланти чи просто карієс (дірка в зубі), про який сама людина навіть не здогадується. Саме оцінка лікарем клінічної ситуації на рентгенограмі дозволяє впевнено та без болю провести саму процедуру професійної гігієни. Рентген-діагностика проводиться перед першим візитом.
+                      </span>
                       <span class="services_steps-list-price">
                         <div class="services_steps-list-price-wrapper">
                           <i class="icon icon-cost"></i>
                           <span class="cost-wrapper">
                             <span class="cost-foreing">~40$</span>
-                            <span class="cost-uah">1100грн</span>
+                            <span class="cost-uah">1000грн</span>
                           </span>
                         </div>
                         <div class="services_steps-list-time-wrapper">
@@ -231,7 +257,9 @@
                     <div class="services_steps-list-content">
                       <span class="services_steps-list-title">Професійна гігієна</span>
 
-                      <span class="services_steps-list-hidden-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid aspernatur atque, consequatur cum doloremque error exercitationem facilis, harum inventore minima obcaecati quod sunt voluptatum!</span>
+                      <span class="services_steps-list-hidden-content">
+                        100% уваги для однієї послуги! Для наших клієнтів ми використовуємо тільки найкращі світові топ бренди - КаВо, Hu-Fridy, Мelag, ЕMS, Sirona, Miłe, Seratoga. Професійна гігієна - це послуга для здорових людей і її треба робити кожних півроку. Якщо перший раз процедура триватиме біля 1,5 години і коштуватиме дорожче, то при регулярних візитах, до 1 години і коштуватиме дешевше.
+                      </span>
 
                       <span class="services_steps-list-price">
                         <div class="services_steps-list-price-wrapper">
@@ -255,7 +283,9 @@
                     <div class="services_steps-list-content">
                       <span class="services_steps-list-title">Коментар</span>
 
-                      <span class="services_steps-list-hidden-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid aspernatur atque, consequatur cum doloremque error exercitationem facilis, harum inventore minima obcaecati quod sunt voluptatum! Amet architecto aut commodi consectetur doloribus dolorum eaque esse et fugit hic incidunt natus necessitatibus, nesciunt odit officiis placeat praesentium quis, sed velit voluptatem?</span>
+                      <span class="services_steps-list-hidden-content">
+                        Ви будете інформовані про все, що лікар побачить на вашій панорамній ренгенограмі та у ротовій порожнині. Якщо буде потреба, то лікар скерує вас до вашого стоматолога, наголошуючи лише на невідкладних втручаннях, які мають позбавити вас можливого болю чи дороговартісного лікування у майбутньому. Ми проінформуємо чи не "заважають" вам ваші "зуби мудрості", та чи немає у вас ознак "хвороби  бізнесмена".
+                      </span>
 
                       <span class="services_steps-list-price">
                         <div class="services_steps-list-price-wrapper">
@@ -279,7 +309,9 @@
                     <div class="services_steps-list-content">
                       <span class="services_steps-list-title">Як правильно чистити зуби</span>
 
-                      <span class="services_steps-list-hidden-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid aspernatur atque, consequatur cum doloremque error exercitationem facilis, harum inventore minima obcaecati quod sunt voluptatum!</span>
+                      <span class="services_steps-list-hidden-content">
+                        Практично у кожного дорослого українця є карієс або пломби, а більше половини з них втрачають зуби через запалення ясен! З нашого досвіду ми бачимо, що більшість дорослих чистять зуби як 12-річні діти - зосереджуються лише на зубах, хоча дорослим людям треба ретельно чистити зуби та ясна. Ми оцінимо те, як ви чистите свої зуби і вкажемо на помилки.
+                      </span>
                       <span class="services_steps-list-price">
                         <div class="services_steps-list-price-wrapper">
                           <i class="icon icon-cost"></i>
@@ -297,7 +329,7 @@
                   </div>
                 </li>
                 <li class="services_steps-list-item col-lg-2">
-                  <div class="services_steps-list-item-step step-gift">
+                  <div class="services_steps-list-item-step step-gift is-can-expand">
                     <p class="services_steps-list-item-step-number">
                       <i class="icon icon-plus"></i>
                     <p>
@@ -306,7 +338,12 @@
                         <i class="icon icon-gift"></i>
                       </p>
 
-                      <p class="message">
+                    <span class="services_steps-list-hidden-content">
+                      Ми придбаємо для вас зубну щітку та йоршики для чищення міжзубного простору та навчимо вас, як ними користуватися! Проконсультуємо щодо вибору пасти. Ми розкажемо Вам як доглядати за зубами ваших близьких - чому, наприклад, вагітним необхідно приходити до гігієніста раз на три місяці, а курцям чи людям, які користуються брекетами, кожного місяця. І все це входить у вартість нашої послуги.
+                    </span>
+
+
+                    <p class="message">
                         Зубні йоршики у подарунок
                       </p>
                     </div>
@@ -317,83 +354,154 @@
                 @@include('../page_parts/logo/skobka.twig')
               </div>
               <div class="services_steps-price pricing">
-                <span class="price"><span>2</span>750</span>
-                <span class="price-currency">
-                  <span class="foreing-price">~100$</span>
-                  <span class="local-currency">грн</span>
-                </span>
-                <p class="price-for-visit">Ціна за 1 комплексний візит</p>
+                <span class="price"><span>$</span>100</span>
+                <p class="price-for-visit">Ціна за 1 комплексний візит
+                </p>
+                <p class="price-to-pay">оплата здійснюється в гривнях</p>
               </div>
+
+              <div class="services_steps-side-mobile">
+                <i class="services_steps-side-mobile-icon icon-baby-face"></i>
+                <p class="services_steps-side-mobile-text">
+                  Для Вашої дитини все починається з консультації.
+                  <br>
+                  Вартість та час професійної гігієни залежить від її віку.
+                </p>
+              </div>
+
             </div>
           </div>
       </section>
 
-      <section class="support">
-        <h2 class="support_title">Чисті зуби не хворіють</h2>
-        <p class="support_subtitle">Регулярні візити двічі на рік</p>
-        <div class="support_steps">
-          <ul class="support_steps-list">
-            <li class="support_steps-list-item col-lg-6">
-              <div class="support_steps-list-item-step step-6 has-arrow">
-                <p class="support_steps-list-item-step-number">крок <span>6</span><p>
-                <div class="support_steps-list-content">
-                  <span class="support_steps-list-title">Повторна гігієна</span>
-
-                  <span class="support_steps-list-price">
-                        <div class="support_steps-list-price-wrapper">
-                          <i class="icon icon-cost"></i>
-                          <span class="cost-wrapper">
-                            <span class="cost-foreing">~70$</span>
-                            <span class="cost-uah">1925грн</span>
-                          </span>
-                        </div>
-                        <div class="support_steps-list-time-wrapper">
-                          <i class="icon icon-clock"></i>
-                          <span class="time">90хв</span>
-                        </div>
-                      </span>
+    <section class="support">
+      <h2 class="support_title">Чисті зуби не хворіють</h2>
+      <p class="support_subtitle">Формула ціни</p>
+      <ul class="support_steps-list row">
+        <li class="support_steps-list-item col-lg-4">
+          <div class="support_steps-list-item-step step-1 has-arrow is-can-expand">
+            <div class="support_steps-list-content">
+              <span class="support_steps-list-title">Перший <br>комплексний візит</span>
+              <span class="support_steps-list-price">$ 100</span>
+              <span class="support_steps-list-hidden-content">
+                 $100 - це вартість першого комплексного візиту, описаного вище. Тривалість першого візиту не менше, ніж півтора години.
+              </span>
+              <div class="support_steps-list-time">
+                <div class="support_steps-list-time-wrapper">
+                  <p class="support_steps-list-time-icon"><i class="icon icon-clock"></i></p>
+                  <p class="time">90хв</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </li>
+        <li class="support_steps-list-item col-lg-4">
+          <div class="support_steps-list-item-step step-2 has-arrow is-can-expand">
+            <div class="support_steps-list-content">
+              <span class="support_steps-list-title">Повторний <br>регулярний візит</span>
+              <span class="support_steps-list-price">$ 70</span>
+              <span class="support_steps-list-hidden-content">
+                $70 - це не знижка! Це вартість регулярних візитів, наприклад, кожних півроку (рекомендовано здоровим людям без запалення ясен), адже через незначний об‘єм зубного каменю, тривалість візиту зменшується і становить біля однієї години.
+              </span>
+              <div class="support_steps-list-time">
+                <div class="support_steps-list-time-wrapper">
+                  <p class="support_steps-list-time-icon"><i class="icon icon-clock"></i></p>
+                  <p class="time">60хв</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="support_steps-list-item col-lg-4">
+          <div class="support_steps-list-item-step step-3 has-arrow is-can-expand">
+            <div class="support_steps-list-content">
+              <span class="support_steps-list-title">Повторний <br>нерегулярний візит</span>
+              <span class="support_steps-list-price">$ 100</span>
+              <span class="support_steps-list-hidden-content">
+                $100 - це не кара за пропущений візит! Це вартість повторних але нерегулярних візитів, які через знову значний об’єм зубного каменю триватимуть, як і перший візит, біля 1,5 години.
+              </span>
+
+              <div class="support_steps-list-time">
+                <div class="support_steps-list-time-wrapper">
+                  <p class="support_steps-list-time-icon"><i class="icon icon-clock"></i></p>
+                  <p class="time">90хв</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        </li>
+      </ul>
+
+      <div class="support_promo">
+        <div class="support_promo-container">
+          <span class="support_promo-sub">Ціна здорових зубів</span>
+          <p class="support_promo-price">$140 на рік</p>
+          <span class="support_promo-sub">За умови відвідування <br> кожні 6 місяців</span>
+        </div>
+      </div>
+    </section>
+      {{ reviews }}
+      <section class="about-us">
+
+        <h1 class="about-us_title">Медіа про Dental Care Offices</h1>
+        <p class="about-us_subtitle">центри турботи про ясна та зуби</p>
+        <div class="about-us_carousel-wrapper">
+          <div class="about-us_carousel-nav" id="about-us_carousel-nav"></div>
+          <ul class="about-us_carousel">
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=14UbWQt6Zcw">
+                <img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/>
+              </a>
             </li>
-            <li class="support_steps-list-item col-lg-6">
-              <div class="support_steps-list-item-step step-7">
-                <p class="support_steps-list-item-step-number">крок <span>7</span><p>
-                <div class="support_steps-list-content">
-                  <span class="support_steps-list-title">Повторна гігієна</span>
+            <li>
+              <a target="_blank" rel="noopener" href="https://focus.ua/society/384948/"><img src="../themes/clinic/img/focus-logo.png" alt="focus logo"/></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4Q0QBkh7Hpg">
+                <img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="http://forbes.net.ua/opinions/1353982-5-povodov-nachat-biznes-bez-startovogo-kapitala">
+                <img src="../themes/clinic/img/forbes-logo.png" alt="forbes logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="http://ua.korrespondent.net/journal/1304417-korrespondent-biznes-po-zubah-istoriya-uspihu-lvivskogo-stomatologa"><img src="../themes/clinic/img/correspondent-logo.png" alt="correspondent logo"/>
+              </a>
+            </li>
 
-                  <span class="support_steps-list-price">
-                      <div class="support_steps-list-price-wrapper">
-                        <i class="icon icon-cost"></i>
-                        <span class="cost-wrapper">
-                          <span class="cost-foreing">~70$</span>
-                          <span class="cost-uah">1925грн</span>
-                        </span>
-                      </div>
-                      <div class="support_steps-list-time-wrapper">
-                        <i class="icon icon-clock"></i>
-                        <span class="time">90хв</span>
-                      </div>
-                    </span>
-                </div>
-              </div>
+            <li>
+              <a target="_blank" rel="noopener"
+                 href="https://ria-ukraine.com/2017/12/20/14522/">
+                <img src="../themes/clinic/img/ria-logo.png" alt="ria logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener"
+                 href="https://www.youtube.com/watch?v=2E6oDuzweVg&feature=youtu.be">
+                <img src="../themes/clinic/img/obozrevatel-logo.png" alt="obozrevatel logo"/>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener"
+                 href="https://www.youtube.com/watch?v=3PcN5KKliCc">
+                <img src="../themes/clinic/img/hromadske-logo.png" alt="hromadske logo"/>
+              </a>
+            </li>
+
+
+            <li>
+              <a id="media_about_us_viva" target="_blank" rel="noopener"
+                 href="https://www.youtube.com/watch?v=Dvjj1LcT5HY">
+                <img src="../themes/clinic/img/viva_logo.png" alt="viva logo"/>
+              </a>
             </li>
           </ul>
         </div>
-        <div class="support-skobka">
-          @@include('../page_parts/logo/skobka.twig')
-        </div>
+    </section>
 
-        <div class="pricing">
-          <span class="price"><span>3</span>850</span>
-          <span class="price-currency">
-                  <span class="foreing-price">~140$</span>
-                  <span class="local-currency">грн</span>
-                </span>
-          <p class="price-for-visit">Ціна за 1 комплексний візит</p>
-        </div>
-      </section>
-      {{ reviews }}
-      {{ schedule_consultation }}
+    {{ schedule_consultation }}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
@@ -419,8 +527,10 @@
     </section>
     @@include('../page_parts/banner/banner.twig')
 
-
-    <div class="map" id="map">
+    <div class="map_wrapper">
+      <div class="map" id="map">
+      </div>
+      <div class="map_message">Натисніть на пін, щоб побудувати маршрут</div>
     </div>
   </main>
 

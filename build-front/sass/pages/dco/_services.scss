@@ -20,6 +20,10 @@
       color: $primary-color;
       margin-bottom: 50px;
       line-height: 1.1;
+
+      @include max-screen($max-mobile) {
+        font-size: 22px;
+       }
     }
     &-subtitle {
       text-align: center;
@@ -33,41 +37,25 @@
       position: relative;
       margin: 120px 0 150px;
       &-side {
-        margin: 10px 0 150px 20px;
-
-        @include min-screen(1770) {
+        &-mobile {
+          display: block;
           margin: 0;
-          position: absolute;
-          top: 0;
-          left: -130px;
-        }
-
-        @include max-screen(1769) {
           text-align: center;
-        }
-        .icon {
-          font-size: 77px;
-          color: $primary-color;
-        }
 
-        &-text {
-          font-size: $fs-md;
-          font-weight: bold;
-          text-transform: uppercase;
-          color: $text-dark-hint;
-          line-height: 1.5;
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: 20px;
+          &-icon {
+            font-size: 77px;
+            color: $primary-color;
+            margin: 10px;
+          }
 
-          @include min-screen(1770) {
-            white-space: nowrap;
-            position: absolute;
-            top: 130px;
-            right: 12px;
-            transform: rotate(-90deg);
-            transform-origin: 100% 100%;
-
+          &-text {
+            font-size: $fs-md - 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0;
           }
         }
       }
@@ -81,19 +69,19 @@
 
         &-item {
           position: relative;
-          padding-top: 25.5%;
+          padding-top: 34.5%;
           color: $white;
 
           @include screen(1025, $hdpi) {
-            padding-top: 30%;
+            padding-top: 32%;
           }
 
           @include screen($mdpi, 1024) {
-            padding-top: 35%;
+            padding-top: 52%;
           }
 
           @include screen($tablet, $max-tablet) {
-            padding-top: 45%;
+            padding-top: 40%;
           }
 
           @include screen(450, $max-mobile) {
@@ -101,37 +89,13 @@
           }
 
           @include screen(321, 449) {
-            padding-top: 75%;
+            padding-top: 90%;
           }
 
           @include max-screen($mobile) {
-            padding-top: 80%;
+            padding-top: 110%;
           }
 
-          /* Mock tests.
-          &:hover, &:focus {
-            @include screen(1025, 1920) {
-              padding-top: 30%;
-            }
-
-            @include screen($mdpi, 1024) {
-              padding-top: 50%;
-            }
-
-
-            @include screen(450, $max-mobile) {
-              padding-top: 45%;
-            }
-
-            @include screen(321, 449) {
-              padding-top: 85%;
-            }
-
-            @include max-screen($mobile) {
-              padding-top: 120%;
-            }
-          }
-          */
           &-step {
             background-color: $primary-color;
             position: absolute;
@@ -229,18 +193,30 @@
             .services_steps-list-hidden-content {
               display: none;
               transition: all $trs-d;
-              color: #D2A3A4;
+              color: $white;
               margin: 20px 0;
               line-height: 1.5;
-              font-size: 16px;
+              font-size: 14px;
+            }
+
+            &.step-gift {
+              .services_steps-list-hidden-content {
+                @includ max-screen(320) {
+                  font-size: 12px;
+                }
+
+                @include screen(992, 1025) {
+                  font-size: 12px;
+                }
+              }
             }
           }
 
 
           &:hover .is-can-expand {
             left: 0;
-            top: -100px;
-            bottom: -110px;
+            top: -130px;
+            bottom: -170px;
             right: 0;
 
             @include max-screen($max-tablet) {

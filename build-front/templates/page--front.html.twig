@@ -79,29 +79,59 @@
         <div class="about-us_carousel-nav" id="about-us_carousel-nav"></div>
         <ul class="about-us_carousel">
           <li>
-            <a href="https://focus.ua/country/340305/"><img src="../themes/clinic/img/focus-logo.png" alt="focus logo"/></a>
-          </li>
-          <li>
-            <a href="http://inter.ua/uk/"><img src="../themes/clinic/img/inter-logo.png" alt="inter logo"/></a>
-          </li>
-          <li>
-            <a href="http://ua.korrespondent.net/journal/1304417-korrespondent-biznes-po-zubah-istoriya-uspihu-lvivskogo-stomatologa"><img src="../themes/clinic/img/correspondent-logo.png" alt="correspondent logo"/>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4Q0QBkh7Hpg">
+              <img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo"/>
             </a>
           </li>
           <li>
-            <a href="https://1plus1.ua/snidanok-z-1-1/video/yak-opanuvati-mistectvo-doglyadu-za-zubami-poradi-likarya-stomatologa">
-            <img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/>
+            <a target="_blank" rel="noopener" href="https://www.facebook.com/yaroslav.zablotskyy/videos/154677307946018/">
+              <img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/>
             </a>
           </li>
           <li>
-            <a href="http://forbes.net.ua/opinions/1353982-5-povodov-nachat-biznes-bez-startovogo-kapitala">
-            <img src="../themes/clinic/img/forbes-logo.png" alt="forbes logo"/>
+            <a target="_blank" rel="noopener" href="http://forbes.net.ua/opinions/1353982-5-povodov-nachat-biznes-bez-startovogo-kapitala">
+              <img src="../themes/clinic/img/forbes-logo.png" alt="forbes logo"/>
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=V7zsuFhw0xw">
-            <img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo"/>
+            <a target="_blank" rel="noopener" href="http://ua.korrespondent.net/journal/1304417-korrespondent-biznes-po-zubah-istoriya-uspihu-lvivskogo-stomatologa"><img src="../themes/clinic/img/correspondent-logo.png" alt="correspondent logo"/>
             </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="http://viva.ua/beauty/beauty-news/46567-samie-krasivie-ulibki-znamenitostey-v-proekte-strana-zdorovih-ulibok.html">
+              <img src="../themes/clinic/img/viva_logo.png" alt="viva logo"/>
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Cr45qn7_1VI">
+              <img src="../themes/clinic/img/business-tv.png" alt="business tv logo"/>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NSE13YjexGA">
+              <img src="../themes/clinic/img/rti-logo.png" alt="RTI радиостанція"/>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=zryJYsUM_Fs">
+              <img src="../themes/clinic/img/white-sales-logo.png" alt="white sales logo"/>
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" rel="noopener" href="http://tvoemisto.tv/exclusive/chysti_zuby_stomatolog_yaroslav_zablotskyy_pro_svoi_tsiny_y_tsinnosti_90048.html">
+              <img src="../themes/clinic/img/misto-logo.png" alt="Твоє місто лого"/>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=gCbEdsGDEIw">
+              <img src="../themes/clinic/img/rada-logo.png" alt="Телеканал рада"/>
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" rel="noopener" href="https://focus.ua/society/384948/"><img src="../themes/clinic/img/focus-logo.png" alt="focus logo"/></a>
           </li>
         </ul>
       </div>
@@ -147,7 +177,7 @@
           @@include('../page_parts/arrows/floating.twig')
         </a>
       </div>
-      {#@@include('../page_parts/modals/clinic_kyiv.twig')#}
+      @@include('../page_parts/modals/clinic_kyiv.twig')
     </section>
 
     <section class="since-1998">
@@ -164,14 +194,15 @@
       </div>
       <div class="img-wrapper">
         <img src="../themes/clinic/img/clinic_lviv.jpg" alt="clinic in lviv">
-        <a href="#clinic_lviv" class="clinic_arrow left clinic_lviv" data-toggle="modal" >
+        <a href="#clinic_lviv_left" class="clinic_arrow left clinic_lviv" data-toggle="modal" >
           @@include('../page_parts/arrows/floating.twig')
         </a>
-        <a href="#clinic_lviv" class="clinic_arrow right clinic_lviv" data-toggle="modal" >
+        <a href="#clinic_lviv_right" class="clinic_arrow right clinic_lviv" data-toggle="modal" >
           @@include('../page_parts/arrows/floating.twig')
         </a>
       </div>
-      {#@@include('../page_parts/modals/clinic_lviv.twig')#}
+      @@include('../page_parts/modals/clinic_lviv_left.twig')
+      @@include('../page_parts/modals/clinic_lviv_right.twig')
     </section>
 
     <section class="small-logo">
@@ -189,8 +220,8 @@
 
     <section class="clinic">
       <div class="clinic-wrapper">
-        <h3 class="clinic_title">Dental care office - центр турботи про зуби у Києві</h3>
-        <p class="clinic_location">Спортивна пл. 1, <strong>ТРЦ Гуллівер</strong></p>
+        <h3 class="clinic_title">Dental care office - центр турботи про ясна та зуби у Києві</h3>
+        <p class="clinic_location">Спортивна пл. 1а, <strong>ТРЦ Гуллівер</strong></p>
       </div>
       <div class="img-wrapper">
         <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
@@ -198,7 +229,7 @@
           @@include('../page_parts/arrows/floating.twig')
         </a>
       </div>
-      {#@@include('../page_parts/modals/dco_kyiv.twig')#}
+      @@include('../page_parts/modals/dco_kyiv.twig')
     </section>
 
       <section class="small-logo">
@@ -216,34 +247,40 @@
       <div class="clinics_carousel">
         <div class="clinics_carousel-wrapper">
           <div class="clinic-wrapper">
-            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
+            <h3 class="clinic_title">Dental care office - центри турботи про ясна та зуби у Львові</h3>
             <p class="clinic_location">вул. Наукова, 7А, <strong> БП Оптіма Плаза</strong></p>
           </div>
           <div class="img-wrapper">
             <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
-            <a href="#dco_lviv" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+            <a href="#dco_lviv_plaza" class="clinic_arrow left dco_lviv" data-toggle="modal" >
               @@include('../page_parts/arrows/floating.twig')
             </a>
           </div>
-          {#@@include('../page_parts/modals/dco_lviv.twig')#}
         </div>
         <div class="clinics_carousel-wrapper">
           <div class="clinic-wrapper">
-            <h3 class="clinic_title">Dental care office - центри турботи про зуби у Львові</h3>
+            <h3 class="clinic_title">Dental care office - центри турботи про ясна та зуби у Львові</h3>
             <p class="clinic_location">вул, Липинського, 28 <strong>ЖК Парус Park</strong></p>
           </div>
           <div class="img-wrapper">
             <img src="../themes/clinic/img/office_parus.jpg" alt="clinic in lviv">
-            <a href="#dco_lviv" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+            <a href="#dco_lviv_parus" class="clinic_arrow left dco_lviv" data-toggle="modal" >
               @@include('../page_parts/arrows/floating.twig')
             </a>
           </div>
-          {#@@include('../page_parts/modals/dco_lviv.twig')#}
         </div>
       </div>
+
+      @@include('../page_parts/modals/dco_lviv_plaza.twig')
+
+      @@include('../page_parts/modals/dco_lviv_parus.twig')
+
     </section>
     @@include('../page_parts/banner/banner.twig')
-    <div class="map" id="map">
+    <div class="map_wrapper">
+      <div class="map" id="map">
+      </div>
+      <div class="map_message">Натисніть на пін, щоб побудувати маршрут</div>
     </div>
   </main>
 

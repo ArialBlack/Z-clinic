@@ -1,5 +1,11 @@
 .paragraph--type--modal-form {
 	min-height: 150px;
+
+  .field-title {
+    @include max-screen($max-mobile) {
+      font-size: 16px;
+    }
+  }
 	.image-button-container{
 		position: relative;
 		picture,
@@ -39,6 +45,22 @@
 	.modal-dialog{
 		max-width: 800px !important;
 		margin: 40px auto 0 !important;
+
+  .alert-info {
+    display: block;
+    text-align: center;
+    background-color: white;
+    border-color: transparent;
+    color: $primary-color;
+    border-radius : 0;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-item--error-message {
+    display: none;
+  }
 
 
 		.modal-content{

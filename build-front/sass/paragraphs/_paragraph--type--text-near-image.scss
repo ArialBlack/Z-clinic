@@ -19,8 +19,12 @@
   .field-title {
     @extend .col-lg-10, %title-red-line-left, %title-hint;
     padding: 20px 30px 0;
-    font-size: $fs-lg;
+    font-size: 30px;
     color: $text-dark-hint;
+
+    @include max-screen($max-mobile) {
+      font-size: 26px;
+    }
   }
 
   .field-text-near-image {

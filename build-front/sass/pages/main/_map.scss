@@ -1,3 +1,23 @@
 .map {
   height: 500px;
+  &_wrapper {
+    position: relative;
+  }
+  &_message {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 15px;
+    font-size: 16px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 1000;
+    background: white !important;
+    @include max-screen($max-mobile) {
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+    }
+  }
 }
