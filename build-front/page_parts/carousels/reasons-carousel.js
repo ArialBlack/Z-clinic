@@ -2,9 +2,9 @@
 (function ($) {
   $(document).ready(function(){
     $('.reasons_carousel').addClass('owl-carousel owl-theme');
-    var clinicsCarousel = $('.reasons_carousel').owlCarousel({
+    var reasonsCarousel = $('.reasons_carousel').owlCarousel({
       // center: true,
-      items: 2,
+      items: 1,
       loop: true,
       margin: 0,
       slideBy: 1,
@@ -24,26 +24,34 @@
       }
     });
   
-    clinicsCarousel.on('changed.owl.carousel', function(event) {
-      console.log(event);
+    reasonsCarousel.on('changed.owl.carousel', function(event) {
+      console.log('reasons carousel', event.item.index);
       var index = event.item.index - 1;
       $('.reasons_carousel-navigation-item').removeClass('active');
       $('.reasons_carousel-navigation-item[data-id=' + index + ']').addClass('active');
       
-      if (event.item.index === 5) {
-        $('.reasons_carousel-navigation-item[data-id=' + 1 + ']').addClass('active');
-      }
-      
       if (index === 0) {
         $('.reasons_carousel-navigation-item[data-id=' + 2 + ']').addClass('active');
       }
+  
+      if (event.item.index === 5) {
+        $('.reasons_carousel-navigation-item[data-id=' + 1 + ']').addClass('active');
+      }
+  
     });
     
     $('.reasons_carousel-navigation-item').on('click', function () {
-      clinicsCarousel.trigger('to.owl.carousel', parseInt($(this).attr('data-id')) + 1);
+      reasonsCarousel.trigger('to.owl.carousel', parseInt($(this).attr('data-id')) - 1);
       $('.reasons_carousel-navigation-item').removeClass('active');
       $(this).addClass('active');
     });
+    
+    $('.reasons_carousel-content-more-btn').on('click', function (e) {
+      e.preventDefault();
+      $(this).hide();
+      var dataId = $(this).attr('data-id');
+      $('#' + dataId).addClass('show');
+    })
   });
   
 }(jQuery));

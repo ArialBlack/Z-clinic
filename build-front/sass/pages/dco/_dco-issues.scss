@@ -90,7 +90,9 @@
         border-bottom: 0 none;
         background-color: transparent !important;
         border-top: 2px solid $primary-color;
-
+        @include max-screen($max-mobile) {
+          border-top: 1px solid $primary-color;
+        }
         a {
           color: white;
           font-weight: bold;
