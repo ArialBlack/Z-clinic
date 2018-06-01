@@ -26,7 +26,7 @@ var fileinclude = require('gulp-file-include'),
 			'fontsFolder': './fonts/',
 			'sass': ['./sass/**/*.scss'],
 			'sassWatch': ['./sass/**/*.scss', './page_parts/**/*.scss'],
-			'img': ['./images/*.*'],
+			'img': ['./images/*.*', './images/**/*.*', './images/*/*.*'],
 			'js': './page_parts/**/*.js',
 			'sassRoot': 'sass/',
 			'svgIcons': './images/icons/*.svg'

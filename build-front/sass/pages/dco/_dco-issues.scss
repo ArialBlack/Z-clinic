@@ -1,0 +1,176 @@
+.dco_issues {
+    padding: 25vh 50px;
+    min-height: 80vh;
+    background: #000000 url('../img/dco/businessman_sick.png') no-repeat 75% 75%;
+    background-size: cover;
+    transition: all .3s ease;
+
+    @include max-screen($max-mobile) {
+      padding: 20px;
+      background: #000000;
+    }
+
+    &.first {
+      background: #000000 url('../img/dco/cleanning_teeth.png') no-repeat 75% 75%;
+      background-size: cover;
+
+      @include max-screen($max-tablet) {
+        background: #000000 url('../img/dco/cleanning_teeth.png') no-repeat 100% 100%;
+      }
+
+      @include max-screen($max-mobile) {
+        background: #000000;
+      }
+    }
+
+    &.second {
+      background: #000000 url('../img/dco/businessman_sick.png') no-repeat 75% 75%;
+      background-size: cover;
+
+      @include max-screen($max-tablet) {
+        background: #000000 url('../img/dco/businessman_sick.png') no-repeat 100% 100%;
+      }
+
+      @include max-screen($max-mobile) {
+        background: #000000;
+      }
+    }
+
+    &-wrapper {
+      text-align: center;
+      max-width: $hdpi+px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .nav-tabs {
+      border-bottom: 0 none;
+    }
+
+    &-tab-item {
+      border: 2px solid transparent;
+      padding: 15px 20px;
+      transition: all .3s ease;
+
+      @include max-screen($max-mobile) {
+        border: 1px solid transparent;
+        padding: 5px 5px;
+      }
+
+      &:first-child {
+        border-right: 2px solid $primary-color;
+        padding: 15px 20px 15px 0;
+
+        @include max-screen($max-mobile) {
+          border-right: 1px solid $primary-color;
+          padding: 5px 5px 5px 0;
+        }
+      }
+
+      &:last-child {
+        padding: 15px 0 15px 20px;
+
+        @include max-screen($max-mobile) {
+          padding: 5px 0 5px 5px;
+        }
+      }
+      &:active, &:hover, &:focus {
+        color: white;
+      }
+
+      &:not(.active) {
+        border-bottom: 2px solid $primary-color;
+
+        @include max-screen($max-mobile) {
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+
+      &.active {
+        border-bottom: 0 none;
+        background-color: transparent !important;
+        border-top: 2px solid $primary-color;
+
+        a {
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-tab-title {
+      text-transform: uppercase;
+      color: $text-hint;
+      font-size: 20px;
+
+      @include max-screen($max-mobile) {
+        font-size: 12px;
+      }
+
+      &:active, &:hover, &:focus {
+        color: white;
+        border: 0 none;
+        text-decoration: none;
+      }
+    }
+
+    &-suggestion {
+      width: 50%;
+      text-align: left;
+      margin: 50px 0;
+
+      @include max-screen($max-mobile) {
+        width: 100%;
+        margin: 25px 0 0;
+      }
+
+      &-text {
+        width: 40%;
+        color: $text-hint;
+        font-size: 18px;
+        line-height: 2;
+        font-weight: bold;
+
+        @include max-screen($max-tablet) {
+          width: 80%;
+        }
+
+        @include max-screen($max-mobile) {
+          width: 100%;
+        }
+      }
+    }
+
+    &-content {
+      margin: 50px 0;
+      text-align: left;
+      width: 50%;
+
+      @include max-screen($max-mobile) {
+        width: 100%;
+        margin: 25px 0 0;
+      }
+
+      &-text {
+        width: 80%;
+        color: white;
+        margin-bottom: 20px;
+        line-height: 1.5;
+
+
+        @include max-screen($max-mobile) {
+          width: 100%;
+          line-height: 1.25;
+        }
+      }
+    }
+
+    .tab-pane.active {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include max-screen($max-mobile) {
+        display: block;
+      }
+    }
+}
