@@ -7,7 +7,7 @@
       items: 2,
       loop: true,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 6000,
       smartSpeed: 900,
       margin: 0,
       slideBy: 1,
