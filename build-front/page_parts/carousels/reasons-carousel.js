@@ -50,7 +50,9 @@
       e.preventDefault();
       $(this).hide();
       var dataId = $(this).attr('data-id');
-      $('#' + dataId).addClass('show');
+      console.log('dataId', dataId);
+      var reasonEl =  $('.reasons_carousel-content-hidden[id=' + dataId + ']').addClass('show');
+      console.log('reasonEl', reasonEl);
     })
   });
   

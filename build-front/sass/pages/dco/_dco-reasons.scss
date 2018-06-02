@@ -170,7 +170,7 @@
             display: none;
             transition: all .3 ease;
             &.show {
-              display: block;
+              display: block !important;
             }
           }
 

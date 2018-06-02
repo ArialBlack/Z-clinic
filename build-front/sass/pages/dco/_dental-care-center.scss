@@ -47,8 +47,12 @@
     position: relative;
     @extend %content-center;
 
+    @include max-screen(480px) {
+      min-height: 250px;
+    }
+
     @include max-screen($max-mobile) {
-      min-height: 200px;
+      min-height: 340px;
     }
 
     &-placeholder {
@@ -67,9 +71,14 @@
         left: 0;
       }
 
-      @include max-screen($max-mobile) {
-        height: auto;
+      @include max-screen(480px) {
         min-height: 250px;
+        height: auto;
+      }
+
+      @include max-screen($max-mobile) {
+        min-height: 340px;
+        height: auto;
       }
 
       &-btn {
@@ -144,10 +153,16 @@
         width: 100%;
       }
 
-      @include max-screen($max-mobile) {
+      @include max-screen(480px) {
         width: 100%;
         height: auto;
         min-height: 250px;
+      }
+
+      @include max-screen($max-mobile) {
+        width: 100%;
+        height: auto;
+        min-height: 340px;
       }
     }
   }

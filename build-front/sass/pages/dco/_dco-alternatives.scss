@@ -57,6 +57,11 @@
       }
     }
 
+    &-subtitle {
+      .red {
+        font-weight: 600;
+      }
+    }
     &-title, &-subtitle {
       .red {
         color: $primary-color;
