@@ -127,9 +127,9 @@
       }
 
       &-text {
-        width: 40%;
-        color: $text-hint;
-        font-size: 18px;
+        width: 75%;
+        color: $primary-color;
+        font-size: 24px;
         line-height: 2;
         font-weight: bold;
 
@@ -139,6 +139,7 @@
 
         @include max-screen($max-mobile) {
           width: 100%;
+          font-size: 18px;
         }
       }
     }

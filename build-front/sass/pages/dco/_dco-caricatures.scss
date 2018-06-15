@@ -19,6 +19,29 @@
       margin: 0 auto;
       overflow: hidden;
     }
+
+    &-title {
+      @extend %title-primary;
+      text-align: center;
+
+      @include max-screen($max-mobile) {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+      &-subtitle {
+        @extend %title-hint;
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        color: $primary-color;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include max-screen($max-mobile) {
+          font-size: 16px;
+        }
+      }
     .caricatures_carousel {
       &-item {
         align-items: center;
@@ -32,9 +55,9 @@
         position: relative;
         text-align: center;
 
-        @include max-screen($max-mobile) {
-          display: none;
-        }
+        //@include max-screen($max-mobile) {
+        //  display: none;
+        //}
 
         &-item {
           display: inline-block;

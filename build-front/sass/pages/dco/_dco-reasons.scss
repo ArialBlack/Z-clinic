@@ -22,7 +22,7 @@
 
       @include max-screen($max-mobile) {
         margin: 15px auto;
-        font-size: 14px;
+        font-size: 18px;
       }
     }
 
@@ -35,7 +35,7 @@
       color: $text-dark-hint;
 
       @include max-screen($max-mobile) {
-        font-size: 14px;
+        font-size: 18px;
       }
     }
 

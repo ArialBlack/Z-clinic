@@ -287,27 +287,6 @@
               }
             }
           }
-
-          .cost {
-            &-wrapper {
-              display: inline-block;
-              margin-left: 20px;
-              vertical-align: bottom;
-              font-style: italic;
-            }
-
-            &-foreing {
-              display: block;
-              font-size: 20px;
-              font-weight: 700;
-            }
-
-            &-uah {
-              display: block;
-              font-size: 18px;
-              font-weight: 700;
-            }
-          }
         }
 
         &-time {
