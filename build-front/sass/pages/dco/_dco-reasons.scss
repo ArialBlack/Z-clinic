@@ -1,0 +1,185 @@
+.dco_reasons {
+    @extend %centered-content;
+    padding: 50px;
+    min-height: 400px;
+    background: white;
+
+    @include max-screen($max-mobile) {
+      padding: 20px;
+    }
+
+    &-wrapper {
+      text-align: center;
+
+    }
+
+    &-title {
+      width: 50%;
+      color: #202020;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 25px auto;
+
+      @include max-screen($max-mobile) {
+        margin: 15px auto;
+        font-size: 18px;
+      }
+    }
+
+    &-text {
+      width: 50%;
+      margin: 0 auto;
+      line-height: 1.25;
+      font-size: 26px;
+      font-weight: 200;
+      color: $text-dark-hint;
+
+      @include max-screen($max-mobile) {
+        font-size: 18px;
+      }
+    }
+
+    &-title {
+      .red {
+        color: $primary-color;
+      }
+    }
+
+    &-carousel {
+      width: 80vw;
+      margin: 0 auto;
+      position: relative;
+
+      .reasons_carousel {
+        padding: 0 !important;
+
+        &-navigation {
+          position: relative;
+          text-align: center;
+          width: 100%;
+          text-align: center;
+
+          &-item {
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 10px;
+            font-weight: 600;
+            color: $primary-color;
+            cursor: pointer;
+            transition: all .2s ease-in;
+
+            @include max-screen($tablet) {
+              font-size: 14px;
+            }
+
+            &:hover, &:focus {
+              color: $primary-color;
+            }
+            &.active {
+              font-size: 36px;
+              font-weight: 600;
+              color: $primary-color;
+
+              @include max-screen($tablet) {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        &-nav {
+          @extend .clearfix;
+          position: absolute;
+          z-index: 5;
+          width: 100%;
+
+          &-arrow {
+            color: white;
+            background: $primary-color;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 20px;
+            line-height: 1;
+            width: 30px;
+            text-align: center;
+            cursor: pointer;
+            top: 30px;
+            margin-top: -10px;
+            z-index: 2;
+
+            @include max-screen($max-tablet) {
+              top: 30px;
+            }
+
+            @include max-screen($max-mobile) {
+              top: 30px;
+            }
+
+            .icon {
+              font-size: 14px;
+              margin-top: -5px;
+
+              @include max-screen($max-tablet) {
+                font-size: 14px;
+              }
+
+              @include max-screen($max-mobile) {
+                font-size: 14px;
+              }
+
+            }
+
+            &.left {
+              position: absolute;
+              left: 40%;
+              @include max-screen($max-mobile) {
+                left: 20%;
+              }
+            }
+
+            &.right {
+              position: absolute;
+              right: 40%;
+              @include max-screen($max-mobile) {
+                right: 20%;
+              }
+            }
+          }
+        }
+
+        &-wrapper {
+
+        }
+
+        &-content {
+          &-title {
+            color: $primary-color;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 25px;
+            font-size: 18px;
+          }
+
+          &-text {
+            text-align: left;
+            color: $text-dark-hint;
+            margin-bottom: 10px;
+          }
+
+          &-hidden {
+            display: none;
+            transition: all .3 ease;
+            &.show {
+              display: block !important;
+            }
+          }
+
+          &-more-btn {
+            color: $primary-color;
+            display: block;
+            text-align: left;
+          }
+        }
+      }
+    }
+}

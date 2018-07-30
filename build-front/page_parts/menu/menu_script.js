@@ -11,6 +11,7 @@
     	});
     	
     	if($('body').hasClass('node-13')) {
+        $('.header-logo_wrap > a').css('visibility', 'hidden');
     	  $("#block-kontaktivsapku-kiiv #paragraphID-3").hide();
         $("#block-kontaktivsapku-kiiv #paragraphID-146").hide();
         $('#block-kontaktivsapku-lviv #paragraphID-7').hide();

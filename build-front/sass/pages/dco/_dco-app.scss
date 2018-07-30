@@ -1,0 +1,101 @@
+.dco_app {
+    padding: 50px;
+    width: 100%;
+    min-height: 400px;
+    background: #f8f8f8;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    @include max-screen($max-mobile) {
+      padding: 20px;
+      display: block;
+      min-height: 350px;
+    }
+
+    &-wrapper {
+      text-align: left;
+      max-width: $hdpi+px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    &-title {
+      margin: 25px 0;
+      color: $text-dark-hint;
+      font-size: 18px;
+      font-weight: 600;
+      width: 60%;
+      line-height: 1.1;
+
+      @include max-screen($max-mobile) {
+        font-size: 16px;
+        width: 100%;
+      }
+    }
+
+    &-list {
+      &-item {
+        color: $text-dark-hint;
+        margin-bottom: 10px;
+
+        &:before {
+          content: "• ";
+          margin-right: 10px;
+          display: inline-block;
+          color: $primary-color;
+        }
+      }
+    }
+
+    &-teaser {
+      position: absolute;
+      z-index: 100;
+      right: -60px;
+      top: -150px;
+
+      @include max-screen(1024px) {
+        display: none;
+      }
+    }
+
+    &-logo {
+      width: 100%;
+      @include max-screen($max-mobile) {
+        margin-top: 25px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    &-links {
+      position: absolute;
+      right: 50%;
+      bottom: 20%;
+      z-index: 1001;
+
+      @include max-screen(1024px) {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        display: block;
+      }
+
+      @include max-screen($max-mobile) {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        display: block;
+      }
+
+      &-item {
+        display: block;
+        margin: 25px;
+
+        @include max-screen($max-mobile) {
+          margin: 10px;
+          display: inline-block;
+        }
+      }
+    }
+}

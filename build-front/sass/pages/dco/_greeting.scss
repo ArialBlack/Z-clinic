@@ -4,132 +4,17 @@
 
     &-wrapper {
       margin: 0 auto;
-      min-height: 60vh;
+      min-height: 50vh;
       padding: 20px;
     }
 
     &_logo {
       display: block;
-      max-width: 100%;
+      max-width: 50%;
       height: auto;
       margin: 0 auto 50px;
-    }
-    //&_logo {
-    //  max-width: 475px;
-    //  display: blcok;
-    //
-    //  &-wrapper {
-    //  }
-    //  @include min-screen($max-mobile) {
-    //    width: 100%;
-    //  }
-    //  @include max-screen($tablet) {
-    //    max-width: 500px;
-    //    display: flex;
-    //    margin: 0 auto;
-    //  }
-    //  margin: 0 auto;
-    //  svg {
-    //    cursor: pointer;
-    //    width: 100%;
-    //    @include min-screen($max-tablet) {
-    //      max-width: 500px;
-    //      display: flex;
-    //      margin: 0 auto;
-    //    }
-    //    transition: color $trs-d;
-    //    .logo_clinic {
-    //      stroke: $text-dark-hint;
-    //      stroke-width: 0.1;
-    //      stroke-dasharray: 100px;
-    //      stroke-dashoffset: 100px;
-    //      animation-name: draw;
-    //      animation-duration: 3s;
-    //      animation-fill-mode: forwards; // Stay on the last frame
-    //      animation-iteration-count: 1; // Run only once
-    //      animation-timing-function: linear;
-    //    }
-    //
-    //    .logo_zablotsky {
-    //      stroke: $primary-color;
-    //      stroke-width: 0.1;
-    //      stroke-dasharray: 10px;
-    //      stroke-dashoffset: 10px;
-    //      animation-name: draw;
-    //      animation-duration: 3s;
-    //      animation-fill-mode: forwards; // Stay on the last frame
-    //      animation-iteration-count: 1; // Run only once
-    //      animation-timing-function: linear;
-    //
-    //      &-dots {
-    //        stroke: $primary-color;
-    //        stroke-width: 0.1;
-    //        stroke-dasharray: 100px;
-    //        stroke-dashoffset: 100px;
-    //        animation-name: draw;
-    //        animation-duration: 3s;
-    //        animation-fill-mode: forwards; // Stay on the last frame
-    //        animation-iteration-count: 1; // Run only once
-    //        animation-timing-function: linear;
-    //      }
-    //    }
-    //  }
-    //}
-
-    &_sublogo {
-      @extend %title-hint;
-      text-align: right;
-      margin-top: 10px;
-      margin-bottom: 100px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 400;
-      font-size: 24px;
-      max-width: 675px;
-
-      @include max-screen($tablet) {
-        max-width: 615px;
-      }
-
       @include max-screen($max-mobile) {
-        font-size: 16px;
-        margin-top: 5px;
-        letter-spacing: 1px;
-      }
-
-      @include max-screen(450) {
-        font-size: 12px;
-        margin-top: 5px;
-        letter-spacing: 1px;
-      }
-    }
-
-    &_title {
-      @extend %title-hint;
-      color: $text-dark-hint;
-      font-weight: 400 !important;
-      font-size: 48px;
-      letter-spacing: 1.5px;
-      line-height: 1.5;
-      text-align: center;
-
-      @include max-screen($max-mobile) {
-        font-size: 20px;
-        text-align: center;
-        line-spacing: 1;
-      }
-    }
-
-    &_subtitle {
-      @extend %title-primary;
-      color: $primary-color;
-      text-align: center;
-      font-size: 24px;
-      font-weight: 400;
-
-      @include max-screen($max-mobile) {
-        font-size: 18px;
-        text-align: center;
+        max-width: 75%;
       }
     }
   }

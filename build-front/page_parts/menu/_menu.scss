@@ -82,9 +82,16 @@
 		width: calc(100vw - 30px);
     max-height: 100vh;
     overflow: auto;
-		@include min-screen($max-mobile){
+
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar { width: 0 !important }
+
+    @include min-screen($max-mobile){
 			min-width: 340px;
 			width: auto;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
 		}
 
     @include  max-screen($tablet) {

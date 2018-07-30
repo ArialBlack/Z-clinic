@@ -35,96 +35,6 @@
     display: none;
   }
 
-  .dco-advantages {
-    @extend %centered-content;
-    padding: 50px;
-    min-height: 100vh;
-    background: #f8f8f8;
-
-    @include max-screen($max-mobile) {
-      padding: 20px;
-    }
-
-    &-wrapper {
-      text-align: center;
-    }
-
-    &_title {
-      @extend %title-hint;
-    }
-
-    &_logo {
-      display: block;
-      margin: 50px;
-      .icon {
-        font-size: 90px;
-        transition: all $trs-d;
-        cursor: pointer;
-        color: $primary-color;
-
-        &:after {
-          content: "";
-          position: absolute;
-          top: -60%;
-          left: -160%;
-          width: 150%;
-          height: 150%;
-          opacity: 0;
-          transform: rotate(30deg);
-
-          background: rgba(255, 255, 255, 0.13);
-          background: linear-gradient(
-              to right,
-              rgba(255, 255, 255, 0.13) 0%,
-              rgba(255, 255, 255, 0.13) 77%,
-              rgba(255, 255, 255, 0.5) 92%,
-              rgba(255, 255, 255, 0.0) 100%
-          );
-        }
-
-        &:hover, &:focus {
-          transform: scale(1.1);
-        }
-
-
-        &:hover:after {
-          opacity: 1;
-          top: -30%;
-          left: -30%;
-          transition-property: left, top, opacity;
-          transition-duration: 0.7s, 0.7s, 0.15s;
-          transition-timing-function: ease;
-        }
-
-        &:active:after {
-          opacity: 0;
-        }
-      }
-    }
-
-    &_subtitle {
-
-    }
-
-    &_description {
-      &-item {
-        @extend %title-hint;
-        color: $text-dark-hint;
-        text-transform: uppercase;
-        font-size: $fs-title;
-        line-height: 1.5;
-        letter-spacing: 2px;
-        word-spacing: 2px;
-
-        @include max-screen($max-mobile) {
-          font-size: 18px;
-        }
-        .text-active {
-          color: $primary-color;
-        }
-      }
-    }
-  }
   .clinics {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -137,8 +47,12 @@
     position: relative;
     @extend %content-center;
 
+    @include max-screen(480px) {
+      min-height: 250px;
+    }
+
     @include max-screen($max-mobile) {
-      min-height: 200px;
+      min-height: 340px;
     }
 
     &-placeholder {
@@ -157,9 +71,14 @@
         left: 0;
       }
 
-      @include max-screen($max-mobile) {
-        height: auto;
+      @include max-screen(480px) {
         min-height: 250px;
+        height: auto;
+      }
+
+      @include max-screen($max-mobile) {
+        min-height: 340px;
+        height: auto;
       }
 
       &-btn {
@@ -193,10 +112,6 @@
           border-radius: 60px;
           background-size: 60px 60px;
         }
-
-        //
-        //pointer-events: none;
-        //touch-actions: none;
       }
     }
 
@@ -210,10 +125,16 @@
         width: 100%;
       }
 
-      @include max-screen($max-mobile) {
+      @include max-screen(480px) {
         width: 100%;
         height: auto;
         min-height: 250px;
+      }
+
+      @include max-screen($max-mobile) {
+        width: 100%;
+        height: auto;
+        min-height: 340px;
       }
     }
   }

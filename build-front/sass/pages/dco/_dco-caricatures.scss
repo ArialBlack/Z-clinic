@@ -1,0 +1,130 @@
+.dco_caricatures {
+    @extend %centered-content;
+    padding: 50px;
+    min-height: 400px;
+    background: #f8f8f8;
+
+    @include max-screen($max-tablet) {
+      padding: 20px;
+    }
+
+    @include max-screen($max-mobile) {
+      padding: 20px;
+      min-height: 250px;
+      margin-top: 25px;
+    }
+
+    &-wrapper {
+      max-width: $hdpi+px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    &-title {
+      @extend %title-primary;
+      text-align: center;
+
+      @include max-screen($max-mobile) {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+      &-subtitle {
+        @extend %title-hint;
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        color: $primary-color;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include max-screen($max-mobile) {
+          font-size: 16px;
+        }
+      }
+    .caricatures_carousel {
+      &-item {
+        align-items: center;
+        display: flex;
+      }
+      &-nav {
+
+      }
+
+      &-navigation {
+        position: relative;
+        text-align: center;
+
+        //@include max-screen($max-mobile) {
+        //  display: none;
+        //}
+
+        &-item {
+          display: inline-block;
+          margin: 10px;
+          padding: 15px 22px;
+          cursor: pointer;
+
+          @include max-screen($max-tablet) {
+            padding: 10px 0px;
+            margin: 5px;
+          }
+
+          img {
+            @include max-screen($max-tablet) {
+              width: 30%;
+              height: 30%;
+            }
+          }
+          &.active {
+            border: 1px solid $primary-color;
+            border-radius: 50%
+          }
+        }
+      }
+
+      &-title {
+        color: #4f5051;
+        text-transform: uppercase;
+        line-height: 1.4;
+        font-size: 40px;
+        font-weight: 600;
+
+        @include max-screen($max-tablet) {
+          font-size: 30px;
+          line-height: 1.1;
+        }
+
+        @include max-screen($max-mobile) {
+          font-size: 16px;
+        }
+      }
+
+      .caricatures-wrapper {
+        display: inline-flex;
+        align-self: center;
+        width: 50%;
+        padding-left: 50px;
+        @include max-screen($max-mobile) {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      .img-wrapper {
+        display: inline-flex;
+        align-self: center;
+        width: 50%;
+        text-align: center;
+        @include max-screen($max-mobile) {
+          width: 100%;
+        }
+
+        img {
+          margin: 0 auto;
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+}

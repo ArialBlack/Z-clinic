@@ -71,46 +71,118 @@
       <div class="greeting-wrapper">
         <div class="greeting_logo-wrapper">
           <img class="greeting_logo" src="../themes/clinic/img/dco_logo.png" alt="Логотип Клініки"/>
-
-          {#<p class="greeting_logo">@@include('../page_parts/logo/logo.twig')</p>#}
-          {#<p class="greeting_sublogo">Dental Care Office</p>#}
         </div>
-      <h1 class="greeting_title">Центр турботи про ясна та зуби</h1>
-      <p class="greeting_subtitle">Для Вас та Вашої дитини</p>
       </div>
     </section>
+
+    <section class="dco_alternatives">
+      <div class="dco_alternatives-wrapper">
+        <h2 class="dco_alternatives-title">
+          <span class="red">Альтернатива</span>
+          <span class="white"> клінікам</span></h2>
+        <p class="dco_alternatives-subtitle">
+          <span class="white">Системна турбота за здоров'ям та посмішкою</span>
+          <span class="red">без лікування</span>
+        </p>
+      </div>
+    </section>
+
     <section class="dco_video-banner">
       <div class="dco_video-banner-placeholder"></div>
       <div class="dco_video-banner-placeholder-btn" id="video_placeholder_btn"></div>
       <iframe id="video_iframe" class="dco_video-banner-frame" src="https://www.youtube.com/embed/Cv2c33MFAoo?&amp;enablejsapi=1&amp;controls=0&amp;rel=0&amp;showinfo=0&amp;html5=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
     </section>
 
-    <section class="dco-advantages">
-      <div class="dco-advantages-wrapper">
-      <span class="dco-advantages_logo">
-        <i class="icon icon-z"></i>
-      </span>
-      <div class="dco-advantages_description">
-        <p class="dco-advantages_description-item">
-          <span class="text-regular">Не клініка,</span>
-          <span class="text-active">а офіс</span>
-        </p>
-
-        <p class="dco-advantages_description-item">
-          <span class="text-regular">Не пацієнти,</span>
-          <span class="text-active">а клієнти</span>
-        </p>
-
-        <p class="dco-advantages_description-item">
-          <span class="text-regular">Лише</span>
-          <span class="text-active">одна послуга</span>
-        </p>
-
-        <p class="dco-advantages_description-item">
-          <span class="text-regular">Лише</span>
-          <span class="text-active">одна ціна</span>
-        </p>
-      </div>
+    <section class="dco_caricatures">
+      <div class="dco_caricatures-wrapper">
+        <h3 class="dco_caricatures-title">
+          Їсти. Усміхатися. Цілуватися
+        </h3>
+        <div class="caricatures_carousel-nav" id="caricatures_carousel-nav"></div>
+        <div class="caricatures_carousel">
+          <div class="caricatures_carousel-item">
+            <div class="caricatures-wrapper">
+              <h3 class="caricatures_carousel-title">Приходь до нас <br> двічі на рік <br> та не плати <br> за лікування!</h3>
+            </div>
+            <div class="img-wrapper">
+              <img src="../themes/clinic/img/dco/caricatures/brush.png" alt="brush">
+            </div>
+          </div>
+          <div class="caricatures_carousel-item">
+            <div class="caricatures-wrapper">
+              <h3 class="caricatures_carousel-title">Ми подбаємо,<br> щоб твій подих <br> тебе не видав!</h3>
+            </div>
+            <div class="img-wrapper">
+              <img src="../themes/clinic/img/dco/caricatures/smoke.png" alt="smoke">
+            </div>
+          </div>
+          <div class="caricatures_carousel-item">
+            <div class="caricatures-wrapper">
+              <h3 class="caricatures_carousel-title">Приходь до нас <br> двічі на рік <br> і вона передумає!</h3>
+            </div>
+            <div class="img-wrapper">
+              <img src="../themes/clinic/img/dco/caricatures/flowers.png" alt="flowers">
+            </div>
+          </div>
+          <div class="caricatures_carousel-item">
+            <div class="caricatures-wrapper">
+              <h3 class="caricatures_carousel-title">Пий червоне вино, <br> двічі на рік <br> приходь до нас <br> та живи <br> на повну!</h3>
+            </div>
+            <div class="img-wrapper">
+              <img src="../themes/clinic/img/dco/caricatures/vine.png" alt="vine">
+            </div>
+          </div>
+          <div class="caricatures_carousel-item">
+            <div class="caricatures-wrapper">
+              <h3 class="caricatures_carousel-title">Пий каву, <br> приходь до нас <br> двічі на рік <br> та живи <br> на повну!</h3>
+            </div>
+            <div class="img-wrapper">
+              <img src="../themes/clinic/img/dco/caricatures/coffee.png" alt="coffee">
+            </div>
+          </div>
+          <div class="caricatures_carousel-item">
+            <div class="caricatures-wrapper">
+              <h3 class="caricatures_carousel-title">Їж шоколад, <br> приходь до нас <br> двічі на рік <br> та живи <br> на повну!</h3>
+            </div>
+            <div class="img-wrapper">
+              <img src="../themes/clinic/img/dco/caricatures/chocolate.png" alt="chocolate">
+            </div>
+          </div>
+          <div class="caricatures_carousel-item">
+            <div class="caricatures-wrapper">
+              <h3 class="caricatures_carousel-title">Відчуй особливу турботу, <br> про себе <br> і про нього!</h3>
+            </div>
+            <div class="img-wrapper">
+              <img src="../themes/clinic/img/dco/caricatures/cart.png" alt="cart">
+            </div>
+          </div>
+        </div>
+        <div class="caricatures_carousel-navigation">
+          <span data-id="1" id="caricatures_carousel-navigation-item-next active" class="caricatures_carousel-navigation-item active">
+            <img src="../themes/clinic/img/dco/caricatures/brush.svg" alt="brush">
+          </span>
+          <span data-id="2" id="caricatures_carousel-navigation-item" class="caricatures_carousel-navigation-item">
+            <img src="../themes/clinic/img/dco/caricatures/smoke.svg" alt="smoke">
+          </span>
+          <span data-id="3" id="caricatures_carousel-navigation-item" class="caricatures_carousel-navigation-item">
+            <img src="../themes/clinic/img/dco/caricatures/flowers.svg" alt="flowers">
+          </span>
+          <span data-id="4" id="caricatures_carousel-navigation-item" class="caricatures_carousel-navigation-item">
+            <img src="../themes/clinic/img/dco/caricatures/vine.svg" alt="vine">
+          </span>
+          <span data-id="5" id="caricatures_carousel-navigation-item" class="caricatures_carousel-navigation-item">
+            <img src="../themes/clinic/img/dco/caricatures/coffee.svg" alt="coffee">
+          </span>
+          <span data-id="6" id="caricatures_carousel-navigation-item" class="caricatures_carousel-navigation-item">
+            <img src="../themes/clinic/img/dco/caricatures/chocolate.svg" alt="chocolate">
+          </span>
+          <span data-id="7" id="caricatures_carousel-navigation-item" class="caricatures_carousel-navigation-item">
+            <img src="../themes/clinic/img/dco/caricatures/cart.svg" alt="cart">
+          </span>
+        </div>
+        <h4 class="dco_caricatures-subtitle">
+          З нами ти можеш пити що хочеш, їсти що хочеш та курити, якщо інакше не можеш.
+        </h4>
       </div>
     </section>
     <section class="clinic">
@@ -133,6 +205,154 @@
       </div>
     </section>
 
+    <section class="dco_reasons">
+      <div class="dco_reasons-wrapper">
+        <p class="dco_reasons-text">Є лише три причини, через які люди втрачають зуби - це проблеми із зубами, яснами та прикусом</p>
+        <p class="dco_reasons-title">
+          У <span class="red">Dental Care Offices</span> усі ці причини під контролем!
+        </p>
+
+        <div class="dco_reasons-carousel">
+          <div class="reasons_carousel-nav" id="reasons_carousel-nav"></div>
+          <div class="reasons_carousel-navigation">
+            <span data-id="1" id="reasons_carousel-navigation-item active" class="reasons_carousel-navigation-item active">1</span>
+            <span data-id="2" id="reasons_carousel-navigation-item" class="reasons_carousel-navigation-item">2</span>
+            <span data-id="3" id="reasons_carousel-navigation-item" class="reasons_carousel-navigation-item">3</span>
+          </div>
+          <div class="reasons_carousel" id="reasons_accordeon">
+            <div class="reasons_carousel-wrapper">
+              <div class="reasons_carousel-content">
+                <h2 class="reasons_carousel-content-title">Карієс</h2>
+                <p class="reasons_carousel-content-text">Карієс, або просто дірки в зубах. Більшість дорослих
+                  українців мають дірки чи пломби. У жителів Швеції, до прикладу,
+                  практично немає карієсу, адже вони вміють доглядати за зубами. А ще
+                  шведи розуміють, що стоматологія дуже дорога, і тому воліють бути
+                  здоровими – щопівроку приходити до стоматолога на профілактику і не
+                  платити за лікування.</p>
+                <a href="#" class="reasons_carousel-content-more-btn" data-id="reason-0">більше...</a>
+                <div class="reasons_carousel-content-hidden collapse" id="reason-0">
+                  <p class="reasons_carousel-content-text">
+                    У Швеції знають, що маленьким дітям не варто давати на ніч чай,
+                    підсолоджену воду і соки, адже цукор, який залишається на зубах
+                    протягом тривалого часу, псує зуби дитини*. Шведам відомо, що
+                    дитина не знає смаку цукру і що найкраща інвестиція, яку може
+                    зробити мама для свого малюка, – це привчити його пити просту воду.
+                  </p>
+                  <p class="reasons_carousel-content-text">
+                    У наших Dental Care Offices ми щопівроку доглядатимемо за вашими
+                    зубами та зубами ваших дітей та навчимо піклуватися про них вдома, в
+                    дитячому садочку, в школі чи в офісі – як у Швеції.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="reasons_carousel-wrapper">
+              <div class="reasons_carousel-content">
+                <h2 class="reasons_carousel-content-title">Ясна</h2>
+                <p class="reasons_carousel-content-text">
+                  Пародонтит, або запалення ясен. Понад 50%, а за
+                  деякими даними, усі 80% українців, мають пародонтит. Пародонтит –
+                  це запалення, викликане бактерійною інфекцією. Більше того,
+                  схильність до цього запалення може передаватись спадково – від
+                  батьків до дітей. </p>
+                <a href="#" class="reasons_carousel-content-more-btn"
+                   data-id="reason-1"
+                >більше...</a>
+                <div class="reasons_carousel-content-hidden collapse" id="reason-1">
+                  <p class="reasons_carousel-content-text">
+                    У США та Канаді, до прикладу, послуга професійної гігієни, яку треба
+                    робити кожних півроку, від появи першого постійного зуба (шести
+                    років), існує вже 115 років і вважається послугою для здорових.
+                  </p>
+                  <p class="reasons_carousel-content-text">
+                    Якщо ж за яснами доглядати так, як треба, то навіть при спадковій
+                    схильності до пародонтиту його можна уникнути. У наших Dental Care
+                    Offices ми щопівроку доглядатимемо за вашими яснами, як у США та
+                    Канаді, та навчимо вас робити це самостійно поза нашим офісом.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="reasons_carousel-wrapper">
+              <div class="reasons_carousel-content">
+                <h2 class="reasons_carousel-content-title">Прикус</h2>
+                <p class="reasons_carousel-content-text">Прикус, або співвідношення зубів верхньої та нижньої
+                  щелеп. Люди не мають критеріїв оцінки того, чи правильний у них
+                  прикус. До прикладу, у світі 80% брекетів ставлять через неправильну
+                  функцію і лише 20% – з причин естетики.</p>
+                <a href="#" class="reasons_carousel-content-more-btn" data-id="reason-2"
+                >більше...</a>
+                <div class="reasons_carousel-content-hidden collapse" id="reason-2">
+                  <p class="reasons_carousel-content-text">
+                    Іноді на вигляд красиві зуби можуть створювати функціональні
+                    проблеми, а іноді навпаки – криві зуби є лише незначним естетичним
+                    недоліком чи навіть «родзинкою», яку не варто виправляти.
+                  </p>
+                  <p class="reasons_carousel-content-text">
+                    Українці не знають, яку шкоду можуть заподіяти «зуби мудрості», які у
+                    сучасних людей просто не поміщаються в щелепах і які в Австрії, до
+                    прикладу, видаляють усім людям до 25 років, починаючи з 14–16
+                    років.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dco_issues first" id="dco_issues">
+      <div class="dco_issues-wrapper">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item dco_issues-tab-item active" id="issues_first_item">
+          <a class="dco_issues-tab-title" data-toggle="tab" id="issues_first" href="#issues_first_content" role="tab">Відбілювання зубів</a>
+        </li>
+        <li class="nav-item dco_issues-tab-item" id="issues_second_item">
+          <a class="dco_issues-tab-title" data-toggle="tab" id="issues_second" href="#issues_second_content" role="tab">Хвороба бізнесмена</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane" id="issues_first_content" role="tabpanel">
+          <div class="dco_issues-content">
+            <p class="dco_issues-content-text">
+              Професійна гігієна – це найбільш безпечний спосіб відбілювання зубів
+              за рахунок їх очищення.
+            </p>
+            <p class="dco_issues-content-text">
+              Якщо ж вас цікавить професійне відбілювання, спеціалісти Dental Care
+              Offices після оцінки стану зубів порадять найкращі саме для вас
+              методики, адже професійне відбілювання, як і встановлення на зубах
+              спеціальних прикрас (знімних та незнімних), слід робити не лише на
+              чистих, а й на здорових зубах.
+            </p>
+          </div>
+          <div class="dco_issues-suggestion">
+            <p class="dco_issues-suggestion-text">
+              Спеціалісти Dental Care Offices підберуть спеціально для вас зубні пасти та порадять зубні щітки, йоржики чи ополіскувачі, зважаючи на вашу схильність до карієсу чи пародонтиту.</p>
+          </div>
+        </div>
+        <div class="tab-pane active" id="issues_second_content" role="tabpanel">
+          <div class="dco_issues-content">
+            <p class="dco_issues-content-text">
+              За останні роки значно зросла кількість людей, які, самі того не знаючи,
+              ночами сильно труть або стискають зуби, руйнуючи тим свою зубо-щелепну систему.
+            </p>
+            <p class="dco_issues-content-text">
+              Ще у 2008 році, після кризи, британські лікарі назвали цю проблему
+              «хворобою бізнесмена», пояснюючи це тим, що коли бізнесмен спить,
+              то лише половина його голови відпочиває, а інша думає про гроші,
+              кредити тощо. Багато молодих людей також труть зубами через такі
+              емоції, як хвилювання перед екзаменом або кохання.
+            </p>
+          </div>
+          <div class="dco_issues-suggestion">
+            <p class="dco_issues-suggestion-text">Спеціалісти Dental Care Offices знають, як "побачити" перші ознаки "хвороби бізнесмена" та до якого фахівця скерувати на подальше обстеження чи лікування.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
     <section class="clinics">
       <div class="clinics_carousel-nav" id="clinics_carousel-nav"></div>
       <div class="clinics_carousel-navigation">
@@ -208,16 +428,9 @@
                       <span class="services_steps-list-title">Скринінг</span>
 
                       <span class="services_steps-list-hidden-content">
-                        Слово "скринінг" означає перевірка. Так як ми працюємо за університетськими стандартами, кожному клієнту (пацієнту) під час візиту професійної гігієни один раз на півроку ми проводимо поглиблений скринінг ясен, щоб мати можливість, як нам, так і самим клієнтам, порівнювати ці результати в динаміці. Такий скрініг триває біля 10 хвилин і входить у вартість нашої послуги.
+                        Слово "скринінг" означає перевірка. Так як ми працюємо за університетськими стандартами, кожному клієнту (пацієнту) під час візиту професійної гігієни один раз на півроку ми проводимо поглиблений скринінг ясен, щоб мати можливість, як нам, так і самим клієнтам, порівнювати ці результати в динаміці. Такий скринінг триває біля 10 хвилин і входить у вартість нашої послуги.
                       </span>
                       <span class="services_steps-list-price">
-                        <div class="services_steps-list-price-wrapper">
-                          <i class="icon icon-cost"></i>
-                          <span class="cost-wrapper">
-                            <span class="cost-foreing">~10$</span>
-                            <span class="cost-uah">275грн</span>
-                          </span>
-                        </div>
                         <div class="services_steps-list-time-wrapper">
                           <i class="icon icon-clock"></i>
                           <span class="time">10хв</span>
@@ -236,13 +449,6 @@
                         Панорамний знімок - це така собі "дорожня карта", де лікар бачить, що "там за поворотом" - де пломби, коронки, імпланти чи просто карієс (дірка в зубі), про який сама людина навіть не здогадується. Саме оцінка лікарем клінічної ситуації на рентгенограмі дозволяє впевнено та без болю провести саму процедуру професійної гігієни. Рентген-діагностика проводиться перед першим візитом.
                       </span>
                       <span class="services_steps-list-price">
-                        <div class="services_steps-list-price-wrapper">
-                          <i class="icon icon-cost"></i>
-                          <span class="cost-wrapper">
-                            <span class="cost-foreing">~40$</span>
-                            <span class="cost-uah">1000грн</span>
-                          </span>
-                        </div>
                         <div class="services_steps-list-time-wrapper">
                           <i class="icon icon-clock"></i>
                           <span class="time">15хв</span>
@@ -262,13 +468,6 @@
                       </span>
 
                       <span class="services_steps-list-price">
-                        <div class="services_steps-list-price-wrapper">
-                          <i class="icon icon-cost"></i>
-                          <span class="cost-wrapper">
-                            <span class="cost-foreing">~100$</span>
-                            <span class="cost-uah">2750грн</span>
-                          </span>
-                        </div>
                         <div class="services_steps-list-time-wrapper">
                           <i class="icon icon-clock"></i>
                           <span class="time">90хв</span>
@@ -288,13 +487,6 @@
                       </span>
 
                       <span class="services_steps-list-price">
-                        <div class="services_steps-list-price-wrapper">
-                          <i class="icon icon-cost"></i>
-                          <span class="cost-wrapper">
-                            <span class="cost-foreing"></span>
-                            <span class="cost-uah">free</span>
-                          </span>
-                        </div>
                         <div class="services_steps-list-time-wrapper">
                           <i class="icon icon-clock"></i>
                           <span class="time">15хв</span>
@@ -313,13 +505,6 @@
                         Практично у кожного дорослого українця є карієс або пломби, а більше половини з них втрачають зуби через запалення ясен! З нашого досвіду ми бачимо, що більшість дорослих чистять зуби як 12-річні діти - зосереджуються лише на зубах, хоча дорослим людям треба ретельно чистити зуби та ясна. Ми оцінимо те, як ви чистите свої зуби і вкажемо на помилки.
                       </span>
                       <span class="services_steps-list-price">
-                        <div class="services_steps-list-price-wrapper">
-                          <i class="icon icon-cost"></i>
-                          <span class="cost-wrapper">
-                            <span class="cost-foreing"></span>
-                            <span class="cost-uah">free</span>
-                          </span>
-                        </div>
                         <div class="services_steps-list-time-wrapper">
                           <i class="icon icon-clock"></i>
                           <span class="time">10хв</span>
@@ -354,7 +539,7 @@
                 @@include('../page_parts/logo/skobka.twig')
               </div>
               <div class="services_steps-price pricing">
-                <span class="price"><span>$</span>100</span>
+                <span class="price"><span>~$</span>100</span>
                 <p class="price-for-visit">Ціна за 1 комплексний візит
                 </p>
                 <p class="price-to-pay">оплата здійснюється в гривнях</p>
@@ -381,9 +566,9 @@
           <div class="support_steps-list-item-step step-1 has-arrow is-can-expand">
             <div class="support_steps-list-content">
               <span class="support_steps-list-title">Перший <br>комплексний візит</span>
-              <span class="support_steps-list-price">$ 100</span>
+              <span class="support_steps-list-price">~$ 100</span>
               <span class="support_steps-list-hidden-content">
-                 $100 - це вартість першого комплексного візиту, описаного вище. Тривалість першого візиту не менше, ніж півтора години.
+                 ~$100 - це вартість першого комплексного візиту, описаного вище. Тривалість першого візиту не менше, ніж півтора години.
               </span>
               <div class="support_steps-list-time">
                 <div class="support_steps-list-time-wrapper">
@@ -398,9 +583,9 @@
           <div class="support_steps-list-item-step step-2 has-arrow is-can-expand">
             <div class="support_steps-list-content">
               <span class="support_steps-list-title">Повторний <br>регулярний візит</span>
-              <span class="support_steps-list-price">$ 70</span>
+              <span class="support_steps-list-price">~$ 70</span>
               <span class="support_steps-list-hidden-content">
-                $70 - це не знижка! Це вартість регулярних візитів, наприклад, кожних півроку (рекомендовано здоровим людям без запалення ясен), адже через незначний об‘єм зубного каменю, тривалість візиту зменшується і становить біля однієї години.
+                ~$70 - це не знижка! Це вартість регулярних візитів, наприклад, кожних півроку (рекомендовано здоровим людям без запалення ясен), адже через незначний об‘єм зубного каменю, тривалість візиту зменшується і становить біля однієї години.
               </span>
               <div class="support_steps-list-time">
                 <div class="support_steps-list-time-wrapper">
@@ -415,9 +600,9 @@
           <div class="support_steps-list-item-step step-3 has-arrow is-can-expand">
             <div class="support_steps-list-content">
               <span class="support_steps-list-title">Повторний <br>нерегулярний візит</span>
-              <span class="support_steps-list-price">$ 100</span>
+              <span class="support_steps-list-price">~$ 100</span>
               <span class="support_steps-list-hidden-content">
-                $100 - це не кара за пропущений візит! Це вартість повторних але нерегулярних візитів, які через знову значний об’єм зубного каменю триватимуть, як і перший візит, біля 1,5 години.
+                ~$100 - це не кара за пропущений візит! Це вартість повторних але нерегулярних візитів, які через знову значний об’єм зубного каменю триватимуть, як і перший візит, біля 1,5 години.
               </span>
 
               <div class="support_steps-list-time">
@@ -448,6 +633,11 @@
         <div class="about-us_carousel-wrapper">
           <div class="about-us_carousel-nav" id="about-us_carousel-nav"></div>
           <ul class="about-us_carousel">
+            <li>
+              <a target="_blank" rel="noopener" href="http://life.pravda.com.ua/columns/2018/03/22/229721">
+                <img src="../themes/clinic/img/up_logo.jpg" alt="Українська Правда лого"/>
+              </a>
+            </li>
             <li>
               <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=14UbWQt6Zcw">
                 <img src="../themes/clinic/img/1_plus_1_logo.png" alt="1+1 logo"/>
@@ -514,12 +704,38 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
+
+    <section class="dco_app">
+      <div class="dco_app-wrapper">
+        <div class="dco_app-logo">
+          <img src="../themes/clinic/img/dco/app_logo.svg" alt="app logo">
+        </div>
+        <p class="dco_app-title">За допомогою нашого мобільного додатку <br>(з кінця 2018 року) ви зможете:</p>
+        <ul class="dco_app-list">
+          <li class="dco_app-list-item">вибрати засоби для догляду разом з лікарем;</li>
+          <li class="dco_app-list-item">замовити доставку зубних щіток та паст;</li>
+          <li class="dco_app-list-item">ввести наступний візит у календар.</li>
+        </ul>
+      </div>
+      <div class="dco_app-links">
+        <a href="#" class="dco_app-links-item">
+          <img src="../themes/clinic/img/dco/ios.svg" alt="ios link">
+        </a>
+        <a href="#" class="dco_app-links-item">
+          <svg width="98" height="33" viewBox="0 0 98 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M97.999 28.043c0 2.42-1.94 4.382-4.332 4.382H4.332C1.94 32.425 0 30.462 0 28.043V4.382C0 1.962 1.94 0 4.332 0h89.336C96.06 0 98 1.962 98 4.382v23.661h-.001z" fill="#000"/><path d="M0 0v21.958L10.947 10.98 0 0z" transform="translate(7.35 6.242)" fill="url(#a)"/><path d="M13.888 8.11L9.469 5.53 0 0v.08l10.947 10.98 2.94-2.95z" transform="translate(7.35 6.162)" fill="url(#b)"/><path d="M0 10.98v.08l9.47-5.53 4.418-2.581L10.947 0 0 10.98z" transform="translate(7.35 17.22)" fill="url(#c)"/><path d="M2.94 0L0 2.949l2.94 2.949 5.05-2.949L2.94 0z" transform="translate(18.297 14.271)" fill="url(#d)"/><path d="M76.267 21.513c-.41 0-.786-.078-1.125-.23a2.11 2.11 0 0 1-.856-.709h-.068c.045.373.068.726.068 1.06v2.629h-.955V15.01h.778l.132.875h.045c.247-.35.533-.601.859-.757a2.575 2.575 0 0 1 1.122-.234c.838 0 1.484.29 1.939.87.455.578.682 1.39.682 2.434 0 1.049-.232 1.864-.694 2.444-.462.58-1.105.87-1.927.87zm-.137-5.799c-.646 0-1.113.181-1.4.542-.288.361-.436.937-.444 1.726v.215c0 .897.149 1.54.444 1.926.296.386.77.579 1.422.579.545 0 .972-.223 1.282-.67.31-.447.464-1.062.464-1.847 0-.796-.154-1.408-.464-1.832-.308-.425-.744-.639-1.304-.639zM81.103 21.395h-.957V12.33h.957v9.065zM86.6 21.395l-.191-.909h-.046c-.315.401-.63.672-.942.813-.312.142-.704.212-1.172.212-.627 0-1.117-.163-1.472-.49-.355-.327-.533-.79-.533-1.393 0-1.289 1.02-1.966 3.058-2.028l1.072-.036v-.396c0-.502-.108-.872-.32-1.11-.213-.239-.555-.357-1.023-.357-.527 0-1.121.163-1.786.49l-.293-.74c.31-.17.651-.304 1.022-.402.37-.097.743-.146 1.116-.146.752 0 1.31.17 1.672.507.363.338.545.88.545 1.626v4.358H86.6v.001zm-2.16-.681c.594 0 1.062-.165 1.402-.495.34-.33.51-.793.51-1.387v-.576l-.957.04c-.76.028-1.308.147-1.645.36-.336.21-.503.54-.503.987 0 .349.104.616.314.797.21.183.503.274.879.274zM87.863 15.01h1.024l1.383 3.643c.303.832.491 1.432.565 1.801h.045c.05-.199.154-.537.314-1.017.16-.48.68-1.954 1.564-4.425h1.026l-2.713 7.272c-.269.718-.583 1.228-.942 1.529-.36.301-.8.451-1.322.451-.292 0-.58-.032-.865-.1v-.774c.212.046.448.07.709.07.657 0 1.126-.373 1.406-1.12l.35-.909-2.544-6.42zM58.554 15.604c.304.254.938.788.938 1.804 0 .987-.555 1.456-1.11 1.896-.171.174-.37.36-.37.655 0 .292.199.454.344.574l.476.373c.58.495 1.108.949 1.108 1.871 0 1.255-1.202 2.524-3.472 2.524-1.915 0-2.84-.92-2.84-1.91 0-.482.237-1.162 1.017-1.63.818-.507 1.928-.573 2.523-.614-.185-.24-.396-.495-.396-.908 0-.227.066-.36.132-.52-.146.013-.291.026-.423.026-1.4 0-2.192-1.056-2.192-2.097 0-.614.277-1.296.845-1.789.753-.628 1.65-.735 2.364-.735h2.719l-.845.481h-.818v-.001zm-.937 5.93c-.106-.013-.172-.013-.304-.013-.119 0-.834.027-1.387.215-.29.106-1.135.426-1.135 1.375 0 .947.91 1.63 2.324 1.63 1.266 0 1.941-.616 1.941-1.443 0-.683-.436-1.042-1.44-1.764zM58 18.997c.303-.308.328-.735.328-.976 0-.96-.567-2.457-1.662-2.457-.344 0-.713.173-.925.44-.224.281-.29.64-.29.99 0 .895.515 2.377 1.65 2.377.33 0 .687-.16.899-.374zM50.241 21.32c-2.095 0-3.216-1.654-3.216-3.147 0-1.748 1.41-3.24 3.415-3.24 1.937 0 3.15 1.532 3.15 3.146 0 1.574-1.199 3.242-3.349 3.242zm1.648-1.079c.317-.428.397-.96.397-1.48 0-1.175-.554-3.414-2.188-3.414-.435 0-.87.174-1.186.454-.514.466-.608 1.053-.608 1.628 0 1.318.646 3.492 2.243 3.492a1.685 1.685 0 0 0 1.342-.68zM43.095 21.32c-2.097 0-3.216-1.654-3.216-3.147 0-1.748 1.411-3.24 3.414-3.24 1.937 0 3.15 1.532 3.15 3.146 0 1.574-1.198 3.242-3.348 3.242zm1.648-1.079c.317-.428.396-.96.396-1.48 0-1.175-.554-3.414-2.19-3.414-.434 0-.87.174-1.185.454-.513.466-.606 1.053-.606 1.628 0 1.318.646 3.492 2.242 3.492a1.68 1.68 0 0 0 1.343-.68zM38.872 21.112l-1.896.443c-.769.12-1.459.227-2.186.227-3.659 0-5.05-2.722-5.05-4.854 0-2.6 1.975-5.013 5.355-5.013.716 0 1.404.107 2.028.282.993.282 1.458.63 1.749.832l-1.1 1.058-.464.107.331-.536c-.45-.444-1.273-1.26-2.836-1.26-2.094 0-3.672 1.61-3.672 3.955 0 2.52 1.804 4.893 4.692 4.893.85 0 1.285-.174 1.683-.336v-2.157l-2.002.107 1.06-.578h2.81l-.345.336c-.094.08-.106.108-.134.214-.013.12-.026.51-.026.644v1.636h.003z" fill="#F9F9F9"/><path d="M62.744 20.727c-.437-.04-.53-.12-.53-.645V12.495l.007-.086c.053-.47.187-.55.598-.792h-1.896l-.995.483h1.014v.006l-.002-.005v8.277c0 .267-.052.309-.358.71h2.347l.49-.294c-.223-.028-.45-.04-.675-.067zM68.137 20.85c-.144.08-.29.174-.433.24a3.046 3.046 0 0 1-1.278.252c-.42 0-1.079-.027-1.751-.52-.933-.667-1.341-1.811-1.341-2.81 0-2.063 1.658-3.074 3.014-3.074.474 0 .961.12 1.356.372.657.438.829 1.011.92 1.317l-3.092 1.265-1.014.08c.329 1.692 1.46 2.676 2.712 2.676.67 0 1.158-.239 1.605-.464l-.698.666zM66.9 16.881c.25-.093.382-.172.382-.36 0-.53-.592-1.144-1.303-1.144-.527 0-1.515.413-1.515 1.85 0 .226.027.466.04.707l2.396-1.053zM69.407 15.03v.878h-.105v-.879h-.288v-.09h.68v.09h-.287zM70.592 15.907v-.886h-.005l-.267.886h-.082l-.27-.886h-.003v.886h-.095v-.97h.164l.244.785h.002l.241-.784h.166v.97h-.095z" fill="#F9F9F9"/><path d="M32.371 9.307h-.659c0-.092-.063-.35-.187-.779h-.951c-.13.42-.194.68-.194.779h-.62c0-.054.16-.5.482-1.332.32-.835.481-1.294.481-1.378h.778c0 .078.145.531.436 1.358.289.826.434 1.276.434 1.352zm-.95-1.176c-.235-.716-.353-1.104-.353-1.162h-.032c0 .054-.122.441-.364 1.162h.748zM35.026 9.307h-.508c0-.057-.19-.358-.566-.902-.395-.573-.621-.965-.675-1.176h-.033c.034.305.052.58.052.824 0 .343.01.76.03 1.254h-.507a29.913 29.913 0 0 0 0-2.712h.612c0 .074.168.367.507.88.361.546.568.915.623 1.11h.03a8.125 8.125 0 0 1-.05-.833c0-.376-.01-.762-.029-1.158h.515c-.019.344-.03.775-.03 1.293 0 .523.01.996.029 1.42zM38.01 7.856c0 .393-.126.738-.375 1.032-.25.294-.6.44-1.05.44-.202 0-.482-.008-.839-.025a34.11 34.11 0 0 0 0-2.711h.36c.059 0 .147-.002.264-.006l.229-.006c.496 0 .854.125 1.077.374.222.251.333.551.333.902zm-.563.089c0-.266-.076-.492-.23-.674-.154-.183-.39-.274-.705-.274-.058 0-.14.006-.242.02.013.277.02.567.02.87 0 .33.008.66.021.987.09.018.18.027.267.027.295 0 .514-.092.656-.278a1.09 1.09 0 0 0 .213-.678zM40.759 9.306h-.609c-.16-.491-.282-.794-.367-.91-.085-.116-.221-.172-.412-.172l-.23.001c0 .357.007.717.02 1.081h-.572a34.11 34.11 0 0 0 0-2.711h.356l.259-.006c.13-.005.252-.006.363-.006.63 0 .945.218.945.653 0 .346-.18.587-.538.723v.032c.138.038.26.148.364.328.104.178.245.508.421.987zm-.772-1.915c0-.276-.176-.414-.527-.414-.129 0-.243.008-.342.03.015.215.022.495.022.84.075.003.14.004.191.004.439 0 .656-.154.656-.46zM43.71 7.9c0 .426-.13.78-.387 1.06-.259.28-.577.42-.957.42-.363 0-.666-.129-.91-.386s-.367-.585-.367-.981c0-.427.13-.78.388-1.06.258-.281.576-.42.956-.42.363 0 .665.127.91.384.244.258.367.585.367.983zm-.568.06c0-.289-.073-.525-.22-.705a.678.678 0 0 0-.543-.27c-.201 0-.37.09-.51.273-.14.181-.21.412-.21.69 0 .287.073.523.221.705a.675.675 0 0 0 .543.271c.2 0 .37-.09.51-.273.139-.185.21-.414.21-.69zM44.874 9.306h-.583a34.89 34.89 0 0 0 0-2.711h.583a34.316 34.316 0 0 0 0 2.711zM47.857 7.856c0 .393-.125.738-.374 1.032-.25.294-.6.44-1.05.44-.202 0-.482-.008-.839-.025a34.11 34.11 0 0 0 0-2.711h.36c.058 0 .146-.002.264-.006l.229-.006c.496 0 .854.125 1.077.374.221.251.333.551.333.902zm-.562.089c0-.266-.076-.492-.23-.674-.155-.183-.39-.274-.705-.274-.059 0-.14.006-.243.02.013.277.02.567.02.87 0 .33.007.66.02.987.09.018.18.027.268.027.295 0 .513-.092.656-.278.142-.185.214-.411.214-.678zM51.815 9.307h-.66c0-.092-.062-.35-.187-.779h-.951c-.13.42-.194.68-.194.779h-.619c0-.054.16-.5.48-1.332.32-.835.48-1.294.48-1.378h.777c0 .078.146.531.436 1.358.292.826.438 1.276.438 1.352zm-.951-1.176c-.235-.716-.353-1.104-.353-1.162h-.032c0 .054-.122.441-.364 1.162h.749zM54.215 7.303c0 .331-.122.576-.365.735-.244.16-.543.238-.897.238-.064 0-.11-.002-.138-.005 0 .262.008.605.022 1.032h-.578c.018-.4.027-.873.027-1.418 0-.499-.01-.93-.027-1.293h.358c.052 0 .148-.002.292-.006s.269-.006.374-.006c.262 0 .482.06.66.18.183.12.272.301.272.543zm-.531.115c0-.297-.195-.446-.584-.446-.097 0-.201.01-.308.031.014.263.022.56.022.891.034.003.075.005.119.005.5 0 .751-.16.751-.481zM56.683 7.303c0 .331-.121.576-.365.735-.244.16-.543.238-.897.238-.064 0-.11-.002-.138-.005 0 .262.008.605.022 1.032h-.578c.018-.4.027-.873.027-1.418 0-.499-.01-.93-.027-1.293h.358c.052 0 .149-.002.292-.006.144-.004.269-.006.375-.006.26 0 .48.06.66.18.182.12.271.301.271.543zm-.53.115c0-.297-.196-.446-.585-.446-.097 0-.2.01-.308.031.015.263.022.56.022.891.034.003.073.005.119.005.502 0 .751-.16.751-.481zM60.719 7.9c0 .426-.13.78-.387 1.06-.259.28-.577.42-.957.42-.363 0-.666-.129-.91-.386s-.367-.585-.367-.981c0-.427.13-.78.387-1.06.259-.281.577-.42.957-.42.363 0 .666.127.91.384.245.258.367.585.367.983zm-.568.06c0-.289-.073-.525-.22-.705a.678.678 0 0 0-.543-.27c-.201 0-.37.09-.51.273-.14.181-.21.41-.21.688 0 .288.073.524.221.705a.675.675 0 0 0 .543.272c.201 0 .37-.09.51-.273.14-.184.209-.413.209-.69zM63.51 9.307h-.508c0-.057-.19-.358-.566-.902-.395-.573-.621-.965-.675-1.176h-.033c.034.305.052.58.052.824 0 .343.01.76.03 1.254h-.507a29.913 29.913 0 0 0 0-2.712h.612c0 .074.17.367.507.88.361.546.568.915.623 1.11h.03a8.125 8.125 0 0 1-.05-.833c0-.376-.01-.762-.029-1.158h.515c-.019.344-.03.775-.03 1.293 0 .523.008.996.029 1.42z" fill="#F9F9FA"/><defs><linearGradient id="a" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 21.9582 -21.7 0 16.324 0)"><stop stop-color="#257CB0"/><stop offset=".286" stop-color="#4A93B5"/><stop offset=".767" stop-color="#78BCBB"/><stop offset="1" stop-color="#89CFBD"/></linearGradient><linearGradient id="b" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.8869 0 0 14.0521 0 -1.496)"><stop stop-color="#52C1AD"/><stop offset="1" stop-color="#DEE89A"/></linearGradient><linearGradient id="c" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 11.0588 -10.9287 0 12.408 0)"><stop stop-color="#EC413D"/><stop offset=".167" stop-color="#DA4452"/><stop offset=".575" stop-color="#B0487A"/><stop offset=".862" stop-color="#954A92"/><stop offset="1" stop-color="#8A4A9D"/></linearGradient><linearGradient id="d" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 5.89763 -5.82829 0 6.91 0)"><stop stop-color="#F58879"/><stop offset=".119" stop-color="#F69079"/><stop offset=".713" stop-color="#FCB877"/><stop offset="1" stop-color="#FEC874"/></linearGradient></defs></svg>
+        </a>
+      </div>
+        <div class="dco_app-teaser">
+          <img src="../themes/clinic/img/dco/app_teaser.png" alt="app teaser">
+        </div>
+    </section>
+
     <section class="quote">
       <div class="quote-wrapper">
         <img src="../themes/clinic/img/zablotsky_portrait.png" class="quote-img" alt="Zablotsky Portrait">
         <p class="quote-wrapper-text">
           <blockquote class="quote-text">
-            <p class="quote-text-left">Я хочу зробити українців здоровими.</p>
+            <p class="quote-text-left">Я хочу, щоб українці були здоровими.</p>
             <p class="quote-text-right">Запрошую у Dental Care Office!</p>
           </blockquote>
         </p>
