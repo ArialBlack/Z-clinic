@@ -329,4 +329,25 @@
 			}
 		}
 	}
+
+  &_lang-links {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    visibility: hidden;
+
+    &_link {
+      color: $text-light-gray;
+      padding: 0 4px;
+
+      &:hover {
+        color: $text-light-gray;
+      }
+
+      &.active {
+        color: $white;
+        background: $primary-color;
+      }
+    }
+  }
 }

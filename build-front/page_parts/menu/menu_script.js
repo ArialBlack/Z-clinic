@@ -9,7 +9,7 @@
     			return;
     		$navRollups.collapse('hide');
     	});
-    	
+
     	if($('body').hasClass('node-13')) {
         $('.header-logo_wrap > a').css('visibility', 'hidden');
     	  $("#block-kontaktivsapku-kiiv #paragraphID-3").hide();
@@ -20,6 +20,7 @@
         $('#contacts_lviv #footer_clinic').hide();
         $('#footer_instagram').attr('href', 'http://instagram.com/dental.care.office/');
         $('#menu_nav_rollup .icon-nav-i').attr('href', 'http://instagram.com/dental.care.office/');
+        $('.menu_lang-links').css('visibility', 'visible');
       }
     });
 
