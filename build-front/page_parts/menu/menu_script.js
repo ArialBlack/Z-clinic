@@ -10,7 +10,7 @@
     		$navRollups.collapse('hide');
     	});
 
-    	if($('body').hasClass('node-13')) {
+    	if($('body').hasClass('node-13')  || $('body').hasClass('node-67')) {
         $('.header-logo_wrap > a').css('visibility', 'hidden');
     	  $("#block-kontaktivsapku-kiiv #paragraphID-3").hide();
         $("#block-kontaktivsapku-kiiv #paragraphID-146").hide();
