@@ -1,5 +1,6 @@
 .path-teeth-care-center {
-  #block-webform {
+  #block-webform,
+  #block-webforma-2 {
     background: $primary-dark-color;
     padding: 20px;
     min-height: 100vh;
@@ -11,7 +12,7 @@
     }
 
     #webform_submission_schedule_consultation_node_13_add_form-ajax,
-    #webform_submission_schedule_consultation_node_67_add_form-ajax {
+    #webform_submission_schedule_consultation_en_node_67_add_form-ajax {
       max-width: $hdpi+px;
       margin: 0 auto;
       display: flex;
