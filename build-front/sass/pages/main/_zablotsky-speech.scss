@@ -41,6 +41,13 @@
     font-weight: 400;
   }
 
+  &_img {
+    display: block;
+    margin: auto;
+    max-width: 150px;
+    width: 100%;
+  }
+
   &_portrait {
     @extend .col-lg-4, .col-12;
     text-align: center;
