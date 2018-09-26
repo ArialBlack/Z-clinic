@@ -6,15 +6,34 @@
       margin: 0 auto;
       min-height: 50vh;
       padding: 20px;
+      max-width: 1050px;
+    }
+
+    &_logo-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+
+      @include max-screen($max-mobile) {
+        flex-direction: column-reverse;
+      }
     }
 
     &_logo {
-      display: block;
       max-width: 50%;
       height: auto;
-      margin: 0 auto 50px;
+      margin: 0 0 50px;
       @include max-screen($max-mobile) {
         max-width: 75%;
+      }
+    }
+
+    &_img {
+      max-width: 240px;
+
+      @include max-screen($max-mobile) {
+        display: none;
       }
     }
   }

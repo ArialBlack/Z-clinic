@@ -1,0 +1,60 @@
+.phone_form {
+  @extend %content-center;
+  padding: 25px 30px 20%;
+  @include min-screen($max-tablet) {
+    padding: 200px 30px 12%;
+  }
+  @include min-screen($mobile) {
+    padding: 0 30px 3%;
+  }
+
+  form {
+    max-width: $hdpi+px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+
+    .node-13 &,
+    .node-67 & {
+      max-width: 1050px;
+    }
+
+    @include max-screen($mdpi) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  input {
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    width: calc(33.3333333% - 40.6555px);
+
+    @include max-screen($mdpi) {
+      width: 100%;
+      margin: 10px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &[type="text"] {
+      border: 1px solid #BCBDBE;
+      padding-left: 25px;
+    }
+  }
+
+  .button {
+    padding: 0;
+    font-size: 16px;
+    max-width: 350px;
+  }
+}
