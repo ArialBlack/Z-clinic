@@ -71,6 +71,15 @@
         @@include('../page_parts/masonry_menu/main.twig')
         </div>
     </section>
+
+	<section class="phone_form">
+		<form action="/customphp/mail.php" method="post">
+			<input class="one" type="text" id="name" name="name" placeholder="Ім'я">
+			<input class="two" type="text" id="phone" name="phone" placeholder="Контактний телефон">
+			<input class="button" type="submit" id="submit" name="submit" value="Зателефонуйте мені">
+		</form>
+	</section>
+
     <section class="about-us">
 
       <h1 class="about-us_title">Медіа про нас</h1>
@@ -141,8 +150,8 @@
       <div class="zablotsky-speech_info">
         <div class="zablotsky-speech-wrapper">
         <h3 class="zablotsky-speech_title">Ярослав Заблоцький</h3>
-        <img class="zablotsky-speech_img" src="../themes/clinic/img/dco/caricatures/brush-flip.png" alt="brush">
         <!--<i class="icon icon-bow_arrow"></i>-->
+		<img class="zablotsky-speech_img" src="../themes/clinic/img/dco/caricatures/brush-flip.png" alt="brush">
         <p class="zablotsky-speech_description">За 30 років своєї роботи лікарем я сформував свою власну філософію і зрозумів, що справжня стоматологія — це не асортимент послуг на вибір, тому:</p>
         </div>
       </div>

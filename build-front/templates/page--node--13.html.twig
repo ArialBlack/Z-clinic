@@ -76,6 +76,16 @@
       </div>
     </section>
 
+</div>
+
+	<section class="phone_form">
+		<form action="/customphp/mail.php" method="post">
+			<input class="one" type="text" id="name" name="name" placeholder="Ім'я">
+			<input class="two" type="text" id="phone" name="phone" placeholder="Контактний телефон">
+			<input class="button" type="submit" id="submit" name="submit" value="Зателефонуйте мені">
+		</form>
+	</section>
+
     <section class="dco_alternatives">
       <div class="dco_alternatives-wrapper">
         <h2 class="dco_alternatives-title">
@@ -193,9 +203,9 @@
       </div>
       <div class="img-wrapper">
         <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
-        <a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
+        <!--<a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
           @@include('../page_parts/arrows/floating.twig')
-        </a>
+        </a>-->
       </div>
       @@include('../page_parts/modals/dco_kyiv.twig')
     </section>
@@ -368,9 +378,9 @@
           </div>
           <div class="img-wrapper">
             <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
-            <a href="#dco_lviv_plaza" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+            <!--<a href="#dco_lviv_plaza" class="clinic_arrow left dco_lviv" data-toggle="modal" >
               @@include('../page_parts/arrows/floating.twig')
-            </a>
+            </a>-->
           </div>
         </div>
         <div class="clinics_carousel-wrapper">
@@ -380,9 +390,9 @@
           </div>
           <div class="img-wrapper">
             <img src="../themes/clinic/img/office_parus.jpg" alt="clinic in lviv">
-            <a href="#dco_lviv_parus" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+            <!--<a href="#dco_lviv_parus" class="clinic_arrow left dco_lviv" data-toggle="modal" >
               @@include('../page_parts/arrows/floating.twig')
-            </a>
+            </a>-->
           </div>
         </div>
       </div>
@@ -692,7 +702,7 @@
         </div>
     </section>
 
-    {{ schedule_consultation }}
+    {{ schedule_consultation_ua }}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
