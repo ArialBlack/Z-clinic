@@ -332,13 +332,14 @@
 
   &_lang-links {
     position: absolute;
-    bottom: 20px;
-    left: 30px;
+    width: 95px;
+    top: 22px;
+    left: 70px;
     visibility: hidden;
 
     &_link {
       color: $text-light-gray;
-      padding: 0 4px;
+      padding: 1px 10px;
 
       &:hover {
         color: $text-light-gray;

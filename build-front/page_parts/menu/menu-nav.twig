@@ -4,7 +4,10 @@
 		<span class="icon icon-stack_menu"></span>
 		<span class="menu-open_button-text">МЕНЮ</span>
 	</button>
-
+  <div class="menu_lang-links">
+    <a class="menu_lang-links_link active" href="/dentalcareoffice">Ua</a>
+    <a class="menu_lang-links_link" href="/en_dentalcareoffice">Eng</a>
+  </div>
 	<div class="menu-rollup menu_nav-rollup collapse" id="menu_nav_rollup">
 		<div class="menu-header nav" role="tablist">
 			<a class="menu-header_link active" data-toggle="tab" href="#menu1" role="tab">
@@ -26,10 +29,6 @@
 			<div class="menu_nav-content_tab tab-pane" id="menu2" role="tabpanel">
 				{{ drupal_menu('submenu') }}
 			</div>
-		</div>
-		<div class="menu_lang-links">
-		  <a class="menu_lang-links_link active" href="/dentalcareoffice">Ua</a>
-		  <a class="menu_lang-links_link" href="/en_dentalcareoffice">Eng</a>
 		</div>
 		<button class="menu-close_button" data-toggle="collapse" data-target="#menu_nav_rollup" aria-expanded="false" aria-controls="Clouse main menu">
 			<span aria-hidden="true">&times;</span>

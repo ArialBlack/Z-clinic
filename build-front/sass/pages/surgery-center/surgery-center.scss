@@ -1,0 +1,33 @@
+.path-surgery-center {
+  .paragraph--type--simple-text-paragraph {
+    .field-title {
+      margin-top: 85px;
+
+      @media (max-width: 767px) {
+        margin-top: 40px;
+      }
+    }
+
+    p {
+      max-width: 940px;
+
+      &.surgery__list-item {
+        position: relative;
+        padding-left: 40px;
+
+        span {
+          position: absolute;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          border-radius: 50%;
+          color: #ffffff;
+          background: #E30613;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
