@@ -76,7 +76,7 @@
 		<form action="/customphp/mail.php" method="post">
 			<input class="one" type="text" id="name" name="name" placeholder="Ім'я">
 			<input class="two" type="text" id="phone" name="phone" placeholder="Контактний телефон">
-			<input class="button" type="submit" id="submit" name="submit" value="Зателефонуйте мені">
+			<input class="button" type="submit" id="submit" name="submit" value="Зателефонуйте мені" onClick="_gaq.push(['_trackEvent', 'Call_me_button', 'submit']);">
 		</form>
 	</section>
 
