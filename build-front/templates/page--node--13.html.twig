@@ -70,13 +70,14 @@
     <section class="greeting">
       <div class="greeting-wrapper">
         <div class="greeting_logo-wrapper">
-          <img class="greeting_logo" src="../themes/clinic/img/dco_logo.png" alt="Логотип Клініки"/>
+          <div class="greeting_logo">
+          	<img src="../themes/clinic/img/dco_logo.png" alt="Логотип Клініки"/>
+          	<p class="dco-greeting-text"><strong>Чисті зуби, свіжий подих - ще ніколи це не було так просто!</strong><br> Запишись на професійну гігієну зубів в один клік.</p>
+          </div>
           <img class="greeting_img" src="../themes/clinic/img/dco/caricatures/brush.png" alt="brush">
         </div>
       </div>
     </section>
-
-
     <section class="phone_form">
       <form action="/customphp/mail.php" method="post">
        <input class="one" type="text" id="name" name="name" placeholder="Ім'я">
@@ -97,10 +98,43 @@
       </div>
     </section>
 
+    <section class="dco_differences">
+      <div class="dco_differences-wrapper">
+        <h3 class="dco_differences-title">Ми відрізняємось</h3>
+        <div class="dco_differences-wrapper-2">
+          <div class="dco_differences-ul-wrapper">
+            <p class="dco_differences-ul-title">Звичайна клініка:</p>
+            <ul>
+              <li>Чистка зубів як другорядна послуга</li>
+              <li>Спеціалізуються на лікуванні</li>
+              <li>Намагається продати максимальну кількість послуг</li>
+              <li>Зацікавлена в хворих</li>
+              <li>Болісно і дорого</li>
+              <li>Забороняє: їсти шоколад, пити каву, червоне вино та мати шкідливу звичку</li>
+            </ul>
+          </div>
+          <div class="dco_differences-ul-wrapper">
+            <p class="dco_differences-ul-title">Dental Care Office:</p>
+            <ul>
+              <li>Чистка зубів як головна та єдина послуга</li>
+              <li>Спеціалізуються на професійній гігієні зубів</li>
+              <li>Надає лише одну послугу</li>
+              <li>Безболісно та доступно кожному</li>
+              <li>Дозволяє: їсти шоколад, пити каву, червоне вино та мати шкідливу звичку (якщо інакше не можете)</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        
+    </section>
+
     <section class="dco_video-banner">
-      <div class="dco_video-banner-placeholder"></div>
-      <div class="dco_video-banner-placeholder-btn" id="video_placeholder_btn"></div>
-      <iframe id="video_iframe" class="dco_video-banner-frame" src="https://www.youtube.com/embed/V0aEaqj5JWo?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <p class="dco_video-banner-text">Сядьте, розслабтеся, отримуйте задоволення від процесу.<br>Ви навіть не помітете як пролетить час.<br>В офісах ми не сваримо за неправильний догляд за зубами, ми просто дбаємо, щоб ваша посмішка додавала вам впевненості.</p>
+      <div class="dco_video-banner-wrapper">
+        <div class="dco_video-banner-placeholder"></div>
+        <div class="dco_video-banner-placeholder-btn" id="video_placeholder_btn"></div>
+        <iframe id="video_iframe" class="dco_video-banner-frame" src="https://www.youtube.com/embed/V0aEaqj5JWo?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section class="dco_caricatures">

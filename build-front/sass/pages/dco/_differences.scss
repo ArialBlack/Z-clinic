@@ -1,0 +1,86 @@
+.dco_differences {
+  @extend %centered-content;
+  padding: 100px 50px;
+  background: #f8f8f8;
+
+  @include max-screen($max-mobile) {
+    padding: 30px 15px;
+  }
+
+  &-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &-wrapper-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include max-screen($max-mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-title {
+    @extend %title-primary;
+    text-align: center;
+    margin-bottom: 95px;
+
+    @include max-screen($max-mobile) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-ul-wrapper {
+    max-width: 500px;
+    margin: 0 30px;
+
+    @include max-screen($max-mobile) {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    ul {
+      font-size: 18px;
+      letter-spacing: .5px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: $text-light-gray;
+      padding-top: 35px;
+      list-style-type: disc;
+      margin-left: 20px;
+
+      @include max-screen($max-mobile) {
+        padding-top: 5px;
+      }
+
+      li {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &-ul-title {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    @include max-screen($max-mobile) {
+      font-size: 17px;
+    }
+  }
+}

@@ -47,6 +47,25 @@
     position: relative;
     @extend %content-center;
 
+    &-wrapper {
+      position: relative;
+    }
+
+    &-text {
+      text-align: center;
+      padding: 60px 30px;
+      max-width: 660px;
+      display: block;
+      margin: auto;
+      color: #080908;
+      font-size: 18px;
+      line-height: 1.5;
+
+      @include max-screen($max-mobile) {
+        padding: 30px 15px;
+      }
+    }
+
     @include max-screen(480px) {
       min-height: 250px;
     }
