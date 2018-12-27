@@ -27,11 +27,17 @@
     }
   }
 
-  input {
+  select {
+    border: 1px solid #BCBDBE;
+    padding-left: 25px;
+    background: #fff;
+  }
+
+  input, select {
     border-radius: 5px;
     height: 50px;
     line-height: 50px;
-    width: calc(33.3333333% - 40.6555px);
+    width: calc(26.3333333% - 40.6555px);
 
     @include max-screen($mdpi) {
       width: 100%;
