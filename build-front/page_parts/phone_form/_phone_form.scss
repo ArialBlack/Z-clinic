@@ -16,6 +16,14 @@
     justify-content: space-between;
     padding: 0 5px;
 
+    #phone-error {
+      display: none !important;
+    }
+
+    &>.intl-tel-input>.flag-container {
+      display: none;
+    }
+
     .node-13 &,
     .node-67 & {
       max-width: 1050px;
@@ -29,11 +37,18 @@
 
   select {
     border: 1px solid #BCBDBE;
-    padding-left: 25px;
-    background: #fff;
+    color: #747574;
+    -webkit-appearance: none;
+    padding-left: 15px;
+    line-height: 1;
+    background: #fff url(../img/select-arrow.svg) no-repeat;
+    background-size: 11px;
+    background-position: 93% center;
+
   }
 
-  input, select {
+  input, select,
+  .intl-tel-input {
     border-radius: 5px;
     height: 50px;
     line-height: 50px;
@@ -55,6 +70,16 @@
     &[type="text"] {
       border: 1px solid #BCBDBE;
       padding-left: 25px;
+    }
+  }
+
+  .intl-tel-input {
+    .intl-tel-input {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
     }
   }
 

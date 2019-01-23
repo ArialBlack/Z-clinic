@@ -98,8 +98,8 @@
     &:before {
       @extend .icon;
       content: $icon-tick;
+      //content: %icon-tick;
       top: 7px;
-      content: %icon-tick;
       width: 20px;
       height: 20px;
       line-height: 20px;

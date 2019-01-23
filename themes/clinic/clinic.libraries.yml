@@ -2,6 +2,7 @@ global-styling:
   css:
     theme:
       css/theme.css: {}
+      css/intlTelInput.min.css: {}
 tether:
   js:
      js/tether.js: {}
@@ -29,6 +30,7 @@ owl.carousel:
 
 custom:
   js:
+     js/intlTelInput.min.js: {}
      js/main.js: {}
      js/map.js: {}
   dependencies:

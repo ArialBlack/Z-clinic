@@ -53,26 +53,27 @@ input[type="submit"] {
 
 @include grid($column-name: "col", $columns-padding: $col-padding);
 
-@include max-screen($max-tablet) {
-  %block {
-    width: auto;
-    float: none;
-  }
-
-  %offset {
-    margin-left: 0;
-  }
-
-  @for $i from 1 through 12 {
-    %col-#{$i} {
-      @extend %block;
-    }
-
-    %col-offset-#{$i} {
-      @extend %offset;
-    }
-  }
-}
+//@include max-screen($max-tablet) {
+//  %block {
+//    width: auto;
+//    float: none; // padding-left: 0
+//    // padding-right: 0
+//  }
+//
+//  %offset {
+//    margin-left: 0;
+//  }
+//
+//  @for $i from 1 through 12 {
+//    %col-md-#{$i} {
+//      @extend %block;
+//    }
+//
+//    %col-md-offset-#{$i} {
+//      @extend %offset;
+//    }
+//  }
+//}
 
 
 @include max-screen($max-tablet) {
@@ -80,7 +81,7 @@ input[type="submit"] {
 }
 
 
-@include max-screen($max-mobile) {
+@include max-screen($max-tablet) {
   %block {
     width: auto;
     float: none; // padding-left: 0

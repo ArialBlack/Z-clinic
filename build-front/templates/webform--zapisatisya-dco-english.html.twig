@@ -1,0 +1,13 @@
+<form{{ attributes }}>
+       <input class="one" type="text" id="name" name="name" placeholder="Name">
+       <input class="two" type="text" id="phone" name="phone" placeholder="Phone" required pattern="[0-9]{5,15}">
+       <select class="three" name="misto" placeholder="City">
+       		<option value="not-selected">City</option>
+       		<option value="kyiv">Kyiv</option>
+       		<option value="lviv">Lviv</option>
+       </select>
+       <input class="button" type="submit" id="submit" name="submit" value="Call me">
+    {{ element.form_token }}
+    {{ element.form_build_id }}
+    {{ element.form_id }}
+</form>
