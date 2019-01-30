@@ -1,0 +1,13 @@
+<form{{ attributes }}>
+       <input class="one" type="text" id="name" name="name" placeholder="Ім'я">
+       <input class="two" type="text" id="phone" name="phone" placeholder="Телефон" required>
+       <select class="three" name="misto" placeholder="Місто">
+       		<option value="not-selected">Місто</option>
+       		<option value="kyiv">Київ</option>
+       		<option value="lviv">Львів</option>
+       </select>
+       <input class="button" type="submit" id="submit" name="submit" value="Зателефонуйте мені">
+    {{ element.form_token }}
+    {{ element.form_build_id }}
+    {{ element.form_id }}
+</form>

@@ -117,14 +117,53 @@ function clinic_preprocess_page(&$variables) {
     ->getViewBuilder('block')
     ->view($block);
   $variables['kontaktivsapku_lviv'] = $block_content;
+  
+  $block = \Drupal\block\Entity\Block::load('call_me_kyiv');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['call_me_kyiv'] = $block_content;
+  
+  $block = \Drupal\block\Entity\Block::load('call_me_lviv');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['call_me_lviv'] = $block_content;
+  
+  $block = \Drupal\block\Entity\Block::load('sign_dco');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['sign_dco'] = $block_content;
+  
+  $block = \Drupal\block\Entity\Block::load('vebforma_2');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['sign_dco_en'] = $block_content;
 
   $block = \Drupal\block\Entity\Block::load('webform');
   $block_content = \Drupal::entityTypeManager()
     ->getViewBuilder('block')
     ->view($block);
   $variables['schedule_consultation'] = $block_content;
+  
+    $block = \Drupal\block\Entity\Block::load('webforma_2');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['schedule_consultation_en'] = $block_content;
+  
+  $block = \Drupal\block\Entity\Block::load('webform_ua');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['schedule_consultation_ua'] = $block_content;
 
   $variables['quoutes'] = views_embed_view('quoutes2front', 'block_1');
   $variables['doctors'] = views_embed_view('doctors', 'block_1');
+  $variables['doctors_en'] = views_embed_view('doctors', 'block_2');
   $variables['reviews'] = views_embed_view('reviews', 'block_1');
+  $variables['reviews_en'] = views_embed_view('reviews', 'block_2');
+  $variables['faq'] = views_embed_view('faq', 'block_1');
 }
