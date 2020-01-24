@@ -59,7 +59,10 @@
 		<span class="icon icon-stack_menu"></span>
 		<span class="menu-open_button-text">МЕНЮ</span>
 	</button>
-
+  <div class="menu_lang-links">
+    <a class="menu_lang-links_link active" href="/dentalcareoffice">Ua</a>
+    <a class="menu_lang-links_link" href="/en_dentalcareoffice">Eng</a>
+  </div>
 	<div class="menu-rollup menu_nav-rollup collapse" id="menu_nav_rollup">
 		<div class="menu-header nav" role="tablist">
 			<a class="menu-header_link active" data-toggle="tab" href="#menu1" role="tab">
@@ -81,10 +84,6 @@
 			<div class="menu_nav-content_tab tab-pane" id="menu2" role="tabpanel">
 				{{ drupal_menu('submenu') }}
 			</div>
-		</div>
-		<div class="menu_lang-links">
-		  <a class="menu_lang-links_link active" href="/dentalcareoffice">Ua</a>
-		  <a class="menu_lang-links_link" href="/en_dentalcareoffice">Eng</a>
 		</div>
 		<button class="menu-close_button" data-toggle="collapse" data-target="#menu_nav_rollup" aria-expanded="false" aria-controls="Clouse main menu">
 			<span aria-hidden="true">&times;</span>
@@ -606,21 +605,15 @@
 
         </div>
     </section>
-	
-	<section class="phone_form" style="display: none;">
+
+	<section class="phone_form">
 		<form action="/customphp/mail.php" method="post">
-			<div class="one">
-				<input class="one" type="text" id="name" name="name" placeholder="Ім'я">
-			</div>
-			<div class="two">
-				<input class="two" type="text" id="phone" name="phone" placeholder="Контактний телефон">
-			</div>
-			<div class="three">
-				<input class="button" type="submit" id="submit" name="submit" value="Зателефонуйте мені">
-			</div>
+			<input class="one" type="text" id="name" name="name" placeholder="Ім'я">
+			<input class="two" type="text" id="phone" name="phone" placeholder="Контактний телефон">
+			<input class="button" type="submit" id="submit" name="submit" value="Зателефонуйте мені" onClick="_gaq.push(['_trackEvent', 'Call_me_button', 'submit']);">
 		</form>
 	</section>
-	
+
     <section class="about-us">
 
       <h1 class="about-us_title">Медіа про нас</h1>
@@ -630,7 +623,17 @@
         <ul class="about-us_carousel">
           <li>
             <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4Q0QBkh7Hpg">
-              <img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo"/>
+              <img src="../themes/clinic/img/ted-x-logo.png" alt="ted x logo" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://proman.com.ua/17081-yaroslav-zablotskij-v-moem-myshlenii-otsutstvuyut-ramki-soglasno-kotorym-ya-chego-to-ne-mogu/?fbclid=IwAR17730kSetIO6TxlY293xkFXR9MUfHvWuo_caeVZxj50LouYvIcot2XUMg">
+              <img src="../themes/clinic/img/proman.png" alt="proman logo"/>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=MxK3wVovJAA&fbclid=IwAR0aYNONvLbgE1Jwhw0BHq9uZDe327-kpoDZ-22g38Dct7DNz3mzaTiQmc4">
+              <img src="../themes/clinic/img/24chanel.png" alt="24 chanel logo" style="max-height: 80px; width: auto;" />
             </a>
           </li>
           <li>
@@ -691,7 +694,8 @@
       <div class="zablotsky-speech_info">
         <div class="zablotsky-speech-wrapper">
         <h3 class="zablotsky-speech_title">Ярослав Заблоцький</h3>
-        <i class="icon icon-bow_arrow"></i>
+        <!--<i class="icon icon-bow_arrow"></i>-->
+		<img class="zablotsky-speech_img" src="../themes/clinic/img/dco/caricatures/brush-flip.png" alt="brush">
         <p class="zablotsky-speech_description">За 30 років своєї роботи лікарем я сформував свою власну філософію і зрозумів, що справжня стоматологія — це не асортимент послуг на вибір, тому:</p>
         </div>
       </div>
@@ -723,7 +727,7 @@
       </div>
       <div class="img-wrapper">
         <img src="../themes/clinic/img/clinic_kyiv.jpg" alt="clinic in kyiv">
-<!--        <a href="#clinic_kyiv" class="clinic_arrow down clinic_kyiv" data-toggle="modal">
+        <a href="#clinic_kyiv" class="clinic_arrow down clinic_kyiv" data-toggle="modal">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 102 102" style="enable-background:new 0 0 102 102;" xml:space="preserve">
 <path style="fill:#FFFFFF;" d="M73.496,51L40.57,68V34L73.496,51z"/>
@@ -734,7 +738,7 @@
 </svg>
 
 
-        </a> -->
+        </a>
       </div>
       <div class="modal fade video_modal" id="clinic_kyiv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -830,7 +834,7 @@
       </div>
       <div class="img-wrapper">
         <img src="../themes/clinic/img/clinic_lviv.jpg" alt="clinic in lviv">
-<!--        <a href="#clinic_lviv_left" class="clinic_arrow left clinic_lviv" data-toggle="modal" >
+        <a href="#clinic_lviv_left" class="clinic_arrow left clinic_lviv" data-toggle="modal" >
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 102 102" style="enable-background:new 0 0 102 102;" xml:space="preserve">
 <path style="fill:#FFFFFF;" d="M73.496,51L40.57,68V34L73.496,51z"/>
@@ -853,7 +857,7 @@
 </svg>
 
 
-        </a> -->
+        </a>
       </div>
       <div class="modal fade video_modal" id="clinic_lviv_left" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -909,7 +913,7 @@
       </div>
       <div class="img-wrapper">
         <img src="../themes/clinic/img/office_kyiv.jpg" alt="clinic in kyiv">
-<!--        <a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
+        <a href="#dco_kyiv" class="clinic_arrow left dco_kyiv" data-toggle="modal" >
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 102 102" style="enable-background:new 0 0 102 102;" xml:space="preserve">
 <path style="fill:#FFFFFF;" d="M73.496,51L40.57,68V34L73.496,51z"/>
@@ -920,7 +924,7 @@
 </svg>
 
 
-        </a> -->
+        </a>
       </div>
       <div class="modal fade video_modal" id="dco_kyiv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -960,7 +964,7 @@
           </div>
           <div class="img-wrapper">
             <img src="../themes/clinic/img/office_lviv.jpg" alt="clinic in lviv">
-<!--            <a href="#dco_lviv_plaza" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+            <a href="#dco_lviv_plaza" class="clinic_arrow left dco_lviv" data-toggle="modal" >
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 102 102" style="enable-background:new 0 0 102 102;" xml:space="preserve">
 <path style="fill:#FFFFFF;" d="M73.496,51L40.57,68V34L73.496,51z"/>
@@ -971,7 +975,7 @@
 </svg>
 
 
-            </a> -->
+            </a>
           </div>
         </div>
         <div class="clinics_carousel-wrapper">
@@ -981,7 +985,7 @@
           </div>
           <div class="img-wrapper">
             <img src="../themes/clinic/img/office_parus.jpg" alt="clinic in lviv">
-<!--            <a href="#dco_lviv_parus" class="clinic_arrow left dco_lviv" data-toggle="modal" >
+            <a href="#dco_lviv_parus" class="clinic_arrow left dco_lviv" data-toggle="modal" >
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 102 102" style="enable-background:new 0 0 102 102;" xml:space="preserve">
 <path style="fill:#FFFFFF;" d="M73.496,51L40.57,68V34L73.496,51z"/>
@@ -992,7 +996,7 @@
 </svg>
 
 
-            </a> -->
+            </a>
           </div>
         </div>
       </div>
