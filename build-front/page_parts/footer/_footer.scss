@@ -206,3 +206,15 @@
     }
   }
 }
+
+.footer_conf-info {
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+  color: #fff;
+
+  @media (max-width: 767px) {
+    display: block;
+    text-align: center;
+  }
+}
